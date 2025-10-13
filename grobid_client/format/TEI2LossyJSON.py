@@ -39,7 +39,8 @@ class TEI2LossyJSONConverter:
         If stream=False returns the full document dict (same shape as original function).
         """
         # Load with BeautifulSoup but avoid building huge structures when streaming
-        content = open(tei_file, 'r').read()
+        with open(tei_file, 'r') as f:
+            content = f.read()
         soup = BeautifulSoup(content, 'xml')
 
         if soup.TEI is None:
