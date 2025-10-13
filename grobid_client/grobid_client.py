@@ -26,6 +26,7 @@ import logging
 from typing import Tuple
 import copy
 
+from .format.TEI2LossyJSON import TEI2LossyJSONConverter
 from .client import ApiClient
 
 
@@ -506,7 +507,6 @@ class GrobidClient(ApiClient):
                     # Convert to JSON if requested
                     if json_output:
                         try:
-                            from .format.TEI2LossyJSON import TEI2LossyJSONConverter
                             converter = TEI2LossyJSONConverter()
                             json_data = converter.convert_tei_file(filename, stream=False)
                             
