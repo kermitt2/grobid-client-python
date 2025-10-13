@@ -4,17 +4,16 @@
 
     Original version: https://github.com/howisonlab/softcite-dataset/blob/master/code/corpus/TEI2LossyJSON.py
 """
-import argparse
+import logging
 import os
 import uuid
 from collections import OrderedDict
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
-from typing import List, Dict, Union, Optional, BinaryIO, Iterator
+from typing import Dict, Union, BinaryIO, Iterator
 
 import dateparser
-from bs4 import BeautifulSoup, NavigableString, Tag
-import logging
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from bs4 import BeautifulSoup, Tag
 
 # Configure module-level logger
 logger = logging.getLogger(__name__)
@@ -299,9 +298,7 @@ class TEI2LossyJSONConverter:
 def _convert_file_worker(path: str):
     """Worker used by ProcessPoolExecutor. Imports inside function to avoid pickling issues."""
     from bs4 import BeautifulSoup
-    import dateparser
     # Reuse existing top-level helpers from this module by importing here
-    from grobid_client.format.TEI2LossyJSON import box_to_dict, get_random_id, get_formatted_passage, get_refs_with_offsets, xml_table_to_json
     with open(path, 'r') as f:
         content = f.read()
     soup = BeautifulSoup(content, 'xml')
@@ -330,20 +327,49 @@ def get_refs_with_offsets(element):
     """Extract references with their text offsets from an element."""
     refs = []
     text = element.get_text()
-    
-    for ref in element.find_all("ref", type="bibr"):
-        ref_text = ref.get_text()
-        if ref_text in text:
-            start_offset = text.find(ref_text)
-            end_offset = start_offset + len(ref_text)
-            refs.append({
-                "type": ref.get("type", ""),
-                "target": ref.get("target", ""),
-                "text": ref_text,
-                "offset_start": start_offset,
-                "offset_end": end_offset
-            })
-    
+
+    # Use BeautifulSoup's position tracking by traversing the DOM tree
+    # and keeping track of character positions as we encounter text
+
+    def find_ref_positions(node, start_pos=0):
+        """
+        Recursively traverse the DOM tree to find reference positions.
+        Returns the next character position after processing this node.
+        """
+        if hasattr(node, 'name') and node.name:
+            # This is an element node
+            if node.name == "ref" and node.get("type") == "bibr":
+                # Found a reference - get its text and calculate position
+                ref_text = node.get_text()
+                # Find this reference text starting from current position
+                actual_start = text.find(ref_text, start_pos)
+                if actual_start != -1:
+                    actual_end = actual_start + len(ref_text)
+                    refs.append({
+                        "type": node.get("type", ""),
+                        "target": node.get("target", ""),
+                        "text": ref_text,
+                        "offset_start": actual_start,
+                        "offset_end": actual_end
+                    })
+                    return actual_end
+                else:
+                    logger.warning(f"Could not find reference text '{ref_text}' at position {start_pos}")
+                    return start_pos
+            else:
+                # Process children in document order
+                current_pos = start_pos
+                for child in node.children:
+                    current_pos = find_ref_positions(child, current_pos)
+                return current_pos
+        else:
+            # This is a text node (NavigableString) - advance position by text length
+            text_content = str(node)
+            return start_pos + len(text_content)
+
+    # Start traversal from the beginning
+    find_ref_positions(element, 0)
+
     return refs
 
 
