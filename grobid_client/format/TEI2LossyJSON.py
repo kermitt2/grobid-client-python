@@ -302,7 +302,8 @@ def _convert_file_worker(path: str):
     import dateparser
     # Reuse existing top-level helpers from this module by importing here
     from grobid_client.format.TEI2LossyJSON import box_to_dict, get_random_id, get_formatted_passage, get_refs_with_offsets, xml_table_to_json
-    content = open(path, 'r').read()
+    with open(path, 'r') as f:
+        content = f.read()
     soup = BeautifulSoup(content, 'xml')
     converter = TEI2LossyJSONConverter()
     return converter.convert_tei_file(path, stream=False)
