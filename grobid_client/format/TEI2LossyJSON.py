@@ -218,75 +218,434 @@ class TEI2LossyJSONConverter:
                                 }
                             )
 
-                    # Extract references from listBibl
+                    # Extract references from listBibl with comprehensive processing
                     list_bibl = soup.find("listBibl")
                     if list_bibl:
                         for i, bibl_struct in enumerate(list_bibl.find_all("biblStruct"), 1):
-                            ref_data = OrderedDict()
-                            ref_data['id'] = f"b{i}"
-
-                            # Extract title
-                            title_node = bibl_struct.find("title", attrs={"level": "a"})
-                            if title_node:
-                                ref_data['title'] = title_node.get_text().strip()
-
-                            # Extract authors
-                            authors = []
-                            for author in bibl_struct.find_all("author"):
-                                forename = author.find('forename')
-                                surname = author.find('surname')
-
-                                if forename and surname:
-                                    author_name = f"{forename.get_text().strip()} {surname.get_text().strip()}"
-                                elif surname:
-                                    author_name = surname.get_text().strip()
-                                elif forename:
-                                    author_name = forename.get_text().strip()
-                                else:
-                                    continue
-
-                                if author_name.strip():
-                                    authors.append(author_name.strip())
-
-                            if authors:
-                                ref_data['authors'] = authors
-
-                            # Extract publication info (journal, year, etc.)
-                            # Look for journal title
-                            journal_node = bibl_struct.find("title", attrs={"level": "j"})
-                            if journal_node:
-                                ref_data['journal'] = journal_node.get_text().strip()
-
-                            # Extract year
-                            date_node = bibl_struct.find("date")
-                            if date_node:
-                                year_text = date_node.get_text().strip()
-                                if year_text and year_text.isdigit():
-                                    ref_data['year'] = int(year_text)
-                                else:
-                                    # Try to extract year from text
-                                    import re
-                                    year_match = re.search(r'\b(19|20)\d{2}\b', year_text)
-                                    if year_match:
-                                        ref_data['year'] = int(year_match.group())
-
-                            # Extract DOI
-                            idno_doi = bibl_struct.find("idno", type="DOI")
-                            if idno_doi:
-                                ref_data['doi'] = idno_doi.get_text().strip()
-
-                            # Extract pages
-                            pages_node = bibl_struct.find("biblScope", attrs={"unit": "page"})
-                            if pages_node:
-                                ref_data['pages'] = pages_node.get_text().strip()
-
-                            # Get raw text as fallback
-                            if not ref_data.get('title'):
-                                ref_data['raw_text'] = bibl_struct.get_text().strip()
-
-                            references_structure.append(ref_data)
+                            ref_data = self._extract_comprehensive_reference_data(bibl_struct, i)
+                            if ref_data:
+                                references_structure.append(ref_data)
 
             return document
+
+    def _extract_comprehensive_reference_data(self, bibl_struct: Tag, index: int) -> Dict:
+        """
+        Extract detailed bibliographic information from TEI biblStruct elements.
+        Implements comprehensive parsing for all standard TEI bibliographic components.
+        """
+        import re
+
+        citation_data = OrderedDict()
+        citation_data['id'] = f"b{index}"
+
+        # Extract reference identifier if present
+        xml_id = bibl_struct.get('{http://www.w3.org/XML/1998/namespace}id') or bibl_struct.get('xml:id')
+        if xml_id:
+            citation_data['target'] = xml_id
+
+        # Initialize containers for different types of content
+        contributor_list = []
+        publication_metadata = {}
+        identifier_collection = {}
+        supplementary_info = []
+        link_references = []
+
+        # 1. Process analytic level information (article/conference paper content)
+        analytic_section = bibl_struct.find("analytic")
+        if analytic_section:
+            # Extract title information from analytic level
+            analytic_titles = analytic_section.find_all("title")
+            for title_element in analytic_titles:
+                title_level = title_element.get("level", "")
+                title_content = self._clean_text(title_element.get_text())
+                if title_content:
+                    if title_level == "a":
+                        citation_data['title'] = title_content
+                    elif title_level == "j":
+                        publication_metadata['journal'] = title_content
+
+            # Extract author information from analytic level
+            analytic_authors = analytic_section.find_all("author")
+            for author_element in analytic_authors:
+                author_info = self._extract_contributor_details(author_element)
+                if author_info:
+                    contributor_list.append(author_info)
+
+            # Handle reference elements within analytic section
+            analytic_ref = analytic_section.find("ref")
+            if analytic_ref:
+                ref_content = self._clean_text(analytic_ref.get_text())
+                if ref_content:
+                    citation_data['reference_text'] = ref_content
+                if analytic_ref.get('target'):
+                    citation_data['reference_uri'] = analytic_ref.get('target')
+
+            # Process identifier elements in analytic section
+            analytic_identifiers = analytic_section.find_all("idno")
+            for identifier_element in analytic_identifiers:
+                self._process_identifier_element(identifier_element, identifier_collection, 'analytic')
+
+            # Process pointer elements in analytic section
+            analytic_pointers = analytic_section.find_all("ptr")
+            for pointer_element in analytic_pointers:
+                self._process_pointer_element(pointer_element, link_references)
+
+        # 2. Process monograph level information (book/journal publication details)
+        monograph_section = bibl_struct.find("monogr")
+        if monograph_section:
+            # Extract title information from monograph level
+            monograph_titles = monograph_section.find_all("title")
+            for title_element in monograph_titles:
+                title_level = title_element.get("level", "")
+                title_content = self._clean_text(title_element.get_text())
+                if title_content:
+                    if title_level == "m" and not citation_data.get('title'):
+                        citation_data['title'] = title_content  # Book title
+                    elif title_level == "j" and not publication_metadata.get('journal'):
+                        publication_metadata['journal'] = title_content
+                    elif title_level == "s":
+                        publication_metadata['series'] = title_content
+
+            # Extract contributors from monograph level (authors/editors)
+            monograph_contributors = monograph_section.find_all(["author", "editor"])
+            for contributor_element in monograph_contributors:
+                contributor_info = self._extract_contributor_details(contributor_element)
+                if contributor_info:
+                    if contributor_element.name == "editor":
+                        contributor_info['role'] = 'editor'
+                    contributor_list.append(contributor_info)
+
+            # Extract imprint information (publication details)
+            imprint_section = monograph_section.find("imprint")
+            if imprint_section:
+                self._process_imprint_details(imprint_section, publication_metadata)
+
+            # Process identifier elements in monograph section
+            monograph_identifiers = monograph_section.find_all("idno")
+            for identifier_element in monograph_identifiers:
+                self._process_identifier_element(identifier_element, identifier_collection, 'monograph')
+
+            # Process pointer elements in monograph section
+            monograph_pointers = monograph_section.find_all("ptr")
+            for pointer_element in monograph_pointers:
+                self._process_pointer_element(pointer_element, link_references)
+
+        # 3. Process series level information
+        series_section = bibl_struct.find("series")
+        if series_section:
+            series_titles = series_section.find_all("title")
+            for title_element in series_titles:
+                title_content = self._clean_text(title_element.get_text())
+                if title_content and not publication_metadata.get('series'):
+                    publication_metadata['series'] = title_content
+
+            series_contributors = series_section.find_all(["author", "editor"])
+            for contributor_element in series_contributors:
+                contributor_info = self._extract_contributor_details(contributor_element)
+                if contributor_info:
+                    contributor_info['role'] = contributor_element.name
+                    contributor_list.append(contributor_info)
+
+        # 4. Process top-level identifiers within biblStruct
+        top_level_identifiers = bibl_struct.find_all("idno")
+        for identifier_element in top_level_identifiers:
+            self._process_identifier_element(identifier_element, identifier_collection, 'biblstruct')
+
+        # 5. Process notes and supplementary information
+        note_elements = bibl_struct.find_all("note")
+        for note_element in note_elements:
+            note_content = self._clean_text(note_element.get_text())
+            note_type = note_element.get("type", "")
+            if note_content:
+                if note_type == "raw_reference":
+                    citation_data['raw_reference'] = note_content
+                elif note_type:
+                    citation_data[f'note_{note_type}'] = note_content
+                else:
+                    supplementary_info.append(note_content)
+
+        # 6. Process pointer elements at biblStruct level
+        biblstruct_pointers = bibl_struct.find_all("ptr")
+        for pointer_element in biblstruct_pointers:
+            self._process_pointer_element(pointer_element, link_references)
+
+        # 7. Compile extracted information into final citation structure
+        self._compile_citation_data(citation_data, contributor_list, publication_metadata,
+                                   identifier_collection, supplementary_info, link_references)
+
+        # Ensure we have meaningful content before returning
+        if self._validate_citation_content(citation_data):
+            return citation_data
+
+        return None
+
+    def _extract_contributor_details(self, contributor_element: Tag) -> Dict:
+        """Extract detailed information about authors, editors, and other contributors."""
+        contributor_info = {}
+
+        # Extract name components
+        surname_element = contributor_element.find("surname")
+        forename_element = contributor_element.find("forename")
+
+        if surname_element and forename_element:
+            surname_text = self._clean_text(surname_element.get_text())
+            forename_text = self._clean_text(forename_element.get_text())
+            contributor_info['name'] = f"{forename_text} {surname_text}"
+            contributor_info['surname'] = surname_text
+            contributor_info['forename'] = forename_text
+        elif surname_element:
+            surname_text = self._clean_text(surname_element.get_text())
+            contributor_info['name'] = surname_text
+            contributor_info['surname'] = surname_text
+        elif forename_element:
+            forename_text = self._clean_text(forename_element.get_text())
+            contributor_info['name'] = forename_text
+            contributor_info['forename'] = forename_text
+        else:
+            # Fallback to full text content
+            full_name = self._clean_text(contributor_element.get_text())
+            if full_name:
+                contributor_info['name'] = full_name
+
+        # Extract affiliation information
+        affiliation_element = contributor_element.find("affiliation")
+        if affiliation_element:
+            affiliation_text = self._clean_text(affiliation_element.get_text())
+            if affiliation_text:
+                contributor_info['affiliation'] = affiliation_text
+
+        return contributor_info if contributor_info.get('name') else None
+
+    def _process_identifier_element(self, identifier_element: Tag, identifier_collection: Dict, level: str):
+        """Process identifier elements (DOI, ISBN, ISSN, etc.) and organize by type and level."""
+        identifier_text = self._clean_text(identifier_element.get_text())
+        identifier_type = identifier_element.get("type", "").lower()
+
+        if identifier_text:
+            # Create level-specific container if it doesn't exist
+            level_key = f"{level}_identifiers"
+            if level_key not in identifier_collection:
+                identifier_collection[level_key] = {}
+
+            # Store identifier by type
+            if identifier_type:
+                identifier_collection[level_key][identifier_type] = identifier_text
+            else:
+                identifier_collection[level_key]['unknown'] = identifier_text
+
+    def _process_pointer_element(self, pointer_element: Tag, link_references: list):
+        """Process pointer elements that contain external links."""
+        pointer_target = pointer_element.get("target", "").strip()
+        if pointer_target:
+            link_references.append(pointer_target)
+
+    def _process_imprint_details(self, imprint_element: Tag, publication_metadata: Dict):
+        """Extract and process imprint information including publisher, dates, and page ranges."""
+        # Extract publisher information
+        publisher_elements = imprint_element.find_all("publisher")
+        for publisher_element in publisher_elements:
+            publisher_name = self._clean_text(publisher_element.get_text())
+            if publisher_name:
+                publication_metadata['publisher'] = publisher_name
+                publisher_location = publisher_element.get("from")
+                if publisher_location:
+                    publication_metadata['publisher_location'] = publisher_location
+
+        # Extract date information
+        date_elements = imprint_element.find_all("date")
+        for date_element in date_elements:
+            date_type = date_element.get("type", "")
+            date_content = self._clean_text(date_element.get_text())
+            date_when = date_element.get("when")
+
+            if date_when:
+                publication_metadata['publication_date'] = date_when
+                # Extract year from ISO date
+                import re
+                year_match = re.search(r'\b(19|20)\d{2}\b', date_when)
+                if year_match:
+                    publication_metadata['year'] = int(year_match.group())
+            elif date_content:
+                if date_type:
+                    publication_metadata[f'date_{date_type}'] = date_content
+                else:
+                    publication_metadata['publication_date_text'] = date_content
+                # Try to extract year from text
+                year_match = re.search(r'\b(19|20)\d{2}\b', date_content)
+                if year_match:
+                    publication_metadata['year'] = int(year_match.group())
+
+        # Extract bibliographic scope information (pages, volume, issue)
+        scope_elements = imprint_element.find_all("biblScope")
+        for scope_element in scope_elements:
+            scope_unit = scope_element.get("unit", "")
+            scope_text = self._clean_text(scope_element.get_text())
+            scope_from = scope_element.get("from")
+            scope_to = scope_element.get("to")
+
+            if scope_unit == "page":
+                if scope_from:
+                    publication_metadata['page_start'] = scope_from
+                if scope_to:
+                    publication_metadata['page_end'] = scope_to
+                if scope_text and not scope_from and not scope_to:
+                    publication_metadata['pages'] = scope_text
+            elif scope_unit in ["volume", "vol"]:
+                publication_metadata['volume'] = scope_text
+            elif scope_unit in ["issue", "num"]:
+                publication_metadata['issue'] = scope_text
+            elif scope_unit == "chapter":
+                publication_metadata['chapter'] = scope_text
+
+    def _compile_citation_data(self, citation_data: Dict, contributors: list,
+                              publication_metadata: Dict, identifiers: Dict,
+                              supplementary_info: list, links: list):
+        """Compile all extracted information into the final citation structure."""
+        # Process contributors
+        if contributors:
+            authors = [c for c in contributors if c.get('role') != 'editor']
+            editors = [c for c in contributors if c.get('role') == 'editor']
+
+            if authors:
+                if len(authors) == 1:
+                    citation_data['authors'] = authors[0]['name']
+                else:
+                    citation_data['authors'] = [author['name'] for author in authors]
+
+            if editors:
+                if len(editors) == 1:
+                    citation_data['editors'] = editors[0]['name']
+                else:
+                    citation_data['editors'] = [editor['name'] for editor in editors]
+
+        # Merge publication metadata
+        for key, value in publication_metadata.items():
+            if value:
+                citation_data[key] = value
+
+        # Merge identifier information
+        for level, level_identifiers in identifiers.items():
+            for id_type, id_value in level_identifiers.items():
+                # Prioritize common identifier types at top level
+                if id_type in ['doi', 'isbn', 'issn', 'pmc', 'pmid', 'arxiv']:
+                    citation_data[id_type] = id_value
+                else:
+                    # Store other identifiers in nested structure
+                    if 'identifiers' not in citation_data:
+                        citation_data['identifiers'] = {}
+                    citation_data['identifiers'][f"{level}_{id_type}"] = id_value
+
+        # Add supplementary information
+        if supplementary_info:
+            if len(supplementary_info) == 1:
+                citation_data['notes'] = supplementary_info[0]
+            else:
+                citation_data['notes'] = supplementary_info
+
+        # Add link references
+        if links:
+            if len(links) == 1:
+                citation_data['url'] = links[0]
+            else:
+                citation_data['urls'] = links
+
+    def _validate_citation_content(self, citation_data: Dict) -> bool:
+        """Validate that the citation contains meaningful information."""
+        # Check for essential bibliographic elements
+        essential_elements = ['title', 'authors', 'journal', 'doi', 'isbn', 'issn', 'pmc', 'pmid']
+
+        # Check if any essential element is present
+        has_essential = any(citation_data.get(element) for element in essential_elements)
+
+        # Check for fallback elements
+        has_fallback = any(citation_data.get(element) for element in ['raw_reference', 'reference_text'])
+
+        return has_essential or has_fallback
+
+    def _extract_person_data(self, person_element: Tag) -> Dict:
+        """
+        Extract person data (author/editor) from TEI persName or author elements.
+        Handles various name formats and affiliations.
+        """
+        import re
+
+        person_data = {}
+
+        # Try different name extraction methods
+        forename = person_element.find("forename")
+        surname = person_element.find("surname")
+
+        if forename and surname:
+            # Standard format: forename + surname
+            forename_text = self._clean_text(forename.get_text())
+            surname_text = self._clean_text(surname.get_text())
+            person_data['name'] = f"{forename_text} {surname_text}"
+            person_data['forename'] = forename_text
+            person_data['surname'] = surname_text
+        elif surname:
+            # Surname only
+            surname_text = self._clean_text(surname.get_text())
+            person_data['name'] = surname_text
+            person_data['surname'] = surname_text
+        elif forename:
+            # Forename only
+            forename_text = self._clean_text(forename.get_text())
+            person_data['name'] = forename_text
+            person_data['forename'] = forename_text
+        else:
+            # Try to get name from full text content
+            full_name = self._clean_text(person_element.get_text())
+            if full_name:
+                person_data['name'] = full_name
+                # Try to parse into components
+                name_parts = full_name.split()
+                if len(name_parts) >= 2:
+                    person_data['surname'] = name_parts[-1]
+                    person_data['forename'] = " ".join(name_parts[:-1])
+
+        # Extract affiliation if present
+        affiliation = person_element.find("affiliation")
+        if affiliation:
+            aff_text = self._clean_text(affiliation.get_text())
+            if aff_text:
+                person_data['affiliation'] = aff_text
+
+                # Try to extract institution and location
+                # Look for common patterns like "Institution, City, Country"
+                parts = [part.strip() for part in aff_text.split(',') if part.strip()]
+                if len(parts) >= 1:
+                    person_data['institution'] = parts[0]
+                if len(parts) >= 2:
+                    person_data['location'] = ", ".join(parts[1:])
+
+        return person_data if person_data.get('name') else None
+
+    def _clean_text(self, text: str) -> str:
+        """
+        Clean and normalize text content to handle encoding issues and extra whitespace.
+        """
+        if not text:
+            return ""
+
+        # Handle common encoding issues
+        if isinstance(text, bytes):
+            try:
+                text = text.decode('utf-8')
+            except UnicodeDecodeError:
+                try:
+                    text = text.decode('latin-1')
+                except UnicodeDecodeError:
+                    text = text.decode('utf-8', errors='ignore')
+
+        # Normalize whitespace and strip
+        import re
+        text = re.sub(r'\s+', ' ', text.strip())
+
+        # Remove any potential XML/HTML entities
+        import html
+        text = html.unescape(text)
+
+        return text
 
     def _iter_passages_from_soup(self, soup: BeautifulSoup, passage_level: str) -> Iterator[Dict[str, Union[str, Dict[str, str]]]]:
         """Yield formatted passages discovered in the TEI soup. This yields the same structures
@@ -298,46 +657,113 @@ class TEI2LossyJSONConverter:
 
     def _iter_passages_from_soup_for_text(self, text_node: Tag, passage_level: str) -> Iterator[Dict[str, Union[str, Dict[str, str]]]]:
         head_paragraph = None
-        
-        # Process body and back sections, but only their direct child divs
+
+        # Process body and back sections
         for section in text_node.find_all(['body', 'back']):
-            # Only get direct child divs of this section
-            div_nodes = [child for child in section.children if hasattr(child, 'name') and child.name == "div"]
-            
+            # Only get direct child divs of this section (handle namespace variants)
+            div_nodes = []
+            for child in section.children:
+                if hasattr(child, 'name') and child.name:
+                    # Handle both namespaced and non-namespaced divs
+                    if child.name == "div" or child.name.endswith(":div"):
+                        div_nodes.append(child)
+
             for id_div, div in enumerate(div_nodes):
-                head = div.find("head")
-                p_nodes = div.find_all("p")
-                head_section = None
+                # Skip references div as it's handled separately
+                if div.get("type") == "references":
+                    continue
 
-                if head:
-                    if len(p_nodes) == 0:
-                        head_paragraph = head.text
-                    else:
-                        head_section = head.text
+                div_type = div.get("type")
+
+                # Process this div and potentially nested divs
+                for passage in self._process_div_with_nested_content(div, passage_level, head_paragraph):
+                    yield passage
+
+    def _process_div_with_nested_content(self, div: Tag, passage_level: str, head_paragraph: str = None) -> Iterator[Dict[str, Union[str, Dict[str, str]]]]:
+        """
+        Process a div and its nested content, handling various back section types.
+        Supports nested divs for complex back sections like annex with multiple subsections.
+        """
+        head = div.find("head")
+        p_nodes = div.find_all("p")
+        head_section = None
+        current_head_paragraph = None
+
+        # Check if this div has nested divs first (handle namespace variants)
+        nested_divs = []
+        for child in div.children:
+            if hasattr(child, 'name') and child.name:
+                # Handle both namespaced and non-namespaced divs
+                if child.name == "div" or child.name.endswith(":div"):
+                    nested_divs.append(child)
+
+        # Count only direct child paragraphs, not those in nested divs
+        direct_p_nodes = [child for child in div.children if hasattr(child, 'name') and child.name == "p"]
+
+        if len(nested_divs) > 0 and len(direct_p_nodes) == 0:
+            # This is a container div - process each nested div independently
+            for nested_div in nested_divs:
+                # Skip references divs
+                if nested_div.get("type") == "references":
+                    continue
+                # Pass None as head_paragraph to ensure nested divs use their own headers
+                for passage in self._process_div_with_nested_content(nested_div, passage_level, None):
+                    yield passage
+            return  # Don't process this div further
+
+        # Determine the section header and content type for divs with content
+        if head:
+            if len(direct_p_nodes) == 0:
+                # This div has only a head, no paragraphs (standalone head)
+                current_head_paragraph = self._clean_text(head.get_text())
+            else:
+                # This div has both head and paragraphs - head is the section header
+                head_section = self._clean_text(head.get_text())
+        else:
+            # If no head element, try to use the type attribute as head_section
+            div_type = div.get("type")
+            if div_type:
+                # Handle specific div types with appropriate section names
+                if div_type == "acknowledgement":
+                    head_section = "Acknowledgements"
+                elif div_type == "conflict":
+                    head_section = "Conflicts of Interest"
+                elif div_type == "contribution":
+                    head_section = "Author Contributions"
+                elif div_type == "availability":
+                    # Only set as default if this div has its own content
+                    if len(direct_p_nodes) > 0:
+                        head_section = "Data Availability"
+                elif div_type == "annex":
+                    head_section = "Annex"
                 else:
-                    # If no head element, try to use the type attribute as head_section
-                    div_type = div.get("type")
-                    if div_type and len(p_nodes) > 0:
-                        head_section = div_type.title()  # Capitalize first letter
+                    # Generic handling - capitalize and format
+                    head_section = div_type.replace("_", " ").title()
 
-                for id_p, p in enumerate(p_nodes):
-                    paragraph_id = get_random_id(prefix="p_")
-                    
-                    if passage_level == "sentence":
-                        for id_s, sentence in enumerate(p.find_all("s")):
-                            struct = get_formatted_passage(head_paragraph, head_section, paragraph_id, sentence)
-                            if self.validate_refs:
-                                for ref in struct['refs']:
-                                    assert ref['offset_start'] < ref['offset_end']
-                                    assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
-                            yield struct
-                    else:
-                        struct = get_formatted_passage(head_paragraph, head_section, paragraph_id, p)
+        # Process paragraphs in this div
+        if len(direct_p_nodes) > 0:
+            for id_p, p in enumerate(direct_p_nodes):
+                paragraph_id = get_random_id(prefix="p_")
+
+                if passage_level == "sentence":
+                    for id_s, sentence in enumerate(p.find_all("s")):
+                        struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, sentence)
                         if self.validate_refs:
                             for ref in struct['refs']:
                                 assert ref['offset_start'] < ref['offset_end']
                                 assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
                         yield struct
+                else:
+                    struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, p)
+                    if self.validate_refs:
+                        for ref in struct['refs']:
+                            assert ref['offset_start'] < ref['offset_end']
+                            assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                    yield struct
+
+        # Update head_paragraph for potential next div
+        if current_head_paragraph is not None:
+            head_paragraph = current_head_paragraph
 
     def process_directory(self, directory: Union[str, Path], pattern: str = "*.tei.xml", parallel: bool = True, workers: int = None) -> Iterator[Dict]:
         """Process a directory of TEI files and yield converted documents.
@@ -445,9 +871,19 @@ def get_refs_with_offsets(element):
 
 def get_formatted_passage(head_paragraph, head_section, paragraph_id, element):
     """Format a passage (paragraph or sentence) with metadata and references."""
-    text = element.get_text()
+    # Import the clean_text method
+    def _clean_text_local(text: str) -> str:
+        if not text:
+            return ""
+        import re
+        import html
+        text = re.sub(r'\s+', ' ', text.strip())
+        text = html.unescape(text)
+        return text
+
+    text = _clean_text_local(element.get_text())
     refs = get_refs_with_offsets(element)
-    
+
     passage = {
         "id": paragraph_id,
         "text": text,
@@ -457,12 +893,12 @@ def get_formatted_passage(head_paragraph, head_section, paragraph_id, element):
         ] if element.has_attr("coords") else [],
         "refs": refs
     }
-    
+
     if head_paragraph:
         passage["head_paragraph"] = head_paragraph
     if head_section:
         passage["head_section"] = head_section
-    
+
     return passage
 
 
