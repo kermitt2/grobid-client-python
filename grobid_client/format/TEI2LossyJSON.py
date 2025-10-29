@@ -64,6 +64,8 @@ class TEI2LossyJSONConverter:
             document['body_text'] = text_structure
             figures_and_tables = []
             document['figures_and_tables'] = figures_and_tables
+            references_structure = []
+            document['references'] = references_structure
 
             # Populate header and body using the same traversal used by the generator
             for child in soup.TEI.children:
@@ -215,6 +217,74 @@ class TEI2LossyJSONConverter:
                                     ] if graphic_coords else []
                                 }
                             )
+
+                    # Extract references from listBibl
+                    list_bibl = soup.find("listBibl")
+                    if list_bibl:
+                        for i, bibl_struct in enumerate(list_bibl.find_all("biblStruct"), 1):
+                            ref_data = OrderedDict()
+                            ref_data['id'] = f"b{i}"
+
+                            # Extract title
+                            title_node = bibl_struct.find("title", attrs={"level": "a"})
+                            if title_node:
+                                ref_data['title'] = title_node.get_text().strip()
+
+                            # Extract authors
+                            authors = []
+                            for author in bibl_struct.find_all("author"):
+                                forename = author.find('forename')
+                                surname = author.find('surname')
+
+                                if forename and surname:
+                                    author_name = f"{forename.get_text().strip()} {surname.get_text().strip()}"
+                                elif surname:
+                                    author_name = surname.get_text().strip()
+                                elif forename:
+                                    author_name = forename.get_text().strip()
+                                else:
+                                    continue
+
+                                if author_name.strip():
+                                    authors.append(author_name.strip())
+
+                            if authors:
+                                ref_data['authors'] = authors
+
+                            # Extract publication info (journal, year, etc.)
+                            # Look for journal title
+                            journal_node = bibl_struct.find("title", attrs={"level": "j"})
+                            if journal_node:
+                                ref_data['journal'] = journal_node.get_text().strip()
+
+                            # Extract year
+                            date_node = bibl_struct.find("date")
+                            if date_node:
+                                year_text = date_node.get_text().strip()
+                                if year_text and year_text.isdigit():
+                                    ref_data['year'] = int(year_text)
+                                else:
+                                    # Try to extract year from text
+                                    import re
+                                    year_match = re.search(r'\b(19|20)\d{2}\b', year_text)
+                                    if year_match:
+                                        ref_data['year'] = int(year_match.group())
+
+                            # Extract DOI
+                            idno_doi = bibl_struct.find("idno", type="DOI")
+                            if idno_doi:
+                                ref_data['doi'] = idno_doi.get_text().strip()
+
+                            # Extract pages
+                            pages_node = bibl_struct.find("biblScope", attrs={"unit": "page"})
+                            if pages_node:
+                                ref_data['pages'] = pages_node.get_text().strip()
+
+                            # Get raw text as fallback
+                            if not ref_data.get('title'):
+                                ref_data['raw_text'] = bibl_struct.get_text().strip()
+
+                            references_structure.append(ref_data)
 
             return document
 
