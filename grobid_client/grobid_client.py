@@ -450,6 +450,25 @@ class GrobidClient(ApiClient):
                 if not force and os.path.isfile(filename):
                     self.logger.info(
                         f"{filename} already exists, skipping... (use --force to reprocess pdf input files)")
+
+                    # Check if JSON output is needed but JSON file doesn't exist
+                    if json_output:
+                        json_filename = filename.replace('.grobid.tei.xml', '.json')
+                        if not os.path.isfile(json_filename):
+                            self.logger.info(f"JSON file {json_filename} does not exist, generating JSON from existing TEI...")
+                            try:
+                                converter = TEI2LossyJSONConverter()
+                                json_data = converter.convert_tei_file(filename, stream=False)
+
+                                if json_data:
+                                    with open(json_filename, 'w', encoding='utf8') as json_file:
+                                        json.dump(json_data, json_file, indent=2, ensure_ascii=False)
+                                    self.logger.debug(f"Successfully created JSON file: {json_filename}")
+                                else:
+                                    self.logger.warning(f"Failed to convert TEI to JSON for {filename}")
+                            except Exception as e:
+                                self.logger.error(f"Failed to convert TEI to JSON for {filename}: {str(e)}")
+
                     continue
 
                 selected_process = self.process_pdf
