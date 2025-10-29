@@ -285,20 +285,19 @@ class GrobidClient(ApiClient):
             raise ServerUnavailableException(error_msg) from e
 
     def _output_file_name(self, input_file, input_path, output):
-        # we use ntpath here to be sure it will work on Windows too
-        if output is not None:
-            input_file_name = str(os.path.relpath(os.path.abspath(input_file), input_path))
-            filename = os.path.join(
-                output, os.path.splitext(input_file_name)[0] + ".grobid.tei.xml"
-            )
-        else:
-            input_file_name = ntpath.basename(input_file)
-            filename = os.path.join(
-                ntpath.dirname(input_file),
-                os.path.splitext(input_file_name)[0] + ".grobid.tei.xml",
-            )
+        # Use pathlib for consistent cross-platform path handling
+        input_file_path = pathlib.Path(input_file)
 
-        return filename
+        if output is not None:
+            # Calculate relative path from input_path, then join with output directory
+            input_path_abs = pathlib.Path(input_path).resolve()
+            input_file_rel = input_file_path.resolve().relative_to(input_path_abs)
+            filename = pathlib.Path(output) / f"{input_file_rel.stem}.grobid.tei.xml"
+        else:
+            # Use the same directory as the input file
+            filename = input_file_path.parent / f"{input_file_path.stem}.grobid.tei.xml"
+
+        return str(filename)
 
     def ping(self) -> Tuple[bool, int]:
         """
