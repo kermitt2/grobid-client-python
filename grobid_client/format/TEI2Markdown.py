@@ -60,42 +60,37 @@ class TEI2MarkdownConverter:
             title = self._extract_title(soup)
             if title:
                 markdown_sections.append(f"# {title}\n")
-            
+
             # Extract authors
             authors = self._extract_authors(soup)
             if authors:
-                markdown_sections.append("## Authors\n")
                 for author in authors:
-                    markdown_sections.append(f"- {author}\n")
+                    markdown_sections.append(f"{author}\n")
                 markdown_sections.append("\n")
-            
+
             # Extract affiliations
             affiliations = self._extract_affiliations(soup)
             if affiliations:
-                markdown_sections.append("## Affiliations\n")
-                for affiliation in affiliations:
-                    markdown_sections.append(f"- {affiliation}\n")
-                markdown_sections.append("\n")
-            
+                affiliations_as_text = ", ".join(affiliations)
+                markdown_sections.append(f"{affiliations_as_text}\n\n")
+
             # Extract publication date
             pub_date = self._extract_publication_date(soup)
             if pub_date:
-                markdown_sections.append(f"## Publication Date\n{pub_date}\n\n")
-            
+                markdown_sections.append(f"Publishd on {pub_date}\n\n")
+
             # Extract fulltext
             fulltext = self._extract_fulltext(soup)
             if fulltext:
-                markdown_sections.append("## Fulltext\n")
                 markdown_sections.append(fulltext)
                 markdown_sections.append("\n")
-            
+
             # Extract annex (acknowledgements, competing interests, etc.)
             annex = self._extract_annex(soup)
             if annex:
-                markdown_sections.append("## Annex\n")
                 markdown_sections.append(annex)
                 markdown_sections.append("\n")
-            
+
             # Extract references
             references = self._extract_references(soup)
             if references:
@@ -117,12 +112,18 @@ class TEI2MarkdownConverter:
         return None
 
     def _extract_authors(self, soup: BeautifulSoup) -> List[str]:
-        """Extract authors from TEI."""
+        """Extract authors from TEI document header (excluding references)."""
         authors = []
-        for author in soup.find_all("author"):
+
+        # Only look in teiHeader to avoid picking up authors from references
+        tei_header = soup.find("teiHeader")
+        if not tei_header:
+            return authors
+
+        for author in tei_header.find_all("author"):
             forename = author.find('forename')
             surname = author.find('surname')
-            
+
             if forename and surname:
                 author_name = f"{forename.get_text().strip()} {surname.get_text().strip()}"
             elif surname:
@@ -131,20 +132,27 @@ class TEI2MarkdownConverter:
                 author_name = forename.get_text().strip()
             else:
                 continue
-                
+
             if author_name.strip():
                 authors.append(author_name.strip())
-        
+
         return authors
 
     def _extract_affiliations(self, soup: BeautifulSoup) -> List[str]:
-        """Extract affiliations from TEI."""
+        """Extract affiliations from TEI document header (excluding references)."""
         affiliations = []
-        for affiliation in soup.find_all("affiliation"):
+
+        # Only look in teiHeader to avoid picking up affiliations from references
+        tei_header = soup.find("teiHeader")
+        if not tei_header:
+            return affiliations
+
+        for affiliation in tei_header.find_all("affiliation"):
             # Get the full affiliation text
             affiliation_text = affiliation.get_text().strip()
             if affiliation_text:
                 affiliations.append(affiliation_text)
+
         return affiliations
 
     def _extract_publication_date(self, soup: BeautifulSoup) -> Optional[str]:
@@ -178,7 +186,7 @@ class TEI2MarkdownConverter:
             if head:
                 section_title = head.get_text().strip()
                 fulltext_sections.append(f"### {section_title}\n")
-            
+
             # Get paragraphs
             paragraphs = div.find_all("p")
             for p in paragraphs:
@@ -189,29 +197,42 @@ class TEI2MarkdownConverter:
         return "".join(fulltext_sections)
 
     def _extract_annex(self, soup: BeautifulSoup) -> str:
-        """Extract annex content (acknowledgements, competing interests, etc.) from TEI."""
+        """Extract annex content (everything in <back> except references) from TEI."""
         annex_sections = []
-        
+
         # Find back element
         back = soup.find("back")
         if not back:
             return ""
-        
-        # Process each div in the back
-        for div in back.find_all("div"):
-            # Get section heading
-            head = div.find("head")
-            if head:
-                section_title = head.get_text().strip()
-                annex_sections.append(f"### {section_title}\n")
-            
-            # Get paragraphs
-            paragraphs = div.find_all("p")
-            for p in paragraphs:
-                paragraph_text = self._process_paragraph(p)
-                if paragraph_text.strip():
-                    annex_sections.append(f"{paragraph_text}\n\n")
-        
+
+        # Remove references from back so they don't get included in annex
+        # References are handled separately by _extract_references
+        back_copy = back
+        for list_bibl in back_copy.find_all("listBibl"):
+            list_bibl.decompose()  # Remove references element
+
+        # Get all content from back (not just divs) - stream everything
+        for child in back_copy.children:
+            if hasattr(child, 'name') and child.name:
+                if child.name == "div":
+                    # Process div content without section headers
+                    paragraphs = child.find_all("p")
+                    for p in paragraphs:
+                        paragraph_text = self._process_paragraph(p)
+                        if paragraph_text.strip():
+                            annex_sections.append(f"{paragraph_text}\n\n")
+                elif child.name == "p":
+                    # Direct paragraphs in back
+                    paragraph_text = self._process_paragraph(child)
+                    if paragraph_text.strip():
+                        annex_sections.append(f"{paragraph_text}\n\n")
+                # Add other elements as needed (e.g., notes, etc.)
+                elif child.name not in ["listBibl"]:  # Skip references, already removed
+                    # Get text content from other elements
+                    text_content = child.get_text().strip()
+                    if text_content:
+                        annex_sections.append(f"{text_content}\n\n")
+
         return "".join(annex_sections)
 
     def _extract_references(self, soup: BeautifulSoup) -> str:

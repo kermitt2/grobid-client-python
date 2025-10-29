@@ -472,6 +472,25 @@ class GrobidClient(ApiClient):
                             except Exception as e:
                                 self.logger.error(f"Failed to convert TEI to JSON for {filename}: {str(e)}")
 
+                    # Check if Markdown output is needed but Markdown file doesn't exist
+                    if markdown_output:
+                        markdown_filename = filename.replace('.grobid.tei.xml', '.md')
+                        if not os.path.isfile(markdown_filename):
+                            self.logger.info(f"Markdown file {markdown_filename} does not exist, generating Markdown from existing TEI...")
+                            try:
+                                from .format.TEI2Markdown import TEI2MarkdownConverter
+                                converter = TEI2MarkdownConverter()
+                                markdown_data = converter.convert_tei_file(filename)
+
+                                if markdown_data:
+                                    with open(markdown_filename, 'w', encoding='utf8') as markdown_file:
+                                        markdown_file.write(markdown_data)
+                                    self.logger.debug(f"Successfully created Markdown file: {markdown_filename}")
+                                else:
+                                    self.logger.warning(f"Failed to convert TEI to Markdown for {filename}")
+                            except Exception as e:
+                                self.logger.error(f"Failed to convert TEI to Markdown for {filename}: {str(e)}")
+
                     continue
 
                 selected_process = self.process_pdf
