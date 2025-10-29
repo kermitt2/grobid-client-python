@@ -26,6 +26,7 @@ import logging
 from typing import Tuple
 import copy
 
+from .format.TEI2LossyJSON import TEI2LossyJSONConverter
 from .client import ApiClient
 
 
@@ -41,7 +42,7 @@ class GrobidClient(ApiClient):
     # Default configuration values
     DEFAULT_CONFIG = {
         'grobid_server': 'http://localhost:8070',
-        'batch_size': 1000,
+        'batch_size': 10,
         'sleep_time': 5,
         'timeout': 180,
         'coordinates': [
@@ -60,7 +61,7 @@ class GrobidClient(ApiClient):
         ],
         'logging': {
             'level': 'INFO',
-            'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            'format': '%(asctime)s - %(levelname)s - %(message)s',
             'console': True,
             'file': None,  # Disabled by default
             'max_file_size': '10MB',
@@ -133,7 +134,7 @@ class GrobidClient(ApiClient):
         log_level = getattr(logging, log_level_str, logging.INFO)
 
         # Parse log format
-        log_format = log_config.get('format', '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        log_format = log_config.get('format', '%(asctime)s - %(levelname)s - %(message)s')
 
         # Create formatter
         formatter = logging.Formatter(log_format)
@@ -284,20 +285,19 @@ class GrobidClient(ApiClient):
             raise ServerUnavailableException(error_msg) from e
 
     def _output_file_name(self, input_file, input_path, output):
-        # we use ntpath here to be sure it will work on Windows too
-        if output is not None:
-            input_file_name = str(os.path.relpath(os.path.abspath(input_file), input_path))
-            filename = os.path.join(
-                output, os.path.splitext(input_file_name)[0] + ".grobid.tei.xml"
-            )
-        else:
-            input_file_name = ntpath.basename(input_file)
-            filename = os.path.join(
-                ntpath.dirname(input_file),
-                os.path.splitext(input_file_name)[0] + ".grobid.tei.xml",
-            )
+        # Use pathlib for consistent cross-platform path handling
+        input_file_path = pathlib.Path(input_file)
 
-        return filename
+        if output is not None:
+            # Calculate relative path from input_path, then join with output directory
+            input_path_abs = pathlib.Path(input_path).resolve()
+            input_file_rel = input_file_path.resolve().relative_to(input_path_abs)
+            filename = pathlib.Path(output) / f"{input_file_rel.stem}.grobid.tei.xml"
+        else:
+            # Use the same directory as the input file
+            filename = input_file_path.parent / f"{input_file_path.stem}.grobid.tei.xml"
+
+        return str(filename)
 
     def ping(self) -> Tuple[bool, int]:
         """
@@ -349,6 +349,7 @@ class GrobidClient(ApiClient):
 
         # Counter for actually processed files
         processed_files_count = 0
+        errors_files_count = 0
         input_files = []
 
         for input_file in all_input_files:
@@ -365,7 +366,7 @@ class GrobidClient(ApiClient):
             input_files.append(input_file)
 
             if len(input_files) == batch_size_pdf:
-                batch_processed = self.process_batch(
+                batch_processed, batch_errors = self.process_batch(
                     service,
                     input_files,
                     input_path,
@@ -385,11 +386,12 @@ class GrobidClient(ApiClient):
                     markdown_output
                 )
                 processed_files_count += batch_processed
+                errors_files_count += batch_errors
                 input_files = []
 
         # last batch
         if len(input_files) > 0:
-            batch_processed = self.process_batch(
+            batch_processed, batch_errors = self.process_batch(
                 service,
                 input_files,
                 input_path,
@@ -409,9 +411,11 @@ class GrobidClient(ApiClient):
                 markdown_output
             )
             processed_files_count += batch_processed
+            errors_files_count += batch_errors
 
         # Log final statistics
         self.logger.info(f"Processing completed: {processed_files_count} out of {total_files} files processed")
+        self.logger.info(f"Errors: {errors_files_count} out of {total_files} files processed")
 
     def process_batch(
             self,
@@ -437,6 +441,7 @@ class GrobidClient(ApiClient):
             self.logger.info(f"{len(input_files)} files to process in current batch")
 
         processed_count = 0
+        error_count = 0
 
         # we use ThreadPoolExecutor and not ProcessPoolExecutor because it is an I/O intensive process
         with concurrent.futures.ThreadPoolExecutor(max_workers=n) as executor:
@@ -448,6 +453,25 @@ class GrobidClient(ApiClient):
                 if not force and os.path.isfile(filename):
                     self.logger.info(
                         f"{filename} already exists, skipping... (use --force to reprocess pdf input files)")
+
+                    # Check if JSON output is needed but JSON file doesn't exist
+                    if json_output:
+                        json_filename = filename.replace('.grobid.tei.xml', '.json')
+                        if not os.path.isfile(json_filename):
+                            self.logger.info(f"JSON file {json_filename} does not exist, generating JSON from existing TEI...")
+                            try:
+                                converter = TEI2LossyJSONConverter()
+                                json_data = converter.convert_tei_file(filename, stream=False)
+
+                                if json_data:
+                                    with open(json_filename, 'w', encoding='utf8') as json_file:
+                                        json.dump(json_data, json_file, indent=2, ensure_ascii=False)
+                                    self.logger.debug(f"Successfully created JSON file: {json_filename}")
+                                else:
+                                    self.logger.warning(f"Failed to convert TEI to JSON for {filename}")
+                            except Exception as e:
+                                self.logger.error(f"Failed to convert TEI to JSON for {filename}: {str(e)}")
+
                     continue
 
                 selected_process = self.process_pdf
@@ -477,10 +501,10 @@ class GrobidClient(ApiClient):
         for r in concurrent.futures.as_completed(results):
             input_file, status, text = r.result()
             filename = self._output_file_name(input_file, input_path, output)
-            processed_count += 1
 
             if status != 200 or text is None:
                 self.logger.error(f"Processing of {input_file} failed with error {status}: {text}")
+                error_count += 1
                 # writing error file with suffixed error code
                 try:
                     pathlib.Path(os.path.dirname(filename)).mkdir(parents=True, exist_ok=True)
@@ -494,6 +518,7 @@ class GrobidClient(ApiClient):
                 except OSError as e:
                     self.logger.error(f"Failed to write error file {filename}: {str(e)}")
             else:
+                processed_count += 1
                 # writing TEI file
                 try:
                     pathlib.Path(os.path.dirname(filename)).mkdir(parents=True, exist_ok=True)
@@ -504,7 +529,6 @@ class GrobidClient(ApiClient):
                     # Convert to JSON if requested
                     if json_output:
                         try:
-                            from .format.TEI2LossyJSON import TEI2LossyJSONConverter
                             converter = TEI2LossyJSONConverter()
                             json_data = converter.convert_tei_file(filename, stream=False)
                             
@@ -540,7 +564,7 @@ class GrobidClient(ApiClient):
                 except OSError as e:
                     self.logger.error(f"Failed to write TEI XML file {filename}: {str(e)}")
 
-        return processed_count
+        return processed_count, error_count
 
     def process_pdf(
             self,
@@ -764,7 +788,7 @@ def main():
     parser.add_argument(
         "--include_raw_affiliations",
         action="store_true",
-        help="call GROBID requestiong the extraciton of raw affiliations",
+        help="call GROBID requesting the extraction of raw affiliations",
     )
     parser.add_argument(
         "--force",
