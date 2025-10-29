@@ -767,7 +767,7 @@ def main():
     parser.add_argument(
         "--include_raw_affiliations",
         action="store_true",
-        help="call GROBID requestiong the extraciton of raw affiliations",
+        help="call GROBID requesting the extraction of raw affiliations",
     )
     parser.add_argument(
         "--force",
