@@ -494,7 +494,9 @@ class GrobidClient(ApiClient):
                     # Check if Markdown output is needed but Markdown file doesn't exist
                     if markdown_output:
                         markdown_filename = filename.replace('.grobid.tei.xml', '.md')
-                        if not os.path.isfile(markdown_filename):
+                        # Expand ~ to home directory before checking file existence
+                        markdown_filename_expanded = os.path.expanduser(markdown_filename)
+                        if not os.path.isfile(markdown_filename_expanded):
                             self.logger.info(f"Markdown file {markdown_filename} does not exist, generating Markdown from existing TEI...")
                             try:
                                 from .format.TEI2Markdown import TEI2MarkdownConverter
@@ -502,9 +504,9 @@ class GrobidClient(ApiClient):
                                 markdown_data = converter.convert_tei_file(filename)
 
                                 if markdown_data:
-                                    with open(markdown_filename, 'w', encoding='utf8') as markdown_file:
+                                    with open(markdown_filename_expanded, 'w', encoding='utf8') as markdown_file:
                                         markdown_file.write(markdown_data)
-                                    self.logger.debug(f"Successfully created Markdown file: {markdown_filename}")
+                                    self.logger.debug(f"Successfully created Markdown file: {markdown_filename_expanded}")
                                 else:
                                     self.logger.warning(f"Failed to convert TEI to Markdown for {filename}")
                             except Exception as e:
@@ -588,13 +590,14 @@ class GrobidClient(ApiClient):
                             from .format.TEI2Markdown import TEI2MarkdownConverter
                             converter = TEI2MarkdownConverter()
                             markdown_data = converter.convert_tei_file(filename)
-                            
+
                             if markdown_data:
                                 markdown_filename = filename.replace('.grobid.tei.xml', '.md')
                                 # Always write Markdown file when TEI is written (respects --force behavior)
-                                with open(markdown_filename, 'w', encoding='utf8') as markdown_file:
+                                markdown_filename_expanded = os.path.expanduser(markdown_filename)
+                                with open(markdown_filename_expanded, 'w', encoding='utf8') as markdown_file:
                                     markdown_file.write(markdown_data)
-                                self.logger.debug(f"Successfully wrote Markdown file: {markdown_filename}")
+                                self.logger.debug(f"Successfully wrote Markdown file: {markdown_filename_expanded}")
                             else:
                                 self.logger.warning(f"Failed to convert TEI to Markdown for {filename}")
                         except Exception as e:
