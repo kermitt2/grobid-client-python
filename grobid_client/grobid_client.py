@@ -60,7 +60,7 @@ class GrobidClient(ApiClient):
             "note"
         ],
         'logging': {
-            'level': 'INFO',
+            'level': 'WARNING',
             'format': '%(asctime)s - %(levelname)s - %(message)s',
             'console': True,
             'file': None,  # Disabled by default
@@ -77,15 +77,19 @@ class GrobidClient(ApiClient):
             sleep_time=None,
             timeout=None,
             config_path=None,
-            check_server=True
+            check_server=True,
+            verbose=False
     ):
+        # Store verbose parameter for logging configuration
+        self.verbose = verbose
+
         # Initialize config with defaults
         self.config = copy.deepcopy(self.DEFAULT_CONFIG)
-    
+
         # Load config file (which may override current values)
         if config_path:
             self._load_config(config_path)
-            
+
         # Constructor parameters take precedence over config file values
         # This ensures CLI arguments override config file values
         self._set_config_params({
@@ -96,7 +100,7 @@ class GrobidClient(ApiClient):
             'timeout': timeout
         })
 
-        # Configure logging based on config
+        # Configure logging based on config and verbose flag
         self._configure_logging()
 
         if check_server:
@@ -129,9 +133,20 @@ class GrobidClient(ApiClient):
         # Get logging config with defaults
         log_config = self.config.get('logging', {})
 
-        # Parse log level
-        log_level_str = log_config.get('level', 'INFO').upper()
-        log_level = getattr(logging, log_level_str, logging.INFO)
+        # Parse log level - verbose flag takes precedence over config
+        if self.verbose:
+            # When verbose is explicitly set via command line, always use INFO level
+            log_level_str = 'INFO'
+            log_level = logging.INFO
+        else:
+            # Use config file level when not verbose, but default to WARNING
+            config_level_str = log_config.get('level', 'WARNING').upper()
+            # If config specifies INFO but verbose is False, use WARNING instead
+            if config_level_str == 'INFO':
+                log_level_str = 'WARNING'
+            else:
+                log_level_str = config_level_str
+            log_level = getattr(logging, log_level_str, logging.WARNING)
 
         # Parse log format
         log_format = log_config.get('format', '%(asctime)s - %(levelname)s - %(message)s')
@@ -346,7 +361,7 @@ class GrobidClient(ApiClient):
             self.logger.warning(f"No eligible files found in {input_path}")
             return
 
-        self.logger.info(f"Found {total_files} file(s) to process")
+        print(f"Found {total_files} file(s) to process")
 
         # Counter for actually processed files
         processed_files_count = 0
@@ -412,9 +427,9 @@ class GrobidClient(ApiClient):
             processed_files_count += batch_processed
             errors_files_count += batch_errors
 
-        # Log final statistics
-        self.logger.info(f"Processing completed: {processed_files_count} out of {total_files} files processed")
-        self.logger.info(f"Errors: {errors_files_count} out of {total_files} files processed")
+        # Log final statistics - always visible
+        print(f"Processing completed: {processed_files_count} out of {total_files} files processed")
+        print(f"Errors: {errors_files_count} out of {total_files} files processed")
 
     def process_batch(
             self,
@@ -793,7 +808,7 @@ def main():
     parser.add_argument(
         "--verbose",
         action="store_true",
-        help="print information about processed files in the console",
+        help="enable detailed logging (INFO level) - shows file-by-file processing details, server status, and JSON conversion messages. Without this flag, only essential statistics and warnings/errors are shown.",
     )
 
     parser.add_argument(
@@ -828,13 +843,13 @@ def main():
         except ValueError:
             temp_logger.warning(f"Invalid concurrency parameter n: {args.n}. Using default value n = 10")
 
-    # Initialize GrobidClient which will configure logging based on config.json
+    # Initialize GrobidClient which will configure logging based on config.json and verbose flag
     try:
         # Only pass grobid_server if it was explicitly provided (not the default)
-        client_kwargs = {'config_path': config_path}
+        client_kwargs = {'config_path': config_path, 'verbose': args.verbose}
         if args.server is not None:  # Only override if user specified a different server
             client_kwargs['grobid_server'] = args.server
-            
+
         client = GrobidClient(**client_kwargs)
         # Now use the client's logger for all subsequent logging
         logger = client.logger
@@ -895,7 +910,7 @@ def main():
         exit(1)
 
     runtime = round(time.time() - start_time, 3)
-    logger.info(f"Processing completed in {runtime} seconds")
+    print(f"Processing completed in {runtime} seconds")
 
 
 if __name__ == "__main__":
