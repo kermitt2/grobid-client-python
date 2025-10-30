@@ -60,7 +60,7 @@ class GrobidClient(ApiClient):
             "note"
         ],
         'logging': {
-            'level': 'INFO',
+            'level': 'WARNING',
             'format': '%(asctime)s - %(levelname)s - %(message)s',
             'console': True,
             'file': None,  # Disabled by default
@@ -77,15 +77,19 @@ class GrobidClient(ApiClient):
             sleep_time=None,
             timeout=None,
             config_path=None,
-            check_server=True
+            check_server=True,
+            verbose=False
     ):
+        # Store verbose parameter for logging configuration
+        self.verbose = verbose
+
         # Initialize config with defaults
         self.config = copy.deepcopy(self.DEFAULT_CONFIG)
-    
+
         # Load config file (which may override current values)
         if config_path:
             self._load_config(config_path)
-            
+
         # Constructor parameters take precedence over config file values
         # This ensures CLI arguments override config file values
         self._set_config_params({
@@ -96,7 +100,7 @@ class GrobidClient(ApiClient):
             'timeout': timeout
         })
 
-        # Configure logging based on config
+        # Configure logging based on config and verbose flag
         self._configure_logging()
 
         if check_server:
@@ -129,9 +133,20 @@ class GrobidClient(ApiClient):
         # Get logging config with defaults
         log_config = self.config.get('logging', {})
 
-        # Parse log level
-        log_level_str = log_config.get('level', 'INFO').upper()
-        log_level = getattr(logging, log_level_str, logging.INFO)
+        # Parse log level - verbose flag takes precedence over config
+        if self.verbose:
+            # When verbose is explicitly set via command line, always use INFO level
+            log_level_str = 'INFO'
+            log_level = logging.INFO
+        else:
+            # Use config file level when not verbose, but default to WARNING
+            config_level_str = log_config.get('level', 'WARNING').upper()
+            # If config specifies INFO but verbose is False, use WARNING instead
+            if config_level_str == 'INFO':
+                log_level_str = 'WARNING'
+            else:
+                log_level_str = config_level_str
+            log_level = getattr(logging, log_level_str, logging.WARNING)
 
         # Parse log format
         log_format = log_config.get('format', '%(asctime)s - %(levelname)s - %(message)s')
@@ -142,6 +157,7 @@ class GrobidClient(ApiClient):
         # Configure the logger
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(log_level)
+        self.logger.propagate = False  # Prevent propagation to root logger to avoid duplicates
 
         # Clear any existing handlers to avoid duplicates
         for handler in self.logger.handlers[:]:
@@ -228,6 +244,7 @@ class GrobidClient(ApiClient):
         """
         # Create a temporary logger for configuration loading since main logger isn't configured yet
         temp_logger = logging.getLogger(f"{__name__}.config_loader")
+        temp_logger.propagate = False  # Prevent propagation to avoid duplicates
         if not temp_logger.handlers:
             temp_handler = logging.StreamHandler()
             temp_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
@@ -345,7 +362,7 @@ class GrobidClient(ApiClient):
             self.logger.warning(f"No eligible files found in {input_path}")
             return
 
-        self.logger.info(f"Found {total_files} file(s) to process")
+        print(f"Found {total_files} file(s) to process")
 
         # Counter for actually processed files
         processed_files_count = 0
@@ -413,9 +430,9 @@ class GrobidClient(ApiClient):
             processed_files_count += batch_processed
             errors_files_count += batch_errors
 
-        # Log final statistics
-        self.logger.info(f"Processing completed: {processed_files_count} out of {total_files} files processed")
-        self.logger.info(f"Errors: {errors_files_count} out of {total_files} files processed")
+        # Log final statistics - always visible
+        print(f"Processing completed: {processed_files_count} out of {total_files} files processed")
+        print(f"Errors: {errors_files_count} out of {total_files} files processed")
 
     def process_batch(
             self,
@@ -457,16 +474,18 @@ class GrobidClient(ApiClient):
                     # Check if JSON output is needed but JSON file doesn't exist
                     if json_output:
                         json_filename = filename.replace('.grobid.tei.xml', '.json')
-                        if not os.path.isfile(json_filename):
+                        # Expand ~ to home directory before checking file existence
+                        json_filename_expanded = os.path.expanduser(json_filename)
+                        if not os.path.isfile(json_filename_expanded):
                             self.logger.info(f"JSON file {json_filename} does not exist, generating JSON from existing TEI...")
                             try:
                                 converter = TEI2LossyJSONConverter()
                                 json_data = converter.convert_tei_file(filename, stream=False)
 
                                 if json_data:
-                                    with open(json_filename, 'w', encoding='utf8') as json_file:
+                                    with open(json_filename_expanded, 'w', encoding='utf8') as json_file:
                                         json.dump(json_data, json_file, indent=2, ensure_ascii=False)
-                                    self.logger.debug(f"Successfully created JSON file: {json_filename}")
+                                    self.logger.debug(f"Successfully created JSON file: {json_filename_expanded}")
                                 else:
                                     self.logger.warning(f"Failed to convert TEI to JSON for {filename}")
                             except Exception as e:
@@ -554,9 +573,10 @@ class GrobidClient(ApiClient):
                             if json_data:
                                 json_filename = filename.replace('.grobid.tei.xml', '.json')
                                 # Always write JSON file when TEI is written (respects --force behavior)
-                                with open(json_filename, 'w', encoding='utf8') as json_file:
+                                json_filename_expanded = os.path.expanduser(json_filename)
+                                with open(json_filename_expanded, 'w', encoding='utf8') as json_file:
                                     json.dump(json_data, json_file, indent=2, ensure_ascii=False)
-                                self.logger.debug(f"Successfully wrote JSON file: {json_filename}")
+                                self.logger.debug(f"Successfully wrote JSON file: {json_filename_expanded}")
                             else:
                                 self.logger.warning(f"Failed to convert TEI to JSON for {filename}")
                         except Exception as e:
@@ -744,10 +764,12 @@ def main():
     # Basic logging setup for initialization only
     # The actual logging configuration will be done by GrobidClient based on config.json
     temp_logger = logging.getLogger(__name__)
-    temp_handler = logging.StreamHandler()
-    temp_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
-    temp_logger.addHandler(temp_handler)
-    temp_logger.setLevel(logging.INFO)
+    temp_logger.propagate = False  # Prevent propagation to avoid duplicates
+    if not temp_logger.handlers:
+        temp_handler = logging.StreamHandler()
+        temp_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
+        temp_logger.addHandler(temp_handler)
+        temp_logger.setLevel(logging.INFO)
 
     valid_services = [
         "processFulltextDocument",
@@ -827,7 +849,7 @@ def main():
     parser.add_argument(
         "--verbose",
         action="store_true",
-        help="print information about processed files in the console",
+        help="enable detailed logging (INFO level) - shows file-by-file processing details, server status, and JSON conversion messages. Without this flag, only essential statistics and warnings/errors are shown.",
     )
 
     parser.add_argument(
@@ -868,13 +890,13 @@ def main():
         except ValueError:
             temp_logger.warning(f"Invalid concurrency parameter n: {args.n}. Using default value n = 10")
 
-    # Initialize GrobidClient which will configure logging based on config.json
+    # Initialize GrobidClient which will configure logging based on config.json and verbose flag
     try:
         # Only pass grobid_server if it was explicitly provided (not the default)
-        client_kwargs = {'config_path': config_path}
+        client_kwargs = {'config_path': config_path, 'verbose': args.verbose}
         if args.server is not None:  # Only override if user specified a different server
             client_kwargs['grobid_server'] = args.server
-            
+
         client = GrobidClient(**client_kwargs)
         # Now use the client's logger for all subsequent logging
         logger = client.logger
@@ -936,7 +958,7 @@ def main():
         exit(1)
 
     runtime = round(time.time() - start_time, 3)
-    logger.info(f"Processing completed in {runtime} seconds")
+    print(f"Processing completed in {runtime} seconds")
 
 
 if __name__ == "__main__":

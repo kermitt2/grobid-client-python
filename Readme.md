@@ -264,10 +264,79 @@ settings.
 | `sleep_time`    | Wait time when server is busy (seconds)                                                                          | 5                       |
 | `timeout`       | Client-side timeout (seconds)                                                                                    | 180                     |
 | `coordinates`   | XML elements for coordinate extraction                                                                           | See above               |
+| `logging`       | Logging configuration (level, format, file output)                                                              | See Logging section     |
 
 > [!TIP]
 > Since version 0.0.12, the config file is optional. The client will use default localhost settings if no configuration
 > is provided.
+
+### Logging Configuration
+
+The client provides configurable logging with different verbosity levels. By default, only essential statistics and warnings are shown.
+
+#### Logging Behavior
+
+- **Without `--verbose`**: Shows only essential information and warnings/errors
+- **With `--verbose`**: Shows detailed processing information at INFO level
+
+#### Always Visible Output
+
+The following information is always displayed regardless of the `--verbose` flag:
+
+```bash
+Found 1000 file(s) to process
+Processing completed: 950 out of 1000 files processed
+Errors: 50 out of 1000 files processed
+Processing completed in 120.5 seconds
+```
+
+#### Verbose Output (`--verbose`)
+
+When the `--verbose` flag is used, additional detailed information is displayed:
+
+- Server connection status
+- Individual file processing details
+- JSON conversion messages
+- Detailed error messages
+- Processing progress information
+
+#### Examples
+
+```bash
+# Clean output - only essential statistics
+grobid_client --input pdfs/ processFulltextDocument
+# Output:
+# Found 1000 file(s) to process
+# Processing completed: 950 out of 1000 files processed
+# Errors: 50 out of 1000 files processed
+# Processing completed in 120.5 seconds
+
+# Verbose output - detailed processing information
+grobid_client --input pdfs/ --verbose processFulltextDocument
+# Output includes all essential stats PLUS:
+# GROBID server http://localhost:8070 is up and running
+# JSON file example.json does not exist, generating JSON from existing TEI...
+# Successfully created JSON file: example.json
+# ... and other detailed processing information
+```
+
+#### Configuration File Logging
+
+The config file can include logging settings:
+
+```json
+{
+    "grobid_server": "http://localhost:8070",
+    "logging": {
+        "level": "WARNING",
+        "format": "%(asctime)s - %(levelname)s - %(message)s",
+        "console": true,
+        "file": null
+    }
+}
+```
+
+**Note**: The `--verbose` command line flag always takes precedence over configuration file logging settings.
 
 ## 🔬 Services
 
