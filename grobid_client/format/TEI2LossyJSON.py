@@ -17,7 +17,10 @@ from bs4 import BeautifulSoup, Tag
 
 # Configure module-level logger
 logger = logging.getLogger(__name__)
-if not logger.handlers:
+logger.propagate = False  # Prevent propagation to avoid duplicate logs
+
+# Only configure basic logging if nothing is set up yet
+if not logger.handlers and not logging.getLogger().handlers:
     # Basic configuration if not already configured by the application
     logging.basicConfig(level=logging.INFO)
 
@@ -441,6 +444,8 @@ class TEI2LossyJSONConverter:
 
     def _process_imprint_details(self, imprint_element: Tag, publication_metadata: Dict):
         """Extract and process imprint information including publisher, dates, and page ranges."""
+        import re
+
         # Extract publisher information
         publisher_elements = imprint_element.find_all("publisher")
         for publisher_element in publisher_elements:
@@ -461,7 +466,6 @@ class TEI2LossyJSONConverter:
             if date_when:
                 publication_metadata['publication_date'] = date_when
                 # Extract year from ISO date
-                import re
                 year_match = re.search(r'\b(19|20)\d{2}\b', date_when)
                 if year_match:
                     publication_metadata['year'] = int(year_match.group())
@@ -750,15 +754,15 @@ class TEI2LossyJSONConverter:
                         struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, sentence)
                         if self.validate_refs:
                             for ref in struct['refs']:
-                                assert ref['offset_start'] < ref['offset_end']
-                                assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                                assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
+                                assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
                         yield struct
                 else:
                     struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, p)
                     if self.validate_refs:
                         for ref in struct['refs']:
-                            assert ref['offset_start'] < ref['offset_end']
-                            assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                            assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
+                            assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
                     yield struct
 
         # Update head_paragraph for potential next div

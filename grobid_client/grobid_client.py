@@ -142,6 +142,7 @@ class GrobidClient(ApiClient):
         # Configure the logger
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(log_level)
+        self.logger.propagate = False  # Prevent propagation to root logger to avoid duplicates
 
         # Clear any existing handlers to avoid duplicates
         for handler in self.logger.handlers[:]:
@@ -228,6 +229,7 @@ class GrobidClient(ApiClient):
         """
         # Create a temporary logger for configuration loading since main logger isn't configured yet
         temp_logger = logging.getLogger(f"{__name__}.config_loader")
+        temp_logger.propagate = False  # Prevent propagation to avoid duplicates
         if not temp_logger.handlers:
             temp_handler = logging.StreamHandler()
             temp_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
@@ -453,16 +455,18 @@ class GrobidClient(ApiClient):
                     # Check if JSON output is needed but JSON file doesn't exist
                     if json_output:
                         json_filename = filename.replace('.grobid.tei.xml', '.json')
-                        if not os.path.isfile(json_filename):
+                        # Expand ~ to home directory before checking file existence
+                        json_filename_expanded = os.path.expanduser(json_filename)
+                        if not os.path.isfile(json_filename_expanded):
                             self.logger.info(f"JSON file {json_filename} does not exist, generating JSON from existing TEI...")
                             try:
                                 converter = TEI2LossyJSONConverter()
                                 json_data = converter.convert_tei_file(filename, stream=False)
 
                                 if json_data:
-                                    with open(json_filename, 'w', encoding='utf8') as json_file:
+                                    with open(json_filename_expanded, 'w', encoding='utf8') as json_file:
                                         json.dump(json_data, json_file, indent=2, ensure_ascii=False)
-                                    self.logger.debug(f"Successfully created JSON file: {json_filename}")
+                                    self.logger.debug(f"Successfully created JSON file: {json_filename_expanded}")
                                 else:
                                     self.logger.warning(f"Failed to convert TEI to JSON for {filename}")
                             except Exception as e:
@@ -531,9 +535,10 @@ class GrobidClient(ApiClient):
                             if json_data:
                                 json_filename = filename.replace('.grobid.tei.xml', '.json')
                                 # Always write JSON file when TEI is written (respects --force behavior)
-                                with open(json_filename, 'w', encoding='utf8') as json_file:
+                                json_filename_expanded = os.path.expanduser(json_filename)
+                                with open(json_filename_expanded, 'w', encoding='utf8') as json_file:
                                     json.dump(json_data, json_file, indent=2, ensure_ascii=False)
-                                self.logger.debug(f"Successfully wrote JSON file: {json_filename}")
+                                self.logger.debug(f"Successfully wrote JSON file: {json_filename_expanded}")
                             else:
                                 self.logger.warning(f"Failed to convert TEI to JSON for {filename}")
                         except Exception as e:
@@ -703,10 +708,12 @@ def main():
     # Basic logging setup for initialization only
     # The actual logging configuration will be done by GrobidClient based on config.json
     temp_logger = logging.getLogger(__name__)
-    temp_handler = logging.StreamHandler()
-    temp_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
-    temp_logger.addHandler(temp_handler)
-    temp_logger.setLevel(logging.INFO)
+    temp_logger.propagate = False  # Prevent propagation to avoid duplicates
+    if not temp_logger.handlers:
+        temp_handler = logging.StreamHandler()
+        temp_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
+        temp_logger.addHandler(temp_handler)
+        temp_logger.setLevel(logging.INFO)
 
     valid_services = [
         "processFulltextDocument",
