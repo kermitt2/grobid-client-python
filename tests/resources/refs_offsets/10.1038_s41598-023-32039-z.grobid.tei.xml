@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Identification of PARN nuclease activity inhibitors by computational-based docking and high-throughput screening</title>
+				<funder ref="#_kEX8fSe">
+					<orgName type="full">Colorado Office of Economic Development</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">HHMI</orgName>
+				</funder>
+				<funder ref="#_ERpGfDU">
+					<orgName type="full">Hughes Medical Institute, U.S. Department of Defense</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Thao</forename><forename type="middle">Ngoc</forename><surname>Huynh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biochemistry</orgName>
+								<orgName type="institution">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80303</postCode>
+									<settlement>Boulder</settlement>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Siddharth</forename><surname>Shukla</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biochemistry</orgName>
+								<orgName type="institution">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80303</postCode>
+									<settlement>Boulder</settlement>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Philip</forename><surname>Reigan</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Department of Pharmaceutical Sciences</orgName>
+								<orgName type="department" key="dep2">Skaggs School of Pharmacy and Pharmaceutical Sciences</orgName>
+								<orgName type="institution">University of Colorado Anschutz</orgName>
+								<address>
+									<postCode>80045</postCode>
+									<settlement>Aurora</settlement>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Roy</forename><surname>Parker</surname></persName>
+							<email>roy.parker@colorado.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biochemistry</orgName>
+								<orgName type="institution">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80303</postCode>
+									<settlement>Boulder</settlement>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Howard Hughes Medical Institute</orgName>
+								<address>
+									<postCode>20815</postCode>
+									<settlement>Chevy Chase</settlement>
+									<region>MD</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Identification of PARN nuclease activity inhibitors by computational-based docking and high-throughput screening</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D88E52A8DB992E59FBD0BEE5BB735087</idno>
+					<idno type="DOI">10.1038/s41598-023-32039-z</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="unknown" ident="GROBID" when="2025-10-31T09:58+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">unknown</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Poly(A)-specific ribonuclease (PARN) is a 3′-exoribonuclease that removes poly(A) tails from the 3′ end of RNAs. PARN is known to deadenylate some ncRNAs, including hTR, Y RNAs, and some miRNAs and thereby enhance their stability by limiting the access of 3′ to 5′ exonucleases recruited by oligo(A) tails. Several PARN-regulated miRNAs target p53 mRNA, and PARN knockdown leads to an increase of p53 protein levels in human cells. Thus, PARN inhibitors might be used to induce p53 levels in some human tumors and act as a therapeutic strategy to treat cancers caused by repressed p53 protein. Herein, we used computational-based molecular docking and high-throughput screening (HTS) to identify small molecule inhibitors of PARN. Validation with in vitro and cell-based assays, identified 4 compounds, including 3 novel compounds and pyrimidopyrimidin-2-one GNF-7, previously shown to be a Bcr-Abl inhibitor, as PARN inhibitors. These inhibitors can be used as tool compounds and as lead compounds for the development of improved PARN inhibitors.</p><p>Poly(A)-specific ribonuclease (PARN) is a 3′ to 5′ exonuclease that removes poly(A) or oligo(A) tails from the 3′ ends of RNAs <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref> . PARN is expressed ubiquitously in almost all tissues of eukaryotic organisms 5 and has multiple functions in eukaryotes. For example, during early development PARN plays a role in mRNA deadenylation in Xenopus <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref> .</p><p>In human cells, PARN primarily functions in an adenylation/deadenylation regulatory pathway that regulates the decay rate of ncRNAs (Fig. <ref type="figure">1</ref>) <ref type="bibr" target="#b7">8</ref> . In this pathway, Y RNAs, snoRNAs, the human telomerase RNA (hTR), and some miRNAs can be oligoadenylated by noncanonical poly(A) polymerases, such as paralogs PAPD5 and PAPD7 <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref> . The presence of the oligo(A) tail can then recruit processive sequence-independent 3′ to 5′ exonucleases to degrade ncRNAs <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref> . Alternatively, the oligoadenylated tail can be removed by adenosine specific 3′ to 5′ exonucleases such as PARN to maintain stability of ncRNAs. Thus, when PARN is inhibited or defective, some ncRNAs are prematurely degraded, including hTR <ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref> .</p><p>PARN also stabilizes some miRNAs by removing poly(A) tails added by PAPD5, which prevents the recruitment of exonucleases DIS3L or DIS3L2 to degrade miRNAs <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11</ref> . Importantly, several PARN-regulated miRNAs (miR-380-5p, miR-1285, miR-92, miR-214, miR-485, miR-331, miR-665, miR-3126, and miR-25) either have been shown, or are predicted, to target the TP53 mRNA <ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref> . p53 is tumor suppressor that prevents outgrowth of aberrant cells by inducing cell-cycle arrest, DNA repair or programmed cell death <ref type="bibr" target="#b25">26</ref> . It has been shown that numerous human cancers increase proliferation and resistance to DNA-damage agents by downregulating the p53 pathway <ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b27">28</ref> . Moreover, depletion of PARN upregulates p53 and sensitizes cells to chemotherapeutic agents <ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b28">29</ref> . Thus, inhibition of PARN might be an effective intervention to induce the expression of p53 in some tumors and thereby limit tumor progression.</p><p>Currently, only a limited number of PARN inhibitors exist <ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref><ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref> . To identify potential inhibitors of PARN, we performed computational-based docking between human PARN and a small molecule library of adenosine analogs and performed high-throughput screening (HTS) of a small molecule library. The combination of these two approaches allowed us to identify four compounds that inhibit PARN in vitro and also repress PARN activity in Hela cells.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Purification of PARN for in vitro assay.</head><p>To test the effects of compounds on PARN, we purified the enzyme and developed an in vitro assay for PARN activity. Expression of full-length PARN led to aggregation, but expression of the C-terminal truncated protein (1-430 aa of PARN) was soluble. Previous work has shown that the D28A and F31A mutations in PARN inhibit PARN activity <ref type="bibr" target="#b34">35</ref> . Given this, we expressed and purified the catalytic mutant PARN D28A F31A (PARNmut) as a negative control. Purification (see "Materials and methods") yielded a dominant band for PARN 1-430 and PARNmut on SDS-PAGE gels (Fig. <ref type="figure" target="#fig_1">2a</ref> and <ref type="figure">b</ref>).</p><p>We found that purified PARN 1-430 shows enzymatic activity on the poly(A) tail of test substrates. PARN 1-430 was incubated with a fluorescently labeled RNA with a CCU UUC C sequence followed by a 9 nucleotide-long poly(A) tail and the reaction product was visualized on denaturing acrylamide gels. We observed that PARN removed the 3′ oligo(A) tail from the RNA substrate (Fig. <ref type="figure" target="#fig_1">2c</ref> and <ref type="figure">d</ref>). The activity was dependent on PARN since PARNmut protein showed no removal of the 3′ adenosines (Fig. <ref type="figure" target="#fig_1">2c</ref>). Moreover, we observed that PARN is inhibited when treated with adenosine monophosphate (AMP), as has been reported previously <ref type="bibr" target="#b30">31</ref> . PARN 1-430 showed reduced activity when incubated with an unadenylated RNA (Fig. <ref type="figure" target="#fig_1">2d</ref>), consistent with the finding that PARN 1-430 preferentially degrades poly(A) tail <ref type="bibr" target="#b35">36</ref> .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Developing a high-throughput PARN inhibition assay.</head><p>To easily screen compounds for inhibition of PARN activity, we developed an assay in which fluorescence was used as the readout for monitoring PARN 1-430 's activity (Fig. <ref type="figure" target="#fig_2">3a</ref>). This assay was modeled on a similar assay developed for Caf1/CNOT7 deadenylase <ref type="bibr" target="#b36">37</ref> . In this assay, PARN 1-430 was incubated with a 5′-fluorescently labeled oligoadenylated RNA. In the absence of deadenylation, this substrate RNA can effectively hybridize to a complementary DNA oligonucleotide with a quencher on its 3′ end leading to a loss of fluorescence (Fig. <ref type="figure" target="#fig_2">3a</ref>). When the RNA substrate is deadenylated, the quenching oligonucleotide is no longer able to stably hybridize leading to an increase in fluorescence in the reaction.</p><p>This assay has several features that make it useful for assessing PARN activity. First, it is time-dependent (Fig. <ref type="figure" target="#fig_2">3b</ref> and <ref type="figure">d</ref>). Second, it is dependent on PARN concentration (Fig. <ref type="figure" target="#fig_2">3c</ref>). Third, we observed that AMP, which is a product of PARN activity and can inhibit PARN 1-430 at high concentrations (&gt; 1 mM), effectively inhibited PARN 1-430 (Fig. <ref type="figure" target="#fig_2">3b</ref>) <ref type="bibr" target="#b30">31</ref> . Finally, we observed that fluorescence correlates with shortening of the 3′ oligo A tail on the substrate by running the material on a gel and observing shortening of the substrate with PARN 1-430 , but no shortening with PARNmut (Figs. <ref type="figure" target="#fig_1">2c</ref> and <ref type="figure" target="#fig_2">3d</ref>). In this assay, PARN 1-430 inhibition is inversely proportional to the reaction fluorescence measured as output, which we can use to test possible PARN inhibitors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational-based library docking to identify potential PARN inhibitors.</head><p>To identify potential small molecule PARN inhibitors, we first used a computational-based docking approach to screen a library of 1820 adenosine analogs from the SelleckChem kinase inhibitor library against the crystal structure of the PARN nuclease domain (PDB: 2A1R) <ref type="bibr" target="#b34">35</ref> . This library was utilized as the kinase inhibitors are ATP-mimetics and the PARN active site binds adenosine. The PARN nuclease domain includes the four conserved residues among DEDD superfamily, Asp28, Glu30, Asp292, and Asp382, that are important for the catalytic activity of PARN and are required for the binding of divalent metal ions <ref type="bibr" target="#b37">38</ref> . Mutations of these residues lead to loss of function in PARN <ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref> . Therefore, based on this information, we targeted this catalytic site of PARN and selected highranking compounds by XP GScore, an approximation of ligand binding free energy, and by interaction with the Asp28-Phe31 region. Analysis of the docking simulation identified several structurally distinct compounds predicted to dock into the PARN catalytic pocket (Fig. <ref type="figure" target="#fig_3">4</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Testing compounds predicted to interact with PARN.</head><p>To determine if any of the compounds predicted to dock to PARN showed effects on PARN 1-430 , we tested 15 compounds based on their docking ranks and commercial availability using the fluorescence assay and gels (Fig. <ref type="figure" target="#fig_4">5</ref> and Table <ref type="table">1</ref>). This screen identified 7 compounds that showed PARN 1-430 inhibition. GNF-7 (labeled as 5o) has the strongest inhibitory effect on PARN 1-430 (Fig. <ref type="figure" target="#fig_4">5a</ref>). In agreement with the fluorescence assay results, the gel assay also revealed GNF-7 (Fig. <ref type="figure" target="#fig_4">5c</ref>), a Bcr-Abl inhibitor <ref type="bibr" target="#b40">41</ref> , as the most effective PARN 1-430 inhibitor (Fig. <ref type="figure" target="#fig_4">5b</ref>). GNF-7 inhibits PARN 1-430 with a lower concentration compared to AMP (2.5 mM) (Fig. <ref type="figure" target="#fig_4">5a</ref> and <ref type="figure">b</ref>).</p><p>A dose response curve and kinetic analysis demonstrated that GNF-7 inhibits PARN 1-430 in a dose-dependent manner (Fig. <ref type="figure" target="#fig_4">5d</ref>). The IC50 of GNF-7 on PARN 1-430 was determined by non-linear fit to be 35 ± 13 μM. This identified GNF-7 as a potential inhibitor of PARN 1-430 based on in vitro analyses.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>High throughput screening of Enamine kinase library.</head><p>To identify PARN inhibitors in a highthroughput manner, 24,000 compounds from the Enamine kinase library were tested in a HTS utilizing the  <ref type="figure" target="#fig_0">S1</ref>. fluorescence assay (Fig. <ref type="figure" target="#fig_2">3a</ref>). The top 18 compounds with IC50s of less than 10 μM based on testing at different concentrations (Table <ref type="table">1</ref>) were then selected for further testing.</p><p>To visualize the inhibitory effects of these compounds on PARN, the reactions were run on gels. We showed all compounds could inhibit PARN at 20 μM, except for TH18 (Fig. <ref type="figure" target="#fig_5">6</ref>). This result was consistent with the fluorescence assay, suggesting that these compounds can inhibit PARN in vitro.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Examine inhibitory effects of identified compounds on PARN in cells.</head><p>To test if the compounds identified by docking and HTS affect PARN in cells, we examined the effect of GNF-7, and the compounds from the HTS on RNAs previously known to be affected by PARN activity. Specifically, previous studies showed the levels of telomerase RNA, hTR, and several miRNAs, including miR-21-5p, decreased when PARN is depleted in Hela cells <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11</ref> . Therefore, we treated Hela cells with all the compounds (50 µM for GNF-7 and 10 µM for TH1-18) for 2 days and measured the levels of these RNAs using northern blotting and/or RT-qPCR.</p><p>We observed that treatment with GNF-7 reduced miR-21-5p levels to ~ 35% compared to the controls when using northern blotting (Fig. <ref type="figure" target="#fig_6">7c</ref> and <ref type="figure">d</ref>). Of the compounds from the HTS, TH11, 15, and 16 showed the strongest effects and reduced miR-21-5p levels to ~ 50% compared to the controls (Fig. <ref type="figure" target="#fig_6">7f</ref> and <ref type="figure">g</ref>). These effects were similar to a PARN KD, which reduced miR-21-5p levels to ~ 75% compared with siRNA controls. None of the compounds reduced PARN protein levels in Hela cells (Fig. <ref type="figure" target="#fig_6">7a</ref> and <ref type="figure">b</ref>). Moreover, RT-qPCR was done to examine the changes in hTR levels of the compounds, which confirmed a decrease in levels of hTR with compounds or siPARN treatments, compared to the controls, (Fig. <ref type="figure" target="#fig_6">7e</ref> and <ref type="figure">h</ref>). This suggested that GNF-7, TH11, TH15, and TH16 treatments can inhibit PARN activity in cells and thereby decrease specific RNA levels. Previous work has shown that PARN inhibition leads to cell death in combination with DNA damaging agent, which has been interpreted to occur through the induction of p53 <ref type="bibr" target="#b10">11</ref> . Given this, we examined if GNF-7, TH11, TH15, or TH16 affected cell growth either by themselves or in combination with the chemotherapeutic agent, doxorubicin. We observed that at 25 μM GNF-7 and 10 μM of TH11, TH15, and TH16, Hela cells showed growth defects compared to DMSO treatment (Fig. <ref type="figure" target="#fig_7">8a</ref> and <ref type="figure">c</ref>). More importantly, we observed that both PARN KD (as previously shown) and cells treated with these compounds showed increased cell death after 24 h of doxorubicin treatment compared to the scramble siRNA and DMSO controls (Fig. <ref type="figure" target="#fig_7">8b</ref> and <ref type="figure">d</ref>). This indicates that GNF-7, TH11, TH15, and TH16 increase the sensitivity of cells to the chemotherapeutic agent, possibly through upregulating p53.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>Herein, we report the identification of PARN inhibitors in vitro and in cells. PARN was purified and its poly(A) trimming activity was shown to be dose-dependent, which can be measured by a simple fluorescence assay (Fig. <ref type="figure" target="#fig_2">3c</ref>). This assay is a useful tool for determining PARN enzymatic activity and for possible drug screen. In computational modeling, we identified several compounds predicted to dock with PARN and tested them using in vitro assays (Figs. <ref type="figure" target="#fig_3">4</ref> and <ref type="figure" target="#fig_4">5</ref>). Moreover, with HTS, we found multiples PARN inhibitors using the fluorescence assay. These together identified GNF-7, a Bcr-Abl inhibitor, TH11, TH15, and TH16 as compounds that inhibit PARN. GNF-7, TH11, TH15, and TH16 were showed to inhibit PARN in a dose-dependent manner with a IC50 of 35 ± 13, 3.36, 2, and 7.9 μM, respectively, which are significantly lower compared to AMP (Fig. <ref type="figure" target="#fig_4">5d</ref>, <ref type="figure" target="#fig_5">6b-d</ref>) <ref type="bibr" target="#b30">31</ref> . We also observed these compounds cause phenotypes consistent with PARN inhibition in cells with a reduction in hTR and miR-21-5p RNA levels similar to PARN KD (Fig. <ref type="figure" target="#fig_6">7c-h</ref>).</p><p>The discovery and development of a selective and effective PARN inhibitor could be a useful tool for cancer treatment. PARN is a processive deadenylase and PARN KD has been shown to upregulate p53 protein in cancer cells, which causes cell-cycle arrest and prevents cell growth and development <ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b28">29</ref> . Thus, targeting PARN may offer a potential therapeutic approach for repressed p53-induced cancers. Previous reports have described aminoglycosides, synthetic nucleotides with fluoro-glucopyranosyl sugar moiety and benzoyl-modified cytosine or adenine, glucopyranosyl analogs bearing uracil, 5-fluorouracil, or thymine as base moiety, and purine-2,6-dione derivatives as possible PARN inhibitors (Table <ref type="table">1</ref>), although these compounds required relatively high concentrations and/or have not been shown to inhibit PARN activity in cells <ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref> . While some purine-2,6-dione derivatives showed PARN inhibition at relatively low concentrations: 30 μM (5b, 8a-d, and 8f), 10 μM (5j and 5k), and 3 μM (8e and 8j) using a similar fluorescence assay, only five IC50 values were reported with the lowest value of 23.9 ± 3.7 μM (compound 8j) (Table <ref type="table">1</ref>) <ref type="bibr" target="#b33">34</ref> . The IC50 of compound 8j is slightly lower than that of GNF-7, suggesting compound 8j may be a good candidate for PARN inhibitor as well. The remainder of these previously identified PARN inhibitors were either tested with a different substrate (poly(A)) or their IC50s were not determined making a direct comparison between the effectiveness of these inhibitors on the activity of PARN difficult <ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref> . Compound name Rename PARN inhibitor in vitro IC50 (µM) Ki (µM) PARN inhibitor in cells Computational docking 5-ITU 5a No n.d. n.d. n.d. 5-bromotubercidine 5b No n.d. n.d. n.d. Tubercidine 5c Yes n.d. n.d. n.d. Vidarabine 5d No n.d. n.d. n.d. AZD8835 5e No n.d. n.d. n.d. Clofarabine 5f No n.d. n.d. n.d. AICAR 5g No n.d. n.d. n.d. Spongosine 5h Yes n.d. n.d. n.d. Regadenoson 5i Yes n.d. n.d. n.d. 2,6-diamino adenosine 5j Yes n.d. n.d. n.d. 2-amino adenosine 5k No n.d. n.d. n.d. Cladribine 5l Yes n.d. n.d. n.d. TWS119 5m No n.d. n.d. n.d. L-adenosine 5n No n.d. n.d. n.d. GNF-7 5o Yes 34.56 n.d. Yes High-throughput screening SYG-00454609 TH1 Yes 1.39 n.d. No SYG-00457029 TH2 Yes 7.22 n.d. No SYG-00456810 TH3 Yes 5.25 n.d. No SYG-00466189 TH4 Yes 5.11 n.d. No SYG-00465471 TH5 Yes 2.91 n.d. No SYG-00457986 TH6 Yes 8.09 n.d. No SYG-00449761 TH7 Yes 1.64 n.d. No SYG-00446344 TH8 Yes 3.94 n.d. No SYG-00466277 TH9 Yes 5.50 n.d. No SYG-00458754 TH10 Yes 5.71 n.d. No SYG-00457386 TH11 Yes 3.36 n.d. Yes SYG-00459052 TH12 Yes 3.30 n.d. No SYG-00463654 TH13 Yes 6.26 n.d. No SYG-00449350 TH14 Yes 2.50 n.d. No SYG-00456208 TH15 Yes 2.00 n.d. Yes SYG-00445034 TH16 Yes 7.90 n.d. Yes SYG-00462261 TH17 Yes 9.46 n.d. No SYG-00447413 TH18 Yes 0.20 n.d. No Ref. 30 9-(3′,4′, dideoxy-3′-fluoro-β-d-glucopyranosyl)-N6benzoyl adenine A2 Yes n.d. 510 ± 52 n.d. 1-(3′,4′, dideoxy-3′-fluoro-β-d-glucopyranosyl)-N4benzoyl adenine A6 Yes n.d. 210 ± 45 n.d. 3-deoxy-3-fluoro-glucopyranose B6 Yes n.d. n.d. n.d. C6 Yes n.d. 645 ± 37 n.d. Ref. 32 1-(3′-deoxy-3′-fluoro-β-d-glucopyranosyl) uracil U1 Yes n.d. 19 ± 5 n.d. 1-(3′-deoxy-3′-fluoro-β-d-glucopyranosyl) 5-fluorouracil FU1 Yes n.d. 98 ± 12 n.d. 1-(3′-deoxy-3′-fluoro-β-d-glucopyranosyl) thymine T1 Yes n.d. 135 ± 18 n.d. Ref. 33 Neomycin B Yes n.d. 0.4 ± 0.1 n.d. Paromomycin Yes n.d. 17.3 ± 3.5 n.d. Lividomycin Yes n.d. 18.7 ± 2.8 n.d. Kanamycin B Yes n.d. 7.3 ± 0.4 n.d. Kanamycin A Yes n.d. 64.7 ± 7.8 n.d. Tobramycin Yes n.d. 7.1 ± 0.2 n.d.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Continued</head><p>From our assays, we identified the pyrimidopyrimidin-2-one GNF-7, TH11, TH15, and TH16 as PARN inhibitors. All the compounds are kinase inhibitors. GNF-7 is considered a multi-kinase inhibitor, but it is not a broad-spectrum kinase inhibitor <ref type="bibr" target="#b41">42</ref> . GNF-7 is a potent inhibitor of Bcr-Abl tyrosine kinase, ACK1 (activated CDC42 kinase 1), and GCK (germinal center kinase) with IC50s of 133 nM, 25 nM, and 8 nM, respectively <ref type="bibr" target="#b40">41,</ref><ref type="bibr" target="#b42">43</ref> . This is not unexpected since most kinase inhibitors are ATP mimetics; however, our studies support that GNF-7, TH11, TH15, and TH16 inhibit PARN activity and could be used as lead compounds for structure-activity study to develop PARN inhibitors with improved potency and selectivity.</p><p>Several observations argue GNF-7, TH11, TH15, and TH16 can inhibit PARN in cells. First, these drug treatments of cells decreased the levels of hTR and miR-21-5p (Fig. <ref type="figure" target="#fig_6">7c-h</ref>), as is seen in PARN-deficient cells <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b17">18</ref> . Second, we observed that GNF-7, TH11, TH15, and TH16 acted similarly to siRNA KD of PARN at increasing cell death in the presence of doxorubicin (Fig. <ref type="figure" target="#fig_7">8b</ref> and <ref type="figure">d</ref>). Taken together, we propose that GNF-7, TH11, TH15, and TH16 can be used as chemical tools for the inhibition of PARN both in vitro and in cells. However, since these compounds can inhibit a range of kinases, finding additional PARN inhibitors, or developing derivatives of these compounds with more selectivity for PARN is an important future area of future research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational-based library docking.</head><p>The SelleckChem kinase inhibitor library (SelleckChem, Cat.</p><p>No. L1200) consisting of 1,820 compounds was docked into active site of the 2.6 Å human PARN nuclease domain crystal structure (PDB: 2A1R) <ref type="bibr" target="#b34">35</ref> , using the Glide module within Schrödinger (Release 2020-3, Schrödinger LLC, New York, NY) <ref type="bibr" target="#b43">[44]</ref><ref type="bibr" target="#b44">[45]</ref><ref type="bibr" target="#b45">[46]</ref> . Prior to docking, the water molecules were removed, and the proteins were prepared by assigning bond orders, adding hydrogens, and repairing any side chains or missing amino acid sequences. To complete protein preparation a restrained minimization of the protein structure was performed using the default constraint of 0.30 Å RMSD and the OPLS_2005 force field <ref type="bibr" target="#b46">47</ref> . The prepared protein was subjected to SiteMap analysis <ref type="bibr" target="#b45">46</ref> , that identified the catalytic binding site and docking grids were generated using Receptor Grid Generation. The compounds in the SelleckChem kinase inhibitor library were prepared using LigPrep by generating possible states at the target pH 7.0 using Epik and minimized by applying the OPLS_2005 force field <ref type="bibr" target="#b46">47</ref> . Molecular docking simulations were performed using the Glide ligand docking module in XP (extra precision) mode and included post-docking minimization <ref type="bibr" target="#b44">45</ref> . The docked structures were examined and high-ranked compounds with favorable XP GScores for ligand binding, that displayed interaction with residues Asp28-Phe31, the divalent metal cation binding site within the active site (Fig. <ref type="figure" target="#fig_3">4</ref>), were selected for evaluation. The XP GScore is an empirical scoring function that approximates the ligand binding free energy; therefore, a more negative value represents favorable binding.</p><p>High-throughput screening. 2 µL of protein (100 nM final concentration) (stock protein was diluted in 1× lysis buffer (HEPES KOH, pH 7.4, 30 mM, KOAc 100 mM, and Mg(OAc) 2 2 mM) was added to wells using offline Multidrop Combi nL. The reaction was pre-incubated with 12.5 nL of Sygnature library (Enamine kinase library (HBL-24) (31.25 μM) for 15 min before 2 µL of RNA (10 µM) was added (DMSO was added to control wells using Echo 655). The reaction was incubated at 22 °C for 20 min in Cytomat automatic incubator. After the incubation, the reaction was quenched by adding 4 µL of quencher solution (30 µM of 3′-BHQ labeled quench DNA in 1% SDS) using Multidrop Combi nL. The quenched reaction was incubated at room temperature for</p><p>Compound name Rename PARN inhibitor in vitro IC50 (µM) Ki (µM) PARN inhibitor in cells Ref. 34 5a Yes 84.1 ± 6.7 n.d. n.d. 5b Yes n.d. n.d. n.d. 5c Yes 119 ± 25 n.d. n.d. 5d Yes 125 ± 32 n.d. n.d. 5e Yes 245 ± 20 n.d. n.d. 5f Yes n.d. n.d. n.d. 5g Yes n.d. n.d. n.d. 5h Yes n.d. n.d. n.d. 5i Yes n.d. n.d. n.d. 5j Yes n.d. n.d. n.d. 5k Yes n.d. n.d. n.d. 8a Yes n.d. n.d. n.d. 8b Yes n.d. n.d. n.d. 8d Yes n.d. n.d. n.d. 8e Yes n.d. n.d. n.d. 8f Yes n.d. n.d. n.d. 8j Yes 23.9 ± 3.7 n.d. n.d. 8k Yes n.d. n.d. n.d.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 1.</head><p>List of all the compounds tested as PARN inhibitors with their corresponding properties <ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref> .</p><p>10 min and fluorescence was measured using PHERAstar FSX (λ485/520). For the counter screen, no protein was added to the reaction. For active potency, dilution series of 10 mM of kinase library compounds (8 points 1:3 dilution, final top concentration was 100 µM) was used to generate IC50 curves. Curves were fitted within Genedata using SmartFit algorithm.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Plasmids and Purification of recombinant PARN.</head><p>Human PARN ORF was codon-optimized using iDT codon optimizer tool for bacterial expression and the corresponding gene block fragment was purchased from iDT. PcoldI-PARN plasmid with Chloramphenicol resistance containing the full-length human PARN ORF was a kind gift from Professor Yukihide Tomari <ref type="bibr" target="#b19">20</ref> . Full-length PARN ORF was cut from the Pcold-PARN plasmid using NdeI-XhoI restriction digest and the native vector was gel purified. PARN 1-430 ORF fragment was PCR amplified from the gene block using the following primers and gel purified.</p><p>Fwd primer: TAA GCA CAT ATG ATG GAA ATC ATT CGC TCC Rev primer: TGC TTA CTC GAG TTA AAT GTC CAT CAC ACG CA The purified PCR product was ligated to the PcoldI NdeI-XhoI digest vector using T4 DNA ligase I (NEB M0202S) and correct insertion was verified using Sanger sequencing. PARN D28A F31A double mutant was created by site-directed mutagenesis of the PARN 1-430 expressing plasmid using the following primers and mutation insertion was verified using sanger sequencing.</p><p>Fwd primer: TTT TTT GCA ATT GCA GGG GAG GCT TCC GGT ATT TCC Rev primer: GGA AAT ACC GGA AGC CTC CCC TGC AAT TGC AAA AAA For recombinant protein purification, the vector was expressed in Rosetta 2 DE at 37 °C overnight with Amp-Camp (50 µg/mL). The starter culture was transferred into 1 L of TB culture and incubated at 37 °C to reach O.D. of 1. The proteins were induced with 1 mM IPTG for 2 days at 15 °C. The proteins were purified using Ni-NTA column and buffer exchanged into storage buffer (30 mM Hepes KOH, pH 7.4, 100 mM KOAc, 2 mM Mg(OAc) 2 , 30% glycerol, 1 mM TCEP). Proteins were verified on SDS gels and stored at -80 °C. siRNAs. siRNAs targeting PARN (siGenome) was purchased from Dharmacon in the Smartpool formulation (M-011348-00-0005). All-stars negative control siRNA from QIAGEN (SI03650318) was used as negative control.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cell culture.</head><p>HeLa cells were purchased from ATCC (CCL2) and verified for absence of mycoplasma contamination. HeLa cells were cultured in DMEM containing 10% FBS, 1% Pen/Strep, at 37 °C under ambient conditions.</p><p>HeLa cells were seeded ~ 100,000 cells/well in a six-well plate 24 h before transfection/GNF-7 (50 µM) treatment. siRNA transfection was performed using Lipofectamin RNAiMAX (Thermo Fisher Scientific) as per manufacturer's protocol. 48 h after transfection/drug treatment, cells were collected for either RNA or protein analysis.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RNA extraction and Northern blotting.</head><p>Total RNA was extracted from cell lysates using TriZol as per manufacturer's protocol and DNAse treated. After quantification on Nanodrop, total RNA was separated on an acrylamide 7 M Urea gel. RNA was transferred to a nylon membrane (Nytran SPC, GE Healthcare) using semiwet transfer. After UV/EDC crosslinking, the blot was pre-hybridized and hybridized in PerfectHyb Plus Hybridization Buffer (Sigma Aldrich) at 42 °C. Northern probes have been previously described <ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b47">48</ref> . After hybridization and washing in 2 × SSC 0.1% SDS wash buffer, blots were exposed to a cassette and imaged on a Typhoon FLA 9500 Phosphoimager. Band intensities were quantified using ImageJ and normalized to the U1 levels under each condition.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RT-qPCR.</head><p>Extracted total RNA was reverse transcribed using Mir-X miRNA first strand synthesis kit (Taraka, Cat # 638315) to make cDNA and qPCR was perfomred with iQ SYBR Green Supermix (BioRad, Cat. No. 1708880) with CGC TGT TTT TCT CGC TGA CT (forward primer) and GCT CTA GAA TGA ACG GTG GAA (reverse primer) for hTR. The RNA levels were normalized using 5S rRNA as a housekeeping gene.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Western blotting.</head><p>Cells was lysed with 2× lysis buffer (2.5% SDS, 4% BME, protease inhibitor) and was separated on a 4-12% Bis-Tris NuPage gel (ThermoFisher) and transferred to protran membrane (Amer-sham). After blocking in 5% non-fat milk in 1×TBST, blots were probed with anti-PARN (Abcam, ab188333, 1:1000 dilution) overnight at 4 °C and HRP anti-rabbit goat (Cell Signaling Technology, 7074S, 1:1000 dilution) secondary antibody for one hour. Blot was quantified using ImageJ and normalized to GAPDH levels (GAPDH antibody (0411) HRP) (Santa Cruz Biotechnology, sc-47724 HRP). Inhibition fluorescence assay. 1 µL of protein (73 nM as final concentration) (stock protein is diluted</p><p>in 1× lysis buffer (HEPES KOH, pH 7.4, 30 mM, KOAc 100 mM, and Mg(Oac) 2 2 mM) was added to 4 µL of 2.5× reaction buffer (Tris-HCl pH 7.4, 10 mM, KCl 50 mM, MgCl 2 5 mM). If drug was added, reaction was preincubated with drugs for 10 min before 5 µL of RNA (5 µM as final concentration) was added. The reaction was incubated at 37 °C for 20 min. After the incubation, the reaction was either diluted with 2× loading buffer and heated to 95 °C for 5 min for gel or quenched by adding 10 µL of quencher solution (30 µM of 3′-BHQ labeled quench DNA in 1% SDS). Quenched reaction was incubated at room temperature for 10-60 min and fluorescence was measured using Fluorescein wavelength measurement.</p><p>Gels. 15% TBE-Urea gel (Thermo Fisher Scientific) was prerun at 20W for 30 min. RNAs from the reaction was loaded into 15% TBE gels and run at 300 V for 35 min. The gel was visualized using iBright (Invitrogen FL1500).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cell death assay.</head><p>The same number of Hela cells were seed into 6 well-plates and treated with GNF-7 (SelleckChem, S8140), TH1-18, or transfected for 2 days. Cell counting were done 2 days post-treatment. For doxorubicin (EMD Millipore, 504042) treatment, doxorubicin (1 μM) was added to cells. Cells were collected and counted at 0 h and 24 h after treatment. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. PARN functions in an adenylation/deadenylation regulatory pathway that regulates the decay rate of ncRNAs. ncRNAs could be targeted to adenylation by PAPD5 or deadenylation by PARN 8 . In PARN-deficient cells, the presence of oligo(A) tail can recruit 3′ to 5′ exonucleases to degrade ncRNAs.</figDesc><graphic coords="2,155.91,50.50,226.80,242.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. PARN purification and validation. (a) SDS-PAGE gel of the fractions during PARN 1-430 purification. (b) SDS-PAGE gel of the fractions during PARNmut purification. (c) Gel assay showing PARN 1-430 and PARNmut's activity activity on poly(A) tail RNA at different time points (0-, 10-, 20-, and 30-min post incubation), PARNmut shows no enzymatic activity on poly(A) RNA. (d) Representative gel confirming PARN activity on poly(A) RNA and non-poly(A) RNA after 20 min of incubation. Poly(A) tail RNA sequence is a fluorescently labeled RNA with a CCU UUC C followed by a 9 nucleotides oligo(A) tail. Non-poly(a) RNA is a fluorescently labeled RNA with a CCU UUC CGC tail instead of 9 nucleotides oligo(A) tail. Full gels are presented in Supplementary Fig.S1.</figDesc><graphic coords="3,367.35,302.37,186.86,97.94" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Developing a fluorescence assay for PARN inhibition. (a) Cartoon depicting the inhibition fluorescence assay. Schematic diagram of the fluorescence-based deadenylase assay. The assay is based on a 5′ FAM-labelled RNA oligonucleotide substrate. After incubation of the substrate in the presence of PARN 1-430 , the reaction is stopped and a 3′ BHQ-labelled DNA oligonucleotide probe complementary to the RNA substrate is added. The fluorescence of intact substrate is quenched upon probe hybridization because of the proximity of the BHQ fluorophore. In contrast, the BHQ-labelled probe cannot hybridize to the FAM-labelled reaction product allowing detection of FAM fluorescence 37 . (b) PARN 1-430 inhibition assay with fluorescence as a readout with time course for PARN 1-430 treatment (73 nM), PARN 1-430 inhibition with 2.5 mM AMP, and no-enzyme control. 2-way ANOVA, multiple comparisons test, average ± SD, n = 3 replicates. *P &lt; 0.05, **P &lt; 0.005, ***P &lt; 0.001, ****P &lt; 0.0001, n.s. was not indicated. (c) Dose-response curve of PARN 1-430 enzymatic activity using different PARN 1-430 concentrations (36.5-730 nM). Dotted-line represents RNA and RNA + Quencher data. One-way ANOVA, multiple comparisons test, average ± SD, n ≥ 3 replicates. *P &lt; 0.05, **P &lt; 0.005, ***P &lt; 0.001, ****P &lt; 0.0001, n.s. was not indicated. (d) PARN 1-430 and PARNmut enzymatic activity measured at different time points. PARN showed an increase in activity versus time while PARNmut showed no activity up to 30 min incubation. Dotted-line represents RNA and RNA + Quencher data. 2-way ANOVA, multiple comparisons test, average ± SD, n = 3 replicates. *P &lt; 0.05, **P &lt; 0.005, ***P &lt; 0.001, ****P &lt; 0.0001, n.s. was not indicated.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Docking of small molecule adenosine analogs into the PARN catalytic site. Ligand interaction map of the predicted binding mode of AICAR, AZD8835, Claribine, Vidarabine, GNF-7, 5-Iodotubercidin, Regadenson, and Clofarabine, where red residues are charged negative, purple residues are charged positive, green residues are hydrophobic, and blue residues are polar, magenta arrows indicate H-bonds, violet lines indicate salt bridges, and gray spheres represent areas of solvent exposure. HIP represents the ND1 and NE2 protonation state of His and NMA represents N-methyl amide of a capped termini. At least one H-bond interaction was observed between the docked small molecule and amino acid residues Asp28-Phe31.</figDesc><graphic coords="5,65.19,50.47,493.10,255.02" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Testing drugs on activity of PARN using RNA substrates in vitro. (a) Inhibition fluorescence assay showing effects of different drugs on PARN 1-430 . PARN 1-430 was pretreated with drugs at room temperature for 10 min before adding RNA substrate. AMP and GNF-7 were shown in pink and red, respectively. Oneway ANOVA, multiple comparisons test, average ± SD, n ≥ 3 replicates. *P &lt; 0.05, **P &lt; 0.005, ***P &lt; 0.001, ****P &lt; 0.0001, n.s. was not indicated. (b) Gels illustrating inhibitory effects of different drugs on PARN 1-430 . The reaction was performed the same as the fluorescence assay, heat inactivated, then loaded and visualized on gels. Full gels are presented in Supplementary Fig. S1. (c) Molecular structure of GNF-7. (d) Dose-response curve of GNF-7 on PARN 1-430 . PARN 1-430 was pre-treated with different concentrations of GNF-7 for 10 min and incubated with RNA substrate. The reaction was quenched with DNA quencher and fluorescence intensity was measured. The IC50 was determined to be 35 ± 15 μM. The vertical dotted line marks the fitted IC50 of GNF-7 and the horizonal dotted line marks 50% inhibition. (e) Kinetic analysis of AMP and GNF-7 effects on PARN 1-430 and a no-enzyme control. Pretreated PARN 1-430 was incubated with RNA substrate for 0, 10, 20, and 30 min and the fluorescence intensity were measured at each time point. 2-way ANOVA, multiple comparisons, average ± SD, n = 3 replicates. *P &lt; 0.05, **P &lt; 0.005, ***P &lt; 0.001, ****P &lt; 0.0001, n.s. was not indicated.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Testing high-throughput screening hits using gel assay. (a) Gels illustrating inhibitory effects of different drugs on PARN 1-430 . The reaction was performed the same as the fluorescence assay, heat inactivated, then loaded and visualized on gels. Full gels are presented in Supplementary Fig. S1. (b) Dose-response curve of TH11 on PARN 1-430 . (c) Dose-response curve of TH15 on PARN 1-430 . (d) Dose-response curve of TH16 on PARN 1-430 .</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7 .</head><label>7</label><figDesc>Figure7. GNF-7, TH11, TH15, and TH16 inhibit PARN in cells. (a) Representative western blots showing GNF-7, TH11, TH15, and TH16 treatments do not affect PARN level. Hela cells were treated with siPARN and 50 μM GNF-7 (or 10 μM TH11, TH15, or TH16) (scramble siRNA and DMSO as controls) for 2 days before lysed. The blot was blotted against anti-PARN antibody. (b) Quantification of the changes in PARN levels of western blot using GAPDH as loading controls. siPARN and drug treatments were normalized to scramble siRNA and DMSO controls, respectively. siPARN and drug treatment data were compared to scr and DMSO data, respectively. One-way ANOVA, multiple comparisons test. Average ± SD, N = 3 biological replicates, n = 1. (c) Representative northern blot showing that miR-21-5p levels decreased in both PARN KD and GNF-7 treatment. Hela cells were treated with siPARN and 50 μM GNF-7 (scramble siRNA and DMSO as controls) for 2 days before RNA extraction. (d) Quantification of miR-21-5p levels normalized to U1 RNA. One-way ANOVA, multiple comparisons test, average ± SD, N = 3 biological replicates, n = 1. (e) RT-qPCR showing that hTR levels reduced in siPARN and GNF-7 treatments compared to scr and DMSO controls, respectively. One-way ANOVA, multiple comparisons test, average ± SD, N = 3 biological replicates, n = 2. (f) Representative northern blot showing that miR-21-5p levels decreased in TH11, TH15, and TH16 treatments. Hela cells were treated with 10 μM of TH1-TH18 (DMSO as control) for 2 days before RNA extraction. (g) Quantification of miR-21-5p levels normalized to U1 RNA. One-way ANOVA, multiple comparisons test, average ± SD, N = 3 biological replicates, n = 1. (h) RT-qPCR showing that hTR levels reduced in siPARN and drug treatments compared to scr and DMSO controls, respectively. One-way ANOVA, multiple comparisons test, average ± SD, N = 3 biological replicates, n = 2. For nothern blot and RT-qPCR quantifications, Scr and DMSO controls were independently set to 1 and used as control for siPARN and drug treatments, respectively. *P &lt; 0.05, **P &lt; 0.005, ***P &lt; 0.001, ****P &lt; 0.0001, n.s. was not indicated. Full blots are presented in Supplementary Fig.S1.◂</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 8 .</head><label>8</label><figDesc>Figure 8. Cell death assay for GNF-7 treatment. (a) Numbers of cells at 2 days after DMSO and GNF-7 treatment. 2-way ANOVA, multiple comparisons test, average ± SD, N = 3 biological replicates, n = 1. (b) Numbers of cells at 0 and 24 h-post doxorubicin treatment. Hela cells were treated with siPARN or GNF-7 for 2 days (scramble siRNA and DMSO as controls) before adding doxorubicin. Cells were collected for quantification after 0-and 24-h post doxorubicin treatment. 2-way ANOVA, multiple comparisons test, average ± SD, N = 3 biological replicates, n = 1. *P &lt; 0.05, **P &lt; 0.005, ***P &lt; 0.001, ****P &lt; 0.0001, n.s. was not indicated. (c) Numbers of cells at 2 days after DMSO and TH1-TH18 treatment. One-way ANOVA, multiple comparisons test, average ± SD, N = 3 biological replicates, n = 1 (d) Numbers of cells at 0 and 24 h-post doxorubicin treatment. Hela cells were treated with siPARN, TH11, TH15, or TH16 for 2 days (scramble siRNA and DMSO as controls) before adding doxorubicin. Cells were collected for quantification after 0-and 24-h post doxorubicin treatment. 2-way ANOVA, multiple comparisons test, average ± SD, N = 3 biological replicates, n = 1. *P &lt; 0.05, **P &lt; 0.005, ***P &lt; 0.001, ****P &lt; 0.0001, n.s. was not indicated.</figDesc><graphic coords="12,99.51,51.74,422.66,303.14" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><graphic coords="10,110.79,103.23,266.66,345.14" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Scientific Reports | (2023) 13:5244 | https://doi.org/10.1038/s41598-023-32039-z</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>The authors thank members of the <rs type="institution">Parker lab</rs> for their suggestions and feed-back and Cell Culture Core for technical assistance. This work was supported by funds from <rs type="funder">HHMI</rs> and funds from the <rs type="funder">Colorado Office of Economic Development</rs> (<rs type="grantNumber">DO-2020-2463</rs>).</p></div>
+			</div>
+			<div type="funding">
+<div><head>Funding</head><p>Howard <rs type="funder">Hughes Medical Institute, U.S. Department of Defense</rs> (Grant no. <rs type="grantNumber">W81XWH2110447</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_kEX8fSe">
+					<idno type="grant-number">DO-2020-2463</idno>
+				</org>
+				<org type="funding" xml:id="_ERpGfDU">
+					<idno type="grant-number">W81XWH2110447</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>The datasets generated during and/or during the current study are available from the corresponding author on reasonable request.</p><p>Received: 18 October 2022; Accepted: 21 March 2023</p></div>
+			</div>
+
+
+			<div type="conflict">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p>R.P. is a consultant for Third Rock Ventures and a co-founder of Faze Medicines. Other authors declare no competing interests.</p></div>
+			</div>
+
+
+			<div type="contribution">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head><p>S.S. and R.P. conceived the project. T.N.H. performed the experiments. P.R. performed computational-based docking between human PARN and drugs. T.N.H and R.P. interpreted data. T.N.H. and R.P. wrote the manuscript. All authors edited the manuscript.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional information</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Information</head><p>The online version contains supplementary material available at <ref type="url" target="https://doi.org/10.1038/s41598-023-32039-z">https:// doi. org/  10. 1038/ s41598-023-32039-z</ref>.</p><p>Correspondence and requests for materials should be addressed to R.P.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reprints and permissions information is available at www.nature.com/reprints.</head><p>Publisher's note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct status="extracted"  xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Cap-dependent deadenylation of mRNA</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Dehlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wormington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Körner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wahle</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/emboj/19.5.1079</idno>
+		<ptr target="https://doi.org/10.1093/emboj/19.5.1079" />
+	</analytic>
+	<monogr>
+		<title level="j">EMBO J</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="1079" to="1086" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Interaction between a poly(A)-specific ribonuclease and the 5&apos; cap influences mRNA deadenylation rates in vitro</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Fritz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Ford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wilusz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/s1097-2765(00)80442-6</idno>
+		<ptr target="https://doi.org/10.1016/s1097-2765" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="80442" to="80446" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Poly(A) tail shortening by a mammalian poly(A)-specific 3&apos;-exoribonuclease</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Körner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wahle</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.272.16.10448</idno>
+		<ptr target="https://doi.org/10.1074/jbc.272.16.10448" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">272</biblScope>
+			<biblScope unit="page" from="10448" to="10456" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The mRNA cap structure stimulates rate of poly(A) removal and amplifies processivity of degradation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martînez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">G</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Nilsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ehrenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Virtanen</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M102270200</idno>
+		<ptr target="https://doi.org/10.1074/jbc.M1022" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">276</biblScope>
+			<biblScope unit="page">70200</biblScope>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The mechanism and regulation of deadenylation: Identification and characterization of Xenopus PARN</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Copeland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wormington</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/s1355838201010020</idno>
+		<ptr target="https://doi.org/10.1017/s" />
+	</analytic>
+	<monogr>
+		<title level="j">RNA</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="10100" to="10120" />
+			<date type="published" when="1355">1355. 2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Opposing polymerase-deadenylase activities regulate cytoplasmic polyadenylation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Richter</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.molcel.2006.08.016</idno>
+		<ptr target="https://doi.org/10.1016/j.molcel.2006.08.016" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="173" to="183" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b6">
+	<analytic>
+		<title level="a" type="main">The deadenylating nuclease (DAN) is involved in poly(A) tail removal during the meiotic maturation of Xenopus oocytes</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Körner</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/emboj/17.18.5427</idno>
+		<ptr target="https://doi.org/10.1093/emboj/17.18.5427" />
+	</analytic>
+	<monogr>
+		<title level="j">EMBO J</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="5427" to="5437" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Maturation of mammalian H/ACA box snoRNAs: PAPD5-dependent adenylation and PARN-dependent trimming</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Berndt</surname></persName>
+		</author>
+		<idno type="DOI">10.1261/rna.032292.112</idno>
+		<ptr target="https://doi.org/10.1261/rna.032292.112" />
+	</analytic>
+	<monogr>
+		<title level="j">RNA</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="958" to="972" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Inhibition of telomerase RNA decay rescues telomerase deficiency caused by dyskerin or PARN defects</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shukla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Goldfarb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Cech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Parker</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nsmb.3184</idno>
+		<ptr target="https://doi.org/10.1038/nsmb.3184" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Struct. Mol. Biol</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="286" to="292" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b9">
+	<analytic>
+		<title level="a" type="main">PARN modulates Y RNA stability and its 3&apos;-end formation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shukla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Parker</surname></persName>
+		</author>
+		<idno type="DOI">10.1128/MCB.00264-17</idno>
+		<ptr target="https://doi.org/10.1128/MCB.00264-17" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page">25</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The RNase PARN controls the levels of specific miRNAs that contribute to p53 regulation</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shukla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Bjerke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Muhlrad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Parker</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.molcel.2019.01.010</idno>
+		<ptr target="https://doi.org/10.1016/j.molcel.2019.01" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page">10</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Disruption of telomerase RNA maturation kinetics precipitates disease</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Roake</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.molcel.2019.02.033</idno>
+		<idno>02. 033</idno>
+		<ptr target="https://doi.org/10.1016/j.molcel" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="688" to="700" />
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b12">
+	<analytic>
+		<title level="a" type="main">TUT-DIS3L2 is a mammalian surveillance pathway for aberrant structured non-coding RNAs</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ustianenko</surname></persName>
+		</author>
+		<idno type="DOI">10.15252/embj.201694857</idno>
+		<ptr target="https://doi.org/10.15252/embj" />
+	</analytic>
+	<monogr>
+		<title level="j">EMBO J</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page">4857</biblScope>
+			<date type="published" when="2016">20169. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A role for the Perlman syndrome exonuclease Dis3l2 in the Lin28-let-7 pathway</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Triboulet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Thornton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Gregory</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature12119</idno>
+		<ptr target="https://doi.org/10.1038/natur" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">497</biblScope>
+			<biblScope unit="page">12119</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Lin28 mediates the terminal uridylation of let-7 precursor MicroRNA</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Heo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.molcel.2008.09.014</idno>
+		<ptr target="https://doi.org/10.1016/j.molcel.2008.09.014" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="276" to="284" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Competition between maturation and degradation drives human snRNA 3&apos; end quality control</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Lardelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lykke-Andersen</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/gad.336891.120</idno>
+		<ptr target="https://doi.org/10.1101/gad.336891.120" />
+	</analytic>
+	<monogr>
+		<title level="j">Genes Dev</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="989" to="1001" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Human telomerase RNA processing and quality control</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Tseng</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.celrep.2015.10.075</idno>
+		<ptr target="https://doi.org/10.1016/j.celrep" />
+	</analytic>
+	<monogr>
+		<title level="j">Cell Rep</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">75</biblScope>
+			<date type="published" when="2015">2015. 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Poly(A)-specific ribonuclease (PARN) mediates 3&apos;-end maturation of the telomerase RNA component</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Moon</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/ng.3423</idno>
+		<ptr target="https://doi.org/10.1038/ng.3423" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Genet</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="1482" to="1488" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b18">
+	<analytic>
+		<title level="a" type="main">PARN and TOE1 constitute a 3&apos; end maturation module for nuclear non-coding RNAs</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Son</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.celrep.2018.03.089</idno>
+		<ptr target="https://doi.org/10.1016/j.celrep.2018.03" />
+	</analytic>
+	<monogr>
+		<title level="j">Cell Rep</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page">89</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Destabilization of microRNAs in human cells by 3&apos; deadenylation mediated by PARN and CUGBP1</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Katoh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hojo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Suzuki</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/nar/gkv669</idno>
+		<ptr target="https://doi.org/10.1093/nar/gkv669" />
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="7521" to="7534" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Predicting effective microRNA target sites in mammalian mRNAs</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Nam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Bartel</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.05005</idno>
+		<ptr target="https://doi.org/10.7554/eLife.05005" />
+	</analytic>
+	<monogr>
+		<title level="j">Elife</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">2569</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b21">
+	<analytic>
+		<title level="a" type="main">MicroRNA control of p53</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Feng</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcb.25609</idno>
+		<ptr target="https://doi.org/10.1002/jcb.25609" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Cell Biochem</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="7" to="14" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b22">
+	<analytic>
+		<title level="a" type="main">p represses p53 to control cellular survival and is associated with poor outcome in MYCN-amplified neuroblastoma</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Swarbrick</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nm.2227</idno>
+		<idno>miR-380-5</idno>
+		<ptr target="https://doi.org/10.1038/nm.2227" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Med</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1134" to="1140" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b23">
+	<analytic>
+		<title level="a" type="main">DIANA-miRPath v3.0: Deciphering microRNA function with experimental support</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Vlachos</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/nar/gkv403</idno>
+		<ptr target="https://doi.org/10.1093/nar/gkv403" />
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="460" to="466" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b24">
+	<analytic>
+		<title level="a" type="main">CPEB and two poly(A) polymerases control miR-122 stability and p53 mRNA translation</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Burns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>D' Ambrogio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nottrott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Richter</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature09908</idno>
+		<ptr target="https://doi.org/10.1038/nature09908" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">473</biblScope>
+			<biblScope unit="page" from="105" to="108" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Mutations in the p53 tumor suppressor gene: Important milestones at the various steps of tumorigenesis</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rivlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Brosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Oren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rotter</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/1947601911408889</idno>
+		<ptr target="https://doi.org/10.1177/" />
+	</analytic>
+	<monogr>
+		<title level="j">Genes Cancer</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">408889</biblScope>
+			<date type="published" when="2011">19476 01911. 2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Unravelling mechanisms of p53-mediated tumour suppression</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Bieging</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Mello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Attardi</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrc3711</idno>
+		<ptr target="https://doi.org/10.1038/nrc" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Cancer</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">11</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b27">
+	<analytic>
+		<title level="a" type="main">The p53 pathway: Origins, inactivation in cancer, and emerging therapeutic approaches</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Joerger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Fersht</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev-biochem-060815-014710</idno>
+		<ptr target="https://doi.org/10.1146/annurev-biochem-060815-014710" />
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Biochem</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="375" to="404" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Depletion of poly(A)-specific ribonuclease (PARN) inhibits proliferation of human gastric cancer cells by blocking cell cycle progression</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">B</forename><surname>Yan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bbamcr.2014.12.004</idno>
+		<ptr target="https://doi.org/10.1016/j.bbamcr.2014.12.004" />
+	</analytic>
+	<monogr>
+		<title level="j">Biochim. Biophys. Acta</title>
+		<imprint>
+			<biblScope unit="page" from="522" to="534" />
+			<date type="published" when="1853">2015. 1853</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Competitive inhibition of human poly(A)-specific ribonuclease (PARN) by synthetic fluoro-pyranosyl nucleosides</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Balatsos</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/bi900236k</idno>
+		<ptr target="https://doi.org/10.1021/bi" />
+	</analytic>
+	<monogr>
+		<title level="j">Biochemistry</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page">236</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Inhibition of human poly(A)-specific ribonuclease (PARN) by purine nucleotides: Kinetic analysis</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Balatsos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Anastasakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Stathopoulos</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/14756360802218763</idno>
+		<ptr target="https://doi.org/10.1080/14756" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Enzyme Inhib. Med. Chem</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="22187" to="22163" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Kinetic and in silico analysis of the slow-binding inhibition of human poly(A)-specific ribonuclease (PARN) by novel nucleoside analogues</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Balatsos</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.biochi.2011.10.011</idno>
+		<ptr target="https://doi.org/10.1016/j.biochi.2011.10.011" />
+	</analytic>
+	<monogr>
+		<title level="j">Biochimie</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="214" to="221" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Inhibition of Klenow DNA polymerase and poly(A)-specific ribonuclease by aminoglycosides</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">G</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martínez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Kirsebom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Virtanen</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/s1355838202021015</idno>
+		<ptr target="https://doi.org/10.1017/s" />
+	</analytic>
+	<monogr>
+		<title level="j">RNA</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">15</biblScope>
+			<date type="published" when="2002">1355 83820 20210. 2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Discovery, synthesis and biochemical profiling of purine-2,6-dione derivatives as inhibitors of the human poly(A)-selective ribonuclease Caf1</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Jadhav</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bmcl.2015.07.095</idno>
+		<ptr target="https://doi.org/10.1016/j.bmcl.2015.07.095" />
+	</analytic>
+	<monogr>
+		<title level="j">Bioorg. Med. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="4219" to="4224" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Structural insight into poly(A) binding and catalytic mechanism of human PARN</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/sj.emboj.7600869</idno>
+		<ptr target="https://doi.org/10.1038/sj.emboj" />
+	</analytic>
+	<monogr>
+		<title level="j">EMBO J</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page">69</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b35">
+	<analytic>
+		<title level="a" type="main">A 54-kDa fragment of the Poly(A)-specific ribonuclease is an oligomeric, processive, and cap-interacting Poly(A)specific 3&apos; exonuclease</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martinez</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M001705200</idno>
+		<ptr target="https://doi.org/10.1074/jbc.M0017" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">275</biblScope>
+			<biblScope unit="page">5200</biblScope>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b36">
+	<analytic>
+		<title level="a" type="main">A fluorescence-based assay suitable for quantitative analysis of deadenylase enzyme activity</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maryati</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/nar/gkt972</idno>
+		<ptr target="https://doi.org/10.1093/nar/gkt972" />
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page">30</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b37">
+	<analytic>
+		<title level="a" type="main">+)-mediated cleavage</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">G</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Martínez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Virtanen</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M111515200</idno>
+		<ptr target="https://doi.org/10.1074/jbc.M1115" />
+	</analytic>
+	<monogr>
+		<title level="m">Identification of the active site of poly(A)-specific ribonuclease by site-directed mutagenesis and Fe</title>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="volume">277</biblScope>
+			<biblScope unit="page">15200</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Coordination of divalent metal ions in the active site of poly(A)-specific ribonuclease</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">G</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Kirsebom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Virtanen</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M403858200</idno>
+		<ptr target="https://doi.org/10.1074/jbc" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">279</biblScope>
+			<biblScope unit="page">58200</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>M</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Tristetraprolin and its family members can promote the cell-free deadenylation of AU-rich element-containing mRNAs by poly(A) ribonuclease</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Kennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Blackshear</surname></persName>
+		</author>
+		<idno type="DOI">10.1128/MCB.23.11.3798-3812.2003</idno>
+		<ptr target="https://doi.org/10.1128/MCB.23.11.3798-3812.2003" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="3798" to="3812" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b40">
+	<analytic>
+		<title level="a" type="main">The Bcr-Abl inhibitor GNF-7 inhibits necroptosis and ameliorates acute kidney injury by targeting RIPK1 and RIPK3 kinases</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bcp.2020.113947</idno>
+		<ptr target="https://doi.org/10.1016/j.bcp.2020.113947" />
+	</analytic>
+	<monogr>
+		<title level="j">Biochem. Pharmacol</title>
+		<imprint>
+			<biblScope unit="volume">177</biblScope>
+			<biblScope unit="page">113947</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Discovery of 2-((3-Amino-4-methylphenyl)amino)-N-(2-methyl-5-(3-(trifluoromethyl)benzamido)phenyl)-4-(methylamino)pyrimidine-5-carboxamide (CHMFL-ABL-053) as a potent, selective, and orally available BCR-ABL/SRC/p38 kinase inhibitor for chronic myeloid leukemia</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liang</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jmedchem.5b01618</idno>
+		<ptr target="https://doi.org/10.1021/acs" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Chem</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page">18</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note>jmedc hem. 5b016</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Identification of novel therapeutic targets in acute leukemias with NRAS mutations using a pharmacologic approach</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nonami</surname></persName>
+		</author>
+		<idno type="DOI">10.1182/blood-2014-12-615906</idno>
+		<ptr target="https://doi.org/10.1182/blood-2014-12-615906" />
+	</analytic>
+	<monogr>
+		<title level="j">Blood</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="3133" to="3143" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Glide: A new approach for rapid, accurate docking and scoring. 1. Method and assessment of docking accuracy</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Friesner</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jm0306430</idno>
+		<ptr target="https://doi.org/10.1021/jm030" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Chem</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">6430</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Extra precision glide: Docking and scoring incorporating a model of hydrophobic enclosure for protein-ligand complexes</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Friesner</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jm051256o</idno>
+		<ptr target="https://doi.org/10.1021/jm051256o" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Chem</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="6177" to="6196" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Identifying and characterizing binding sites and assessing druggability</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Halgren</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ci800324m</idno>
+		<ptr target="https://doi.org/10.1021/ci" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Inf. Model</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page">324</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Prediction of hydration free energies for the SAMPL4 diverse set of compounds using molecular dynamics simulations with the OPLS-AA force field</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Beckstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fourrier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">I</forename><surname>Iorga</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10822-014-9727-1</idno>
+		<ptr target="https://doi.org/10.1007/s10822-014-9727-1" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Aided Mol. Des</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="265" to="276" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Inventory of telomerase components in human cells reveals multiple subpopulations of hTR and hTERT</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Cech</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/nar/gku560</idno>
+		<ptr target="https://doi.org/10.1093/nar/gku560" />
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="8565" to="8577" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

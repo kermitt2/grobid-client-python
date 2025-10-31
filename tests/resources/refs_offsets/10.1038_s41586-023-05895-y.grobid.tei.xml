@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Increased mutation and gene conversion within human segmental duplications</title>
+				<funder ref="#_4pYgx9Q #_WUXkahm #_AFM4rxD">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Howard Hughes Medical Institute</orgName>
+					<orgName type="abbreviated">HHMI</orgName>
+				</funder>
+				<funder ref="#_kWVU8b5">
+					<orgName type="full">James S. McDonnell Foundation</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">HHMI&apos;s Open Access</orgName>
+				</funder>
+				<funder ref="#_JBdh8qe">
+					<orgName type="full">US National Institutes of Health</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-05-10">10 May 2023</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mitchell</forename><forename type="middle">R</forename><surname>Vollger</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Division of Medical Genetics</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Philip</forename><forename type="middle">C</forename><surname>Dishuck</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">William</forename><forename type="middle">T</forename><surname>Harvey</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">William</forename><forename type="middle">S</forename><surname>Dewitt</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Computational Biology Program</orgName>
+								<orgName type="institution">Fred Hutchinson Cancer Research Center</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Electrical Engineering and Computer Sciences</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Berkeley Berkeley</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xavi</forename><surname>Guitart</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">E</forename><surname>Goldberg</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Allison</forename><forename type="middle">N</forename><surname>Rozanski</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Julian</forename><surname>Lucas</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution" key="instit1">UC Santa Cruz Genomics Institute</orgName>
+								<orgName type="institution" key="instit2">University of California</orgName>
+								<address>
+									<settlement>Santa Cruz Santa Cruz</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mobin</forename><surname>Asri</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution" key="instit1">UC Santa Cruz Genomics Institute</orgName>
+								<orgName type="institution" key="instit2">University of California</orgName>
+								<address>
+									<settlement>Santa Cruz Santa Cruz</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Human</forename><surname>Pangenome</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Reference</forename><surname>Consortium</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Katherine</forename><forename type="middle">M</forename><surname>Munson</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexandra</forename><forename type="middle">P</forename><surname>Lewis</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kendra</forename><surname>Hoekzema</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Glennis</forename><forename type="middle">A</forename><surname>Logsdon</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Porubsky</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benedict</forename><surname>Paten</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution" key="instit1">UC Santa Cruz Genomics Institute</orgName>
+								<orgName type="institution" key="instit2">University of California</orgName>
+								<address>
+									<settlement>Santa Cruz Santa Cruz</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kelley</forename><surname>Harris</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pinghsun</forename><surname>Hsieh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Evan</forename><forename type="middle">E</forename><surname>Eichler</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Genome Sciences</orgName>
+								<orgName type="institution">University of Washington School of Medicine</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution">Howard Hughes Medical Institute</orgName>
+								<address>
+									<settlement>Chevy Chase</settlement>
+									<region>MD</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Increased mutation and gene conversion within human segmental duplications</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2023-05-10">10 May 2023</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">594D0C4697A7042FA377CE4EA49AF1B5</idno>
+					<idno type="DOI">10.1038/s41586-023-05895-y</idno>
+					<note type="submission">Received: 6 July 2022 Accepted: 28 February 2023</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="unknown" ident="GROBID" when="2025-10-31T09:58+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">unknown</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Single-nucleotide variants (SNVs) in segmental duplications (SDs) have not been systematically assessed because of the limitations of mapping short-read sequencing data 1,2 . Here we constructed 1:1 unambiguous alignments spanning high-identity SDs across 102 human haplotypes and compared the pattern of SNVs between unique and duplicated regions <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4</ref> . We find that human SNVs are elevated 60% in SDs compared to unique regions and estimate that at least 23% of this increase is due to interlocus gene conversion (IGC) with up to 4.3 megabase pairs of SD sequence converted on average per human haplotype. We develop a genome-wide map of IGC donors and acceptors, including 498 acceptor and 454 donor hotspots affecting the exons of about 800 protein-coding genes. These include 171 genes that have 'relocated' on average 1.61 megabase pairs in a subset of human haplotypes. Using a coalescent framework, we show that SD regions are slightly evolutionarily older when compared to unique sequences, probably owing to IGC. SNVs in SDs, however, show a distinct mutational spectrum: a 27.1% increase in transversions that convert cytosine to guanine or the reverse across all triplet contexts and a 7.6% reduction in the frequency of CpGassociated mutations when compared to unique DNA. We reason that these distinct mutational properties help to maintain an overall higher GC content of SD DNA compared to that of unique DNA, probably driven by GC-biased conversion between paralogous sequences <ref type="bibr" target="#b4">5,</ref><ref type="bibr" target="#b5">6</ref> .</p><p>The landscape of human SNVs has been well characterized for more than a decade in large part owing to wide-reaching efforts such as the International HapMap Project and the 1000 Genomes Project <ref type="bibr" target="#b6">7,</ref><ref type="bibr" target="#b7">8</ref> . Although these consortia helped to establish the genome-wide pattern of SNVs (as low as 0.1% allele frequency) and linkage disequilibrium on the basis of sequencing and genotyping thousands of human genomes, not all parts of the human genome could be equally ascertained. Approximately 10-15% of the human genome 8 has remained inaccessible to these types of analysis either because of gaps in the human genome sequence or, more frequently, the low mapping quality associated with aligning short-read whole-genome sequencing data. This is because short-read sequence data are of insufficient length (&lt;200 base pairs (bp)) to unambiguously assign reads and, therefore, variants to specific loci 9 . Although certain classes of large, highly identical repeats (for example, α-satellites in centromeres) were readily recognized, others, especially SDs 1 and their 859 associated genes 10 , in euchromatin were much more problematic to recognize.</p><p>Operationally, SDs are defined as interchromosomal or intrachromosomal homologous regions in any genome that are &gt;1 kbp in length and &gt;90% identical in sequence <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b10">11</ref> . As such regions arise by duplication as opposed to retrotransposition, they were initially difficult to identify and early versions of the human genome sequence had either missed or misassembled these regions owing to their high sequence identity <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13</ref> . Large-insert BAC clones ultimately led to many of these regions being resolved. Subsequent analyses showed that SDs contribute disproportionately to copy number polymorphisms and disease structural variation 9,14 , are hotspots for gene conversion 15 , are substantially enriched in GC-rich DNA and Alu repeats <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> , and are transcriptionally diverse leading to the emergence, in some cases, of human-specific genes thought to be important for human adaptation <ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref> . Despite their importance, the pattern of SNVs among humans has remained poorly characterized. Early on, paralogous sequence variants were misclassified as SNVs 2 and, as a result, later high-identity SDs became blacklisted from SNV analyses because short-read sequence data could not be uniquely placed <ref type="bibr" target="#b21">22,</ref>23  . This exclusion has translated into a fundamental lack of understanding in mutational processes precisely in regions predicted to be more mutable owing to the action of IGC <ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref> . Previously, we noted an increase in SNV density in duplicated regions when compared to unique regions of the genome on the basis of our comparison of GRCh38 and the complete telomere-to-telomere</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Article</head><p>(T2T) human reference genome <ref type="bibr" target="#b9">10</ref> . Leveraging high-quality phased genome assemblies from 47 humans generated as part of the Human Pangenome Reference Consortium (HPRC) <ref type="bibr" target="#b2">3</ref> , we sought to investigate this difference more systematically and compare the SNV landscape of duplicated and unique DNA in the human genome revealing distinct mutational properties.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Strategy and quality control</head><p>Unlike previous SNV discovery efforts, which catalogued SNVs on the basis of the alignment of sequence reads, our strategy was assembly driven (Extended Data Fig. <ref type="figure">1</ref>). We focused on the comparison of 102 haplotype-resolved genomes (Supplementary Table <ref type="table">1</ref>) generated as part of the HPRC (n = 94) or other efforts (n = 8) <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b28">29</ref> in which phased genome assemblies had been assembled using high-fidelity (HiFi) long-read sequencing <ref type="bibr" target="#b29">30</ref> . The extraordinary assembly contiguity of these haplotypes (contig N50, defined as the sequence length of the shortest contig at 50% of the total assembly length, &gt; 40 Mbp) provided an unprecedented opportunity to align large swathes (&gt;1 Mbp) of the genome, including high-identity SD repeats anchored by megabases of synteny.</p><p>As SD regions are often enriched in assembly errors even among long-read assemblies <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b30">31</ref> , we carried out a series of analyses to assess the integrity and quality of these regions in each assembled haplotype. First, we searched for regions of collapse <ref type="bibr" target="#b10">11</ref> by identifying unusual increases or decreases in sequence read depth <ref type="bibr" target="#b2">3</ref> . We determine that, on average, only 1.64 Mbp (1.37%) of the analysed SD sequence was suspect owing to unusually high or low sequence read depth on the basis of mapping of underlying read data-as such patterns are often indicative of a misassembly 3 (Methods). Next, for all SD regions used in our analysis we compared the predicted copy number by Illumina sequence read depth with the sum based on the total copy number from the two assembled haplotypes. These orthogonal copy number estimates were highly correlated (Pearson's R = 0.99, P &lt; 2.2 × 10 -16 ; Supplementary Fig. <ref type="figure">1</ref>) implying that most SD sequences in the assemblies have the correct copy number. To confirm these results in even the most difficult to assemble duplications, we selected 19 of the largest and most identical SDs across 47 haplotypes for a total of 893 tests. These estimates were also highly correlated (Pearson's R = 0.99, P &lt; 2.2 × 10 -16 ; Supplementary Figs. <ref type="figure" target="#fig_4">2</ref> and <ref type="figure" target="#fig_1">3</ref>), and of the 893 tests conducted, 756 were identical. For the 137 tests for which estimates differed, most (n = 125) differed by only one copy. Finally, most of these discrepancies came from just three large (&gt;140 kbp) and highly identical (&gt;99.3%) SDs (Supplementary Fig. <ref type="figure" target="#fig_1">3</ref>).</p><p>To validate the base-level accuracy, we next compared the quality value for both SD and unique sequences using Illumina sequencing data for 45 of the HPRC samples (Methods). Both unique (average quality value = 59 s.d. 1.9) and SD (average quality value = 53 s.d. 1.9) regions are remarkably high quality, which in the case of SDs translates into less than 1 SNV error every 200 kbp (Supplementary Fig. <ref type="figure" target="#fig_2">4</ref>). We further show that these high-quality assembles result in accurate variant calls (Supplementary Notes and Supplementary Figs. <ref type="figure" target="#fig_3">5</ref><ref type="figure">6</ref><ref type="figure" target="#fig_5">7</ref><ref type="figure">8</ref><ref type="figure">9</ref>). We also assessed the contiguity of the underlying assemblies using a recently developed tool, GAVISUNK, which compares unique k-mer distributions between HiFi-based assemblies and orthogonal Oxford Nanopore Technologies sequencing data from the same samples. We found that, on average, only 0.11% of assayable SD sequence was in error compared to 0.14% of unique regions assayed (Supplementary Table <ref type="table">2</ref>), implying high and comparable assembly contiguity. As a final control for potential haplotype-phasing errors introduced by trio HiFi assembly of diploid samples, we generated deep Oxford Nanopore Technologies and HiFi data from a second complete hydatidiform mole (CHM1) for which a single paternal haplotype was present and applied a different assembly algorithm <ref type="bibr" target="#b31">32</ref> (Verkko 1.0; Extended Data Fig. <ref type="figure" target="#fig_4">2</ref>). We show across our many analyses that the results from the CHM1 Verkko assembly are consistent with individual haplotypes obtained from diploid HPRC samples produced by trio hifiasm <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b31">32</ref> (Supplementary Fig. <ref type="figure">10</ref>). We therefore conclude that phasing errors have, at most, a negligible effect on our results and that most (&gt;98%) SDs analysed were accurately assembled from multiple human genomes allowing the pattern of SNV diversity in SDs to be systematically interrogated.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Increased SNV density in SD regions</head><p>To assess SNVs, we limited our analysis to portions of the genome where a 1:1 orthologous relationship could be unambiguously assigned (as opposed to regions with extensive copy number variation). Using the T2T-CHM13 reference genome, we aligned the HPRC haplotypes requiring alignments to be a minimum of 1 Mbp in length and carry no structural variation events greater than 10 kbp (Methods and Extended Data Fig. <ref type="figure">1</ref>). Although the proportion of haplotypes compared for any locus varied (Fig. <ref type="figure">1a</ref>), the procedure allowed us to establish, on average, 120.2 Mbp 1:1 fully aligned sequence per genome for SD regions out of a total of 217 Mbp from the finished human genome (T2T-CHM13 v1.1). We repeated the analysis for 'unique' (or single-copy) regions of the genome and recovered by comparison 2,508 Mbp as 1:1 alignments (Fig. <ref type="figure">1a</ref>). All downstream analyses were then carried out using this orthologous alignment set. We first compared the SNV diversity between unique and duplicated regions excluding suboptimal alignments mapping to tandem repeats or homopolymer stretches. Overall, we observe a significant 60% increase in SNVs in SD regions (Methods; Pearson's chi-squared test with Yates's continuity correction P &lt; 2.2 × 10 -16 ; Fig. <ref type="figure">1b</ref>). Specifically, we observe an average of 15.3 SNVs per 10 kbp versus 9.57 SNVs per 10 kbp for unique sequences (Fig. <ref type="figure">1d</ref>). An empirical cumulative distribution comparing the number of SNVs in 10-kbp windows between SD and unique sequence confirms that this is a general property and not driven simply by outliers. The empirical cumulative distribution shows that more than half of the SD sequences have more SNVs than their unique counterparts (Fig. <ref type="figure">1b</ref>). Moreover, for all haplotypes we divided the unique portions of the genome into 125-Mbp bins and found that all SD bins of equivalent size have more SNVs than any of the bins of unique sequence (empirical P value &lt; 0.0005; Extended Data Fig. <ref type="figure" target="#fig_1">3</ref>). This elevation in SNVs is only modestly affected by the sequence identity of the underlying SDs (Pearson's correlation of only 0.008; Supplementary Fig. <ref type="figure">11</ref>). The increase in SNVs (60%) in SDs is greater than that in all other assayable classes of repeats: Alu (23%), L1 (-9.4%), human endogenous retroviruses (-9.4%) and ancient SDs for which the divergence is greater than 10% (12%) (Extended Data Fig. <ref type="figure" target="#fig_2">4</ref> and Supplementary Table <ref type="table">3</ref>). We find, however, that SNV density correlates with increasing GC content (Supplementary Fig. <ref type="figure" target="#fig_4">12</ref>) consistent with Alu repeats representing the only other class of common repeat to show an elevation.</p><p>Previous publications have shown that African haplotypes are genetically more diverse, having on average about 20% more variant sites compared to non-African haplotypes <ref type="bibr" target="#b7">8</ref> . To confirm this observation in our data, we examined the number of SNVs per 10 kbp of unique sequence in African versus non-African haplotypes (Fig. <ref type="figure">1c</ref>,<ref type="figure">d</ref>) and observed a 27% (10.8 versus 8.5) excess in African haplotypes. As a result, among African haplotypes, we see that the average distance between SNVs (979 bp) is 19.4% closer than in non-African haplotypes (1,215 bp), as expected <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b11">12</ref> . African genomes also show increased variation in SDs, but it is less pronounced with an average distance of 784 bases between consecutive SNVs as compared to 909 bases in non-African haplotypes (13.8%). Although elevated in African haplotypes, SNV density is higher in SD sequence across populations and these properties are not driven by a few sites but, once again, are a genome-wide feature. We put forward three possible hypotheses to account for this increase although note these are not mutually exclusive: SDs have unique mutational mechanisms that increase SNVs; SDs have a deeper average coalescence than unique parts of the genome; and differences in sequence composition (for example, GC richness) make SDs more prone to particular classes of mutation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Putative IGC</head><p>One possible explanation for increased diversity in SDs is IGC in which sequence that is orthologous by position no longer shares an evolutionary history because a paralogue from a different location has 'donated' its sequence through ectopic template-driven conversion <ref type="bibr" target="#b32">33</ref> , also known as nonallelic gene conversion <ref type="bibr" target="#b26">27</ref> . To identify regions of IGC, we developed a method that compares two independent alignment strategies to pinpoint regions where the orthologous alignment of an SD sequence is inferior to an independent alignment of the sequence without flanking information (Fig. <ref type="figure" target="#fig_4">2a</ref> and Methods). We note several limitations of our approach (Supplementary Notes); however, we show that our high-confidence IGC calls (20+ supporting SNVs) have strong overlap with other methods for identifying IGC (Supplementary Notes and Supplementary Fig. <ref type="figure" target="#fig_1">13</ref>). Using this approach, we created a genome-wide map of putative large IGC events for all of the HPRC haplotypes for which 1:1 orthologous relationships could be established (Fig. <ref type="figure" target="#fig_4">2</ref>).</p><p>Across all 102 haplotypes, we observe 121,631 putative IGC events for an average of 1,193 events per human haplotype (Fig. <ref type="figure" target="#fig_4">2b</ref>,c and Supplementary Table <ref type="table">4</ref>). Of these events, 17,949 are rare and restricted to a single haplotype (singletons) whereas the remaining events are observed in several human haplotypes grouping into 14,663 distinct events (50% reciprocal overlap at both the donor and acceptor site). In total, we estimate that there is evidence for 32,612 different putative IGC events (Supplementary Table <ref type="table">5</ref>) among the SD regions that are assessed at present. Considering the redundant IGC callset (n = 121,631), the average IGC length observed in our data is 6.26 kbp with the largest event observed being 504 kbp (Extended Data Fig. <ref type="figure" target="#fig_3">5</ref>). On average, each IGC event has 13.3 SNVs that support the conversion event and 2.03 supporting SNVs per kilobase pair, and as expected, there is strong</p><p>Mean = 784 Mean = 979 Non-African African 1.0 10.0 100.0 1,000.0 10,000.0 0 0.25 0.50 0.75 1.00 1.25 0 0.25 0.50 0.75 1.00 1.25 Distance to next closest SNV Density Density chr1 chr6 chr8 chrX a b e d c HLA CHM1 CHM1 African haplotypes Non-African haplotypes 105.0 110.0 115.0 120.0 125.0 130.0 2,400 2,450 2,500 2,550 Amount of sequence within synteny blocks &gt;1 Mbp (Mbp)</p><p>17.4 10.8 13.3 8.4 13.7 8.6 13.7 8.1 12.7 8.4 13.4 8.4 African American East Asian European South Asian Non-African SD Unique SD Unique SD Unique SD Unique SD Unique SD Unique 10 15 Genomic region No. SNVs per 10 kbp 0 0.25 0.50 0.75 1.00 0 1 10 100 1,000 Number of SNVs in 10-kbp windows Cumulative fraction of windows SD Unique chrX SD Unique Mean = 909 Mean = 1,215 SD Unique Fig. 1 | Increased single-nucleotide variation in SDs. a, The portion of the human genome analysed for SD (red) and unique (blue) regions among African and non-African genomes. Shown are the number of megabase pairs aligned in 1:1 syntenic blocks to T2T-CHM13 v1.1 for each assembled haplotype. Data are shown as both a single point per haplotype originating from a single individual and a smoothed violin plot to represent the population distribution. b, Empirical cumulative distribution showing the number of SNVs in 10-kbp windows in the syntenic regions stratified by unique (grey), SD (red) and the X chromosome (chrX; green). Dashed lines represent individual haplotypes and thick lines represent the average trend of all the data. c, Distribution of the average distance to the next closest SNV in SD (red) and unique (grey) space separating African (top) and non-African (bottom) samples. Dashed vertical lines are drawn at the mean of each distribution. d, Average number of SNVs per 10-kbp window in SD (red) versus unique (grey) space by superpopulation and with mean value shown underneath each violin. The non-African column represents an aggregation of the data from all non-African populations in this study. e, Density of SNVs in 10 bp of each other for SD (top, red) and unique (bottom, grey) regions for chromosomes 1, 6, 8 and X comparing the relative density of known (for example, HLA) and new hotspots of single-nucleotide variation.</p><p>correlation (Pearson's R = 0.63, P &lt; 2.2 × 10 -16 ; Fig. <ref type="figure" target="#fig_4">2d</ref>) between the length of the events and supporting SNVs. Furthermore, we validated these supporting SNVs against Illumina sequencing data and find that on average only 1% (12/1,192) of IGC events contain even one erroneous SNV (Supplementary Fig. <ref type="figure" target="#fig_2">4</ref>). The putative IGC events detected with our method are largely restricted to higher identity duplications with only 325 events detected in 66.1 Mbp of SDs with &gt;10% sequence divergence (Supplementary Figs. <ref type="figure" target="#fig_2">14</ref> and <ref type="figure" target="#fig_3">15</ref>). We further stratify these results by callset, minimum number of supporting SNVs and haplotype (Supplementary Table <ref type="table">6</ref>). Finally, we use the number of supporting informative SNVs to estimate the statistical confidence of every putative IGC call (Fig. <ref type="figure" target="#fig_4">2c</ref>, Supplementary Table <ref type="table">7</ref> and Methods). Using these P values, we identify a subset of the high-confidence (P value &lt; 0.05) IGC calls with 31,910 IGC events and 10,102 nonredundant events. On average, we identify 7.5 Mbp of sequence per haplotype affected by putative IGC and 4.3 Mbp in our high-confidence callset (Fig. <ref type="figure" target="#fig_4">2b</ref>). Overall, 33.8% (60.77/180.0 Mbp) of the analysed SD sequence is affected by putative IGC in at least one human haplotype. Furthermore, among all SDs covered by at least 20 assembled haplotypes, we identify 498 acceptor and 454 donor IGC hotspots with at least 20 distinct IGC events (Fig. <ref type="figure" target="#fig_1">3</ref> and Supplementary Table <ref type="table">8</ref>). IGC hotspots are more likely to associate with higher copy number SDs compared to a random sample of SD windows of equal size (median of 9 overlaps compared to 3, one-sided Wilcoxon rank sum test P &lt; 2.2 × 10 -16 ) and regions with more IGC events are moderately correlated with the copy number of the SD (Pearson's R = 0.23, P &lt; 2.2 × 10 -16 ; Supplementary Fig. <ref type="figure">16</ref>). IGC hotspots also preferentially overlap higher identity duplications (median 99.4%) compared to randomly sampled windows (median 98.0%, one-sided Wilcoxon rank sum test P &lt; 2.2 × 10 -16 ).</p><p>These events intersect 1,179 protein-coding genes, and of these genes, 799 have at least one coding exon affected by IGC (Supplementary Tables <ref type="table">9</ref> and <ref type="table">10</ref>). As a measure of functional constraint, we used the probability of being loss-of-function intolerant (pLI) for each of the 799 genes <ref type="bibr" target="#b33">34</ref> (Fig. <ref type="figure" target="#fig_2">4a</ref>). Among these, 314 (39.3%) have never been assessed Fig. <ref type="figure" target="#fig_4">2</ref> | Candidate IGC events. a, Method to detect IGC. The assembled human haplotype query sequence from 1:1 syntenic alignments was fragmented into 1-kbp windows in 100-bp increments and realigned back to T2T-CHM13 v1.1 independent of the flanking sequence information using minimap2 v2.24 to identify each window's single best alignment position. These alignments were compared to their original syntenic alignment positions, and if they were not overlapping, we considered them to be candidate IGC windows. Candidate IGC windows were then merged into larger intervals and realigned when windows were overlapping in both the donor and the acceptor sequence. We then used the CIGAR string to identify the number of matching and mismatching bases at the 'donor' site and compared that to the number of matching and mismatching bases at the acceptor site determined by the syntenic alignment to calculate the number of supporting SNVs. b, The amount of SDs (in megabase pairs) predicted to be affected by IGC per haplotype, as a function of the minimum number of SNVs that support the IGC call. Dashed lines represent individual haplotypes and the solid line represents the average. c, Empirical cumulative distribution of the megabase pairs of candidate IGC observed in HPRC haplotypes, as a function of the minimum underlying P-value threshold used to define the IGC callset (see Methods for IGC P-value calculation). Dashed lines represent individual haplotypes and the solid line represents the average. d, Correlation between IGC length and the number of supporting SNVs. e, Distribution of the distance between predicted IGC acceptor and donor sites for intrachromosomal events by chromosome.</p><p>for mutation intolerance (that is, no pLI) owing to the limitations of mapping short-read data from population samples <ref type="bibr" target="#b33">34</ref> . Of the remaining genes, we identify 38 with a pLI greater than 0.5, including genes associated with disease (F8, HBG1 and C4B) and human evolution (NOTCH2 and TCAF). Of the genes with high pLI scores, 12 are the acceptor site for at least 50 IGC events, including CB4, NOTCH2 and OPNL1W-a locus for red-green colour blindness (Fig. <ref type="figure" target="#fig_2">4b-e</ref>). We identify a subset of 418 nonredundant IGC events that are predicted to copy the entirety of a gene body to a 'new location' in the genome (Fig. <ref type="figure" target="#fig_2">4f</ref>,<ref type="figure">g</ref>). As a result, 171 different protein-coding genes with at least 2 exons and 200 coding base pairs are converted in their entirety by putative IGC events in a subset of human haplotypes (Supplementary Table <ref type="table">11</ref>), and we refer to this phenomenon as gene repositioning. These gene-repositioning events are large (average 26 kbp; median 16.7 kbp) and supported by a high number of SNVs (average 64.7; median 15.3 SNVs), suggesting that they are unlikely to be mapping artefacts. Markedly, these putative IGC events copy the reference gene model on average a distance of 1.66 Mbp (median 216 kbp) from its original location. These include several disease-associated genes (for example, TAOK2, C4A, C4B, PDPK1 and IL27) as well as genes that have eluded complete characterization owing to their duplicative nature <ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref> .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Evolutionary age of SDs</head><p>Our analysis suggests that putative IGC contributes modestly to the significant increase of human SNV diversity in SDs. For example, if we apply the least conservative definition of IGC (1 supporting SNV) and exclude all putative IGC events from the human haplotypes, we estimate that it accounts for only 23% of the increase (Extended Data Fig. <ref type="figure">6</ref>). If we restrict to higher confidence IGC events (P &lt; 0.05), only 19.6% of the increase could be accounted for. An alternative explanation may be that the SDs are evolutionarily older, perhaps owing to reduced selective constraint on duplicated copies <ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39</ref> . To test whether SD sequences seem to have a deeper average coalescence than unique regions, we constructed a high-quality, locally phased assembly (hifiasm v0.15.2) of a chimpanzee (Pan troglodytes) genome to calibrate age since the time of divergence and to distinguish ancestral versus derived alleles in human SD regions (Methods). Constraining our analysis to syntenic regions between human and chimpanzee genomes (Methods), we characterized 4,316 SD regions (10 kbp in size) where we had variant calls from at least 50 human and one chimpanzee haplotype. We selected at random 9,247 analogous windows from unique regions for comparison. We constructed a multiple sequence alignment</p><p>Acceptor site density Donor site density Chromosome: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 X a b c HG03492 0-0.6 0.7-5.8 13.9-15.3 15.6-16 17.6-21.5 21.8-22.4 22.9-23.1 26-26.7 41.3-41.6 42.1-42.4 42.5-42.9 27.4-28.7 29.4-30.5 32.1-32.5 76.4-76.7 77.5-77.9 80-80.5 80.9-81.3 81.9-82.4 83.2-83.6 97.4-97.7 43-43.4 71.7-72.1 73.6-73.9 NA12878 HG002 GRCh38 CHM1 HG02080 HG00673 HG00621 HG00514 HG005 HG00438 HG02148 HG01978 HG01952 HG01358 HG01258 HG01175 HG01123 HG01109 HG01106 HG02572 HG02559 HG02055 HG01891 Prader-Willi syndrome 15q11-q13 Centromere 34 1.9 14.4 13.6 10.9 35.7 7.1 3.1 1.5 4.3 7.8 5.2 19.4 52.7 36.5 37.6 6.6 4.1 4.2 4.9 1.2 5.9 20.9 6.9 70.3 30.9 27 64 2.9 5 33.8 13.0 13.0 22.0 17.0 27.6 15.0 9.0 8.8 14.0 7.7 13.7 23.1 33.0 35.0 37.5 12.0 8.5 7.4 7.0 6.0 12.7 14.0 13.7 46.8 18.7 30.7 30.9 8.0 10.0 20,000,000 24,000,000 28,000,000 Genomic position Acceptor Donor 0 10 20 30 No. of haplotypes with IGC event ABCB10P1 for each window and estimated the time to the most recent common ancestor (TMRCA) for each 10-kbp window independently. We infer that SDs are significantly older than the corresponding unique regions of similar size (Supplementary Figs. <ref type="figure" target="#fig_5">17</ref> and 18; one-sided Wilcoxon rank sum test P value = 4.3 × 10 -14 ), assuming that mutation rates have remained constant over time within these regions since the humanchimpanzee divergence. The TMRCAs inferred from SD regions are, on average, 22% more ancient when compared to unique regions (650 versus 530 thousand years ago (ka)), but only a 5% difference is noted when comparing the median (520 versus 490 ka). However, this effect all but disappears (only a 0.2% increase) after excluding windows classified as IGC (Supplementary Fig. 19; one-sided Wilcoxon rank sum test P = 0.05; mean TMRCA unique = 528 ka, mean TMRCA SD = 581 ka, median TMRCA unique = 495 ka, median TMRCA SD = 496 ka).</p><note type="other">ABCB10P3 ABCB10P4 CHEK2P2 CHRFAM7A CHRNA7 CXADRP2 GOLGA6L1 GOLGA6L22 GOLGA6L6 GOLGA8DP GOLGA8F GOLGA8G GOLGA8J GOLGA8K GOLGA8N GOLGA8O GOLGA8Q GOLGA8R GOLGA8S GOLGA8T GRAMD4P6 HERC2 HERC2P2 HERC2P3 HERC2P7 HERC2P9 LONRF2P3 LONRF2P4 POTEB POTEB3 ULK4P2 ULK4P3 ZNF519P2</note></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SNV mutational spectra in SDs</head><p>As a third possibility, we considered potential differences in the sequence context of unique and duplicated DNA. It has been recognized for almost two decades that human SDs are particularly biased towards Alu repeats and GC-rich DNA of the human genome <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b39">40</ref> . Notably, among the SNVs in SDs, we observed a significant excess of transversions (transition/transversion ratio (Ti/Tv) = 1.78) when compared to unique sequence (Ti/Tv = 2.06; P &lt; 2.2 × 10 -16 , Pearson's chi-squared test with Yates's continuity correction). Increased mutability of GC-rich DNA is expected and may explain, in part, the increased variation in SDs and transversion bias <ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b40">41</ref> . Using a more complete genome, we compared the GC composition of unique and duplicated DNA specifically for the regions considered in this analysis. We find that, on average, 42.4% of the analysed SD regions are guanine or cytosine (43.0% across all SDs) when compared to 40.8% of the unique DNA (P value &lt; 2.2 × 10 -16 , one-sided t-test). Notably, this enrichment drops slightly (41.8%) if we exclude IGC regions. Consequently, we observe an increase of all GC-containing triplets in SD sequences compared to unique regions of the genome (Fig. <ref type="figure" target="#fig_3">5a</ref>). Furthermore, the enrichment levels of particular triplet contexts in SD sequence correlate with the mutability of the same triplet sequence in unique regions of the genome (Pearson's R = 0.77, P = 2.4 × 10 -7 ; Fig. <ref type="figure" target="#fig_3">5b</ref>). This effect is primarily driven by CpG-containing triplets, which are enriched between 14 and 30% in SD sequences. Note, we observe a weaker and insignificant correlation for the non-CpG-containing triplets (Pearson's R = 0.22, P = 0.27). Extrapolating from the mutational frequencies seen in unique sequences, we estimate that there is 3.21% more variation with SDs due to their sequence composition alone.</p><p>To further investigate the changes in GC content and their effect on variation in SDs, we compared the triplet mutational spectra of SNVs from unique and duplicated regions of the genome to determine whether the predominant modes of SNV mutation differed (Methods). We considered all possible triplet changes, first quantifying the number of ancestral GC bases and triplets in SDs (Fig. <ref type="figure" target="#fig_3">5a</ref>). A principal component analysis (PCA) of these normalized mutational spectra shows clear discrimination (Fig. <ref type="figure" target="#fig_3">5c</ref>) between unique and SD regions (PC1) beyond that of African and non-African diversity, with the first principal component capturing 80.2% of the variation separating the mutational spectrum of SDs and unique DNA. We observe several differences when comparing the triplet-normalized mutation frequency AC244197.3 ACTR3B</p><note type="other">ANAPC1 C4B DHX40 EOLA1 F8 FAM120A FLNC HBG1 HBG2 HERC2 HIC2 ISY1-RAB43 NOTCH2 OPN1LW NUDT4 TUD7A PDPK1 CORO1A PHC1 PPIE RAB43 RMND5A T0013193 T0096537 T0096538 T0126759 T0126762 T0126763 T0126764 T0126765 T0202771 T0202772 T0204050 T0204051 T0218473</note><p>TCAF1 0 100 200 300 No pLI data available 0 0.25 0.50 0.75 1.00 pLI pLI pLI Count of genes with IGC over exons C4B 0 0.25 0.50 0.75 1.00 Number of IGC donor events ANAPC1 C4B HERC2 HIC2 PDPK1 NOTCH2 PPIE T0126759 T0126762 T0126763 T0126764 T0126765 T0204050 T0204051 TCAF1 0 0.25 0.50 0.75 1.00 2.8 11 8.3 1.1 1.4 3 1.4 4.8 23.6 2.3 12.2 3.6 7.2 3.5 3.8 2.3 3.4 2.0 1.0 69.0 3.0 1.0 2.0 1.0 3.0 3.7 10.7 1.7 8.5 1.0 1.0 2.6 1.0 1.8 2.2 31.82 31.84 31.86 31.88 31.90 Genomic position (Mbp) Genomic position (Mbp) 0 5 10 15 20 C4A C4B CYP21A2 STK19 T NXB 82 88 1:1 alignment coverage FCGR2B FCGR3B FCGR3B FCGR3A 48.4 39.1 64.6 64 38.3 32.9 15.8 225.0 201.0 637.0 265.5 120.0 115.5 48.8 160.80 160.85 160.90 160.95 161.00 chr1 position (Mbp) 0 1 2 3 4 5 TRIM49 TRIM64B TRIM49C 15.6 57.3 23.9 45.4 15.5 66.5 11.0 1.5 85.0 23.0 35.6 221.7 89.7 89.8 89.9 90.0 chr11 position (Mbp) 0 2.5 5.0 7.5 1.4 7.7 1 1.7 14.4 10.3 1.3 1.5 7.5 1.7 1.9 3.8 1.4 11.8 21.1 1.2 1.6 7.9 20.7 1 7.3 1.6 2.0 7.0 1.0 1.0 3.0 5.0 1.0 1.0 1.0 1.5 1.0 2.0 2.0 12.7 9.3 1.0 1.0 21.5 3.8 1.2 2.5 1.0 152.40 152.45 152.50 0 2 4 6 Number of haplotypes with IGC event OPN1LW OPN1MW OPN1MW2 TEX28 35 45 55 0 500 1,000 1,500 2,000 Number of IGC acceptor events 0 500 1,000 1,500 2,000 e d b c g f a 1:1 alignment coverage OPN1LW CORO1A NOTCH2 ISY1-RAB43 PDPK1 DHX40 T0218473 Number of haplotypes with IGC event Acceptor Donor Number of haplotypes with IGC event Acceptor Donor Number of haplotypes with IGC event of particular mutational events in SD and unique sequences (Fig. <ref type="figure" target="#fig_3">5d</ref>). Most notable is a 7.6% reduction in CpG transition mutations-the most predominant mode of mutation in unique regions of the genome due to spontaneous deamination of methylated CpGs 6 (Supplementary Tables <ref type="table">12</ref> and <ref type="table">13</ref>).</p><p>The most notable changes in mutational spectra in SD sequences are a 27.1% increase in C&gt;G mutations, a 15.3% increase in C&gt;A mutations and a 10.5% increase in A&gt;C mutations. C&gt;G mutations are associated with double-strand breaks in humans and some other apes <ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43</ref> . This effect becomes more pronounced (+40.4%) in our candidate IGC regions consistent with previous observations showing increases in C&gt;G mutations in regions of non-crossover gene conversion and double-strand breaks <ref type="bibr" target="#b42">[43]</ref><ref type="bibr" target="#b43">[44]</ref><ref type="bibr" target="#b44">[45]</ref> . However, the increase remains in SD regions without IGC (+20.0%) perhaps owing to extensive nonallelic homologous recombination associated with SDs or undetected IGC events <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b8">9</ref> .</p><p>To further investigate the potential effect of GC-biased gene conversion (gBGC) on the mutational spectra in SDs, we measured the frequency of (A,T)&gt;(G,C) mutations in SD regions with evidence of IGC to determine whether cytosine and guanine bases are being preferentially maintained as might be expected in regions undergoing gBGC. If we measure the frequency of (A,T)&gt;(C,G) in windows with at least one haplotype showing evidence of IGC, then we observe that the frequency is 4.7% higher than in unique regions of the genome; notably, in SDs</p><p>0.9 1.0 1.1 1.2 1.3 TAA AAA AAG ACT ACA TCA GAC CAG TCC TCG GCG TAT TAG AAC TCT GAT GCT CCT GAG CAC GCC CCG AAT TAC CAA CAT GAA GCA ACC CCA ACG CCC SD composition Unique composition No. of GC bases 0 1 2 3 a ACG 1.14 GCG 1.27 CCG 1.3 TCG 1.22 CAT 0.99 CAC 1.08 ACC 1.04 CCC 1.11 ACA 0.99 GCC 1.1 TAT 0.91 CAG 1.05 ACT 0.97 GCA 1.02 CCT 1.04 TCC 1.07 GCT 1.02 TCT 0.98 CCA 1.07 CAA 0.97 GAT 1 AAT 0.94 TAC 0.95 GAC 1.04 AAC 0.97 TCA 1 TAA 0.9 TAG 0.93 GAG 1.05 AAG 0.95 AAA 0.95 GAA 1 R = 0.77, P = 2.4 × 10 -7 0.9 1.0 1.1 1.2 1.3 0.1 0.3 1.0 Frequency of mutation in unique sequence SD composition Unique composition b -0.4 -0.2 0 0.2 -0.10 -0.05 0 0.05 0.10 PC1 (80.19%) PC2 (2.14%) AFR AMR EAS EUR SAS SD Unique c A&gt;C A &gt;G A&gt;T C &gt;A C&gt;G C &gt;T A C G T A C G T A C G T A C G T A C G T A C G T A C G T 3′ base 5′ base -0.6 -0.5 -0.4 -0.3 -0.2 -0.1 0 0.1 0.2 0.3 0.4 0.5 0.6 log 2 [FC] d Triplet -0.6 without IGC, this rate is reduced compared to that of unique sequence (-3.5%). Additionally, there is a 5.8% reduction in (G,C)&gt;(A,T) bases consistent with IGC preferentially restoring CG bases that have mutated to AT bases through gBGC. These results indicate that gBGC between paralogous sequences may be a strong factor in shaping the mutational landscape of SDs. Although, the (A,T)&gt;(C,G) frequency is comparable in SD regions not affected by IGC, the mutational landscape at large is still very distinct between SDs and unique parts of the genome. In PCA of the mutational spectra in SDs without IGC, the first principal component distinguishing the mutational spectrum of SDs and unique DNA captures a larger fraction of the variation (94.6%) than in the PCA including IGC sites (80.2%; Supplementary Fig. <ref type="figure" target="#fig_4">20</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Modelling of elevated SNV frequency</head><p>To model the combined effect of unique mutational properties, evolutionary age and sequence content on the frequency of SNVs, we developed a multivariable linear regression using copy number, SD identity, number of unique IGC events, GC content and TMRCA to predict the number of SNVs seen in a 10-kbp window. A linear model containing all pairwise interactions of these predictors was able to explain 10.5% of the variation in SNVs per 10 kbp (adjusted R 2 ), whereas a model containing only the number of IGC events explained only 1.8% of the variation. We note that this measure of variance is related but not directly comparable to the finding that the elevation in the number of SNVs is reduced by 23% when excluding IGC regions. All of the random variables, including their pairwise interactions, were significant (P value &lt; 0.05) predictors of SNVs per 10 kbp except the interaction of number of IGC events with GC content, copy number and TMRCA. The strongest single predictors were the number of unique IGC events and the divergence of the overlapping SD (Supplementary Table <ref type="table">14</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>Since the first publications of the human genome <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b12">13</ref> , the pattern of single-nucleotide variation in recently duplicated sequence has been difficult to ascertain, leading to errors <ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b10">11</ref> . Later, indirect approaches were used to infer true SNVs in SDs, but these were far from complete <ref type="bibr" target="#b39">40</ref> . More often than not, large-scale sequencing efforts simply excluded such regions in an effort to prevent paralogous sequence variants from contaminating single-nucleotide polymorphism databases and leading to false genetic associations <ref type="bibr" target="#b7">8,</ref><ref type="bibr">23</ref> . The use of phased genome assemblies as opposed to aligned sequence reads had the advantage of allowing us to establish 1:1 orthologous relationships as well as the ability to discern the effect of IGC while comparing the pattern of single-nucleotide variation for both duplicated and unique DNA within the same haplotypes. As a result, we identify over 1.99 million nonredundant SNVs in a gene-rich portion of the genome previously considered largely inaccessible. SNV density is significantly elevated (60%) in duplicated DNA when compared to unique DNA consistent with suggestions from primate genome comparisons and more recent de novo mutation studies from long-read sequencing data <ref type="bibr">[46]</ref><ref type="bibr">[47]</ref><ref type="bibr" target="#b47">[48]</ref> . Furthermore, an increased de novo mutation rate in SDs could support our observation of an elevated SNV density without the need for an increase in TMRCA. We estimate that at least 23% of this increase is due to the action of IGC between paralogous sequences that essentially diversify allelic copies through concerted evolution. IGC in SDs seems to be more pervasive in the human genome compared to earlier estimates <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b26">27</ref> , which owing to mapping uncertainties or gaps could assay only a smaller subset of regions <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b26">27</ref> . We estimate more than 32,000 candidate regions (including 799 protein-coding genes) with the average human haplotype showing 1,192 events when compared to the reference. The putative IGC events are also much larger (mean 6.26 kbp) than those of most previous reports <ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b48">49</ref> , with the top 10% of the size distribution &gt;14.4 kbp in length. This has the net effect that entire genes are copied hundreds of kilobase pairs into a new genomic context when compared to the reference. The effect of such 'repositioning events' on gene regulation will be an interesting avenue of future research.</p><p>As for allelic gene conversion, our predicted nonallelic gene conversion events are abundant, cluster into larger regional hotspots and favour G and C mutations, although this last property is not restricted to IGC regions <ref type="bibr" target="#b44">45,</ref><ref type="bibr" target="#b49">50</ref> . Although we classify these regions as putative IGC events, other mutational processes such as deletion followed by duplicative transposition could, in principle, generate the same signal creating large tracts of 'repositioned' DNA. It should also be stressed that our method simply relies on the discovery of a closer match within the reference; by definition, this limits the detection of IGC events to regions where the donor sequence is already present in the reference as opposed to an alternative. Moreover, we interrogated only regions where 1:1 synteny could be unambiguously established. As more of the genome is assessed in the context of a pangenome reference framework, we anticipate that the proportion of IGC will increase, especially as large-copy-number polymorphic SDs, centromeres and acrocentric DNA become fully sequence resolved <ref type="bibr" target="#b2">3</ref> . Although we estimate 4.3 Mbp of IGC in SDs on average per human haplotype, we caution that this almost certainly represents a lower bound and should not yet be regarded as a rate until more of the genome is surveyed and studies are carried out in the context of parent-child trios to observe germline events.</p><p>One of the most notable features of duplicated DNA is its higher GC content. In this study, we show that there is a clear skew in the mutational spectrum of SNVs to maintain this property of SDs beyond expectations from unique DNA. This property and the unexpected Ti/Tv ratio cannot be explained by lower accuracy of the assembly of SD regions. We find a 27.1% increase in transversions that convert cytosine to guanine or the reverse across all triplet contexts. GC-rich DNA has long been regarded as hypermutable. For example, C&gt;G mutations preferentially associate with double-strand breaks in humans and apes <ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43</ref> and GC-rich regions in yeast show about 2-5 times more mutations depending on sequence context compared to AT-rich DNA <ref type="bibr" target="#b40">41</ref> . Notably, in human SD regions, we observe a paucity of CpG transition mutations, characteristically associated with spontaneous deamination of CpG dinucleotides and concomitant transitions <ref type="bibr" target="#b5">6</ref> . The basis for this is unclear, but it may be partially explained by the recent observation that duplicated genes show a greater degree of hypomethylation when compared to their unique counterparts <ref type="bibr" target="#b9">10</ref> . We propose that excess of guanosine and cytosine transversions is a direct consequence of GC-biased gene conversion <ref type="bibr" target="#b4">5</ref> driven by an excess of double-strand breaks that result from a high rate of nonallelic homologous recombination events and other break-induced replication mechanisms among paralogous sequences.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Online content</head><p>Any methods, additional references, Nature Portfolio reporting summaries, source data, extended data, supplementary information, acknowledgements, peer review information; details of author contributions and competing interests; and statements of data and code availability are available at <ref type="url" target="https://doi.org/10.1038/s41586-023-05895-y">https://doi.org/10.1038/s41586-023-05895-y</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Defining unique and SD regions</head><p>To define regions of SD, we used the annotations available for T2T-CHM13 v1.1 (ref. 10), which include all nonallelic intrachromosomal and interchromosomal pairwise alignments &gt;1 kbp and with &gt;90% sequence identity that do not consist entirely of common repeats or satellite sequences <ref type="bibr" target="#b10">11</ref> . To define unique regions, we found the coordinates in T2T-CHM13 that were not SDs, ancient SDs (&lt;90% sequence identity), centromeres or satellite arrays <ref type="bibr" target="#b58">51</ref> and defined these areas to be the non-duplicated (unique) parts of the genome. For both SDs and unique regions, variants in tandem repeat elements as identified by Tandem Repeats Finder <ref type="bibr" target="#b59">52</ref> were excluded because many SNVs called in these regions are ultimately alignment artefacts. RepeatMasker v4.1.2 was used to annotate SNVs with additional repeat classes beyond SDs <ref type="bibr" target="#b60">53</ref> .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Copy number estimate validation</head><p>The goal of this analysis was to validate copy number from the assembled HPRC haplotypes compared to estimates from read-depth analysis of the same samples sequenced using Illumina whole-genome sequencing (WGS). Large, recently duplicated segments are prone to copy number variation and are also susceptible to collapse and misassembly owing to their repetitive nature. HPRC haplotypes were assembled using PacBio HiFi with hifiasm 3,54 creating contiguous long-read assemblies. We selected 19 SD loci corresponding to genes that were known to be duplicated and copy number variable in the human species. We k-merized the 2 haplotype assemblies corresponding to each locus for each individual into k-mers of 31 base pairs in length. We then computed copy number estimates over each locus for the sum haplotype assemblies and calculated the difference based on Illumina WGS from the same sample. For both datasets, we derived these estimates using FastCN, an algorithm implementing whole-genome shotgun sequence detection <ref type="bibr" target="#b62">55</ref> . When averaging across each region and comparing differences in assembly copy versus Illumina WGS copy estimate, we observe that 756 out of 893 tests were perfectly matched (δ = 0), suggesting that most of these assemblies correctly represent the underlying genomic sequence of the samples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quality value estimations with Merqury</head><p>Estimates of the quality value of SD and unique regions were made using Merqury v1.1 and parental Illumina sequencing data <ref type="bibr" target="#b63">56</ref> . We first used Meryl to create k-mer databases (with a k-mer length of 21) using the parental sequencing data following the instructions in the Merqury documentation. Then Merqury was run with default parameters (merqury. sh {k-mer meryl database} {paternal sequence} {maternal sequence}) to generate quality value estimates for the hifiasm assemblies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Haplotype integrity analysis using inter-SUNK approach</head><p>For the 35 HPRC assemblies with matched ultralong Oxford Nanopore Technologies (ONT) data, we applied GAVISUNK v1.0.0 as an orthogonal validation of HiFi assembly integrity <ref type="bibr" target="#b64">57</ref> . In brief, candidate haplotype-specific singly unique nucleotide k-mers (SUNKs) of length 20 are determined from the HiFi assembly and compared to ONT reads phased with parental Illumina data. Inter-SUNK distances are required to be consistent between the assembly and ONT reads, and regions that can be spanned and tiled with consistent ONT reads are considered validated. ONT read dropouts do not necessarily correspond to misassembly-they are also caused by large regions devoid of haplotype-specific SUNKs from recent duplications, homozygosity or over-assembly of the region, as well as Poisson dropout of read coverage.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Read-depth analysis using the HPRC unreliable callset</head><p>For the 94 assembled HPRC haplotypes, we downloaded the regions identified to have abnormal coverage form S3 (s3://human-pangenomics/ submissions/e9ad8022-1b30-11ec-ab04-0a13c5208311-COVERAGE_ ANALYSIS_Y1_GENBANK/FLAGGER/JAN_09_2022/FINAL_HIFI_BASED/ FLAGGER_HIFI_ASM_SIMPLIFIED_BEDS/ALL/). We then intersected these regions with the callable SD regions in each assembly to determine the number of collapsed, falsely duplicated and low-coverage base pairs in each assembly. The unreliable regions were determined by the HPRC using Flagger v0.1 (<ref type="url" target="https://github.com/mobinasri/flagger/">https://github.com/mobinasri/flagger/</ref>) <ref type="bibr" target="#b2">3</ref> .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Whole-genome alignments and synteny definition</head><p>Whole-genome alignments were calculated against T2T-CHM13 v1.1 with a copy of GRCh38 chrY using minimap2 v2. 24 (ref. 58) with the parameters -a -x asm20-secondary=no -s 25000 -K 8G. The alignments were further processed with rustybam v0. 1.29 (ref. 59) using the subcommands trim-paf to remove redundant alignments in the query sequence and break-paf to split alignments on structural variants over 10 kbp. After these steps, the remaining alignments over 1 Mbp of continuously aligned sequence were defined to be syntenic. The software pipeline is available on GitHub at <ref type="url" target="https://github.com/mrvollger/asm-to-reference-alignment/">https://github.com/  mrvollger/asm-to-reference-alignment/</ref> (refs. 58-67).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Estimating the diversity of SNVs in SDs and unique sequences</head><p>When enumerating the number of SNVs, we count all pairwise differences between the haplotypes and the reference, counting events observed in multiple haplotypes multiple times. Therefore, except when otherwise indicated, we are referring to the total number of pairwise differences rather than the total number of nonredundant SNVs (number of segregation sites). The software pipeline is available on GitHub at <ref type="url" target="https://github.com/mrvollger/sd-divergence">https://github.com/mrvollger/sd-divergence</ref> (refs. 60-63,65,66,68).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Defining IGC events</head><p>Each query haplotype genome sequence was aligned to the reference genome (T2T-CHM13 v1.1) using minimap2 v2. 24 (ref. 58) considering only those regions that align in a 1:1 fashion for &gt;1 Mbp without any evidence of gaps or discontinuities greater than 10 kbp in size. This eliminates large forms of structural variation, including copy number variants or regions of large-scale inversion restricting the analysis to largely copy number invariant SD regions (about 120 Mbp) and flanking unique sequence. Once these syntenic alignments were defined, we carried out a second alignment fragmenting the 1:1 synteny blocks into 1-kbp windows (100-bp increments) and remapped back to T2T-CHM13 to identify each window's single best alignment position. These second alignments were then compared to original syntenic ones and if they no longer overlapped, we considered them to be candidate IGC regions. Adjacent IGC windows were subsequently merged into larger intervals when windows continued to be mapped non-syntenically with respect to the original alignment. We then used the CIGAR string to identify the number of matching and mismatching bases at the 'donor' site and compared that to the number of matching and mismatching bases at the acceptor site determined by the syntenic alignment. A donor sequence is, thus, defined as a segment in T2T-CHM13 that now maps with higher sequence identity to a new location in the human haplotype (alignment method 2) and the acceptor sequence is the segment in T2T-CHM13 that has an orthologous mapping to the same region in the human haplotype (alignment method 1). As such, there is dependence on both the reference genome and the haplotype being compared. The software pipeline is available on GitHub at <ref type="url" target="https://github.com/mrvollger/asm-to-reference-alignment/">https://github.com/mrvollger/asm-to-reference-alignment/</ref> (refs. 58-67).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Assigning confidence to IGC events</head><p>To assign confidence measures to our IGC events, we adapted a previously described method <ref type="bibr" target="#b76">69</ref> to calculate a P value for every one of our candidate IGC calls. Our method uses a cumulative binomial distribution constructed from the number of SNVs supporting the IGC event and the total number of informative sites between two paralogues to assign a one-sided P value to each event. Specifically:</p><formula xml:id="formula_0">P X k B k n p ( ≤ ) = ( , , )</formula><p>in which B is the binomial cumulative distribution, n is the number of informative sites between paralogues, k is the number of informative sites that agree with the non-converted sequence (acceptor site), and p is the probability that at an informative site the base matches the acceptor sequence. We assume p to be 0.5 reflecting that a supporting base change can come from one of two sources: the donor or acceptor paralogue. With these assumptions, our binomial model reports the probability that we observe k or fewer sites that support the acceptor site (that is, no IGC) at random given the data, giving us a one-sided P value for each IGC event. No adjustments were made for multiple comparisons.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Testing for IGC in unique regions</head><p>To test the specificity of our method, we applied it to an equivalent total of unique sequence (125 Mbp) on each haplotype, which we expected to show no or low levels of IGC. On average, we identify only 33.5 IGC events affecting 38.2 kbp of sequence per haplotype. If we restrict this to high-confidence IGC events, we see only 5.93 events on average affecting 7.29 kbp. This implies that our method is detecting IGC above background in SDs and that the frequency of IGC in SDs is more than 50 times higher in the high-confidence callsets (31,910 versus 605).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional genome assemblies</head><p>We assembled HG00514, NA12878 and HG03125 using HiFi long-read data and hifiasm v0.</p><p>15.2 with parental Illumina data 54 . Using HiFi long-read data and hifiasm v0.15.2 we also assembled the genome of the now-deceased chimpanzee Clint (sample S006007). The assembly is locally phased as trio-binning and HiC data were unavailable. Data are available on the National Center for Biotechnology Information (NCBI) Sequence Read Archive (SRA) under the BioProjects PRJNA551670 (ref. 4), PRJNA540705 (ref. 70), PRJEB36100 (ref. 4) and PRJNA659034 (ref. 47). These assemblies are made available on Zenodo (<ref type="url" target="https://doi.org/10.5281/zenodo.6792653">https://doi.  org/10.5281/zenodo.6792653</ref>) 71 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Determining the composition of triplet mutations in SD and unique sequences</head><p>The mutational spectra for unique and SD regions from each individual were computed using mutyper on the basis of derived SNVs polarized against the chimpanzee genome assembly described above <ref type="bibr" target="#b79">[72]</ref><ref type="bibr" target="#b80">[73]</ref><ref type="bibr" target="#b81">[74]</ref> . These spectra were normalized to the triplet content of the respective unique or SD regions by dividing the count of each triplet mutation type by the total count of each triplet context in the ancestral region and normalizing the number of counts in SD and unique sequences to be the same. For PCA, the data were further normalized using the centred log-ratio transformation, which is commonly used for compositional measurements <ref type="bibr" target="#b82">75</ref> . The code is available on GitHub at <ref type="url" target="https://github.com/mrvollger/mutyper_workflow/">https://github.com/  mrvollger/mutyper_workflow/</ref> (refs. 61-63,65,72,76).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Estimation of TMRCA</head><p>To estimate TMRCA for a locus of interest, we focus on orthologous sequences (10-kbp windows) identified in synteny among human and chimpanzee haplotypes. Under an assumption of infinite sites, the number of mutations x i between a human sequence and its most recent common ancestor is Poisson distributed with a mean of µ T × , in which µ is the mutation rate scaled with respect to the substitutions between human and chimpanzee lineages, and T is the TMRCA. That is,</p><formula xml:id="formula_1">T x nµ = ∑ / i n i =1</formula><p>, in which n is the number of human haplotypes. To convert TMRCA to time in years, we assume six million years of divergence between human and chimpanzee lineages. We note that the TMRCA estimates reported in the present study account for mutation variation across loci (that is, if the mutation rate is elevated for a locus, the effect would be accounted for). Thus, for each individual locus, an independent mutation (not uniform) rate is applied depending on the observed pattern of mutations compared to the chimpanzee outgroup.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended Data Fig. 1 | Analysis schema for variant and IGC calling.</head><p>Whole-genome alignments were calculated for the HPRC assemblies against T2T-CHM13 v1.1 with a copy of GRCh38 chrY using minimap2 v2.24. The alignments were further processed to remove alignments that were redundant in query sequence or that had structural variants over 10 kbp in length. After these steps, the remaining alignments over 1 Mbp were defined to be syntenic and used in downstream analyses. We then counted all pairwise singlenucleotide differences between the haplotypes and the reference and stratified these results into unique regions versus SD regions based on the SD annotations from T2T-CHM13 v1.1. All variants intersecting tandem repeats were filtered to avoid spurious SNV calls. To detect candidate regions of IGC, the query sequence with syntenic alignments was fragmented into 1 kbp windows with a 100 bp slide and realigned back to T2T-CHM13 v1.1 independent of the flanking sequence using minimap2 v2.24 to identify each window's single best alignment position. These alignments were compared to their original syntenic alignment positions, and if they were not overlapping, we considered them to be candidate IGC windows. Candidate IGC windows were then merged into larger intervals and realigned when windows were overlapping in both the donor and the acceptor sequence. We then used the CIGAR string to identify the number of matching and mismatching bases at the "donor" site and compared that to the number of matching and mismatching bases at the acceptor site determined by the syntenic alignment to calculate the number of supporting SNVs.  <ref type="table">S3</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended</head><p>Extended Data Fig. <ref type="figure" target="#fig_3">5</ref> | Largest IGC events in the human genome. The ideogram depicts as red arcs the positions of the largest IGC events between and within human chromosomes (top 10% of the length distribution).</p><p>Extended Data Fig. <ref type="figure">6</ref> | Percent of increased single-nucleotide variation explained by IGC. Shown is the fraction of the increased SNV diversity in SDs that can be attributed to IGC for each of the HPRC haplotypes stratified by global superpopulation. In text is the average across all haplotypes (23%). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Extended</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><figDesc>of SNV events that must map better at a new location Average amount of gene conversion per haplotype (Mbp)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 3 |</head><label>3</label><figDesc>Fig. 3 | IGC hotspots. a, Density of IGC acceptor (top, blue) and donor (bottom, orange) sites across the 'SD genome'. The SD genome consists of all main SD regions (&gt;50 kbp) minus the intervening unique sequences. b, All intrachromosomal IGC events on 24 human haplotypes analysed for chromosome 15. Arcs drawn in blue (top) have the acceptor site on the left-hand side and the donor site on the right. Arcs drawn in orange (bottom) are arranged oppositely. Protein-coding genes are drawn as vertical black lines above the ideogram, and large duplication (blue) and deletion (red) events associated with human diseases are drawn as horizontal lines just above the ideogram. c, Zoom of the 30 highest confidence (lowest P value) IGC events on chromosome 15 between 17 and 31 Mbp. The number to the left of each event shows its length (kbp) and that to the right shows its number of SNVs. Genes with IGC events are highlighted in red and associate with the breakpoint regions of Prader-Willi syndrome. An expanded graphic with all haplotypes is included in Extended Data Fig. 7.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4 |</head><label>4</label><figDesc>Fig. 4 | Protein-coding genes affected by IGC. a, Number of putative IGC events intersecting exons of protein-coding genes as a function of a gene's pLI. Of the 799 genes, 314 (39.3%) did not have a pLI score and are shown in the column labelled No pLI data available. b,c, Number of times a gene exon acts as an acceptor (b) or a donor (c) of an IGC event. d,e, IGC events at the complement factor locus, C4A and C4B (d), and the opsin middle-and long-wavelength-sensitive genes associated with colour blindness (OPN1MW and OPN1LW locus; e). Predicted donor (orange) and acceptor (blue) segments by length (number to left of event) and average number of supporting SNVs (number to right of event) are shown. The number of human haplotypes supporting each configuration is depicted by the histograms to the right. f,g, IGC events that reposition entire gene models for the FCGR (f) and TRIM (g) loci.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 5 |</head><label>5</label><figDesc>Fig. 5 | Sequence composition and mutational spectra of SD SNVs. a, Compositional increase in GC-containing triplets in SD versus unique regions of the genome (coloured by GC content). b, Correlation between the enrichment of certain triplets in SDs compared to the mutability of that triplet in unique regions of the genome. Mutability is defined as the sum of all SNVs that change a triplet divided by the total count of that triplet in the genome. The enrichment ratio of SD over unique regions is indicated in text next to each triplet sequence. The text (upper left) indicates the value of the Pearson's correlation coefficient and the P value from a two-sided t-test without adjustment for multiple comparisons. c, PCA of the mutational spectra of triplets in SD (circles) versus unique (triangles) regions polarized against a chimpanzee genome assembly and coloured by the continental superpopulation of the sample. AFR, African; AMR, American; EAS, East Asian; EUR, European; SAS, South Asian. d, The log[fold change] in triplet mutation frequency between SD and unique sequences. The y axis represents the 5′ base of the triplet context; the first level of the x axis shows which central base has changed and the second level of the x axis shows the 3′ base: heatmap depicts the log[fold change]. As an example, the top left corner shows the log[fold change] in frequency of TAA&gt;TCA mutations in SD versus unique sequences.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Data Fig. 2 |</head><label>2</label><figDesc>Ideogram of an assembly of CHM1 aligned to T2T-CHM13. The ideogram depicts the contiguity (alternating blue and orange contigs) of a CHM1 assembly generated by Verkko as compared to T2T-CHM13. The overall contig N50 is 105.2 Mbp providing near chromosome arm contiguity with the exception of breaks at the centromere (red) and other large satellite arrays. Because the sequence is derived from a monoploid complete hydatidiform mole, there is no opportunity for assembly errors due to inadvertent haplotype switching.ExtendedData Fig. 3 | Increased variation in SD sequences and African haplotypes. Histograms of the average number of SNVs per 10 kbp over all 125 Mbp bins of unique (blue) and SD (red) sequence for all haplotypes. African haplotypes (bottom) are compared separately to non-African (top) haplotypes. All SD bins (125 Mbp each) have more SNVs than any unique bin irrespective of human superpopulation. Extended Data Fig. 4 | Average number of SNVs across different repeat classes. Shown are the average number of SNVs per 10 kbp within SDs (red), unique (blue), and additional sequence classes (gray) across the HPRC haplotypes. These classes include exonic regions, ancient SDs (SD with &lt;90% sequence identity) and all elements identified by RepeatMasker (RM) with Alu, L1 LINE, and HERV elements broken out separately. Below each sequence class we show the average number of SNVs per 10 kbp for the median haplotype. Standard deviations and measurements for additional repeat classes are provided in Table</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Data Fig. 7 |</head><label>7</label><figDesc>IGC hotspots. a) Density of IGC acceptor (top, blue) and donor (bottom, orange) sites across the "SD genome". The SD genome consists of all main SD regions (&gt;50 kbp) minus the intervening unique sequences. b) All intrachromosomal IGC events from 102 human haplotypes analyzed for chromosome 15. Arcs drawn in blue (top) have the acceptor site on the left-hand side and the donor site on the right. Arcs drawn in orange (bottom) are arranged oppositely. Protein-coding genes are drawn as vertical black lines above the ideogram, and large duplication (blue) and deletion (red) events associated with human diseases are drawn as horizontal lines just above the ideogram. c) Zoom of the 100 highest confidence (lowest p-value) IGC events identified on chromosome 15 between 17 and 31 Mbp. Genes that are intersected by IGC events are highlighted in red.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><graphic coords="16,45.47,48.96,510.00,374.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><graphic coords="17,45.47,48.96,510.00,309.60" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements We thank <rs type="person">T. Brown</rs> for help in editing this manuscript, <rs type="person">P. Green</rs> for valuable suggestions, and <rs type="person">R. Seroussi</rs> and his staff for their generous donation of time and resources. This work was supported in part by grants from the <rs type="funder">US National Institutes of Health</rs> (<rs type="grantNumber">NIH 5R01HG002385</rs>, <rs type="grantNumber">5U01HG010971</rs> and <rs type="grantNumber">1U01HG010973</rs> to E.E.E.; <rs type="grantNumber">K99HG011041</rs> to P.H.; and <rs type="grantNumber">F31AI150163</rs> to W.S.D.). W.S.D. was supported in part by a Fellowship in Understanding Dynamic and <rs type="person">Multi-scale Systems</rs> from the <rs type="funder">James S. McDonnell Foundation</rs>. E.E.E. is an investigator of the <rs type="funder">Howard Hughes Medical Institute (HHMI)</rs>. This article is subject to <rs type="funder">HHMI's Open Access</rs> to Publications policy. HHMI laboratory heads have previously granted a nonexclusive CC BY 4.0 licence to the public and a sublicensable licence to HHMI in their research articles. Pursuant to those licences, the author-accepted manuscript of this article can be made freely available under a CC BY 4.0 licence immediately on publication.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_JBdh8qe">
+					<idno type="grant-number">NIH 5R01HG002385</idno>
+				</org>
+				<org type="funding" xml:id="_4pYgx9Q">
+					<idno type="grant-number">5U01HG010971</idno>
+				</org>
+				<org type="funding" xml:id="_WUXkahm">
+					<idno type="grant-number">1U01HG010973</idno>
+				</org>
+				<org type="funding" xml:id="_AFM4rxD">
+					<idno type="grant-number">K99HG011041</idno>
+				</org>
+				<org type="funding" xml:id="_kWVU8b5">
+					<idno type="grant-number">F31AI150163</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>PacBio HiFi and ONT data have been deposited into NCBI SRA under the following BioProject IDs: PRJNA850430, PRJNA731524, PRJNA551670, PRJNA540705 and PRJEB36100. PacBio HiFi data for CHM1 are available under the following SRA accessions: SRX10759865 and SRX10759866. Sequencing data for Clint PTR are available on NCBI SRA under the Bio-Project PRJNA659034. The T2T-CHM13 v1.1 assembly can be found on NCBI (GCA_009914755.3). Cell lines obtained from the NIGMS Human Genetic Cell Repository at the Coriell Institute for Medical Research are listed in Supplementary Table <ref type="table">1</ref>. Assemblies of HPRC samples are available on NCBI under the BioProject PRJNA730822. All additional assemblies used in this work (Clint PTR, CHM1, HG00514, NA12878 and HG03125), variant calls, assembly alignments, and other annotation data used in analysis are available on Zenodo (<ref type="url" target="https://doi.org/10.5281/zenodo.6792653">https://doi.org/10.5281/  zenodo.6792653</ref>) <ref type="bibr" target="#b78">71</ref> .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability</head><p>The software pipeline for aligning assemblies and calling IGC is available on GitHub (<ref type="url" target="https://github.com/mrvollger/asm-to-reference-alignmentv0.1">https://github.com/mrvollger/asm-to-reference- alignmentv0.1</ref>) and Zenodo (<ref type="url" target="https://zenodo.org/record/7653446">https://zenodo.org/record/7653446</ref>) <ref type="bibr" target="#b74">67</ref> . Code for analysing variants called against T2T-CHM13 v1.1 is available on GitHub (<ref type="url" target="https://github.com/mrvollger/sd-divergencev0.1">https://github.com/mrvollger/sd-divergencev0.1</ref> and Zenodo (<ref type="url" target="https://zenodo.org/record/7653464">https://zenodo.org/record/7653464</ref>) <ref type="bibr" target="#b75">68</ref> . The software pipeline for analysing the triple context of SNVs is available on GitHub (<ref type="url" target="https://github.com/mrvollger/mutyper_workflowv0.1">https://github.com/mrvollger/mutyper_workflowv0.1</ref>) and Zenodo (<ref type="url" target="https://zenodo.org/record/7653472">https://zenodo.org/record/7653472</ref>) <ref type="bibr" target="#b83">76</ref> . Scripts for figure and table generation are available on GitHub (<ref type="url" target="https://github.com/mrvollger/sd-divergence-and-igc-figuresv0.1">https://github.com/mrvollger/  sd-divergence-and-igc-figuresv0.1</ref>) and Zenodo (<ref type="url" target="https://zenodo.org/record/7653486">https://zenodo.  org/record/7653486</ref>) <ref type="bibr" target="#b84">77</ref> . GAVISUNK is available on GitHub (<ref type="url" target="https://github.com/pdishuck/GAVISUNK">https://  github.com/pdishuck/GAVISUNK</ref>) and Zenodo (<ref type="url" target="https://zenodo.org/record/7655335">https://zenodo.org/  record/7655335</ref>) <ref type="bibr" target="#b64">57</ref> .</p></div>
+			</div>
+
+
+			<div type="conflict">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Competing interests E.E.E. is a scientific advisory board member of Variant Bio, Inc. All other authors declare no competing interests.</p></div>
+			</div>
+
+
+			<div type="contribution">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Author contributions Conceptualization and design: M.R.V., K. Harris, W.S.D., P.H. and E.E.E. Identification and analysis of SNVs from phased assemblies: M.R.V. Mutational spectrum analysis: M.R.V., W.S.D., M.E.G. and K. Harris. Evolutionary age analysis: M.R.V. and P.H. Assembly generation: M.A., J.L., B.P. and HPRC. PacBio genome sequence generation: K.M.M., A.P.L., K. Hoekzema and G.A.L. Copy number analysis and validation: P.C.D., X.G., W.T.H., A.N.R., D. Porubsky and M.R.V. Table organization: M.R.V. Supplementary material organization: M.R.V. Display items: M.R.V., X.G., P.H. and P.C.D. Resources: HPRC, K. Harris, B.P. and E.E.E. Manuscript writing: M.R.V. and E.E.E. with input from all authors.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reporting summary</head><p>Further information on research design is available in the Nature Portfolio Reporting Summary linked to this article.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional information Supplementary information</head><p>The online version contains supplementary material available at <ref type="url" target="https://doi.org/10.1038/s41586-023-05895-y">https://doi.org/10.1038/s41586-023-05895-y</ref>. Correspondence and requests for materials should be addressed to Evan E. Eichler. Peer review information Nature thanks Anna Lindstrand and the other, anonymous, reviewer(s) for their contribution to the peer review of this work. Reprints and permissions information is available at <ref type="url" target="http://www.nature.com/reprints">http://www.nature.com/reprints</ref>.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct status="extracted"  xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Segmental duplications: organization and impact within the current human genome project assembly</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Bailey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Yavor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">F</forename><surname>Massa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Trask</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Eichler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1005" to="1017" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Complex SNP-related sequence variation in segmental genome duplications</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Fredman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Genet</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="861" to="866" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A draft human pangenome reference</title>
+		<author>
+			<persName><forename type="first">W.-W</forename><surname>Liao</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41586-023-05896-x</idno>
+		<ptr target="https://doi.org/10.1038/s41586-023-05896-x" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Haplotype-resolved diverse human genomes and integrated analysis of structural variation</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ebert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">372</biblScope>
+			<biblScope unit="page">7117</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Biased gene conversion and the evolution of mammalian genomic landscapes</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Duret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Galtier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Genomics Hum. Genet</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">333</biblScope>
+			<date type="published" when="2009-05">2009. May 2023</date>
+		</imprint>
+	</monogr>
+	<note>Nature |</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Mutagenic deamination of cytosine residues in DNA</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Duncan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Miller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page" from="560" to="561" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b6">
+	<analytic>
+		<title level="a" type="main">The International HapMap Project</title>
+		<author>
+			<persName><forename type="first">International</forename><surname>Hapmap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Consortium</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">426</biblScope>
+			<biblScope unit="page" from="789" to="796" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b7">
+	<analytic>
+		<title level="a" type="main">1000 Genomes Project Consortium et al. An integrated map of genetic variation from 1,092 human genomes</title>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">491</biblScope>
+			<biblScope unit="page" from="56" to="65" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Diversity of human copy number</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">H</forename><surname>Sudmant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">11184</biblScope>
+			<biblScope unit="page" from="2" to="7" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Segmental duplications and their variation in a complete human genome</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Vollger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">376</biblScope>
+			<biblScope unit="page">6965</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Recent segmental duplications in the human genome</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Bailey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">297</biblScope>
+			<biblScope unit="page" from="1003" to="1007" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Initial sequencing and analysis of the human genome</title>
+		<author>
+			<persName><surname>Ihgsc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">409</biblScope>
+			<biblScope unit="page" from="860" to="921" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b12">
+	<analytic>
+		<title level="a" type="main">The sequence of the human genome</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Venter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">291</biblScope>
+			<biblScope unit="page" from="1304" to="1351" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Segmental duplications and copy-number variation in the human genome</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Sharp</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Hum. Genet</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="78" to="88" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Interlocus gene conversion explains at least 2.7% of single nucleotide variants in human segmental duplications</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Dumont</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Genomics</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">456</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Alu transposition model for the origin and expansion of human segmental duplications</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Bailey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Eichler</surname></persName>
+		</author>
+		<author>
+			<persName><surname>An</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Hum. Genet</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="823" to="834" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Ancestral reconstruction of segmental duplications reveals punctuated cores of human genome evolution</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Jiang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Genet</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="1361" to="1368" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Emergence of a Homo sapiens-specific gene family and chromosome 16p11. 2 CNV susceptibility</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Nuttle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">536</biblScope>
+			<biblScope unit="page" from="205" to="209" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Transcriptional fates of human-specific segmental duplications in brain</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Dougherty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1566" to="1576" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Human-specific NOTCH2NL genes affect notch signaling and cortical neurogenesis</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">T</forename><surname>Fiddes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">173</biblScope>
+			<biblScope unit="page" from="1356" to="1369" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b20">
+	<monogr>
+		<title level="m" type="main">The hominoid-specific gene TBC1D3 promotes generation of basal neural progenitors and induces cortical folding in mice</title>
+		<author>
+			<persName><forename type="first">X.-C</forename><surname>Ju</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">18197</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The ENCODE blacklist: identification of problematic regions of the genome</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Amemiya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kundaje</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Boyle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">9354</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b22">
+	<analytic>
+		<title level="a" type="main">An open resource for accurately benchmarking small variant and reference calls</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Zook</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="561" to="566" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b23">
+	<analytic>
+		<title level="a" type="main">The coalescent with selection on copy number variants</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Teshima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Innan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genetics</title>
+		<imprint>
+			<biblScope unit="volume">190</biblScope>
+			<biblScope unit="page" from="1077" to="1086" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b24">
+	<analytic>
+		<title level="a" type="main">The coalescent and infinite-site model of a small multigene family</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Innan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genetics</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="page" from="803" to="810" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Interplay of interlocus gene conversion and crossover in segmental duplications under a neutral scenario</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Hartasánchez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vallès-Codina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brasó-Vives</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Navarro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">G3 Genes Genomes Genet</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1479" to="1489" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Frequent nonallelic gene conversion on the human lineage and its effect on the divergence of gene duplicates</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Harpak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Pritchard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page">201708151</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b27">
+	<analytic>
+		<title level="a" type="main">The rate and tract length of gene conversion between duplicated genes</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Mansai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Innan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genes</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="313" to="331" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The complete sequence of a human genome</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nurk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">376</biblScope>
+			<biblScope unit="page" from="44" to="53" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Semi-automated assembly of high-quality diploid human reference genomes</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Jarvis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">611</biblScope>
+			<biblScope unit="page" from="519" to="531" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Gaps and complex structurally variant loci in phased genome assemblies</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Porubsky</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/gr.277334.122</idno>
+		<ptr target="https://doi.org/10.1101/gr.277334.122" />
+	</analytic>
+	<monogr>
+		<title level="j">Genom. Res</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Telomere-to-telomere assembly of diploid chromosomes with Verkko</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rautiainen</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41587-023-01662-6</idno>
+		<ptr target="https://doi.org/10.1038/s41587-023-01662-6" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Biotechnol</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Dynamics of a human interparalog gene conversion hotspot</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bosch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Hurles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Navarro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Jobling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="835" to="844" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Analysis of protein-coding genetic variation in 60,706 humans</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">536</biblScope>
+			<biblScope unit="page" from="285" to="291" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Altered TAOK2 activity causes autism-related neurodevelopmental and cognitive abnormalities through RhoA signaling</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Richter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="1329" to="1350" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Schizophrenia risk from complex variation of complement component 4</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sekar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">530</biblScope>
+			<biblScope unit="page" from="177" to="183" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b36">
+	<analytic>
+		<title level="a" type="main">PDK1 decreases TACE-mediated α-secretase activity and promotes disease progression in prion and Alzheimer&apos;s diseases</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pietri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Med</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="1124" to="1131" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Preservation of duplicate genes by complementary, degenerative mutations</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Force</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genetics</title>
+		<imprint>
+			<biblScope unit="volume">151</biblScope>
+			<biblScope unit="page" from="1531" to="1545" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Asymmetric sequence divergence of duplicate genes</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Conant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wagner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="2052" to="2058" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Large-scale inference of the point mutational spectrum in human segmental duplications</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nakken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Rødland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Rognes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hovig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Genomics</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">43</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b40">
+	<analytic>
+		<title level="a" type="main">GC content elevates mutation and recombination rates in the yeast Saccharomyces cerevisiae</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Kiktev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Lobachev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Petes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>E7109-E7118</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Germline de novo mutation clusters arise during oocyte aging in genomic regions with high double-strand-break incidence</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Goldmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Genet</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="487" to="492" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Overlooked roles of DNA damage and maternal age in generating human germline mutations</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Gao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Natl Acad. Sci</title>
+		<meeting>Natl Acad. Sci<address><addrLine>USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="9491" to="9500" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Gene conversion tracts from double-strand break repair in mammalian cells</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Richardson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Winderbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Nickoloff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jasin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell. Biol</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="93" to="101" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Non-crossover gene conversions show strong GC bias and unexpected clustering in humans</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Williams</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">4637</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Analysis of primate genomic variation reveals a repeat-driven expansion of the human genome</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Res</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="358" to="368" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b46">
+	<analytic>
+		<title level="a" type="main">The structure, function and evolution of a complete human chromosome 8</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Logsdon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">593</biblScope>
+			<biblScope unit="page" from="101" to="107" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Familial long-read sequencing increases yield of de novo mutations</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Noyes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Hum. Genet</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="631" to="646" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b48">
+	<monogr>
+		<title level="m" type="main">A phylogenetic approach disentangles interlocus gene conversion tract length and initiation rate</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Thorne</surname></persName>
+		</author>
+		<ptr target="https://arxiv.org/abs/1908.08608" />
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Estimating the human mutation rate from autozygous segments reveals population differences in human mutational processes</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Narasimhan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">303</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b50">
+	<monogr>
+		<title level="m" type="main">Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article&apos;s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article&apos;s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use</title>
+		<ptr target="http://creativecommons.org/licenses/by/4.0/" />
+		<imprint/>
+	</monogr>
+	<note>Publisher&apos;s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b51">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Author</forename><surname>The</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">2023</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b52">
+	<monogr>
+		<title level="m" type="main">Human Pangenome Reference Consortium</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Yan Gao 27 , Shilpa Garg 28</title>
+		<author>
+			<persName><forename type="first">Julian</forename><forename type="middle">K</forename><surname>Lucas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nanibaa&apos; A. Garrison</title>
+		<editor>
+			<persName><forename type="first">Jennifer</forename><surname>Mcdaniel 51</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Karen</forename><forename type="middle">H</forename><surname>Miga</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Matthew</forename><forename type="middle">W</forename><surname>Mitchell</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Jean</forename><surname>Monlong 5</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Jacquelyn</forename><surname>Mountcastle 24</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Katherine</forename><forename type="middle">M</forename><surname>Munson</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Moses</forename><surname>Njagi Mwaniki 53</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Maria</forename><surname>Nattestad 9</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Adam</forename><forename type="middle">M</forename><surname>Novak</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Sergey</forename><surname>Nurk 47</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Hugh</forename><forename type="middle">E</forename><surname>Olsen</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Nathan</forename><forename type="middle">D</forename><surname>Olson 51</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Trevor</forename><surname>Benedict Paten 5</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Adam</forename><forename type="middle">M</forename><surname>Pesout 5</surname></persName>
+		</editor>
+		<editor>
+			<persName><surname>Phillippy</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">61</biblScope>
+			<date>Jan. Hugo Magalhães 21. Tobias Marschall 21</date>
+			<pubPlace>Barbara A. Koenig; Santiago Marco-Sola; Alice B. Popejoy; Allison A. Regier 8 , Arang Rhie 47 , Samuel Sacco 56 , Ashley D. Sanders 57 , Valerie A. Schneider</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Paul Flicek Xiaowen Feng Adam Frankish Giulio Formenti Cristian Groza Andrea Guarracino Miten Jain Erich D. Jarvis 6,24,42 , Hanlee P. Ji 43 , Eimear E. Kenny 44 Alexey Kolesnikov Jennifer Kordosky Sergey Koren HoJoon Lee 43 Alexandra P. Lewis Heng Li Shuangjia Lu Tsung-Yu Lu Pierre Marijon Charles Markello Fergal J. Martin Ann McCartney Pjotr Prins Daniela Puiu Mikko Rautiainen Baergen I. Schultz Kishwar Shafin Jonas A. Sibbesen Jouni Sirén Michael W. Smith Heidi J. Sofia Chad Tomlinson 8 , Francesca Floriana Tricomi 10 , Flavia Villani 18 , Mitchell R. Vollger 1,2 , Justin Wagner 51 , Brian Walenz 47 , Ting Wang 8,26 , Jonathan M. D. Wood 40 , Aleksey V. Zimin 55,62 &amp; Justin M. Zook 51</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b54">
+	<analytic>
+		<title level="a" type="main">16 Department of Data Sciences, Dana-Farber Cancer Institute</title>
+		<author>
+			<persName><forename type="first">Llc</forename><surname>Google</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">17 Department of Biomedical Informatics</title>
+		<meeting><address><addrLine>Mountain View, CA, USA; Montreal, Quebec, Canada; Montreal, Quebec, Canada; Naples, Italy; Los Angeles, CA, USA; Boston, MA, USA; Boston, MA, USA; Memphis, TN, USA; Washington Center; Washington DC, USA; Santa Cruz, Santa Cruz, CA, USA; Düsseldorf, Germany; Düsseldorf, Germany</addrLine></address></meeting>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+		</imprint>
+		<respStmt>
+			<orgName>European Molecular Biology Laboratory, European Bioinformatics Institute, Hinxton, UK. 11 Department of Human Genetics, McGill University ; Canadian Center for Computational Genomics, McGill University ; WPI-ASHBi), Kyoto University, Kyoto, Japan. 14 Institute of Genetics and Biophysics, National Research Council ; Department of Quantitative and Computational Biology, University of Southern California ; Department of Genetics, Genomics and Informatics, University of Tennessee Health Science Center ; Arizona State University ; 20 Department of Ecology and Evolutionary Biology, University of California ; 21 Institute for Medical Biometry and Bioinformatics, Medical Faculty, Heinrich Heine University Düsseldorf ; Heinrich Heine University Düsseldorf</orgName>
+		</respStmt>
+	</monogr>
+	<note>13 Institute for the Advanced Study of Human Biology 22 Center for Digital Medicine</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b55">
+	<analytic>
+		<title level="a" type="main">27 Center for Computational and Genomic Medicine, The Children&apos;s Hospital of Philadelphia</title>
+	</analytic>
+	<monogr>
+		<title level="j">Quantitative Biology Center (QBiC)</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<pubPlace>New York, NY, USA; St Louis, MO, USA; Philadelphia, PA, USA; Los Angeles, Los Angeles, CA; Los Angeles, Los Angeles, CA, USA; Los Angeles, Los Angeles, CA, USA; Santa Cruz, Santa Cruz, CA, USA; Scotts Valley, CA, USA; Montreal, Quebec, Canada. 35 Genomics Research Centre, Human Technopole, Milan, Italy; New Haven, CT, USA; New Haven, CT, USA; Tübingen, Germany; Tübingen, Germany; Boston, MA, USA; New York, NY, USA; Stanford, CA, USA; New York, NY, USA; San Francisco; San Francisco, CA, USA</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Core Unit Bioinformatics, Medical Faculty, Heinrich Heine University Düsseldorf, Düsseldorf, Germany. 24 Vertebrate Genome Laboratory, The Rockefeller University ; National Institutes of Health (NIH)-National Human Genome Research Institute, Bethesda, MD, USA. 26 Department of Genetics, Washington University School of Medicine ; Center for Biosustainability, Technical University of Denmark, Copenhagen, Denmark. 29 Institute for Society and Genetics, College of Letters and Science, University of California ; David Geffen School of Medicine, University of California ; David Geffen School of Medicine, University of California ; Department of Biomolecular Engineering, University of California ; Quantitative Life Sciences, McGill University ; Department of Genetics, Yale University School of Medicine ; Center for Genomic Health, Yale University School of Medicine ; University of Tübingen ; Department of Computer Science, University of Tübingen ; Tree of Life, Wellcome Sanger Institute, Hinxton, UK. 41 Northeastern University ; 42 Laboratory of Neurogenetics of Language, The Rockefeller University ; Department of Medicine, Stanford University School of Medicine ; 44 Institute for Genomic Health, Icahn School of Medicine at Mount Sinai ; Bioethics and Institute for Human Genetics, University of California</orgName>
+		</respStmt>
+	</monogr>
+	<note>28 Novo Nordisk Foundation USA. 30 Institute for Precision Health 31 Division of General Internal Medicine and Health Services Research Dovetail Genomics 39 Biomedical Data Science 43 Division of Oncology</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b56">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">European Molecular Biology Laboratory</title>
+		<imprint/>
+	</monogr>
+	<note>Genome Biology Unit</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b57">
+	<analytic>
+		<title level="a" type="main">50 Departament d&apos;Arquitectura de Computadors i Sistemes Operatius</title>
+	</analytic>
+	<monogr>
+		<title level="m">58 National Center for Biotechnology Information</title>
+		<meeting><address><addrLine>Barcelona, Spain; Barcelona, Spain; Gaithersburg, MD, USA; Davis, Davis, CA, USA; Baltimore, MD, USA; Santa Cruz, Santa Cruz, CA, USA; Berlin, Germany; Bethesda, MD, USA; Copenhagen, Denmark; Dubai; Dubai; Baltimore, MD, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>United Arab Emirates. 61 Center for Genomic Discovery</publisher>
+			<biblScope unit="volume">52</biblScope>
+		</imprint>
+		<respStmt>
+			<orgName>Genome Informatics Section, Computational and Statistical Genomics Branch, National Human Genome Research Institute, National Institutes of Health, Bethesda, MD, USA. 48 Division of Biology and Biomedical Sciences, Washington University School of Medicine, St Louis, MO, USA. 49 Computer Sciences Department, Barcelona Supercomputing Center ; Universitat Autònoma de Barcelona ; 51 Material Measurement Laboratory, National Institute of Standards and Technology ; Coriell Institute for Medical Research, Camden, NJ, USA. 53 Department of Computer Science, University of Pisa, Pisa, Italy. 54 Department of Public Health Sciences, University of California ; Department of Biomedical Engineering, Johns Hopkins University ; Department of Ecology and Evolutionary Biology, University of California ; 57 Berlin Institute for Medical Systems Biology, Max Delbrück Center for Molecular Medicine in the Helmholtz Association ; Center for Health Data Science, University of Copenhagen ; Mohammed Bin Rashid University of Medicine and Health Sciences ; Johns Hopkins University</orgName>
+		</respStmt>
+	</monogr>
+	<note>National Library of Medicine 60 Al Jalila Genomics Center of Excellence National Institutes of Health United Arab Emirates. 62 Center for Computational Biology</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Complete genomic and epigenetic maps of human centromeres</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Altemose</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">376</biblScope>
+			<biblScope unit="page">4178</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Tandem repeats finder: a program to analyze DNA sequences</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Benson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="573" to="580" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b60">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F A</forename><surname>Smit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Hubley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Repeatmasker</surname></persName>
+		</author>
+		<idno>Open-4.0</idno>
+		<ptr target="http://www.repeatmasker.org" />
+		<imprint>
+			<biblScope unit="page" from="2013" to="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Haplotype-resolved de novo assembly using phased assembly graphs with hifiasm</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Concepcion</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Methods</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="170" to="175" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Comparison of village dog and wolf genomes highlights the role of the neural crest in dog domestication</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Pendleton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Biol</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page">64</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Merqury: reference-free quality, completeness, and phasing assessment for genome assemblies</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rhie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Walenz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Koren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Phillippy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Biol</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page">245</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b64">
+	<analytic>
+		<title level="a" type="main">GAVISUNK: genome assembly validation via inter-SUNK distances in Oxford Nanopore reads</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Dishuck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Rozanski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Logsdon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Porubsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Eichler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page">714</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Minimap2: pairwise alignment for nucleotide sequences</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="3094" to="3100" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b66">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Vollger</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/ZENODO.6342176</idno>
+		<ptr target="https://doi.org/10.5281/ZENODO.6342176" />
+		<title level="m">mrvollger/rustybam: v0.1.29. Zenodo</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b67">
+	<analytic>
+		<title level="a" type="main">The Sequence Alignment/Map format and SAMtools</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="2078" to="2079" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Twelve years of SAMtools and BCFtools</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Danecek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Gigascience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">8</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b69">
+	<analytic>
+		<title level="a" type="main">HTSlib: C library for reading/writing high-throughput sequencing data</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Bonfield</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Gigascience</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">7</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b70">
+	<monogr>
+		<title level="m" type="main">Sustainable data analysis with Snakemake. F1000Res</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mölder</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">33</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b71">
+	<monogr>
+		<ptr target="https://github.com/pysam-developers/pysam" />
+		<title level="m">Python module for reading and manipulating SAM/BAM/VCF/BCF files. GitHub</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b72">
+	<analytic>
+		<title level="a" type="main">BEDTools: the Swiss-army tool for genome feature analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Quinlan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Protoc. Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="11" to="12" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b73">
+	<analytic>
+		<title level="a" type="main">A synthetic-diploid benchmark for accurate variant-calling evaluation</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Methods</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="595" to="597" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b74">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Vollger</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/ZENODO.7653446</idno>
+		<ptr target="https://doi.org/10.5281/ZENODO.7653446" />
+		<title level="m">mrvollger/asm-to-reference-alignment: v0.1. Zenodo</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b75">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Vollger</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/ZENODO.7653464</idno>
+		<ptr target="https://doi.org/10.5281/ZENODO.7653464" />
+		<title level="m">mrvollger/sd-divergence: v0.1. Zenodo</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Transposable element subfamily annotation has a reproducibility problem</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Carey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Patterson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Wheeler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mob. DNA</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">4</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Fully phased human genome assembly without parental data using single-cell strand sequencing and long reads</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Porubsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="302" to="308" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Supplementary data for: Increased mutation and gene conversion within human segmental duplications</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vollger</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/zenodo.7651064</idno>
+		<ptr target="https://doi.org/10.5281/zenodo.7651064" />
+	</analytic>
+	<monogr>
+		<title level="j">Zenodo</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b79">
+	<monogr>
+		<title level="m" type="main">mutyper: assigning and summarizing mutation types for analyzing germline mutation spectra</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Dewitt</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/2020.07.01.183392</idno>
+		<ptr target="https://doi.org/10.1101/2020.07.01.183392" />
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Inferring evolutionary dynamics of mutation rates through the lens of mutation spectrum variation</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Carlson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">S</forename><surname>Dewitt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Genet. Dev</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="50" to="57" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Evidence for recent, population-specific evolution of the human mutation rate</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Harris</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="3439" to="3444" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b82">
+	<analytic>
+		<title level="a" type="main">The statistical analysis of compositional data</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aitchison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. R. Stat. Soc</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="139" to="160" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b83">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Vollger</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/ZENODO.7653472</idno>
+		<ptr target="https://doi.org/10.5281/ZENODO.7653472" />
+		<title level="m">mrvollger/mutyper_workflow: v0.1. Zenodo</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b84">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Vollger</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/ZENODO.7653486</idno>
+		<ptr target="https://doi.org/10.5281/ZENODO.7653486" />
+		<title level="m">mrvollger/sd-divergence-and-igc-figures: v0.1. Zenodo</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

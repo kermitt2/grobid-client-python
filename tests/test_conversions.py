@@ -1,11 +1,10 @@
 """
 Unit tests for TEI to JSON and TEI to Markdown conversion functionality.
 """
-import pytest
-from unittest.mock import Mock, patch, MagicMock, mock_open
-import json
 import os
 import tempfile
+from unittest.mock import Mock, patch
+
 from grobid_client.grobid_client import GrobidClient
 from tests.resources import TEST_DATA_PATH
 
@@ -328,7 +327,7 @@ class TestTEIConversions:
                 assert len(ref_types) > 0, "Should find some reference types"
 
                 # Test reference structure
-                for ref in refs_found[:3]:  # Check first few references
+                for ref in refs_found:  # Check ALL references
                     assert 'type' in ref, "Reference should have type"
                     assert 'text' in ref, "Reference should have text"
                     assert 'offset_start' in ref, "Reference should have offset_start"
@@ -360,3 +359,265 @@ class TestTEIConversions:
 
         # Check for author information
         assert 'De Marchis' in markdown_data or 'Cristiano' in markdown_data, "Markdown should contain author information"
+
+    def test_reference_offset_issues_with_known_cases(self):
+        """Test TEI to JSON conversion for XML files with known reference offset issues."""
+        import json
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Test cases with known reference offset problems
+        test_cases = [
+            {
+                "xml_file": "10.1371_journal.pone.0218311.grobid.tei.xml",
+                "json_file": "10.1371_journal.pone.0218311.json",
+                "title": "Being right matters: Model-compliant events in predictive processing"
+            },
+            {
+                "xml_file": "10.7554_elife.78558.grobid.tei.xml",
+                "json_file": "10.7554_elife.78558.json",
+                "title": "Macrophages regulate gastrointestinal motility through complement component 1q"
+            },
+            {
+                "xml_file": "10.1038_s41477-023-01501-1.grobid.tei.xml",
+                "json_file": "10.1038_s41477-023-01501-1.json",
+                "title": "nature plants Article"
+            },
+            {
+                "xml_file": "10.1038_s41598-023-32039-z.grobid.tei.xml",
+                "json_file": "10.1038_s41598-023-32039-z.json",
+                "title": "Identification of PARN nuclease activity inhibitors by computational-based docking and high-throughput screening"
+            },
+            {
+                "xml_file": "10.1038_s41598-023-32039-z.grobid.tei.xml",
+                "json_file": "10.1038_s41598-023-32039-z.json",
+                "title": "Identification of PARN nuclease activity inhibitors by computational-based docking and high-throughput screening"
+            }
+            ,
+            {
+                "xml_file": "10.1038_s41586-023-05895-y.grobid.tei.xml",
+                "json_file": "10.1038_s41586-023-05895-y.json",
+                "title": "Increased mutation and gene conversion within human segmental duplications"
+            }
+        ]
+
+        converter = TEI2LossyJSONConverter()
+        refs_offsets_dir = os.path.join(TEST_DATA_PATH, 'refs_offsets')
+
+        for case in test_cases:
+            xml_path = os.path.join(refs_offsets_dir, case["xml_file"])
+            expected_json_path = os.path.join(refs_offsets_dir, case["json_file"])
+
+            # Verify test files exist
+            assert os.path.exists(xml_path), f"XML file should exist: {xml_path}"
+            assert os.path.exists(expected_json_path), f"Expected JSON file should exist: {expected_json_path}"
+
+            # Convert XML to JSON
+            converted_json = converter.convert_tei_file(xml_path, stream=False)
+            assert converted_json is not None, f"Conversion should succeed for {case['xml_file']}"
+            assert isinstance(converted_json, dict), f"Converted result should be dict for {case['xml_file']}"
+
+            # Load expected JSON for comparison (optional, for debugging)
+            with open(expected_json_path, 'r', encoding='utf-8') as f:
+                expected_json = json.load(f)
+
+            # Test basic structure
+            assert 'biblio' in converted_json, f"Should have biblio section for {case['xml_file']}"
+            assert 'body_text' in converted_json, f"Should have body_text section for {case['xml_file']}"
+
+            # Test title extraction
+            if 'title' in converted_json['biblio']:
+                assert case['title'] in converted_json['biblio']['title'], f"Should extract correct title for {case['xml_file']}"
+
+            # Test body text extraction with references
+            if 'body_text' in converted_json and len(converted_json['body_text']) > 0:
+                body_text = converted_json['body_text']
+
+                # Should have at least one paragraph
+                paragraphs = [p for p in body_text if p.get('text')]
+                assert len(paragraphs) > 0, f"Should extract at least one paragraph for {case['xml_file']}"
+
+                # Should have references in some paragraphs
+                refs_found = []
+                for paragraph in paragraphs:
+                    if 'refs' in paragraph and paragraph['refs']:
+                        refs_found.extend(paragraph['refs'])
+
+                if refs_found:
+                    # Test reference structure integrity
+                    for ref in refs_found:  # Check ALL references
+                        assert 'type' in ref, f"Reference should have type in {case['xml_file']}"
+                        assert 'text' in ref, f"Reference should have text in {case['xml_file']}"
+                        assert 'offset_start' in ref, f"Reference should have offset_start in {case['xml_file']}"
+                        assert 'offset_end' in ref, f"Reference should have offset_end in {case['xml_file']}"
+
+                        # Validate offset bounds
+                        offset_start = ref['offset_start']
+                        offset_end = ref['offset_end']
+                        paragraph_text = next((p['text'] for p in paragraphs if 'refs' in p and ref in p['refs']), None)
+
+                        if paragraph_text:
+                            assert 0 <= offset_start <= len(paragraph_text), f"offset_start should be within paragraph bounds for {case['xml_file']}"
+                            assert 0 <= offset_end <= len(paragraph_text), f"offset_end should be within paragraph bounds for {case['xml_file']}"
+                            assert offset_start < offset_end, f"offset_start should be less than offset_end for {case['xml_file']}"
+
+                            # Validate that the reference text matches the text at the specified offsets
+                            expected_ref_text = paragraph_text[offset_start:offset_end]
+                            actual_ref_text = ref['text']
+
+                            # This is where we discover offset issues - the assertion should fail
+                            # and reveal the conversion problems mentioned by the user
+                            assert expected_ref_text == actual_ref_text, f"Reference text at offsets ({offset_start}-{offset_end}) should match '{actual_ref_text}' but got '{expected_ref_text}' in {case['xml_file']}\nContext: ...{paragraph_text[max(0, offset_start-20):offset_end+20]}..."
+
+            # Additional detailed validation against expected JSON
+            print(f"\n=== Detailed comparison for {case['xml_file']} ===")
+            if 'body_text' in converted_json and 'body_text' in expected_json:
+                converted_paragraphs = [p for p in converted_json['body_text'] if p.get('text')]
+                expected_paragraphs = [p for p in expected_json['body_text'] if p.get('text')]
+
+                print(f"Converted has {len(converted_paragraphs)} paragraphs, expected has {len(expected_paragraphs)}")
+
+                # Compare first few paragraphs in detail
+                for i, (conv_p, exp_p) in enumerate(zip(converted_paragraphs, expected_paragraphs)):
+                    print(f"\nParagraph {i+1}:")
+                    print(f"  Converted length: {len(conv_p.get('text', ''))}")
+                    print(f"  Expected length: {len(exp_p.get('text', ''))}")
+                    print(f"  Converted refs: {len(conv_p.get('refs', []))}")
+                    print(f"  Expected refs: {len(exp_p.get('refs', []))}")
+
+                    # Check if references match
+                    conv_refs = conv_p.get('refs', [])
+                    exp_refs = exp_p.get('refs', [])
+
+                    if conv_refs and exp_refs:
+                        for j, (conv_ref, exp_ref) in enumerate(zip(conv_refs, exp_refs)):
+                            conv_text = conv_ref.get('text', '')
+                            exp_text = exp_ref.get('text', '')
+                            conv_start = conv_ref.get('offset_start', -1)
+                            conv_end = conv_ref.get('offset_end', -1)
+                            exp_start = exp_ref.get('offset_start', -1)
+                            exp_end = exp_ref.get('offset_end', -1)
+
+                            print(f"    Ref {j+1}:")
+                            print(f"      Text: '{conv_text}' vs '{exp_text}'")
+                            print(f"      Offsets: {conv_start}-{conv_end} vs {exp_start}-{exp_end}")
+
+                            # Check if offsets are different
+                            if conv_start != exp_start or conv_end != exp_end:
+                                print(f"      *** OFFSET MISMATCH ***")
+
+                                # Validate what the converted offset actually points to
+                                if conv_p.get('text') and 0 <= conv_start <= conv_end <= len(conv_p['text']):
+                                    actual_text_at_offset = conv_p['text'][conv_start:conv_end]
+                                    print(f"      Converted offset points to: '{actual_text_at_offset}'")
+                                    if actual_text_at_offset != conv_text:
+                                        print(f"      *** OFFSET DOES NOT MATCH REFERENCE TEXT ***")
+
+    def test_offset_validation_for_specific_references(self):
+        """Test specific references that are known to have offset issues."""
+        import json
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Test both files to see which one has offset issues
+        test_cases = [
+            {
+                "name": "PLOS ONE",
+                "xml_file": "10.1371_journal.pone.0218311.grobid.tei.xml",
+                "json_file": "10.1371_journal.pone.0218311.json"
+            },
+            {
+                "name": "eLife",
+                "xml_file": "10.7554_elife.78558.grobid.tei.xml",
+                "json_file": "10.7554_elife.78558.json"
+            }
+        ]
+
+        for case in test_cases:
+            xml_file = os.path.join(TEST_DATA_PATH, 'refs_offsets', case["xml_file"])
+            expected_json_file = os.path.join(TEST_DATA_PATH, 'refs_offsets', case["json_file"])
+
+            print(f"\n=== Analyzing {case['name']} ===")
+
+            converter = TEI2LossyJSONConverter()
+            converted_json = converter.convert_tei_file(xml_file, stream=False)
+
+            # Load expected JSON
+            with open(expected_json_file, 'r', encoding='utf-8') as f:
+                expected_json = json.load(f)
+
+            print(f"\n=== Detailed Reference Analysis for {case['name']} ===")
+
+            if 'body_text' in converted_json:
+                for para_idx, paragraph in enumerate(converted_json['body_text']):  # Check ALL paragraphs
+                    if paragraph.get('refs'):
+                        print(f"\nParagraph {para_idx + 1} (ID: {paragraph.get('id', 'unknown')}):")
+                        print(f"Text length: {len(paragraph.get('text', ''))}")
+
+                        for ref_idx, ref in enumerate(paragraph.get('refs', [])):  # ALL references
+                            offset_start = ref.get('offset_start', -1)
+                            offset_end = ref.get('offset_end', -1)
+                            ref_text = ref.get('text', '')
+                            paragraph_text = paragraph.get('text', '')
+
+                            print(f"  Ref {ref_idx + 1}: '{ref_text}' at offsets {offset_start}-{offset_end}")
+
+                            # Validate the offset actually points to the correct text
+                            if 0 <= offset_start < offset_end <= len(paragraph_text):
+                                actual_text = paragraph_text[offset_start:offset_end]
+                                if actual_text != ref_text:
+                                    print(f"    *** MISMATCH: Expected '{ref_text}', got '{actual_text}'")
+                                    print(f"    Context: ...{paragraph_text[max(0, offset_start-15):offset_end+15]}...")
+                                else:
+                                    print(f"    ✓ OK: Offset correctly points to reference text")
+                            else:
+                                print(f"    *** INVALID OFFSET: Out of bounds (text length: {len(paragraph_text)})")
+
+            # Compare with expected JSON to see differences
+            print(f"\n=== Conversion vs Expected JSON Analysis for {case['name']} ===")
+            if 'body_text' in converted_json and 'body_text' in expected_json:
+                converted_paragraphs = converted_json['body_text']
+                expected_paragraphs = expected_json['body_text']
+
+                total_offset_differences = 0
+                total_refs_checked = 0
+
+                for para_idx, (conv_para, exp_para) in enumerate(zip(converted_paragraphs, expected_paragraphs)):
+                    conv_refs = conv_para.get('refs', [])
+                    exp_refs = exp_para.get('refs', [])
+
+                    print(f"\nParagraph {para_idx + 1}:")
+                    print(f"  Converted refs: {len(conv_refs)}, Expected refs: {len(exp_refs)}")
+
+                    for ref_idx, (conv_ref, exp_ref) in enumerate(zip(conv_refs, exp_refs)):
+                        total_refs_checked += 1
+
+                        conv_start = conv_ref.get('offset_start', -1)
+                        conv_end = conv_ref.get('offset_end', -1)
+                        exp_start = exp_ref.get('offset_start', -1)
+                        exp_end = exp_ref.get('offset_end', -1)
+
+                        if conv_start != exp_start or conv_end != exp_end:
+                            total_offset_differences += 1
+                            print(f"    Ref {ref_idx + 1}: OFFSET DIFFERENCE")
+                            print(f"      Converted: {conv_start}-{conv_end}")
+                            print(f"      Expected: {exp_start}-{exp_end}")
+
+                            # Check what each offset points to
+                            conv_text = conv_para.get('text', '')
+                            exp_text = exp_para.get('text', '')
+
+                            if 0 <= conv_start < conv_end <= len(conv_text):
+                                conv_actual = conv_text[conv_start:conv_end]
+                                print(f"      Converted points to: '{conv_actual}'")
+
+                            if 0 <= exp_start < exp_end <= len(exp_text):
+                                exp_actual = exp_text[exp_start:exp_end]
+                                print(f"      Expected points to: '{exp_actual}'")
+
+                print(f"\n=== Summary for {case['name']} ===")
+                print(f"Total references checked: {total_refs_checked}")
+                print(f"References with offset differences: {total_offset_differences}")
+
+                if total_offset_differences > 0:
+                    print(f"*** DETECTED {total_offset_differences} OFFSET ISSUES ***")
+                else:
+                    print("No offset differences detected between conversion and expected output")

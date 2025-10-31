@@ -1,0 +1,1377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Being right matters: Model-compliant events in predictive processing</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2019-06-13">June 13, 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Daniel</forename><forename type="middle">S</forename><surname>Kluger</surname></persName>
+							<email>daniel.kluger@wwu.de</email>
+							<idno type="ORCID">0000-0002-0691-794X</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Psychology</orgName>
+								<orgName type="institution">University of Muenster</orgName>
+								<address>
+									<settlement>Muenster</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Otto-Creutzfeldt-Center for Cognitive and Behavioral Neuroscience</orgName>
+								<orgName type="institution">University of Muenster</orgName>
+								<address>
+									<settlement>Muenster</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Laura</forename><surname>Quante</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Psychology</orgName>
+								<orgName type="institution">University of Muenster</orgName>
+								<address>
+									<settlement>Muenster</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Otto-Creutzfeldt-Center for Cognitive and Behavioral Neuroscience</orgName>
+								<orgName type="institution">University of Muenster</orgName>
+								<address>
+									<settlement>Muenster</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Axel</forename><surname>Kohler</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Goethe Research Academy for Early Career Researchers</orgName>
+								<orgName type="institution">University of Frankfurt</orgName>
+								<address>
+									<settlement>Frankfurt</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ricarda</forename><forename type="middle">I</forename><surname>Schubotz</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Psychology</orgName>
+								<orgName type="institution">University of Muenster</orgName>
+								<address>
+									<settlement>Muenster</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Otto-Creutzfeldt-Center for Cognitive and Behavioral Neuroscience</orgName>
+								<orgName type="institution">University of Muenster</orgName>
+								<address>
+									<settlement>Muenster</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Neurology</orgName>
+								<orgName type="institution">University Hospital Cologne</orgName>
+								<address>
+									<settlement>Cologne</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of London</orgName>
+								<address>
+									<country key="GB">UNITED KINGDOM</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Being right matters: Model-compliant events in predictive processing</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2019-06-13">June 13, 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">72242E9B1CEE1C7D05A8BC57460DCE5E</idno>
+					<idno type="DOI">10.1371/journal.pone.0218311</idno>
+					<note type="submission">Received: October 23, 2018 Accepted: May 31, 2019</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="unknown" ident="GROBID" when="2025-10-31T10:05+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">unknown</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>While prediction errors (PE) have been established to drive learning through adaptation of internal models, the role of model-compliant events in predictive processing is less clear. Checkpoints (CP) were recently introduced as points in time where expected sensory input resolved ambiguity regarding the validity of the internal model. Conceivably, these events serve as on-line reference points for model evaluation, particularly in uncertain contexts.</p><p>Evidence from fMRI has shown functional similarities of CP and PE to be independent of event-related surprise, raising the important question of how these event classes relate to one another. Consequently, the aim of the present study was to characterise the functional relationship of checkpoints and prediction errors in a serial pattern detection task using electroencephalography (EEG). Specifically, we first hypothesised a joint P3b component of both event classes to index recourse to the internal model (compared to non-informative standards, STD). Second, we assumed the mismatch signal of PE to be reflected in an N400 component when compared to CP. Event-related findings supported these hypotheses. We suggest that while model adaptation is instigated by prediction errors, checkpoints are similarly used for model evaluation. Intriguingly, behavioural subgroup analyses showed that the exploitation of potentially informative reference points may depend on initial cue learning: Strict reliance on cue-based predictions may result in less attentive processing of these reference points, thus impeding upregulation of response gain that would prompt flexible model adaptation. Overall, present results highlight the role of checkpoints as modelcompliant, informative reference points and stimulate important research questions about their processing as function of learning und uncertainty.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Predicting upcoming events constitutes one of the fundamental qualities of brain function. Based on internal models shaped by previous experience, top-down predictions are compared to bottom-up sensory signals <ref type="bibr" target="#b0">[1]</ref>. Redundant components of perceptual information are disregarded whereas surprising expectancy violations are propagated upward in the processing hierarchy <ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref>. Model adaptation in consequence of such prediction errors (PE) has been proposed to be the foundation of associative learning mechanisms <ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref>, as unexpected events are particularly informative with regard to their current context. Importantly, probabilistically occurring expected events have also been suggested to inform the internal model <ref type="bibr" target="#b5">[6]</ref>: While PE instigate model adaptation, expected events verify model-based predictions. These verifications are particularly informative when we face uncertain environments. A recent fMRI study <ref type="bibr" target="#b6">[7]</ref> found that in uncertain environments, so-called checkpoints (CP) emerged as points in time where distinctive processing of expected events pointed to a context-sensitive adaptation in predictive processing. While the entire stimulus sequence could be predicted reliably in stable environments, unstable environments prompted stepwise predictions. This way, CP were used to verify the internal model in order to predict the next section accordingly. Thus, while model adaptation is induced by prediction errors, context-dependent model evaluation does not seem to require expectancy violations. Instead, selected time points carry information about the on-line validity of the internal model, raising the intriguing question of how checkpoints and prediction errors functionally relate to one another.</p><p>For the present study, we employed the paradigm from <ref type="bibr" target="#b6">[7]</ref> in an electroencephalography (EEG) experiment. Exploiting the temporal benefits of EEG, we aimed to further understand the functional relationship of CP and PE as well as their respective evolution over time. Specifically, we aimed to show how functional commonalities of and central distinctions between the two event types translate to electrophysiological signals.</p><p>Participants performed a serial pattern detection task in which they were asked to press and hold a response button whenever they detected a short or long ordered digit sequence (e.g. 1-2-3-4-5, length of either 5 or 7 items) within an otherwise pseudorandom stream of coloured single digits. Expectable sequence length was cued by digit colour and occasionally violated by premature terminations or unexpected extensions. In addition to these two types of prediction errors, checkpoints were defined as sequential positions where PE could potentially occur, but did not. Thus, although checkpoints were exclusively sampled from regular events consistent with the previous cue, their occurrence was probabilistically modulated by blockwise manipulation of irreducible uncertainty. Irreducible uncertainty refers to uncertainty that cannot be reduced further and remains even after successful (i.e., ideal) learning <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref>. Going back to our research question, both checkpoints and prediction errors provide central information for model evaluation or adaptation, respectively, whereas deterministic standard trials (STD) did neither. Consequently, we first hypothesised a joint event-related (ERP) component of CP and PE (compared to STD) reflecting recourse to the internal model. The P3b component has been conclusively shown to co-vary with subjective improbability or unexpectedness of a stimulus <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref>. Such highly informative events supposedly initiate contextual updating <ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> or memory-based revision of mental representations <ref type="bibr" target="#b14">[15]</ref>. Importantly, the P3b is elicited by behaviourally relevant rather than merely deviant stimuli in order to facilitate motor responses <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref>, making it a promising candidate for a joint physiological component of checkpoints and prediction errors.</p><p>Aside from the aforementioned conceptual commonalities of CP and PE, one critical distinction remains, namely the mismatch signal that is intrinsic to prediction errors. N400 is elicited by a multitude of sensory events and its amplitude is known to scale with event surprise in language <ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref>, recognition memory (reviewed in <ref type="bibr" target="#b19">[20]</ref>), and arithmetic tasks <ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref>, presumably marking modality-independent integration of incongruous information. More generally, N400 has been discussed as a modality-independent index of representations needing revision in light of expectancy violations (for review, see <ref type="bibr" target="#b10">[11]</ref>). Consequently, we hypothesised an enhanced N400 component for highly surprising, model-incongruent PE to reflect this mismatch signal in contrast to expectation-compliant CP: While information from both event types has to be integrated into existing model structures, the excess effort of integrating prediction error information should result in a more pronounced N400 component.</p><p>Complementing ERP analyses, we assessed topographic microstates <ref type="bibr" target="#b22">[23]</ref> for a multivariate, assumption-free comparison of the temporal dynamics underlying CP and PE processing. This way, we aimed to characterise the two event classes using similarities and differences in the onset, duration, and strength of their respective network activation.</p><p>Finally, we employed performance-based subgroup analyses of behavioural data to further assess the implications of statistical learning on individual reaction time patterns. Specifically, we hypothesised strong reliance on cue information to induce both beneficial and maladaptive responses towards CP and PE, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and methods</head><p>The study was conducted according to the principles expressed in the declaration of Helsinki and approved by the Local Ethics Committee of the University of Mu ¨nster (Department of Psychology).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Participants</head><p>A total of 32 neurologically healthy, right-handed volunteers (26 female) at the age of 23.4 ± 2.5 years (M ± SD) participated in the study for payment or course credit. Participants were recruited from the university's volunteer database and had (corrected-to-) normal vision. Written informed consent was obtained from all participants prior to the start of experimental procedures. One participant was excluded from further data analysis due to poor behavioural performance during the experiment; a second participant was excluded due to technical difficulties during the EEG session. Therefore, all reported analyses are based on a sample of 30 participants (25 female, age 23.2 ± 2.5 years).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulus material</head><p>Task and stimulus material of the present study were adopted from a previous fMRI study conducted in our lab <ref type="bibr" target="#b6">[7]</ref>. In short, participants were shown pseudorandomly coloured single digits presented for 500 ms in the centre of a light grey computer screen (see Fig <ref type="figure" target="#fig_0">1A</ref>). Presentation frequencies for all colours and digits were equally distributed both within and across blocks of approximately 6 minutes. Each block contained ordered sequences increasing the previous digit by one (e.g. 1-2-3-4-5; Fig <ref type="figure" target="#fig_0">1A</ref>, left) embedded in random trials with no discernible relation between consecutive digits. In order to balance sequential starting points across digits, the ascending regularity necessarily included the 0 character and continued in a circular fashion after the figure <ref type="figure">9</ref> (e.g. 8-9-0-1-2).</p><p>Undisclosed to the participants, two colours were exclusively used as cues (fixed validity p = .80) to indicate the start of ordered sequences: one colour marked the first digit of a short ordered sequence (regular length of five digits), a second colour marked the first digit of a long ordered sequence (regular length of seven digits). Each participant was assigned two individual cue colours from distinct hues.</p><p>Prediction errors, i.e. violations of cue-based expectations with regard to sequence length, were induced by manipulation of the sequences' expectation compliance. While the cues indicated the length of regular ordered sequences (e.g. seven digits for long ordered sequences), terminated sequences were shortened by two items. Conversely, extended sequences were prolonged by two items (Fig <ref type="figure" target="#fig_0">1C</ref>). In addition to prediction errors, checkpoints were defined as events of interest for subsequent analyses. In line with the design of our previous study <ref type="bibr" target="#b6">[7]</ref>, checkpoints were sampled from positions of potential terminations and extensions, when expected stimuli were in fact presented (see Fig <ref type="figure" target="#fig_0">1B</ref>). Finally, the composition of regular, terminated, and extended sequences within a particular block was varied across blocks. This way, the irreducible uncertainty of a block was set to be either low or high (Fig <ref type="figure" target="#fig_0">1D</ref>). Low uncertainty blocks could be seen as statistically stable regarding cue-based expectations whereas highly uncertain blocks formed a more unstable statistical structure. The experiment was programmed and run using the Presentation 14.9 software (Neurobehavioral Systems, San Francisco, CA, USA).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Task</head><p>Participants were instructed to press and hold the left button of a response box with their right index finger as soon as they noticed an ordered sequence. Release of the button was to indicate the end of the ordered sequence.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental procedures</head><p>The study was conducted on two consecutive days. On the first day, participants completed a training session to familiarise themselves with the task and to provide them with implicit knowledge of the cues and the underlying statistical structure of the experiment. The training consisted of two blocks (one block of low and high uncertainty, respectively) with a total duration of approximately 12 minutes. Importantly, at no point during the training or the EEG session was it revealed that there was informational content in some of the colours (i.e. the cues) or that the blocks varied in their respective statistical structure (i.e. their level of uncertainty).</p><p>The second day included the EEG session as well as a subsequent post-measurement. The EEG session consisted of eight blocks (four blocks of each uncertainty level) with a total duration of approximately 48 minutes. Detailed information on trial numbers per block and condition is provided in Supporting Information ( <ref type="table" target="#tab_0">S1</ref> Table). Participants were sitting comfortably on a chair in a darkened, sound-dampened and electrically shielded EEG booth. They were instructed to avoid blinking the best they could, most importantly during button presses. Experimental procedure and task during the EEG session were otherwise identical to the training session.</p><p>Following the EEG session, participants completed a behavioural post-measurement in order to assess their implicit knowledge of the cue information. To this end, they were shown one final experimental block (duration approx. 5 min) on a computer outside the EEG booth, performing the identical task as before. Crucially, only half of the ordered sequences were cued by the colours learned during the training and the EEG session. The other half began with fixed but different colours that had indeed been presented during training and EEG, but not as cues for the respective participant. Therefore, these colours were non-informative in that they contained no implicitly learned information concerning upcoming trials. In a verbal interview following the post-measurement, all participants denied having noticed any colour-related regularity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioural data analysis</head><p>Statistical analyses of behavioural responses were performed in R (R Foundation for Statistical Computing, Vienna, Austria). First, correct and incorrect responses were aggregated separately for training, EEG session, and post-measurement for each participant. Incorrect responses were further divided into misses (no response over the course of a sequence) and false alarms (response occurring without presentation of sequential trials). Participants' overall performances were assessed via the discrimination index PR <ref type="bibr" target="#b23">[24]</ref>.</p><p>Reaction times for button presses and releases were assessed for the EEG session and postmeasurement. Onset latency was calculated as reaction time relative to the onset of the second trial of any particular ordered sequence (i.e. the earliest possible point to detect a sequential pattern). Offset latency was calculated as reaction time relative to the onset of the first random trial after a particular sequence. Reaction times occurring either before the cue trial (i.e. earlier than -500 ms) or more than 2000 ms after the end of the sequence were excluded.</p><p>We used a repeated-measures analysis of variance (ANOVA) to assess potential differences in offset latency as a function of expectation compliance and uncertainty during the EEG session. Furthermore, effects of cue learning on onset latency during the post-measurement were assessed by means of a paired t-test (learned vs new cue colours). Finally, a data-driven subgroup analysis based on participants' post-test performance was conducted to assess differential effects of stimulus surprise on response patterns as well as premature and anticipatory button releases as a function of cue learning. Where appropriate, results of paired t-tests were corrected for multiple comparisons at p = .05 using the false discovery rate (fdr) correction <ref type="bibr" target="#b24">[25]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Single-trial analyses: Event-specific surprise</head><p>In addition to global context effects of uncertainty, single-trial behavioural and physiological correlates of CP and PE conceivably depend on how much information is carried by respective stimuli. For single-trial analyses of reaction times and ERPs, we modelled event-specific surprise following the notion of an ideal Bayesian observer (see <ref type="bibr" target="#b25">[26]</ref>). Surprise I(x i ) was defined as the improbability of event x i , i.e.</p><formula xml:id="formula_0">Iðx i Þ ¼ À ln pðx i Þ with p x i ð Þ ¼ n i j þ 1 P k n i k þ 1</formula><p>where n i j denotes the total number of occurrences of outcome j (terminated, regular, extended) up to the current observation i relative to the sum of all past observations (with k for all possible outcomes).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EEG data analysis</head><p>EEG data acquisition and data preprocessing. Scalp EEG was recorded from 62 Ag/ AgCl-electrodes mounted in a BrainCap TMS electrode cap (Brain Products, Gilching, Germany) using the BrainVision Recorder software (Brain Products, Gilching, Germany). All scalp channels were measured against a ground electrode at position FPz and referenced against FCz during recording. Two additional electrooculogram (EOG) electrodes were applied above and below the right eye for the detection of horizontal and vertical eye movements. All impedances were kept below 10 kOhm. EEG was recorded at a sampling rate of 1 kHz with recording filters set to 0.1-1000 Hz bandpass.</p><p>EEG preprocessing was conducted in EEGLAB <ref type="bibr" target="#b26">[27]</ref>. Data segments containing experimental breaks were discarded prior to independent component analysis (ICA). Resulting components distinctly reflecting eye movements were subsequently rejected manually (mean = 2.83 components) using the SASICA toolbox <ref type="bibr" target="#b27">[28]</ref>. Data were then filtered with a 0.1 Hz low cut and 30 Hz high cut filter and recalculated to common average reference. Based on participants' overall pattern of reaction times at the end of sequences, a time frame of [-100, 600] ms was defined for the analysis of event-related potentials (ERP) and multivariate segmentation. Epochs containing artefacts were discarded by semiautomatic inspection with an allowed maximum/minimum amplitude of ± 200 μV and voltage steps no higher than 50 μV per sampling. Channels with a high proportion of outliers (kurtosis criterion: z &gt; 6) were replaced by a linear interpolation of their neighbour electrodes (M = 1.8 interpolated channels).</p><p>Event-related potentials. Averages of the epochs representing our events of interest were calculated separately for each participant. Prediction errors were defined as violations of cue-based expectations of sequence length. For terminations, the event onset was time-locked to the first unexpected random digit, whereas extensions were defined with the onset time-locked to the first unexpected sequential digit. Checkpoints were defined as positions of potential expectation violations when an expected stimulus was in fact presented. At these points in time, based on a previous study <ref type="bibr" target="#b6">[7]</ref>, we hypothesised an incoming regular (i.e., expected) stimulus to be checked for either a termination (i.e. a check occurring during the ongoing sequence) or an extension (i.e. a check at the regular end) of the ordered sequence. Due to their unambiguous characteristic and temporal distinctiveness, digits at the fourth position of every long extended sequence were defined as sequential standard trials. The number of valid trials per condition (after artefact rejection) is summarised in Supporting Information ( <ref type="table">S2</ref> Table). Finally, grand averages across participants were calculated for all events of interest.</p><p>Using the Mass Univariate ERP Toolbox <ref type="bibr" target="#b28">[29]</ref>, we employed a two-stage approach to assess reliable ERP differences between conditions: First, we restricted our analyses to specific time frames and electrodes for stringent testing of our hypotheses. In a second step, we performed a whole-brain analysis including all time points to increase sensitivity. In each case, ERPs from the respective conditions were submitted to a repeated measures cluster mass permutation test <ref type="bibr" target="#b29">[30]</ref> using a family-wise significance level of α = .05. Repeated measures t-tests were performed for each comparison using the original data and 5000 random within-participant permutations of the data. For each permutation, all t-scores corresponding to uncorrected p-values of p = .05 or less were formed into clusters. The sum of the t-scores in each cluster defined the "mass" of that cluster and the most extreme cluster mass in each of the 5001 sets of tests was used to estimate the distribution of the null hypothesis.</p><p>To recap, ERP analyses were conducted to highlight functional commonalities of and distinctions between checkpoints and prediction errors. To this end, both CP and PE were first compared to non-informative standard trials (STD) within the P3b time window (300-600 ms). In line with our hypotheses, differential correlates of prediction errors and checkpoints were finally assessed in a direct comparison within the N400 time frame (300-500 ms).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Multivariate segmentation.</head><p>We used the Cartool software package (available via <ref type="url" target="www.sites.google.com/site/cartoolcommunity">www.  sites.google.com/site/cartoolcommunity</ref>) for a segmentation of event-related EEG data sets into topographic maps. This procedure was first introduced by Lehmann and colleagues <ref type="bibr" target="#b22">[23]</ref> to describe what they termed functional microstates, meaning brief time periods of stability in otherwise fluctuating field configurations. More generally, this segmentation allows the assessment of spatial field characteristics and their temporal dynamics (see <ref type="bibr" target="#b30">[31]</ref>. As these topographic ERP analyses consider information from all electrodes (i.e. the field configuration as a whole), they offer a multivariate approach to investigating effects between time periods or experimental conditions without a priori selection.</p><p>The methodology behind topographic ERP analyses has been described in great detail (see <ref type="bibr" target="#b31">[32]</ref> for an excellent step-by-step tutorial) and is briefly outlined here. Based on the so-called AAHC (atomize and agglomerate hierarchical clustering) algorithm, Cartool first iteratively generated clusters of ERP topographies to identify template maps separately for each experimental condition. A cross-validation criterion was then used to determine which number of template maps optimally described the group-averaged ERPs (i.e. how many template maps were needed to maximise explained variance in the data). Finally, the optimal number of cluster maps per experimental condition was fitted back to the original data, allowing us to compare onset and duration of the same template maps across conditions.</p><p>Multivariate segmentation analysis was conducted to assess the number and topographic distribution of template maps underlying ERPs of checkpoints, prediction errors, and standard trials as well as differences in their timing and/or field power across conditions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioural results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EEG session.</head><p>All participants showed an overall high level of performance with a mean PR score of M PR = 0.90 (SD = 0.06) during the EEG session, indicating good attentiveness throughout the experiment. Mean PR scores did not differ significantly between experimental blocks (F(7, 248) = 0.03, p = .999) or as a function of block uncertainty (t(29) = 1.58, p = .139, see Fig <ref type="figure" target="#fig_1">2A</ref>).</p><p>The repeated-measures ANOVA yielded a significant main effect of expectation compliance on offset latency (F(2, 58) = 51.54, p &lt; .001). Post-hoc pairwise t-tests revealed participants' button releases to be significantly slower after terminated (M = 619.48 ms, SD = 96.55 ms) than after regular (M = 532.81 ms, SD = 99.74 ms, fdr-adjusted p = .003) as well as after extended sequences (M = 346.68 ms, SD = 219.35 ms, fdr-adjusted p &lt; .001). The difference between extended and regular sequences was significant as well (fdr-adjusted p &lt; .001, see Fig <ref type="figure" target="#fig_1">2B</ref>). This pattern of offset latencies fully replicated the findings from our previous fMRI study (see <ref type="bibr" target="#b6">[7]</ref>). Neither the main effect of uncertainty (F(1, 29) = 0.05, p = .821) nor the interaction term of uncertainty X expectation compliance (F(2, 58) = 1.72, p = .187) reached statistical significance, suggesting that participants were able to discriminate regular from manipulated sequences regardless of the respective uncertainty level. The number of misses (t(29) = -1.89, p = .068) and false alarms (t(29) = 0.10, p = .923) did not differ significantly between high and low uncertainty blocks (see Fig <ref type="figure" target="#fig_1">2A</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Post-measurement.</head><p>Participants performed equally well during the post-measurement (M PR = .90, SD = 0.05) as they had during the EEG session. The post-measurement was conducted in order to assess cue learning: If participants had learned the association of cue colours and prospective ordered sequences over the course of the training and the EEG session, they could be expected to respond more quickly to sequences beginning with established cue colours than to those starting with new colours during the post-measurement. Indeed, the corresponding t-test confirmed a significant difference between learned and new cue colours (t(29) = -2.47, p = .01, one-tailed): Participants exhibited a shorter reaction time to learned cue colours (M = 788.02 ms, SD = 168.00 ms) than to new cue colours just introduced during the post-measurement (M = 844.59 ms, SD = 172.31 ms; see Fig <ref type="figure" target="#fig_1">2B</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Performance-based subgroup analyses.</head><p>Based on participants' reaction times at onset during the post-measurement, the sample was median-split into two equal groups (n = 15): The first group had shown a gain in response speed following the learned cue colours (gain), whereas the second group had not (no gain, see Fig <ref type="figure" target="#fig_2">3A</ref>). The gain group showed a significantly higher difference between reactions to new and learned cue colours (M = 178.54 ms, SD = 106.62 ms) than did the no gain group (M = -45.40 ms, SD = 82.24 ms, t(26.64) = 6.29, p &lt; .001, one-sided).</p><p>The rationale behind comparing the two subgroups' behavioural performance was that a stronger association of cue colour and sequence length (as reflected by a pronounced gain in response speed during post-measurement) should entail distinct response patterns at the end of regular and manipulated sequences. We repeated the offset latency ANOVA separately for gain and no gain groups and found the overall main effect of expectation compliance to be present in both groups (gain: F(2, 28) = 30.15, p &lt; .001; no gain: F(2, 28) = 28.23, p &lt; .001; see Fig <ref type="figure" target="#fig_2">3B</ref>). Notably, only the gain group showed a significant interaction of expectation compliance and irreducible uncertainty (F(2, 28) = 7.98, p = .002): Button releases at the end of extended sequences occurred significantly earlier when uncertainty was low (M = 221.16 ms, SD = 328.87 ms) than when it was high (M = 333.75 ms, SD = 252.23 ms, t(14) = 2.90, p = .012).</p><p>By definition, extensions were on average more surprising under low uncertainty due to their low presentation rate in these blocks. Importantly, however, event-specific surprise values of extensions also fluctuated under high uncertainty (albeit to a lesser extent). Thus, the reported uncertainty effect on the gain group's responses after extended sequences might be generalised across uncertainty levels in such a way that more surprising extensions-regardless of global contextual features-evoked shorter offset latencies in the gain group: If excess reliance on cue information had in fact determined the behavioural effect found for the gain group, these participants should have responded equally fast to locally surprising extensions irrespective of global uncertainty. Corroborating this hypothesis, we found a significant negative correlation of stimulus-bound surprise and offset latency after extended sequences for the gain group (r(72) = -.29, p = .013) but not for the no gain group (r(72) = .06, p = .617). The difference between the two correlation coefficients was found to be significant (Z = 2.11, p = .017, one-tailed).</p><p>An intuitive explanation for earlier releases following highly surprising extensions would be that the gain group not only released the button more quickly, but also more often prematurely: Conceivably, the more stable the cue information had been learned, the more likely would the response button be released at the expected sequence end rather than at the actual end. We assessed two additional questions with regard to more specific distinctions in behaviour: First, we hypothesised the gain group to more frequently respond prematurely to extended sequences, i.e. at the 'would-be' end of the sequence had it not been extended (see Fig <ref type="figure" target="#fig_0">1B</ref>). Recall that unexpected extensions occurred at the sequential positions where-based on the cue information-a non-sequential digit was expected. Accordingly, as illustrated in Fig <ref type="figure" target="#fig_3">4</ref>, we compared the two groups' button releases within the interval of -1000 (onset of the unexpected sequential digit) and 500 ms (offset of the first non-sequential digit) around the end of extended sequences. Supporting our hypothesis, the gain group was found to have a significantly higher number of releases within the [-1000, 500] ms time frame than the no gain group (t(15) = 22.28, p &lt; .001, one-sided; see Fig <ref type="figure" target="#fig_3">4A</ref>). The group difference in incremental releases per 100 ms window was also found to be significant (t(15) = 2.35, p = .017, one-sided).</p><p>Second, stronger expectations by means of more accessible cue information within the gain group could conceivably lead to a similar pattern of early responses following regular sequences. The gain group could therefore be expected to more frequently release the response button within a brief interval of ± 500 ms around the end of regular sequences. Responses during the last sequential digit (i.e. offset latency between -500 and 0 ms) would reflect an anticipatory release of the response button whereas responses during the first non-sequential digit (0-500 ms) would reflect a quick detection of the sequence end. Both anticipatory and quick releases after the end of a regular sequence were hypothesised to be positively associated with the degree to which the colour-length association had been learned. Fittingly, the gain group was found to have a significantly higher number of releases within the ± 500 ms time frame than the no gain group (t(10) = 9.47, p &lt; .001, one-sided; see Fig <ref type="figure" target="#fig_3">4B</ref>). The group difference in incremental releases per 100 ms window showed a non-significant trend (t(10) = 1.81, p = .05, one-sided).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EEG results</head><p>Event-related potentials. Based on our hypotheses, we first tested prediction errors and sequential standards for reliable differences in the P300 time frame. We analysed all time points between 300 and 600 ms (1350 comparisons in total) from two subsets of electrodes: one parieto-central subset (CP1, CPz, CP2, P1, Pz, P2) to detect a posterior P3b component and a fronto-central subset (F1, Fz, F2) controlling for anterior P3a effects (see <ref type="bibr" target="#b14">[15]</ref> for a review of P3a and P3b topographies). Supporting our hypothesis, we found a significant P3b over the parieto-central electrodes (352-576 ms) peaking around 388 ms (Fig <ref type="figure" target="#fig_4">5A</ref>). No significant potentials were found in the fronto-central subset.</p><p>Subsequently, all time points between 0 and 600 ms were included in a two-sided wholebrain analysis to assess reliable differences exceeding our hypotheses (18600 comparisons in total). In addition to the reported P3b effect (see S1 Fig for comparison), we found a significant ERP component resembling a P600 with a right-lateralised parietal scalp distribution peaking around 500 ms (Fig <ref type="figure" target="#fig_4">5A</ref>). While timing, scalp distribution, and the underlying experimental manipulation are fitting for a P600 component, the reported effect is caused at least in part by a more pronounced negativity of STD (instead of a PE-related positivity). We therefore refrain from interpreting this finding and suggest future studies specifically address P600 modulation as a function of local probabilities.</p><p>Like prediction errors, checkpoints are probabilistic, highly informative sequential positions with an immediate relevance for behaviour. Therefore, one would expect a certain degree of similarity between PE and checkpoint ERPs when compared with deterministic, behaviourally non-informative standard trials. ERPs from checkpoints and sequential standards were submitted to a one-sided analysis including all time points between 300 and 600 ms (1350 comparisons in total) and the two electrode clusters described above. The analysis revealed a pattern very similar to previous prediction error ERPs, including both a significant posterior P3b (324-574 ms, peaking around 422 ms) and a right-lateralised P600 (peaking around 554 ms, Fig <ref type="figure" target="#fig_4">5B</ref>). Notably, P3b and P600 peak latencies thus occurred slightly earlier for prediction errors than for checkpoints. No significant potentials were found in the fronto-central subset.</p><p>Since strategic adaptation of CP processing as a function of context uncertainty was one of the central objectives of the previous fMRI study, we subsequently split the analysis to separately assess high and low uncertainty checkpoint ERPs. P3b and P600 were found for checkpoints in both uncertainty conditions (Fig <ref type="figure" target="#fig_5">6</ref>). Interestingly, while the P3b component was virtually identical in both latency and scalp distribution, we found subtle differences regarding the P600: At the group level, the activation peak occurred ~50 ms earlier and slightly more frontally for high (500 ms at CP4) than for low uncertainty checkpoints (554 ms at P6, see Fig <ref type="figure" target="#fig_5">6</ref>).</p><p>Recall that we observed an earlier P3b peak for prediction errors (388 ms) than for low (426 ms) and high uncertainty checkpoints (418 ms). In contrast, P600 peak latencies were identical for PE and high uncertainty CP (500 ms) and earlier than for low uncertainty CP (554 ms). This pattern of ERP results suggests a close functional relationship of prediction errors and (particularly high uncertainty) checkpoints (see Figs <ref type="figure" target="#fig_4">5A</ref> and <ref type="figure" target="#fig_5">6</ref>). This relationship and its variation under uncertainty were the main objective of our subsequent multivariate segmentation analysis (see below).</p><p>Given the reported conceptual and functional similarities between prediction errors and checkpoints, their direct contrast was meant to reveal the correlate of expectation violation definitive of PE. We hypothesised this mismatch to be reflected in an enhanced N400 component. Accordingly, we included all time points between 300 and 500 ms in a one-sided wholebrain analysis (6262 comparisons in total). PE were found to elicit a significantly enhanced N400 over parieto-central electrodes (338-500 ms) peaking around 418 ms (Fig <ref type="figure" target="#fig_6">7</ref>). No additional significant components were found in the subsequent whole-brain analysis including all time points between 0 and 600 ms (18600 comparisons in total).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Multivariate segmentation.</head><p>Cartool's meta-criterion showed that group-averaged ERPs of checkpoints, prediction errors, and standard trials were optimally described by a set of 12 topographic template maps (TM). Fig <ref type="figure" target="#fig_7">8</ref> shows the temporal progressions of these topographies for each condition. Visual inspection suggested notable differences between conditions within two main time frames. First, following a virtually simultaneous onset of fronto-centrally distributed TM 11 (around 204 ms), PE and high uncertainty CP exhibited a sustained frontal cluster (TM 2, 284-326 ms) after transitioning through a more global TM 12 (Fig <ref type="figure" target="#fig_7">8</ref>, Box A). Whereas this frontal shift was not found for low uncertainty CP, it was even more pronounced for STD (i.e., with a higher amplitude and an earlier onset). After fitting the group-level template maps onto individual subject data, one-sided t-tests confirmed a significantly greater global field power of TM2 for STD compared to PE (t(13.08) = 1.91, p = .039) and CP HIGH (t (14.83) = 1.83, p = .044). Similarly, onsets of TM2 occurred significantly earlier for STD than for CP HIGH (t(20.86) = -1.95, p = .033). The comparison of STD and PE showed a non-significant trend (t(15.42) = -1.67, p = .057).</p><p>Second, ERP time courses showed differential topographic as well as temporal configurations during a later time frame (starting at around 360 ms). Prediction errors and both checkpoint conditions shared a frontal-to-parietal shift (TM 3-5) with particular differences in cluster onset and duration (Fig <ref type="figure" target="#fig_7">8</ref>, Box B). In contrast, sequential standard trials showed a distinct ongoing frontal topography with a slight dominance of left hemisphere sources (TM 9, 406-540 ms). Group-level onset and duration for the reported topographies are listed in Table <ref type="table" target="#tab_0">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>Predicting events of everyday life, our internal model of the world is constantly compared to sensory input we perceive. Prediction errors induced by unexpected events are deemed particularly informative in that they instigate learning through model updating. We show here that information is equally sampled from expected events at particularly relevant checkpoints, suggesting that under uncertainty, model-affirmative events similarly prompt recourse to the internal model. Both checkpoints and prediction errors showed a significant P3b component when compared to sequential standards, indexing the relative (im)probability of CP and PE occurrence. Conversely, the direct comparison of CP and PE revealed a significant N400 component as the mismatch correlate elicited solely by prediction errors. Combined with findings from behavioural and functional microstate analyses, checkpoint characteristics highlight the significance of informative reference points for abstract predictive processing, raising intriguing questions for future research.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Functional characteristics of checkpoints</head><p>In order to establish a more precise characterisation of checkpoints, they have to be related to and dissociated from two other event types: First, since checkpoints are regular events, they share the expectedness of sensory input with sequential standards. In contrast to these standards, however, checkpoints are probabilistic and therefore informative with regard to task context and behavioural requirements. Second, PE are equally informative but do carry a mismatch signal that requires behavioural adaptation in opposition to the internal model.</p><p>As hypothesised, the significance of checkpoints and prediction errors as particularly meaningful points in time was reflected in a joint P3b component compared to least informative standards. Often discussed as an index of enhanced information transmission and allocation of resources <ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref>, P3b is well suited to reflect exploitation of information at these sequential positions. More precisely, an incoming stimulus is evaluated in context of previous stimuli by comparing it to information from working memory <ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref>. Such monitoring is immediately beneficial for stimulus classification and-where required-transforming this information into action <ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref>. These proposals fit well with central findings from the original fMRI study in which we found enhanced activation at checkpoints under high (vs low) contextual uncertainty. We interpreted these effects as an iterant evaluation of model information retrieved from working memory, pointing towards a strategic adaptation of predictive processing to contextual statistics <ref type="bibr" target="#b6">[7]</ref>. Notably, the observed activation pattern included the temporo-parietal junction (TPJ), a hypothesised cortical source of the P3b <ref type="bibr" target="#b38">[39]</ref>. Common ERP components and the similarities in functional microstates thus further illuminate the processing of CP and PE as highly informative events, suggesting that positions of potential and actual prediction errors are being exploited in a similar way.</p><p>It remains the key difference between checkpoints and prediction errors that only the latter violated cue-based predictions. Therefore, despite the similarities reported above, CP and PE will eventually be processed differently once consequences of the actual stimulus come into effect. Supporting our initial hypothesis, the mismatch signal for PE (vs CP) was reflected in an N400 component. N400 effects have typically been reported when words mismatched semantic expectations shaped by previous context information (e.g., <ref type="bibr" target="#b39">[40]</ref>). Closely related to the present paradigm, centro-parietal N400 effects following incorrect (vs correct) solutions in arithmetic tasks (e.g., <ref type="bibr" target="#b40">[41]</ref>) point towards a more general process independent of stimulus modality. Accordingly, Kutas &amp; Federmeier <ref type="bibr" target="#b10">[11]</ref> discuss the N400 as an index of conceptual representations which-when contextually induced predictions are violated-may need to be refined. Such adaptive processes are conceivably reflected by components occurring even later than the PE-related N400, e.g., ERPs related to subsequent digits 'confirming' the initially surprising stimulus. Future research could make use of later time frames to further distinguish prediction errors and checkpoints with regard to the respective consequences they entail. To summarise, checkpoints are informative points in time which, despite a lack of unexpected input, show close functional similarities to canonical prediction errors. Our findings suggest that information from particular sequential positions, irrespective of the actual outcome, is used for evaluation and/or updating of internal models. Importantly, while sensory input at CP complied with the more likely expectation, their sequential positions were tagged by the statistical structure inherent in the stimulus stream. Previous fMRI results have shown CP to be exploited particularly in highly uncertain contexts, conceivably in order to solve ambiguity with regard to upcoming sensory information and efficiently adapt behaviour. Overall, the functional profile of checkpoints conceptually relates to bottleneck states <ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref> from the realm of hierarchical reinforcement learning. Bottleneck states form natural subgoals in hierarchical representations of behaviour <ref type="bibr" target="#b43">[44]</ref><ref type="bibr" target="#b44">[45]</ref>. For example, when trying to find the kitchen in a friend's house, certain features like doors and stairways operate as bottlenecks informing the search <ref type="bibr" target="#b41">[42]</ref>. Consequently, bottlenecks are conceptualised as transition points between larger sets of representational states. Similarly, on a more abstract level, the sequential positions of CP and PE mark informative transition points between predictable and non-predictable (random) states. Depending on whether or not the presented stimulus complied with cue-based expectations, checkpoints and prediction errors are supposedly used for model evaluation and updating, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Implications for predictive processing</head><p>Combined ERP and microstate findings of the present study revealed considerable similarities between the representations of checkpoints and prediction errors. On a broader scale, this suggests overlapping roles of CP and PE in predictive processing. Given that error-based model updating has been established to be fundamental for associative learning <ref type="bibr" target="#b45">[46]</ref>, CP could similarly be used for model evaluation. Clearly, expectation-compliant information (as observed at checkpoints) does not call for corrective model updating. It seems unlikely, however, that potentially critical information extracted from CP would not be used to evaluate the validity of model statistics on-line. Particularly for the estimation of higher level statistics, the number of regular outcomes at critical time points is no less instructive than the number of prediction errors. Support for this proposition comes from earlier studies using digit sequences in abstract predictive processing. Ku ¨hn and Schubotz <ref type="bibr" target="#b5">[6]</ref> found a distinct frontal correlate of regular, model-compliant events at sequential positions where statistically rare breaches of expectancy had previously been observed. As the actual sensory input neither violated model-based predictions nor called for behavioural adaptation, these frontal responses reflected increased weight of bottom-up signals driving potential model updating solely based on statistical regularities. Another study manipulated the requirement to either ignore or respond to two different expectation violations <ref type="bibr" target="#b46">[47]</ref>. Again, violations that could be ignored ('drifts') did confirm the internal model, whereas violations that required a response ('switches') prompted corrective model updating. The pattern of brain activation suggested a two-step neural response to these events, starting with joint processing of stimulus discrimination followed by distinct correlates of behavioural responses prompted by the respective violation type.</p><p>In line with these previous findings, we suggest information from checkpoint and prediction error time points to be evaluated irrespective of the actual outcome (distinguishing both events from non-informative standard trials), especially under uncertainty. Successive model adaptation is induced only in case of unexpected stimuli (distinguishing PE from CP). As the temporal resolution of fMRI did not allow for the inclusion of standard trials in the original study, it remains an intriguing question for future research to determine how context (in)stability influences the expectation and processing of these informative events.</p><p>In addition to effects of context uncertainty, behavioural subgroup analyses suggested inter-individual differences in cue learning as a determining factor for CP/PE processing: The more strongly participants had learned the cue-length association, the more often they showed early responses at the end of a sequence. Depending on which sequence was observed, this response pattern had diverging implications on behavioural efficiency: In case of regular sequences, early releases during the last sequential digit showed how strong anticipation of the sequence ending spurred fast and efficient responses. Critically, however, the very same anticipation led some participants to erroneously respond at the 'would-be' end of extended sequences. One explanation could be that (overly) successful cue learning triggered a consistent prediction of sequence length ("Five digits after green") irrespective of context-dependent violations. This way, information from checkpoints (in regular sequences) or prediction errors (in extended sequences) would not be exploited, as indicated by the negative correlation between event-specific surprise and offset latency. Overall, these results suggest that participants with increased knowledge of cueing information strongly (and sometimes falsely) relied on these initial cues, virtually disregarding potentially informative transition points during the sequence. In other words, excess reliance on cue information led to less attention being given to these transition points. More formalised accounts of predictive processing have postulated attention to control the involvement of prior expectations at different levels <ref type="bibr" target="#b47">[48]</ref>. Specifically, attention is conceptualised as a means to increase the weight (or gain) of neural responses coding error signals, making them more eligible to drive learning and potential behavioural adjustments. Strict adherence to cue information conceivably impedes allocating attentional resources to CP/PE time points and, consequently, model adaptation. One promising direction for future studies would thus be to specifically vary training exposure between groups and assess the interplay of bottom-up and top-down dynamics underlying CP/PE processing.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Limitations and future directions</head><p>The main aim of the present study was to exploit the temporal benefits of EEG for an extension of previous fMRI results. In order to warrant a high degree of comparability between the two studies, we chose a full replication of the experimental paradigm. As a consequence, it remains a limitation of the present study that half of the checkpoints required a response whereas the other half did not (for discussion, see <ref type="bibr" target="#b6">[7]</ref>). To this end, one central direction for studies currently in preparation is to reduce the number of prediction error types, effectively ensuring equal behavioural relevance of all checkpoints. Furthermore, some caution is required when interpreting ERPs elicited by events of naturally varying presentation frequencies. Therefore, despite our best effort to limit noise in the EEG data, further research is needed to consolidate the functional characteristics of checkpoints and (less frequent) prediction errors.</p><p>There are several promising analyses beyond the scope of this paper which would not have been ideal for the current ERP epochs (-100 ms to 600 ms). Going forward, specifically reepoching the data to include a longer pre-stimulus period would allow ERP and time-frequency analyses of anticipatory CP/PE processing as a function of uncertainty. Relatedly, the microstate analyses presented here motivate a more in-depth multivariate assessment of STD, CP, and PE representations, extending our understanding of similarities and differences between them. For example, STD trials should be reliably discriminable from CP and PE already during the pre-stimulus period, reflecting the anticipation of task-relevant information that can be obtained from the latter. Thus, representations of CP and PE should be similar during the pre-stimulus period but distinct during later periods reflecting actual outcome processing. Learning about the time course and potential uncertainty modulation of these comparisons will provide a more comprehensive account of the factors driving abstract prediction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p>Checkpoints are probabilistic, cue-compliant events informing predictive processing. Their functional profile closely resembles that of canonical prediction errors, indicating similar roles of the two event classes in abstract prediction. Both types of events presumably serve as reference points providing behaviourally relevant information, the central distinction being whether the respective outcome violates the internal model (PE) or not (CP). We suggest that despite the expected input observed at checkpoints, information at these particular positions is exploited on-line in order to adapt behaviour. Intriguing questions remain with regard to underlying network dynamics and their potential modulation as a function of uncertainty.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig 1 .</head><label>1</label><figDesc>Fig 1. (A) Exemplary trial succession and time frame of the corresponding response for ordered sequences. Sequential trials have been highlighted for illustrative purposes. (B) Schematic structure of a short ordered sequence showing the positions of checkpoints (CP) and prediction errors (PE, red). At the fourth position, the sequence could either be terminated (PE) or continued as expected (CP). Similarly, the sixth position contained either the regular end (CP) or an unexpected extension of the sequence (PE). (C) Cue-based expected sequence length and resulting prediction errors for terminated and extended short ordered sequences (expectation compliance). (D) Local transition probabilities for terminated, regular, and extended sequences depending on the respective level of irreducible uncertainty. https://doi.org/10.1371/journal.pone.0218311.g001</figDesc><graphic coords="4,43.20,78.01,532.80,476.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig 2 .</head><label>2</label><figDesc>Fig 2. (A) Mean count of false alarms (FA) and misses per block as well as mean PR score as a function of uncertainty. (B) Mean offset latencies for terminated, regular, and extended sequences as well as mean onset latencies for learned and new cue colours during post-measurement. �� = p &lt; .01, ��� = p &lt; .001. https://doi.org/10.1371/journal.pone.0218311.g002</figDesc><graphic coords="8,43.20,78.01,532.80,147.57" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig 3 .</head><label>3</label><figDesc>Fig 3. (A) Individual gains in reaction time (defined as the difference in reaction time following new minus learned cues) during post-measurement. Positive values indicate quicker button presses following learned cues. Blue dotted line depicts Mdn Diff = 78.70 ms. Participants were consequently median-split into a gain group (blue) and a no gain group (red). (B) Upper panel: Mean offset latencies as a function of expectation compliance for gain (blue) and no gain group (red). Significant differences only shown for high vs low uncertainty for the sake of clarity (see Fig 2B for differences between levels of expectation compliance). Lower panel: Correlations between offset latency and trial-specific surprise value of sequential extensions for both groups. �� = p &lt; .01. https://doi.org/10.1371/journal.pone.0218311.g003</figDesc><graphic coords="9,96.26,386.53,479.74,249.22" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig 4 .</head><label>4</label><figDesc>Fig 4. (A) Mean count of button releases during the experiment up to selected offset latencies for gain (blue) and no gain group (red). Shown here for an exemplary short extended sequence (length of 7 digits), the gain group was found to release the response button more frequently at offset latencies between -1000 and +500 ms (i.e. between the onset of the unexpected sequential digit [red frame] and the offset of the first non-sequential) following extended sequences. Dotted lines and bars depict mean offset latencies for regular sequences per group ± 2 SEM. (B) Similarly, shown here for a short regular sequence (length of 5 digits), the gain group was found to release the response button more frequently at offset latencies between -500 and +500 ms (i.e. between the onset of the last sequential digit and the offset of the first nonsequential digit) following regular sequences. Dotted lines and bars depict mean offset latencies for extended sequences per group ± 2 SEM. https://doi.org/10.1371/journal.pone.0218311.g004</figDesc><graphic coords="11,43.20,78.01,532.80,378.71" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig 5 .</head><label>5</label><figDesc>Fig 5. (A) Significant ERP differences between prediction errors and sequential standards included a parieto-central P3b (left) as well as a right-lateralised P600 component peaking over electrode P6 (right). P3b topography shows the frontal and parietal subsets of electrodes used for the analysis (bottom left). Significant clusters are marked in bold. (B) ERP differences between checkpoints and sequential standards were equally reflected in significant P3b (left) and P600 components (right). Respective bottom panels show component evolution over time (all electrodes, no temporal constraints). https://doi.org/10.1371/journal.pone.0218311.g005</figDesc><graphic coords="12,43.20,74.89,532.80,345.32" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig 6 .</head><label>6</label><figDesc>Fig 6. Grand averaged ERPs of low (top row) vs high uncertainty checkpoints (bottom row) and sequential standards. Checkpoints elicited significant P3b (left) and P600 components (right) irrespective of the uncertainty level. Note that, while uncertainty did not modulate P3b scalp distribution or peak latency, the P600 elicited by high uncertainty checkpoints showed an earlier peak and a slightly more frontally distributed topography. https://doi.org/10.1371/journal.pone.0218311.g006</figDesc><graphic coords="13,43.20,78.01,532.80,350.59" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig 7 .</head><label>7</label><figDesc>Fig 7. The direct comparison of prediction errors and checkpoints revealed a significant N400 component peaking around 418 ms over parietocentral electrodes. Bottom panel shows component evolution over time. https://doi.org/10.1371/journal.pone.0218311.g007</figDesc><graphic coords="14,95.98,78.01,479.96,339.31" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig 8 .</head><label>8</label><figDesc>Fig 8. Global field power (GFP) of group-averaged ERPs for prediction errors, checkpoints under high/low uncertainty, and sequential standard trials time-locked to stimulus onset. Coloured segments within the area under the curve depict distinct topographic configurations (template maps, TM) as revealed by hierarchical clustering. Upper panel shows scalp distributions of TM depicted in Box A (TM 11, 12, 2) and B (TM 3, 4, 5, 9). Note that the CP LOW curve was flipped for illustrative purposes only and did not differ in polarity. https://doi.org/10.1371/journal.pone.0218311.g008</figDesc><graphic coords="15,168.27,78.01,407.74,254.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 . Group-level onset and duration of selected template maps for PE, high/low uncertainty checkpoints, and sequential standard trials.</head><label>1</label><figDesc>Time frame for grand average ERP analysis [-100, 600] ms.</figDesc><table><row><cell>TM class</cell><cell></cell><cell>Condition</cell><cell></cell><cell></cell></row><row><cell></cell><cell>PE</cell><cell>CP HIGH</cell><cell>CP LOW</cell><cell>STD</cell></row><row><cell>TM 2</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Onset (ms)</cell><cell>284</cell><cell>284</cell><cell>-</cell><cell>236 | 368</cell></row><row><cell>Duration (ms)</cell><cell>42</cell><cell>42</cell><cell>-</cell><cell>94 | 38</cell></row><row><cell>TM 3</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Onset (ms)</cell><cell>326 | 360</cell><cell>360</cell><cell>370</cell><cell>330</cell></row><row><cell>Duration (ms)</cell><cell>12 | 78</cell><cell>62</cell><cell>48</cell><cell>38</cell></row><row><cell>TM 4</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Onset (ms)</cell><cell>438</cell><cell>422</cell><cell>418</cell><cell>-</cell></row><row><cell>Duration (ms)</cell><cell>34</cell><cell>50</cell><cell>72</cell><cell>-</cell></row><row><cell>TM 5</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Onset (ms)</cell><cell>472</cell><cell>472</cell><cell>328 | 490</cell><cell>-</cell></row><row><cell>Duration (ms)</cell><cell>104</cell><cell>76</cell><cell>42 | 70</cell><cell>-</cell></row><row><cell>TM 9</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Onset (ms)</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>406</cell></row><row><cell>Duration (ms)</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>134</cell></row><row><cell>TM 11</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Onset (ms)</cell><cell>204</cell><cell>204</cell><cell>206</cell><cell>202</cell></row><row><cell>Duration (ms)</cell><cell>38</cell><cell>48</cell><cell>30</cell><cell>34</cell></row><row><cell>TM 12</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Onset (ms)</cell><cell>242</cell><cell>252</cell><cell>240</cell><cell>-</cell></row><row><cell>Duration (ms)</cell><cell>42</cell><cell>32</cell><cell>88</cell><cell>-</cell></row><row><cell cols="2">https://doi.org/10.1371/journal.pone.0218311.t001</cell><cell></cell><cell></cell><cell></cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>PLOS ONE | https://doi.org/10.1371/journal.pone.0218311 June 13, 2019</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We would like to thank <rs type="person">Monika Mertens</rs>, <rs type="person">Katharina Thiel</rs>, and <rs type="person">Alina Eisele</rs> for their help during data collection.</p></div>
+			</div>
+			
+			<div type="funding">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The authors received no specific funding for this work.</p></div>
+			</div>
+
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The data underlying the results presented in the study are available from the Open Science Framework via <ref type="url" target="https://osf.io/uatkn/">https://osf.  io/uatkn/</ref>.</p></div>
+			</div>
+
+
+			<div type="conflict">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The authors have declared that no competing interests exist.</p></div>
+			</div>
+
+
+			<div type="contribution">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Contributions</head><p>Conceptualization: Daniel S. Kluger, Laura Quante, Ricarda I. Schubotz.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data curation: Daniel S. Kluger, Laura Quante.</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Formal analysis: Daniel S. Kluger, Axel Kohler.</head><p>Investigation: Daniel S. Kluger.</p><p>Methodology: Daniel S. Kluger, Laura Quante, Axel Kohler.</p><p>Project administration: Axel Kohler, Ricarda I. Schubotz. Supervision: Ricarda I. Schubotz.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0" /><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><figDesc>Supporting information S1 Fig. ERP topographies for the three analyses detailed in the main text. Bold electrode positions indicate significant clusters from hypothesis-driven ROI analyses, asterisks indicate significant clusters from temporally unconstrained whole-brain analyses. Bold asterisked electrode positions indicate ROI-based clusters which remained significant after whole-brain correction using cluster mass permutation tests. PE = prediction errors, STD = standard trials, CP = checkpoints. (TIFF) S1 Table. Detailed trial numbers for all conditions. Since low and high uncertainty blocks were each presented four times, trial numbers in parentheses show grand total number of presentations. (DOCX) S2 Table. Total number of presentations for all events of interest and the minimum of trial numbers remaining after artefact rejection. PE = prediction errors, STD = standard trials, CP = checkpoints. (DOCX) Visualization: Daniel S. Kluger. Writing -original draft: Daniel S. Kluger, Ricarda I. Schubotz. Writing -review &amp; editing: Daniel S. Kluger, Laura Quante, Axel Kohler, Ricarda I. Schubotz.</figDesc></figure>
+			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct status="extracted"  xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Predictive coding in the visual cortex: a functional interpretation of some extraclassical receptive-field effects</title>
+		<author>
+			<persName><forename type="first">Rpn</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Ballard</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/4580</idno>
+		<idno type="PMID">10195184</idno>
+		<ptr target="https://doi.org/10.1038/4580" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="79" to="87" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b1">
+	<analytic>
+		<title level="a" type="main">On the computational architecture of the neocortex</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mumford</surname></persName>
+		</author>
+		<idno type="PMID">1540675</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biol Cybern</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="241" to="251" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A theory of cortical responses</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Friston</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rstb.2005.1622</idno>
+		<idno type="PMID">15937014</idno>
+		<ptr target="https://doi.org/10.1098/rstb.2005.1622" />
+	</analytic>
+	<monogr>
+		<title level="j">Philos Trans R Soc London B Biol Sci</title>
+		<imprint>
+			<biblScope unit="volume">360</biblScope>
+			<biblScope unit="page" from="815" to="836" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A theory of Pavlovian conditioning: Variations in the effectiveness of reinforcement and nonreinforcement</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Rescorla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Wagner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Classical conditioning II: Current research and theory</title>
+		<imprint>
+			<date type="published" when="1972">1972</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="64" to="99" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Canonical microcircuits for predictive coding</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Bastos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">M</forename><surname>Usrey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Adams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Mangun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fries</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Friston</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2012.10.038</idno>
+		<idno type="PMID">23177956</idno>
+		<ptr target="https://doi.org/10.1016/j.neuron.2012.10.038" />
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="695" to="711" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Temporally remote destabilization of prediction after rare breaches of expectancy</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">B</forename><surname>Ku ¨hn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Schubotz</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/hbm.21325</idno>
+		<idno type="PMID">21674697</idno>
+		<ptr target="https://doi.org/10.1002/hbm.21325" />
+	</analytic>
+	<monogr>
+		<title level="j">Hum Brain Mapp</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="1812" to="1820" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Strategic adaptation to non-reward prediction error qualities and irreducible uncertainty in fMRI</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Kluger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Schubotz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cortex.2017.09.017</idno>
+		<idno type="PMID">29078084</idno>
+		<ptr target="https://doi.org/10.1016/j.cortex.2017.09.017" />
+	</analytic>
+	<monogr>
+		<title level="j">Cortex</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="32" to="48" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Risk, unexpected uncertainty, and estimation uncertainty: Bayesian learning in unstable settings</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Payzan-Lenestour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bossaerts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="14" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Computations of uncertainty mediate acute stress responses in humans</title>
+		<author>
+			<persName><forename type="first">De</forename><surname>Berker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rutledge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Mathys</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Marshall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cross</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Dolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bestmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Com</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">10996</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Trial-by-trial fluctuations in the event-related electroencephalogram reflect dynamic changes in the degree of surprise</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Mars</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Debener</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Gladwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Haggard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Rothwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bestmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.2925-08.2008</idno>
+		<idno type="PMID">19020046</idno>
+		<ptr target="https://doi.org/10.1523/JNEUROSCI.2925-08.2008" />
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="12539" to="12545" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Thirty years and counting: finding meaning in the N400 component of the event-related brain potential (ERP)</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kutas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Federmeier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Rev Psych</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="621" to="647" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Prior probabilities modulate cortical surprise responses: a study of event-related potentials</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Seer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lange</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Boos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Dengler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kopp</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bandc.2016.04.011</idno>
+		<idno type="PMID">27266394</idno>
+		<ptr target="https://doi.org/10.1016/j.bandc.2016.04.011" />
+	</analytic>
+	<monogr>
+		<title level="j">Brain Cognition</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="78" to="89" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Top-down attention affects sequential regularity representation in the human visual system</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kimura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Widmann</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Schro ¨ger E</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpsycho.2010.05.003</idno>
+		<idno type="PMID">20478347</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpsycho" />
+	</analytic>
+	<monogr>
+		<title level="j">Int J Psychophysiol</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="126" to="134" />
+			<date type="published" when="2010">2010. 2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Is P3 a strategic or a tactical component? Relationships of P3 sub-components to response times in oddball tasks with go, no-go and choice responses</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Verleger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Grauhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Śmigasiewicz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroimage.2016.08.049</idno>
+		<idno type="PMID">27570107</idno>
+		<ptr target="https://doi.org/10.1016/j.neuroimage.2016.08.049" />
+	</analytic>
+	<monogr>
+		<title level="j">NeuroImage</title>
+		<imprint>
+			<biblScope unit="volume">143</biblScope>
+			<biblScope unit="page" from="223" to="234" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Updating P300: an integrative theory of P3a and P3b</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Polich</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.clinph.2007.04.019</idno>
+		<idno type="PMID">17573239</idno>
+		<ptr target="https://doi.org/10.1016/j.clinph.2007.04.019" />
+	</analytic>
+	<monogr>
+		<title level="j">Clin Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="2128" to="2148" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Stimulus context determines P3a and P3b</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Katayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Polich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="23" to="33" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b16">
+	<analytic>
+		<title level="a" type="main">The anatomical and functional relationship between the P3 and autonomic components of the orienting response</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nieuwenhuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">De</forename><surname>Geus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1469-8986.2010.01057.x</idno>
+		<idno type="PMID">20557480</idno>
+		<ptr target="https://doi.org/10.1111/j.1469-8986.2010.01057.x" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="162" to="175" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Modelling the N400 brain potential as a change in a probabilistic representation of meaning</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rabovsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Mcclelland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Hum Behav</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">693</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The N400 as an index of lexical preactivation and its implications for prediction in language comprehension</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Szewczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Schriefers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Lang Cog Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="665" to="686" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Event-related potential (ERP) studies of memory encoding and retrieval: A selective review</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Friedman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Johnson</forename><forename type="middle">R</forename><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Micr Res Tech</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="6" to="28" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Processing of incongruous mental calculation problems: Evidence for an arithmetic N400 effect</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Niedeggen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ro ¨sler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Jost</surname></persName>
+		</author>
+		<idno type="PMID">10352554</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="307" to="324" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The effect of numerical distance and stimulus probability on ERP components elicited by numerical incongruencies in mental addition</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Szűcs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Cse ´pe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cogn Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="289" to="300" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b22">
+	<analytic>
+		<title level="a" type="main">EEG alpha map series: brain micro-states by space-oriented adaptive segmentation</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lehmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ozaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Pal</surname></persName>
+		</author>
+		<idno type="PMID">2441961</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electroencephalogr Clin Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="271" to="288" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Pragmatics of measuring recognition memory: applications to dementia and amnesia</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Snodgrass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Corwin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Exp Psych</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page">34</biblScope>
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Controlling the false discovery rate: a practical and powerful approach to multiple testing</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Benjamini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hochberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J R Stat Soc Series B Stat Methodol</title>
+		<imprint>
+			<biblScope unit="page" from="289" to="300" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Encoding uncertainty in the hippocampus</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Duggins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Friston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neur Netw</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="535" to="546" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b26">
+	<analytic>
+		<title level="a" type="main">EEGLAB: an open source toolbox for analysis of single-trial EEG dynamics including independent component analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Delorme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Makeig</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jneumeth.2003.10.009</idno>
+		<idno type="PMID">15102499</idno>
+		<ptr target="https://doi.org/10.1016/j.jneumeth" />
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci Methods</title>
+		<imprint>
+			<biblScope unit="volume">134</biblScope>
+			<biblScope unit="page" from="9" to="21" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b27">
+	<analytic>
+		<title level="a" type="main">A practical guide to the selection of independent components of the electroencephalogram for artifact correction</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chaumon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Bishop</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Busch</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jneumeth.2015.02.025</idno>
+		<idno type="PMID">25791012</idno>
+		<ptr target="https://doi.org/10.1016/j.jneumeth.2015.02.025" />
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci Methods</title>
+		<imprint>
+			<biblScope unit="volume">250</biblScope>
+			<biblScope unit="page" from="47" to="63" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Mass univariate analysis of event-related brain potentials/fields I: A critical tutorial review</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Groppe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Urbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kutas</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1469-8986.2011.01273.x</idno>
+		<idno type="PMID">21895683</idno>
+		<ptr target="https://doi.org/10.1111/j.1469-8986.2011.01273" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="1711" to="1725" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Global, voxel, and cluster tests, by theory and permutation, for a difference between two groups of structural MR images of the brain</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">T</forename><surname>Bullmore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Suckling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Overmeyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rabe-Hesketh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Brammer</surname></persName>
+		</author>
+		<idno type="PMID">10193695</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans Med Imaging</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="32" to="42" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b30">
+	<analytic>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brunet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Michel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Spatiotemporal analysis of multichannel EEG: CARTOOL</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Topographic ERP analyses: a step-by-step tutorial review</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Murray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brunet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Michel</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10548-008-0054-5</idno>
+		<idno type="PMID">18347966</idno>
+		<ptr target="https://doi.org/10.1007/s10548-008-0054-5" />
+	</analytic>
+	<monogr>
+		<title level="j">Brain Topogr</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="249" to="264" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Toward a psychophysiological assessment of dynamic changes in mental workload</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Humphrey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Kramer</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/001872089403600101</idno>
+		<idno type="PMID">8026842</idno>
+		<ptr target="https://doi.org/10.1177/001872089403600101" />
+	</analytic>
+	<monogr>
+		<title level="j">Hum Factors</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="3" to="26" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b33">
+	<analytic>
+		<title level="a" type="main">On the utility of P3 amplitude as a measure of processing capacity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kok</surname></persName>
+		</author>
+		<idno type="PMID">11352145</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Psychophysiology</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="557" to="577" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b34">
+	<monogr>
+		<title level="m" type="main">Theoretical overview of P3a and P3b. In Detection of change</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Polich</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<publisher>Springer</publisher>
+			<pubPlace>Boston</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Neuropsychology and neuropharmacology of P3a and P3b</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Polich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Criado</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijpsycho.2005.12.012</idno>
+		<idno type="PMID">16510201</idno>
+		<ptr target="https://doi.org/10.1016/j.ijpsycho.2005.12.012" />
+	</analytic>
+	<monogr>
+		<title level="j">Int J Psychophysiol</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="172" to="185" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Evidence for an integrative role of P3b in linking reaction to perception</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Verleger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Jaśkowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wascher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Psychophysiol</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="165" to="181" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Decision making, the P3, and the locus coeruleus-norepinephrine system</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nieuwenhuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Aston-Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Cohen</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0033-2909.131.4.510</idno>
+		<idno type="PMID">16060800</idno>
+		<ptr target="https://doi.org/10.1037/0033-2909.131.4.510" />
+	</analytic>
+	<monogr>
+		<title level="j">Psychol Bull</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="page">510</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Is the P300 component a manifestation of context updating?</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Donchin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Coles</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav Brain Sci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="357" to="374" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Electrophysiology reveals semantic memory use in language comprehension</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kutas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Federmeier</surname></persName>
+		</author>
+		<idno type="PMID">11115760</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn Sci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="463" to="470" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Electrophysiological correlates of stimulus-driven multiplication facts retrieval</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Galfano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mazza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Angrilli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Umiltà</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuropsychologia.2004.02.010</idno>
+		<idno type="PMID">15193945</idno>
+		<ptr target="https://doi.org/10.1016/j.neuropsychologia" />
+	</analytic>
+	<monogr>
+		<title level="j">Neuropsychologia</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="1370" to="1382" />
+			<date type="published" when="2004">2004. 2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Hierarchical reinforcement learning and decision making</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Botvinick</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.conb.2012.05.008</idno>
+		<idno type="PMID">22695048</idno>
+		<ptr target="https://doi.org/10.1016/j.conb.2012.05.008" />
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="956" to="962" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Optimal behavioral hierarchy</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Solway</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Diuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Co ´rdova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Barto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Niv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Botvinick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS Comput Biol</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Skill characterization based on betweenness</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">¨</forename><surname>Şimşek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Barto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<meeting><address><addrLine>Boston</addrLine></address></meeting>
+		<imprint>
+			<publisher>MIT Press</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Automatic skill acquisition in reinforcement learning using graph centrality measures</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Moradi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Shiri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Rad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Khadivi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hasler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Intell Data Analys</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="113" to="135" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b45">
+	<analytic>
+		<title level="a" type="main">A dual role for prediction error in associative learning</title>
+		<author>
+			<persName><forename type="first">Den</forename><surname>Ouden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hem</forename><surname>Friston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Daw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">D</forename><surname>Mcintosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Stephan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename></persName>
+		</author>
+		<idno type="DOI">10.1093/cercor/bhn161</idno>
+		<idno type="PMID">18820290</idno>
+		<ptr target="https://doi.org/10.1093/cercor/bhn161" />
+	</analytic>
+	<monogr>
+		<title level="j">Cereb Cortex</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="1175" to="1185" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Frontostriatal contribution to the interplay of flexibility and stability in serial prediction</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Trempler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Schiffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>El-Sourani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ahlheim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Fink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Schubotz</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/jocn_a_01040</idno>
+		<idno type="PMID">27626228</idno>
+		<ptr target="https://doi.org/10.1162/jocn_a_01040" />
+	</analytic>
+	<monogr>
+		<title level="j">J Cogn Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="298" to="309" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b47">
+	<analytic>
+		<title level="a" type="main">The free-energy principle: a rough guide to the brain?</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Friston</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tics.2009.04.005</idno>
+		<idno type="PMID">19559644</idno>
+		<ptr target="https://doi.org/10.1016/j.tics.2009.04.005" />
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn Sci</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="293" to="301" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
