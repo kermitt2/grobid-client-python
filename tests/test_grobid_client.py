@@ -504,7 +504,8 @@ class TestEdgeCases:
             force=True,
             verbose=False,
             flavor=None,
-            json_output=False
+            json_output=False,
+            markdown_output=False
         )
 
         assert result == (0, 0, 0)  # No files processed, no errors, no skipped

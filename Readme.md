@@ -4,7 +4,8 @@
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/kermitt2/grobid_client_python/)](https://archive.softwareheritage.org/browse/origin/https://github.com/kermitt2/grobid_client_python/)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-A simple, efficient Python client for [GROBID](https://github.com/kermitt2/grobid) REST services that provides concurrent processing capabilities for PDF documents, reference strings, and patents.
+A simple, efficient Python client for [GROBID](https://github.com/kermitt2/grobid) REST services that provides
+concurrent processing capabilities for PDF documents, reference strings, and patents.
 
 ## 📋 Table of Contents
 
@@ -13,8 +14,8 @@ A simple, efficient Python client for [GROBID](https://github.com/kermitt2/grobi
 - [Installation](#-installation)
 - [Quick Start](#-quick-start)
 - [Usage](#-usage)
-  - [Command Line Interface](#command-line-interface)
-  - [Python Library](#python-library)
+    - [Command Line Interface](#command-line-interface)
+    - [Python Library](#python-library)
 - [Configuration](#-configuration)
 - [Services](#-services)
 - [Testing](#-testing)
@@ -31,15 +32,17 @@ A simple, efficient Python client for [GROBID](https://github.com/kermitt2/grobi
 - **Coordinate Extraction**: Optional PDF coordinate extraction for precise element positioning
 - **Sentence Segmentation**: Layout-aware sentence segmentation capabilities
 - **JSON Output**: Convert TEI XML output to structured JSON format with CORD-19-like structure
+- **Markdown Output**: Convert TEI XML output to clean Markdown format with structured sections
 
 ## 📋 Prerequisites
 
 - **Python**: 3.8 - 3.13 (tested versions)
 - **GROBID Server**: A running GROBID service instance
-  - Local installation: [GROBID Documentation](http://grobid.readthedocs.io/)
-  - Docker: `docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.8.2`
-  - Default server: `http://localhost:8070`
-  - Online demo: https://lfoppiano-grobid.hf.space (usage limits apply), more details [here](https://grobid.readthedocs.io/en/latest/getting_started/#using-grobid-from-the-cloud).
+    - Local installation: [GROBID Documentation](http://grobid.readthedocs.io/)
+    - Docker: `docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.8.2`
+    - Default server: `http://localhost:8070`
+    - Online demo: https://lfoppiano-grobid.hf.space (usage limits apply), more
+      details [here](https://grobid.readthedocs.io/en/latest/getting_started/#using-grobid-from-the-cloud).
 
 
 > [!IMPORTANT]
@@ -51,16 +54,19 @@ A simple, efficient Python client for [GROBID](https://github.com/kermitt2/grobi
 Choose one of the following installation methods:
 
 ### PyPI (Recommended)
+
 ```bash
 pip install grobid-client-python
 ```
 
 ### Development Version
+
 ```bash
 pip install git+https://github.com/kermitt2/grobid_client_python.git
 ```
 
 ### Local Development
+
 ```bash
 git clone https://github.com/kermitt2/grobid_client_python
 cd grobid_client_python
@@ -70,6 +76,7 @@ pip install -e .
 ## ⚡ Quick Start
 
 ### Command Line
+
 ```bash
 # Process PDFs in a directory
 grobid_client --input ./pdfs --output ./output processFulltextDocument
@@ -79,6 +86,7 @@ grobid_client --server https://your-grobid-server.com --input ./pdfs processFull
 ```
 
 ### Python Library
+
 ```python
 from grobid_client.grobid_client import GrobidClient
 
@@ -135,6 +143,7 @@ grobid_client [OPTIONS] SERVICE
 | `--segmentSentences`         | Segment sentences with coordinates        |
 | `--flavor`                   | Processing flavor for fulltext extraction |
 | `--json`                     | Convert TEI output to JSON format         |
+| `--markdown`                 | Convert TEI output to Markdown format     |
 
 
 #### Examples
@@ -148,6 +157,9 @@ grobid_client --input ~/pdfs --output ~/tei --n 20 --teiCoordinates processFullt
 
 # Process with JSON output
 grobid_client --input ~/pdfs --output ~/results --json processFulltextDocument
+
+# Process with Markdown output
+grobid_client --input ~/pdfs --output ~/results --markdown processFulltextDocument
 
 # Process citations with custom server
 grobid_client --server https://grobid.example.com --input ~/citations.txt processCitationList
@@ -204,6 +216,14 @@ client.process(
     json_output=True
 )
 
+# Process with Markdown output
+client.process(
+    service="processFulltextDocument",
+    input_path="/path/to/pdfs",
+    output_path="/path/to/output",
+    markdown_output=True
+)
+
 # Process citation lists
 client.process(
     service="processCitationList",
@@ -214,17 +234,25 @@ client.process(
 
 ## ⚙️ Configuration
 
-Configuration can be provided via a JSON file. When using the CLI, the `--server` argument overrides the config file settings.
+Configuration can be provided via a JSON file. When using the CLI, the `--server` argument overrides the config file
+settings.
 
 ### Default Configuration
 
 ```json
 {
-    "grobid_server": "http://localhost:8070",
-    "batch_size": 1000,
-    "sleep_time": 5,
-    "timeout": 60,
-    "coordinates": ["persName", "figure", "ref", "biblStruct", "formula", "s"]
+  "grobid_server": "http://localhost:8070",
+  "batch_size": 1000,
+  "sleep_time": 5,
+  "timeout": 60,
+  "coordinates": [
+    "persName",
+    "figure",
+    "ref",
+    "biblStruct",
+    "formula",
+    "s"
+  ]
 }
 ```
 
@@ -314,6 +342,7 @@ The config file can include logging settings:
 ## 🔬 Services
 
 ### Fulltext Document Processing
+
 Extracts complete document structure including headers, body text, figures, tables, and references.
 
 ```bash
@@ -336,11 +365,16 @@ When using the `--json` flag, the client converts TEI XML output to a structured
   "level": "paragraph",
   "biblio": {
     "title": "Document Title",
-    "authors": ["Author 1", "Author 2"],
+    "authors": [
+      "Author 1",
+      "Author 2"
+    ],
     "doi": "10.1000/example",
     "publication_date": "2023-01-01",
     "journal": "Journal Name",
-    "abstract": [...]
+    "abstract": [
+      ...
+    ]
   },
   "body_text": [
     {
@@ -365,8 +399,16 @@ When using the `--json` flag, the client converts TEI XML output to a structured
       "label": "Table 1",
       "head": "Sample Data",
       "content": {
-        "headers": ["Header 1", "Header 2"],
-        "rows": [["Value 1", "Value 2"]],
+        "headers": [
+          "Header 1",
+          "Header 2"
+        ],
+        "rows": [
+          [
+            "Value 1",
+            "Value 2"
+          ]
+        ],
         "metadata": {
           "row_count": 1,
           "column_count": 2,
@@ -399,9 +441,91 @@ client.process(
 ```
 
 > [!NOTE]
-> When using `--json`, the `--force` flag only checks for existing TEI files. If a TEI file is rewritten (due to `--force`), the corresponding JSON file is automatically rewritten as well.
+> When using `--json`, the `--force` flag only checks for existing TEI files. If a TEI file is rewritten (due to
+`--force`), the corresponding JSON file is automatically rewritten as well.
+
+### Markdown Output Format
+
+When using the `--markdown` flag, the client converts TEI XML output to a clean, readable Markdown format. This
+provides:
+
+- **Structured Sections**: Title, Authors, Affiliations, Publication Date, Fulltext, Annex, and References
+- **Clean Formatting**: Human-readable format suitable for documentation and sharing
+- **Preserved Content**: All text content with proper section organization
+- **Reference Formatting**: Bibliographic references in a readable format
+
+#### Markdown Structure
+
+The generated Markdown follows this structure:
+
+```markdown
+# Document Title
+
+## Authors
+
+- Author Name 1
+- Author Name 2
+
+## Affiliations
+
+- Affiliation 1
+- Affiliation 2
+
+## Publication Date
+
+January 1, 2023
+
+## Fulltext
+
+### Introduction
+
+Content of the introduction section...
+
+### Methods
+
+Content of the methods section...
+
+## Annex
+
+### Acknowledgements
+
+Acknowledgement text...
+
+### Competing Interests
+
+Competing interests statement...
+
+## References
+
+**[1]** Paper Title. *Author Name*. *Journal Name* (2023).
+**[2]** Another Paper. *Author et al.*. *Conference* (2022).
+```
+
+#### Usage Examples
+
+```bash
+# Generate both TEI and Markdown outputs
+grobid_client --input pdfs/ --output results/ --markdown processFulltextDocument
+
+# Markdown output with coordinates and sentence segmentation
+grobid_client --input pdfs/ --output results/ --markdown --teiCoordinates --segmentSentences processFulltextDocument
+```
+
+```python
+# Python library usage
+client.process(
+    service="processFulltextDocument",
+    input_path="/path/to/pdfs",
+    output_path="/path/to/output",
+    markdown_output=True
+)
+```
+
+> [!NOTE]
+> When using `--markdown`, the `--force` flag only checks for existing TEI files. If a TEI file is rewritten (due to `--force`), the corresponding Markdown file is automatically rewritten as well.
 
 ### Header Document Processing
+
 Extracts only document metadata (title, authors, abstract, etc.).
 
 ```bash
@@ -409,6 +533,7 @@ grobid_client --input pdfs/ --output headers/ processHeaderDocument
 ```
 
 ### Reference Processing
+
 Extracts and structures bibliographic references from documents.
 
 ```bash
@@ -416,6 +541,7 @@ grobid_client --input pdfs/ --output refs/ processReferences
 ```
 
 ### Citation List Processing
+
 Parses raw citation strings from text files.
 
 ```bash
@@ -458,6 +584,7 @@ pytest -v
 ### Continuous Integration
 
 Tests are automatically run via GitHub Actions on:
+
 - Push to main branch
 - Pull requests
 - Multiple Python versions (3.8-3.13)
@@ -480,7 +607,7 @@ Benchmark results for processing **136 PDFs** (3,443 pages total, ~25 pages per 
 ### Additional Benchmarks
 
 - **Header processing**: 3.74s for 136 PDFs (36 PDF/s) with n=10
-- **Reference extraction**: 26.9s for 136 PDFs (5.1 PDF/s) with n=10  
+- **Reference extraction**: 26.9s for 136 PDFs (5.1 PDF/s) with n=10
 - **Citation parsing**: 4.3s for 3,500 citations (814 citations/s) with n=10
 
 ## 🛠️ Development
@@ -530,7 +657,8 @@ bump-my-version bump patch
 
 ## 📄 License
 
-Distributed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0). See `LICENSE` for more information.
+Distributed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0). See `LICENSE` for more
+information.
 
 ## 👥 Authors & Contact
 
