@@ -1,0 +1,3529 @@
+{
+  "level": "paragraph",
+  "biblio": {
+    "title": "Macrophages regulate gastrointestinal motility through complement component 1q",
+    "authors": [
+      "Mihir Pendse",
+      "Haley De Selle",
+      "Nguyen Vo",
+      "Gabriella Quinn",
+      "Chaitanya Dende",
+      "Yun Li",
+      "Cristine Salinas",
+      "Tarun Srinivasan",
+      "Daniel Propheter",
+      "Alexander Crofts",
+      "Eugene Koo",
+      "Brian Hassell",
+      "Kelly Ruhn",
+      "Prithvi Raj",
+      "Yuuki Obata",
+      "Lora Hooper"
+    ],
+    "doi": "10.7554/eLife.78558",
+    "hash": "08221396F308EBC0C4A64AF4510984D4",
+    "publication_date": "2023-04-26",
+    "publication_year": 2023,
+    "publisher": "",
+    "abstract": [
+      {
+        "id": 0,
+        "text": "Peristaltic movement of the intestine propels food down the length of the gastrointestinal tract to promote nutrient absorption. Interactions between intestinal macrophages and the enteric nervous system regulate gastrointestinal motility, yet we have an incomplete understanding of the molecular mediators of this crosstalk. Here, we identify complement component 1q (C1q) as a macrophage product that regulates gut motility. Macrophages were the predominant source of C1q in the mouse intestine and most extraintestinal tissues. Although C1q mediates the complementmediated killing of bacteria in the bloodstream, we found that C1q was not essential for the immune defense of the intestine. Instead, C1q-expressing macrophages were located in the intestinal submucosal and myenteric plexuses where they were closely associated with enteric neurons and expressed surface markers characteristic of nerve-adjacent macrophages in other tissues. Mice with a macrophage-specific deletion of C1qa showed changes in enteric neuronal gene expression, increased neurogenic activity of peristalsis, and accelerated intestinal transit. Our findings identify C1q as a key regulator of gastrointestinal motility and provide enhanced insight into the crosstalk between macrophages and the enteric nervous system.",
+        "coords": [],
+        "refs": []
+      },
+      {
+        "id": 1,
+        "text": "This study provides a fundamental finding that complement C1q produced by enteric macrophages shapes neuronal function and gut motility. The authors present convincing data showing that while macrophage-derived C1q is not necessary for defenses against enteric pathogens, it plays an important role in regulating neuronal gene expression and intestinal transit. These findings will be of interest to gastroenterologists, neuroscientists and immunologists in revealing a novel neuroimmune axis in gut homeostasis.",
+        "coords": [],
+        "refs": []
+      }
+    ]
+  },
+  "body_text": [
+    {
+      "id": "p_50944a6f",
+      "text": "Peristalsis is the physical force that propels food through the intestine, promoting digestion and nutrient absorption. The gastrointestinal motility that underlies peristalsis is a complex process that requires coordination of the activity of smooth muscle cells by enteric neurons (Rao and Gershon, 2016). Several studies have revealed that intestinal macrophages impact gastrointestinal motility by regulating the functions of enteric neurons and facilitating their interactions with smooth muscle cells (Muller et al., 2014;Matheis et al., 2020).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b50",
+          "text": "(Rao and Gershon, 2016)",
+          "offset_start": 283,
+          "offset_end": 306
+        },
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014;",
+          "offset_start": 507,
+          "offset_end": 528
+        },
+        {
+          "type": "bibr",
+          "target": "#b41",
+          "text": "Matheis et al., 2020)",
+          "offset_start": 528,
+          "offset_end": 549
+        }
+      ],
+      "head_section": "Introduction"
+    },
+    {
+      "id": "p_f4b8fac0",
+      "text": "Macrophages carry out diverse functions in the intestine that vary according to their anatomical location. For example, macrophages that localize to the tissue located directly underneath the gut epithelium -known as the lamina propria -contribute to immune defense against pathogenic bacteria (Gabanyi et al., 2016). A distinct group of macrophages localizes to the tissues located beneath the lamina propria, between the circular and longitudinal muscle layers in the tissue region known as the muscularis externa. These muscularis macrophages express genes that are distinct from lamina propria macrophages (Gabanyi et al., 2016). They directly regulate the activity of smooth muscle cells (Luo et al., 2018) and secrete soluble factors, such as bone morphogenetic protein 2 (BMP2), which interact with the enteric neurons that control smooth muscle activity (Muller et al., 2014). Muscularis macrophages thus play a key role in regulating gut motility. However, we have a limited understanding of the molecular mechanisms by which these macrophages regulate intestinal neuromuscular activity and gut motility.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b25",
+          "text": "(Gabanyi et al., 2016)",
+          "offset_start": 294,
+          "offset_end": 316
+        },
+        {
+          "type": "bibr",
+          "target": "#b25",
+          "text": "(Gabanyi et al., 2016)",
+          "offset_start": 610,
+          "offset_end": 632
+        },
+        {
+          "type": "bibr",
+          "target": "#b38",
+          "text": "(Luo et al., 2018)",
+          "offset_start": 693,
+          "offset_end": 711
+        },
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014)",
+          "offset_start": 862,
+          "offset_end": 883
+        }
+      ],
+      "head_section": "Introduction"
+    },
+    {
+      "id": "p_65a62121",
+      "text": "C1q is a member of the defense collagen family that has distinct roles in immune defense and nervous system development and function (Bossi et al., 2014;Casals et al., 2019;Shah et al., 2015;Thielens et al., 2017). It is composed of six molecules each of C1qA, C1qB, and C1qC, forming a 410 kDa oligomer. C1q circulates in the bloodstream, where it participates in immune defense against infection by recognizing antibodies bound to invading bacteria. This binding interaction initiates the classical complement pathway, which entails the recruitment and proteolytic processing of other complement components that rupture the bacterial membrane and recruit phagocytic cells (Kishore and Reid, 2000;Noris and Remuzzi, 2013). C1q is also produced by microglia (brain-resident macrophage-like cells) in the brain where it promotes the pruning of neuronal synapses through an unclear mechanism (Hammond et al., 2020;Hong et al., 2016). Consequently, C1q deficiency results in heightened synaptic connectivity in the central nervous system which can lead to epilepsy (Chu et al., 2010).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b9",
+          "text": "(Bossi et al., 2014;",
+          "offset_start": 133,
+          "offset_end": 153
+        },
+        {
+          "type": "bibr",
+          "target": "#b10",
+          "text": "Casals et al., 2019;",
+          "offset_start": 153,
+          "offset_end": 173
+        },
+        {
+          "type": "bibr",
+          "target": "#b57",
+          "text": "Shah et al., 2015;",
+          "offset_start": 173,
+          "offset_end": 191
+        },
+        {
+          "type": "bibr",
+          "target": "#b61",
+          "text": "Thielens et al., 2017)",
+          "offset_start": 191,
+          "offset_end": 213
+        },
+        {
+          "type": "bibr",
+          "target": "#b32",
+          "text": "(Kishore and Reid, 2000;",
+          "offset_start": 674,
+          "offset_end": 698
+        },
+        {
+          "type": "bibr",
+          "target": "#b45",
+          "text": "Noris and Remuzzi, 2013)",
+          "offset_start": 698,
+          "offset_end": 722
+        },
+        {
+          "type": "bibr",
+          "target": "#b29",
+          "text": "(Hammond et al., 2020;",
+          "offset_start": 890,
+          "offset_end": 912
+        },
+        {
+          "type": "bibr",
+          "target": "#b30",
+          "text": "Hong et al., 2016)",
+          "offset_start": 912,
+          "offset_end": 930
+        },
+        {
+          "type": "bibr",
+          "target": "#b12",
+          "text": "(Chu et al., 2010)",
+          "offset_start": 1062,
+          "offset_end": 1080
+        }
+      ],
+      "head_section": "Introduction"
+    },
+    {
+      "id": "p_2b7dd51f",
+      "text": "C1q is also produced at barrier sites, such as the intestine, where encounters with commensal and pathogenic microbes are frequent. However, little is known about the physiological role of C1q in barrier tissues. Liver immune cells, including macrophages and dendritic cells, produce serum C1q; however, the cellular source of C1q in barrier tissues including the intestine remains unclear (Petry et al., 2001). Here, we show that C1q is produced by macrophages of the mouse intestine. Intestinal C1q-expressing macrophages exhibit properties of neuromodulatory macrophages from other tissues and are located close to enteric neurons that have a known role in controlling gut motility. Accordingly, mice lacking macrophage C1q exhibit altered expression of enteric neuronal genes, increased neurogenic peristaltic contractions, and accelerated gastrointestinal motility. These findings identify C1q as a key mediator of a neuroimmune interaction that regulates gut motility.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b49",
+          "text": "(Petry et al., 2001)",
+          "offset_start": 390,
+          "offset_end": 410
+        }
+      ],
+      "head_section": "Introduction"
+    },
+    {
+      "id": "p_6775c716",
+      "text": "C1q is expressed by macrophages in the mouse small intestine Soluble defense collagens are an ancient, evolutionarily conserved family of antimicrobial proteins with shared structural features including a C-terminal globular head and a collagen-like region (Casals et al., 2019). Little is known about the function of defense collagens at mucosal barrier sites, where microbial encounter is frequent. Our initial goal in this study was to identify soluble defense collagens that are expressed by the mouse intestine and to assess their role in host defense. Therefore, we measured the expression of 18 defense collagen genes in the mouse small intestine and colon by RNA sequencing (RNA-seq). The most abundant soluble defense collagen transcripts in the small intestine and colon were those encoding C1qA, C1qB, and C1qC (Figure 1A; Figure 1-figure",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b10",
+          "text": "(Casals et al., 2019)",
+          "offset_start": 257,
+          "offset_end": 278
+        }
+      ],
+      "head_section": "Results"
+    },
+    {
+      "id": "p_5c0ec7db",
+      "text": "Serum C1q is produced by liver dendritic cells, monocytes, and macrophages (El-Shamy et al., 2018). However, the cellular source(s) of C1q in peripheral tissues, including the intestine, is unknown. Quantitative PCR (qPCR) analysis of fluorescence-activated cell sorting (FACS)-sorted cell suspensions recovered from the small intestines of wild-type C57BL/6 mice revealed that C1qa, C1qb, and C1qc transcripts were most abundant in CD45 + cells, which include all immune cells, as compared to CD45 - cells, which encompass epithelial cells and other non-immune cells (Figure 1B). Furthermore, C1q transcripts and protein were most abundant in CD45 + cells recovered from the subepithelial compartment, which includes both the lamina propria and muscularis, as compared to CD45 + cells recovered from the intraepithelial compartment of the small intestine (Figure 1C and D). Thus, C1q is expressed by immune cells located in the subepithelial compartment of the intestine and is largely absent from epithelial cells and intraepithelial immune cells.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b22",
+          "text": "(El-Shamy et al., 2018)",
+          "offset_start": 75,
+          "offset_end": 98
+        }
+      ],
+      "head_section": "supplement 1)."
+    },
+    {
+      "id": "p_49162a19",
+      "text": "To identify intestinal immune cells that express C1q, we further analyzed the subepithelial CD45 + cell population by flow cytometry. Expression of C1q transcripts and protein was highest in CD11b + M-HCII + F4/80 hi macrophages and was mostly absent from non-macrophage immune cells (Figure 1E-H). Thus, C1q is expressed by macrophages in the mouse small intestine.",
+      "coords": [],
+      "refs": [],
+      "head_section": "supplement 1)."
+    },
+    {
+      "id": "p_775e8b1f",
+      "text": "We next assessed whether macrophages are the primary source of C1q in the intestine by analyzing two mouse models. First, we depleted macrophages by injecting neutralizing antibodies directed against the receptor for colony-stimulating factor 1 (CSF1R)(Figure 2A), which is required for the development of a subset of lamina propria macrophages (Bogunovic et al., 2009) macrophages (Muller et al., 2014). Antibody injection led to a >twofold reduction in the number of macrophages recovered from the small intestine (Figure 2B), and a corresponding reduction in small intestinal C1q gene expression (Figure 2C), suggesting that macrophages are the primary source of intestinal C1q.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b8",
+          "text": "(Bogunovic et al., 2009)",
+          "offset_start": 345,
+          "offset_end": 369
+        },
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014)",
+          "offset_start": 382,
+          "offset_end": 403
+        }
+      ],
+      "head_section": "Macrophages are the primary source of C1q in the mouse gastrointestinal tract"
+    },
+    {
+      "id": "p_8c76d7c0",
+      "text": "Second, we constructed a genetic model of C1q deficiency by crossing C1qa fl/fl mice (Fonseca et al., 2017) to mice carrying the Lyz2-Cre transgene (LysM-Cre mice), which is selectively expressed in myeloid cells including macrophages (Figure 2D). These mice, hereafter designated as C1qa ΔMϕ mice, lacked C1q expression in intestinal macrophages (Figure 2E and F). Importantly, C1qa ΔMϕ mice had markedly lower C1q expression in both the small intestine and colon (Figure 2G), indicating that macrophages are the main source of C1q in the intestine. Unexpectedly, the C1qa ΔMϕ mice also lost C1q gene expression in the lung, skin, kidney, and liver (but not the brain), and the C1q protein was undetectable in the serum (Figure 2-figure supplement 1). These findings indicate that macrophages are the primary source of C1q in the intestine and suggest that LysM + macrophages or macrophage-like cells are also the main sources of C1q in most extraintestinal tissues and the bloodstream.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b24",
+          "text": "(Fonseca et al., 2017)",
+          "offset_start": 85,
+          "offset_end": 107
+        }
+      ],
+      "head_section": "Macrophages are the primary source of C1q in the mouse gastrointestinal tract"
+    },
+    {
+      "id": "p_27e2628f",
+      "text": "The classical complement pathway is a well-studied host defense system that protects against systemic pathogenic infection (Warren et al., 2002;Noris and Remuzzi, 2013). Circulating C1q activates the complement pathway by binding to antibody-antigen complexes or to bacterial cell surface molecules, and thus protects against systemic infection. Therefore, we assessed whether C1q promotes the immune defense of the intestine. We first determined whether C1q exhibits characteristics of known intestinal antimicrobial proteins, including induction by the intestinal microbiota and secretion into the gut lumen. C1qa was expressed at similar levels in the small intestines of germ-free and conventionally-raised mice (Figure 3A), suggesting that C1q expression is not induced by the gut microbiota. This contrasted with Reg3g, encoding the antimicrobial protein REG3G (Cash et al., 2006), which was expressed at a > twofold higher level in conventional as compared to germ-free mice (Figure 3A). Additionally, in contrast to REG3G, C1q was not detected in the gut lumen of either conventional or germ-free mice (Figure 3B). C1qa expression was also not markedly altered by a 24 hr oral infection with the intestinal pathogenic bacterial species Salmonella Typhimurium (Figure 3C). Although we cannot rule out the induction of C1q by longer-term pathogenic infections, these data indicate that C1q is not induced by the gut microbiota or by a 24 hr infection with S. typhimurium, in contrast to other intestinal antibacterial proteins.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b69",
+          "text": "(Warren et al., 2002;",
+          "offset_start": 123,
+          "offset_end": 144
+        },
+        {
+          "type": "bibr",
+          "target": "#b45",
+          "text": "Noris and Remuzzi, 2013)",
+          "offset_start": 144,
+          "offset_end": 168
+        },
+        {
+          "type": "bibr",
+          "target": "#b11",
+          "text": "(Cash et al., 2006)",
+          "offset_start": 867,
+          "offset_end": 886
+        }
+      ],
+      "head_section": "C1qa ΔMφ mice do not show altered microbiota composition, barrier function, or resistance to enteric infection"
+    },
+    {
+      "id": "p_f8aa61d0",
+      "text": "We next assessed whether C1q regulates the composition of the gut microbiota. 16 S rRNA gene sequencing analysis of the fecal microbiotas of C1qa fl/fl and C1qa ΔMϕ mice showed that the microbiota composition was not appreciably altered in the absence of macrophage C1q (Figure 3D). Analysis of 16 S rRNA gene copy number in mesenteric lymph nodes further indicated no statistically significant differences in translocation of the microbiota to the mesenteric lymph nodes (Figure 3E). We next challenged C1qa fl/fl and C1qa ΔMϕ mice with dextran sulfate sodium (DSS), which damages the colonic epithelium and exposes underlying tissues to the commensal microbiota. However, the sensitivity of the C1qa ΔMϕ mice to DSS was similar to that of their C1qa fl/fl littermates as assessed by change in body weight and histopathological analysis (Figure 3F; Figure 3-figure",
+      "coords": [],
+      "refs": [],
+      "head_section": "C1qa ΔMφ mice do not show altered microbiota composition, barrier function, or resistance to enteric infection"
+    },
+    {
+      "id": "p_5b000801",
+      "text": "There was also no change in intestinal paracellular permeability in C1qa ΔMϕ mice as measured by oral administration of FITC-dextran (Figure 3G). These results suggest that macrophage C1q does not substantially impact gut microbiota composition or intestinal epithelial barrier function.",
+      "coords": [],
+      "refs": [],
+      "head_section": "supplement 1)."
+    },
+    {
+      "id": "p_d4851132",
+      "text": "To determine whether C1q protects against enteric infection we conducted oral infection experiments with the enteric pathogen Citrobacter rodentium. We chose C. rodentium as our model organism for two reasons. First, C. rodentium is a non-disseminating pathogen, allowing us to test specifically for C1q's role in intestinal infection. Second, C. rodentium clearance depends on immunoglobulins and complement component C3 (Belzer et al., 2011). Because C1q is bactericidal in concert with C3 and immunoglobulins, we predicted that C1qa ΔMϕ mice would be more susceptible to C. rodentium infection. However, C1qa ΔMϕ mice cleared C. rodentium similarly to their C1qa fl/fl littermates (Figure 3H) and showed similar histopathology (Figure 3-figure supplement 2), indicating that C1q is dispensable for defense against C. rodentium infection.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b3",
+          "text": "(Belzer et al., 2011)",
+          "offset_start": 422,
+          "offset_end": 443
+        }
+      ],
+      "head_section": "supplement 1)."
+    },
+    {
+      "id": "p_4e4cd47f",
+      "text": "We also did not observe altered immunity in the absence of C1q. Measurement of transcripts encoding secreted immune effectors in the small intestines of C1qa fl/fl and C1qa ΔMϕ littermates revealed no statistically significant differences in cytokine expression (Figure 3I). Furthermore, there were no statistically significant differences in the percentages or absolute numbers of various T cell subsets, including T helper 1 (T H 1), T H 2, T H 17, and regulatory T (T reg ) cells between C1qa fl/fl and C1qa ΔMϕ mice (Figure 3J; Figure 3-figure supplement 3). Although total B cell numbers trended lower in C1qa ΔMϕ mice, the difference was not statistically significant (Figure 3J; Figure 3-figure",
+      "coords": [],
+      "refs": [],
+      "head_section": "supplement 1)."
+    },
+    {
+      "id": "p_4a7112a4",
+      "text": "There were also no statistically significant differences in the percentages or absolute numbers of total plasma cells (Figure 3J; Figure 3-figure supplement 4), IgA + plasma cells (Figure 3J; Figure 3figure supplement 4), myeloid cells (Figure 3J; Figure 3-figure supplement 5), or innate lymphoid cells (Figure 3J; Figure 3-figure supplement 6) when comparing C1qa fl/fl and C1qa ΔMϕ mice. These results suggest that the absence of macrophage C1q has little impact on intestinal immunity. Altogether, our findings suggest that C1q does not participate substantially in intestinal immune defense and thus might have an intestinal function that is independent of its canonical role in activating the classical complement pathway. Representative immunoblot of an ammonium sulfate precipitation of intestinal luminal contents and feces from germ-free and conventional mice with detection of C1q. C1q in small intestinal tissue is shown for comparison at right. REG3G was analyzed as a control, as it is secreted into the intestinal lumen of conventional mice (Cash et al., 2006). Each lane represents multiple mice pooled (n=5 and 9 for germ-free and conventional, respectively) and the immunoblot is representative of three independent experiments. (C) C1q gene expression is not altered by acute enteric infection",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b11",
+          "text": "(Cash et al., 2006)",
+          "offset_start": 1056,
+          "offset_end": 1075
+        }
+      ],
+      "head_section": "supplement 4)."
+    },
+    {
+      "id": "p_48ec5bc8",
+      "text": "C1q is expressed by muscularis macrophages that are located near enteric neurons",
+      "coords": [],
+      "refs": [],
+      "head_section": "Figure 3 continued on next page"
+    },
+    {
+      "id": "p_5d6ea9c6",
+      "text": "Intestinal macrophages perform distinct functions depending on their anatomical location. Macrophages in the lamina propria protect against invasion by pathogenic microbes and promote tissue repair (Grainger et al., 2017). In contrast, muscularis macrophages that reside in deeper intestinal tissues, such as the muscularis externa (Figure 4A), regulate enteric neurons and smooth muscle cells that drive gastrointestinal motility (De Schepper et al., 2018a;De Schepper et al., 2018b). Furthermore, C1q has several well-described functions in regulating the development and activity of neurons of the central nervous system (Hammond et al., 2020;Hong et al., 2016), suggesting that intestinal C1q + macrophages might interact with enteric neurons. These prior findings prompted us to characterize the anatomical localization of C1q + macrophages within mouse intestinal tissues. The enteric nervous system is a network of neurons whose cell bodies are organized into two regions of the gastrointestinal tract: the submucosal plexus and the myenteric plexus (Figure 4A). Immunofluorescence microscopy revealed that C1q was localized close to submucosal plexus nerve fibers marked with βIII tubulins (TUBB3) in C1qa fl/fl mice (Figure 4B and C D small intestine C1q Csf1r (Mφ) HuC/D (neuron) Merge colon Longitudinal muscle-myenteric plexus (LMMP) C1qa fl/fl C1qa ΔMφ C1qa fl/fl C1qa ΔMφ muscularis epithelium (epi) lamina propria (LP) lumen submucosal plexus (SP) circular muscle longitudinal muscle myenteric plexus neurons B C1qa fl/fl (isotype control) small intestine C1qa fl/fl C1qa ΔMφ epi LP C1qa fl/fl C1qa ΔMφ lumen SP/muscularis DAPI (nuclei) C1q CD169 (Mφ) A C CD169 (Mφ) C1q DAPI (nuclei) TUBB3 (neuron) epi LP SP/muscularis small intestine colon C1qa fl/fl C1qa ΔMφ C1qa fl/fl C1qa ΔMφ epi lumen SP/muscularis C1qa fl/fl (isotype control) Isotype control wild-type C57BL/6 DAPI (nuclei) C1q CD169 (Mφ) E 30 25 20 15 10 5 0 **** CD169 Median fluorescence intensity (× 1000) 15 20 10 5 0 ** ARG1 F 4 / 8 0 h i C 1 q - F 4 / 8 0 h i C 1 q + 5 6 4 3 2 1 0 **** TREM2 CD169 C1q -Mφ C1q + Mφ 100 80 60 40 20 0 -10 4 0 10 4 10 5 10 6 TREM2 100 80 60 40 20 0 ARG1 100 80 60 40 20 0 % of max Small intestinal macrophages LMMP Figure 4. Complement component 1q (C1q) is expressed by muscularis macrophages that are located near enteric neurons. (A) Graphic depicting the muscularis of the mouse small intestine. The lumen, epithelium (epi), lamina propria (LP), submucosal plexus (SP), and longitudinal muscle-myenteric plexus (LMMP) are indicated. Created at Biorender.com. (B) Immunofluorescence detection of C1q (violet) and macrophages marked with CD169 (green) in the small intestine and colon of C1qa fl/fl and C1qa ∆Mφ littermates. Nuclei were detected with 4',6-diamidino-2-phenylindole (DAPI; blue). Detection Finally, C1q-expressing intestinal macrophages showed elevated expression of Arginase 1, CD169, and TREM2 (triggering receptor expressed on myeloid cells 2) (Figure 4E), which are enriched on macrophages with known neuromodulatory functions (Colonna, 2003;Paloneva et al., 2002;Ural et al., 2020). Thus, C1q-expressing intestinal macrophages are located near enteric neurons in the submucosal and myenteric plexuses and express proteins that are characteristic of nerve-adjacent macrophages in other tissues.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b28",
+          "text": "(Grainger et al., 2017)",
+          "offset_start": 198,
+          "offset_end": 221
+        },
+        {
+          "type": "bibr",
+          "target": "",
+          "text": "(De Schepper et al., 2018a;",
+          "offset_start": 431,
+          "offset_end": 458
+        },
+        {
+          "type": "bibr",
+          "target": "",
+          "text": "De Schepper et al., 2018b)",
+          "offset_start": 458,
+          "offset_end": 484
+        },
+        {
+          "type": "bibr",
+          "target": "#b29",
+          "text": "(Hammond et al., 2020;",
+          "offset_start": 624,
+          "offset_end": 646
+        },
+        {
+          "type": "bibr",
+          "target": "#b30",
+          "text": "Hong et al., 2016)",
+          "offset_start": 646,
+          "offset_end": 664
+        },
+        {
+          "type": "bibr",
+          "target": "#b14",
+          "text": "(Colonna, 2003;",
+          "offset_start": 3062,
+          "offset_end": 3077
+        },
+        {
+          "type": "bibr",
+          "target": "#b48",
+          "text": "Paloneva et al., 2002;",
+          "offset_start": 3077,
+          "offset_end": 3099
+        },
+        {
+          "type": "bibr",
+          "target": "#b64",
+          "text": "Ural et al., 2020)",
+          "offset_start": 3099,
+          "offset_end": 3117
+        }
+      ],
+      "head_section": "Figure 3 continued on next page"
+    },
+    {
+      "id": "p_0026055a",
+      "text": "Gut macrophages engage in crosstalk with the enteric nervous system and regulate functions, including gastrointestinal motility, that depend on the enteric nervous system (Muller et al., 2014). This crosstalk involves the exchange of specific proteins such as bone morphogenetic protein 2 (BMP2) (Muller et al., 2014). Furthermore, microglial C1q promotes central nervous system development while also regulating neuronal transcriptional programs (Benavente et al., 2020;Schafer et al., 2012;Stevens et al., 2007). Given that intestinal C1q + macrophages phenotypically resemble peripheral neuromodulatory macrophages and reside near enteric neurons, we postulated that macrophage-derived C1q might also regulate enteric nervous system function.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014)",
+          "offset_start": 171,
+          "offset_end": 192
+        },
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014)",
+          "offset_start": 296,
+          "offset_end": 317
+        },
+        {
+          "type": "bibr",
+          "target": "#b4",
+          "text": "(Benavente et al., 2020;",
+          "offset_start": 447,
+          "offset_end": 471
+        },
+        {
+          "type": "bibr",
+          "target": "#b54",
+          "text": "Schafer et al., 2012;",
+          "offset_start": 471,
+          "offset_end": 492
+        },
+        {
+          "type": "bibr",
+          "target": "#b59",
+          "text": "Stevens et al., 2007)",
+          "offset_start": 492,
+          "offset_end": 513
+        }
+      ],
+      "head_section": "Numbers of enteric neurons are similar in C1qa fl/fl and C1qa ΔMϕ mice"
+    },
+    {
+      "id": "p_894b1d4f",
+      "text": "As an initial test of this idea, we compared the numbers of enteric neurons in C1qa ΔMϕ and C1qa fl/fl mice. Immunofluorescence analysis of LMMP wholemounts from the small intestine and colon revealed a similar number of HuC/D + neurons and a similar density of TUBB3 + neuronal fibers (Figure 5A and B). There were also similar numbers of specific neuronal subsets, including excitatory (Chat + ) and inhibitory (Nos1 + ) neurons (Figure 5C and E), and a similar density of S100B + enteric glial cells (Figure 5D and E). Thus, the anatomical features of the enteric nervous system are not appreciably altered in C1qa ΔMφ mice.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Numbers of enteric neurons are similar in C1qa fl/fl and C1qa ΔMϕ mice"
+    },
+    {
+      "id": "p_01d19552",
+      "text": "We next assessed whether C1qa ΔMϕ mice show evidence of altered neuronal function. We performed RNAseq on the colonic LMMP from C1qa fl/fl and C1qa ΔMϕ littermates and then conducted unbiased with isotype control antibodies on C1qa fl/fl small intestines is shown at right. Anti-rat IgG AlexaFluor 488 and streptavidin-Cy5 were used as secondary stains for CD169 and C1q, respectively. The intestinal surface is denoted with a red dotted line and the gut lumen, epithelium, and lamina propria are indicated. The approximate region encompassing the submucosal plexus and the muscularis is denoted with two white dotted lines. Examples of C1q + areas are indicated with yellow arrows and examples of CD169 + macrophages are indicated with white arrowheads. Note that the violet staining near the bottom of the muscularis is non-specific, as indicated by its presence in the isotype control image. Images are representative of three independent experiments. Scale bars = 50 μm. (C) Immunofluorescence detection of C1q (violet), macrophages marked with CD169 (green), and neurons marked with TUBB3 (yellow) in the small intestines of wild-type C57BL/6 mice. Nuclei are detected with DAPI (blue). The epithelium and lamina propria are indicated. The approximate region encompassing the submucosal plexus and the muscularis is denoted with two white dotted lines. The expanded image area delineated by a yellow square shows an example of the close association between C1q and TUBB3 + neurons. Images are representative of images captured from three mice. Anti-rat IgG AlexaFluor 488, anti-rabbit IgG AlexaFluor 594, and streptavidin-Cy5 were used as secondary stains for CD169, TUBB3, and C1q, respectively, and an isotype control image is shown at upper right. Scale bars = 50 μm. (D) RNAscope detection of C1qa (green), muscularis macrophages marked by Csf1r (red), and immunofluorescence detection of enteric neuronal ganglia by HuC/D (blue) in LMMP wholemounts of small intestines and colons from C1qa A Small intestine Colon C1qa ΔMφ C1qa fl/fl HuC/D TUBB3 B C1qa fl/fl C1qa ΔMφ C1qa fl/fl C1qa ΔMφ Small intestine Colon HuC/D nNOS Chat Merge C1qa fl/fl C1qa ΔMφ S100B S100b Relative expression Chat Nos1 ns ns ns ns ns ns 2.5 3.0 2.0 1.5 1.0 0.5 0.0 2.5 2.0 1.5 1.0 0.5 0.0 4 3 2 1 0 I l e u m C o l o n C1qa fl/fl C1qa ΔMφ Small intestine Colon C1qa fl/fl C1qa ΔMφ C D E S m a l l i n t e s t i n e C o l o n ns ns 0 1000 2000 3000 4000 5000 C1qa fl/fl C1qa ΔMφ Neurons/mm 2 Longitudinal muscle-myenteric plexus Longitudinal musclemyenteric plexus Figure 5. Numbers of enteric neurons are similar in C1qa fl/fl and C1qa ∆Mφ mice. (A) Immunofluorescence analysis of enteric neuronal ganglia marked with HuC/D (red) and neuronal fibers marked with TUBB3 (green) in LMMP wholemounts of small intestines and colons from C1qa fl/fl and C1qa ∆Mφ mice. Anti-mouse IgG AlexaFluor 594 and anti-rabbit IgG AlexaFluor 488 were used as secondary stains for HuC/D and TUBB3, respectively. Images are representative of three independent experiments. Scale bars = 50 μm. (B) Quantification of total enteric neurons per unit area (mm 2 ) from the images shown in panel (A). Data are pooled from two independent experiments. Each data point represents one mouse. (C) Visualization of specific neuronal subsets in the LMMP from C1qa fl/fl and C1qa ∆Mφ mice by RNAscope detection. Inhibitory neurons were marked by Nos1 (green) and excitatory neurons were marked by Chat (red). Neuronal nuclei marked by HuC/D (blue) were detected by immunofluorescence. Images are representative of two independent experiments. Scale bars = 50 μm. (D) Immunofluorescence detection of enteric glial cells marked by S100B (green) in LMMP wholemounts from the small intestines and colons of C1qa fl/fl and C1qa ∆Mφ mice. Images are representative of two independent experiments. Scale bars = 50 μm. (E) qPCR analysis of Nos1, Chat, and S100b in the LMMP of small intestines and colons from C1qa fl/fl and C1qa ∆Mφ mice. Each data point represents one mouse. Error bars represent SEM. ns, not significant by the two-tailed Student's t-test. LMMP, longitudinal muscle-myenteric plexus.",
+      "coords": [],
+      "refs": [],
+      "head_section": "C1qa ΔMϕ mice have altered gastrointestinal motility"
+    },
+    {
+      "id": "p_5e57a37e",
+      "text": "Gene Set Enrichment Analysis. Of the 22 biological pathways that were enriched in the LMMP of C1qa ΔMϕ mice, 17 were related to neuronal development or function, including synapse organization, dendrite development, and neurotransmitter secretion (Figure 6A). Our analysis also identified 30 differentially expressed genes with known roles in regulating neuronal activity (e.g. Dusp26), synaptic transmission (e.g. Rasgrf2), and neuropeptide signaling (e.g. Tacr2) (Mao et al., 2017;Schwechter et al., 2013;Yang et al., 2017; Figure 6B). We also compared the genes differentially expressed in the C1qa ΔMϕ mice to those differentially expressed in the TashT mouse line, which contains an insertional mutation that leads to dysregulated gut motility. The gut motility phenotypes in the TashT line are comparable to Hirschsprung's disease, a human genetic disorder resulting in incomplete development of the enteric nervous system (Bergeron et al., 2015). A comparative analysis revealed a statistically significant overlap in the transcriptional changes in the colonic LMMP of C1qa ΔMϕ mice and the neural crest cells of TashT mice (Figure 6B). These results suggested that macrophage C1q impacts enteric nervous system gene expression and function.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b40",
+          "text": "(Mao et al., 2017;",
+          "offset_start": 465,
+          "offset_end": 483
+        },
+        {
+          "type": "bibr",
+          "target": "#b56",
+          "text": "Schwechter et al., 2013;",
+          "offset_start": 483,
+          "offset_end": 507
+        },
+        {
+          "type": "bibr",
+          "target": "#b71",
+          "text": "Yang et al., 2017",
+          "offset_start": 507,
+          "offset_end": 524
+        },
+        {
+          "type": "bibr",
+          "target": "#b6",
+          "text": "(Bergeron et al., 2015)",
+          "offset_start": 929,
+          "offset_end": 952
+        }
+      ],
+      "head_section": "C1qa ΔMϕ mice have altered gastrointestinal motility"
+    },
+    {
+      "id": "p_30413a42",
+      "text": "Efficient coordination of gastrointestinal motility is necessary for proper digestion, nutrient absorption, and excretion. Given that muscularis macrophages regulate enteric nervous system functions that govern gastrointestinal motility (Muller et al., 2014), we assessed whether macrophage C1q impacts gut motility. We first tested this idea by measuring gut transit time using the nonabsorbable dye Carmine Red. C1qa ΔMϕ and C1qa fl/fl littermates were gavaged with the dye and the time to the first appearance of the dye in the feces was recorded. Transit times were decreased in C1qa ΔMϕ mice relative to their C1qa fl/fl littermates, indicating accelerated gut motility (Figure 6C). This was not due to a change in the length of either the small intestine or the colon, which were unaltered in the C1qa ΔMϕ mice (Figure 6D). By contrast, gut transit time was unchanged in C3 -/-mice, suggesting that macrophage C1q impacts gut motility independent of its canonical function in the classical complement pathway (Figure 6C). Accelerated transit was also observed in the small intestines of C1qa ΔMϕ mice as assessed by rhodamine dye transit assay (Figure 6E). To assess colonic motility, we measured the expulsion time after intrarectal insertion of a glass bead and found that C1qa ΔMϕ mice had accelerated colonic motility when compared to C1qa fl/fl littermates (Figure 6F). Our results thus suggest that the absence of macrophage C1q results in defective enteric nervous system function and dysregulated gastrointestinal motility.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014)",
+          "offset_start": 237,
+          "offset_end": 258
+        }
+      ],
+      "head_section": "C1qa ΔMϕ mice have altered gastrointestinal motility"
+    },
+    {
+      "id": "p_93399661",
+      "text": "A limitation of in vivo measures of gut motility is that they cannot distinguish between defects in 'intrinsic' enteric neurons and 'extrinsic' neurons that innervate the gastrointestinal tract (Berthoud et al., 2004;Uesaka et al., 2016). We, therefore, used an ex vivo organ bath system to specifically assess enteric nervous system function by measuring the activity of colonic migrating motor complexes (CMMC; rhythmic peristaltic contractions that depend on the enteric nervous system) (Obata et al., 2020). Spatiotemporal mapping revealed that the colons of C1qa ΔMϕ mice had increased total number, frequency, and velocity of CMMC as compared to C1qa fl/fl littermates (Figure 6G and H; Figure 6-video 1; Figure 6video 2). This indicated that the colons of C1qa ΔMϕ mice maintained increased neurogenic peristaltic activity compared to their C1qa fl/fl littermates even in the absence of gut-extrinsic signals. Thus, the absence of macrophage C1q increases enteric nervous system-dependent peristalsis and accelerates gut transit. Taken together, our findings reveal that macrophage C1q regulates gastrointestinal motility.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b7",
+          "text": "(Berthoud et al., 2004;",
+          "offset_start": 194,
+          "offset_end": 217
+        },
+        {
+          "type": "bibr",
+          "target": "#b63",
+          "text": "Uesaka et al., 2016)",
+          "offset_start": 217,
+          "offset_end": 237
+        },
+        {
+          "type": "bibr",
+          "target": "#b46",
+          "text": "(Obata et al., 2020)",
+          "offset_start": 490,
+          "offset_end": 510
+        }
+      ],
+      "head_section": "C1qa ΔMϕ mice have altered gastrointestinal motility"
+    },
+    {
+      "id": "p_ac8d51a7",
+      "text": "Here, we have identified a role for C1q in regulating gastrointestinal motility. We discovered that macrophages are the primary source of C1q in the mouse intestine and that macrophage C1q regulates enteric neuronal gene expression and gastrointestinal transit time. Our findings reveal a previously unappreciated function for C1q in the intestine and help to illuminate the molecular basis for macrophage-mediated control of gut motility.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_756c8bf0",
+      "text": "Our study identifies macrophages as the main source of C1q in the mouse small intestine and colon. Both transient antibody-mediated depletion of macrophages and in vivo deletion of the C1qa gene from macrophages led to a marked reduction in intestinal C1q expression. The C1qa ΔMϕ mice also lacked C1q in the circulation, indicating that LysM + macrophages or macrophage-like cells are the sources of circulating C1q in the absence of infection. This enhances findings from prior studies indicating that monocytes, macrophages, and immature dendritic cells are the main sources of C1q in the bloodstream (El-Shamy et al., 2018). Importantly, the C1qa ΔMϕ mice retained C1q expression",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b22",
+          "text": "(El-Shamy et al., 2018)",
+          "offset_start": 604,
+          "offset_end": 627
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_89b53e20",
+      "text": "C 1 q a fl /f l C3 -/- 0 1 2 3 4 Total transit time (hours) *** C 1 q a Δ M φ ns Carmine Red transit assay Colonic bead expulsion assay C 1 q a fl /f l 0 100 200 300 400 Expulsion time (seconds) ** C 1 q a Δ M φ F 0 10 20 30 40 Length (cm) ns ns Sm. int. Colon C1qa fl/fl C1qa ΔMφ Intestinal length E 0 10 20 30 40 50 % Fluorescence recovered ** C1qa fl/fl C1qa ΔMφ C1qa fl/fl C1qa ΔMφ * * Sm. int.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_06ec04c4",
+      "text": "S t o m a c h C e c u m Colon 2 4 6 8 10 12 14 Intestinal segment: Rhodamine B transit assay G 0 10 20 30 40 50 60 Gut length (mm) 0 500 1000 1500 2000 2500 Time (s) 0 500 1000 1500 2000 2500 0 10 20 30 40 50 C1qa fl/fl",
+      "coords": [],
+      "refs": [],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_382935a4",
+      "text": "C1qa ΔMφ Colonic migrating motor complexes (CMMC) A D B Log 2 (fold change) (C1qa ΔMφ :C1qa fl/fl ) -1 0 1 Clca1 Ang4 Fcgbp Mybpc2 Actn2 Six2 Isl2 Scin Aldh1a2 Pdzd2 Dusp26 9530036M11Rik Tacr2 Colec10 Mab21I2 Sdk1 Rasgrf2 Mettl7a1 Cpt2 Acox1 Rhou Pex11a Slc25a20 Mt1 Yam1 Smim24 Mgst1 Trp53i11 C2 Acaa1b Figure 6 continued in the brain, allowing us to analyze the effects of C1q deficiency without possible confounding effects on the central nervous system.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_29baa775",
+      "text": "C1q has two known physiological functions that are distinct and vary according to tissue context. C1q was originally discovered as having a role in the classical complement pathway, which tags and destroys invading microbes (Noris and Remuzzi, 2013;Schifferli et al., 1986). Circulating C1q binds to invading microorganisms and recruits additional proteins that assemble into the membrane attack complex (MAC) (Kishore and Reid, 2000). C1q-mediated MAC formation has been described primarily in the bloodstream, where the necessary accessory proteins are present at high levels (Davis et al., 1979). However, even in the absence of infection, C1q is expressed in tissues such as the brain, where it regulates neuronal development and function (Kouser et al., 2015;van Schaarenburg et al., 2016).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b45",
+          "text": "(Noris and Remuzzi, 2013;",
+          "offset_start": 224,
+          "offset_end": 249
+        },
+        {
+          "type": "bibr",
+          "target": "#b55",
+          "text": "Schifferli et al., 1986)",
+          "offset_start": 249,
+          "offset_end": 273
+        },
+        {
+          "type": "bibr",
+          "target": "#b32",
+          "text": "(Kishore and Reid, 2000)",
+          "offset_start": 410,
+          "offset_end": 434
+        },
+        {
+          "type": "bibr",
+          "target": "#b16",
+          "text": "(Davis et al., 1979)",
+          "offset_start": 578,
+          "offset_end": 598
+        },
+        {
+          "type": "bibr",
+          "target": "#b35",
+          "text": "(Kouser et al., 2015;",
+          "offset_start": 743,
+          "offset_end": 764
+        },
+        {
+          "type": "bibr",
+          "target": "#b65",
+          "text": "van Schaarenburg et al., 2016)",
+          "offset_start": 764,
+          "offset_end": 794
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_7f2d5550",
+      "text": "Our findings suggest that C1q does not play a central role in the immune defense of the intestine. First, we found that intestinal C1q expression was not induced by gut commensals or pathogens and was not deposited into the gut lumen. Second, C1q deficiency did not markedly alter gut microbiota composition or the course of disease after DSS treatment. There were also no major changes in cytokine expression or numbers and frequencies of intestinal immune cells that would indicate dysregulated interactions with the microbiota. Third, C1q was not required for clearance of C. rodentium, a non-disseminating enteric pathogen whose clearance requires antigen-specific IgG and complement component 3 (C3) (Belzer et al., 2011). Although we cannot rule out a role for C1q in immune defense against other intestinal pathogens, or during chronic inflammation or infection, these findings suggest that C1q is not essential for intestinal immune defense in mice.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b3",
+          "text": "(Belzer et al., 2011)",
+          "offset_start": 705,
+          "offset_end": 726
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_83141d84",
+      "text": "Instead, our results indicate that C1q influences enteric nervous system function and regulates intestinal motility. First, C1q-expressing macrophages were present in the myenteric and submucosal plexuses and resided close to enteric neurons. Second C1q-expressing macrophages expressed cell surface markers like those expressed by nerve-adjacent C1q-expressing macrophages in the lung (Ural et al., 2020). Third, macrophage-specific deletion of C1qa altered enteric neuronal gene expression. Finally, consistent with the altered neuronal gene expression, macrophage-specific C1qa deletion altered gastrointestinal motility in both the small and large intestines. Thus, our results suggest that the function of C1q in the intestine is similar to its function in the brain, where it regulates the development and function of neurons (Benoit and Tenner, 2011;Kouser et al., 2015;van Schaarenburg et al., 2016).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b64",
+          "text": "(Ural et al., 2020)",
+          "offset_start": 386,
+          "offset_end": 405
+        },
+        {
+          "type": "bibr",
+          "target": "#b5",
+          "text": "(Benoit and Tenner, 2011;",
+          "offset_start": 832,
+          "offset_end": 857
+        },
+        {
+          "type": "bibr",
+          "target": "#b35",
+          "text": "Kouser et al., 2015;",
+          "offset_start": 857,
+          "offset_end": 877
+        },
+        {
+          "type": "bibr",
+          "target": "#b65",
+          "text": "van Schaarenburg et al., 2016)",
+          "offset_start": 877,
+          "offset_end": 907
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_9eb811af",
+      "text": "A function for macrophage C1q in intestinal motility adds to the growing understanding of how gut macrophages regulate intestinal peristalsis. Prior work has shown that CSF1R + macrophages selectively localize to the muscularis of the mouse intestine (Muller et al., 2014;Gabanyi et al., 2016). These macrophages secrete BMP2, which activates enteric neurons that regulate colonic muscle contraction and thus colonic motility (Muller et al., 2014). We found that depletion of CSF1R + macrophages reduces intestinal C1q expression and that macrophage-specific deletion of C1qa alters enteric neuronal gene expression and activity. Thus, our findings suggest that C1q is a key component of the macrophage-enteric nervous system axis.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014;",
+          "offset_start": 251,
+          "offset_end": 272
+        },
+        {
+          "type": "bibr",
+          "target": "#b25",
+          "text": "Gabanyi et al., 2016)",
+          "offset_start": 272,
+          "offset_end": 293
+        },
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014)",
+          "offset_start": 426,
+          "offset_end": 447
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_0e05c629",
+      "text": "An important remaining question concerns the molecular mechanism by which C1q regulates gut motility. One possibility is that C1q shapes microbiota composition which, in turn, impacts gut motility. This idea is suggested by studies in zebrafish showing that a deficiency in intestinal macrophages leads to altered gut microbiota composition relative to wild-type zebrafish (Earley et al., 2018) studies in zebrafish and mice have shown that severe defects in enteric nervous system development produce changes in gut microbiota composition that are linked to dysregulated gut motility (Rolig et al., 2017;Johnson et al., 2018). However, we did not observe prominent changes in the composition of the gut microbiota in C1qa ΔMϕ mice, arguing against a central role for the microbiota in C1q-mediated regulation of gut motility. A second possibility is that the absence of C1q leads to immunological defects that alter gut transit time. This idea is consistent with studies showing that T-cell cytokines can influence gastrointestinal motility (Akiho et al., 2011). However, this seems unlikely given the lack of pronounced immunological abnormalities in the intestines of C1qa ΔMϕ mice.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b20",
+          "text": "(Earley et al., 2018)",
+          "offset_start": 373,
+          "offset_end": 394
+        },
+        {
+          "type": "bibr",
+          "target": "#b52",
+          "text": "(Rolig et al., 2017;",
+          "offset_start": 585,
+          "offset_end": 605
+        },
+        {
+          "type": "bibr",
+          "target": "#b31",
+          "text": "Johnson et al., 2018)",
+          "offset_start": 605,
+          "offset_end": 626
+        },
+        {
+          "type": "bibr",
+          "target": "#b1",
+          "text": "(Akiho et al., 2011)",
+          "offset_start": 1042,
+          "offset_end": 1062
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_6adb981e",
+      "text": "A third possibility is that C1q changes the cell-intrinsic properties of the macrophages that express it, thus altering their interactions with neurons to influence gut motility. We explored this possibility by conducting single-cell RNA sequencing (scRNAseq) on macrophages isolated from small intestinal cell suspensions (Figure 6-figure supplement 1A). We identified 11 unique macrophage clusters and found that C1qa ΔMϕ mice had alterations in at least three highly represented clusters (Figure 6figure supplement 1B). Gene set enrichment analysis of the most significantly altered clusters did not reveal any pronounced functional differences (Figure 6-figure supplement 1C). However, analysis of the differentially expressed genes across all macrophage clusters indicated lowered representation of transcripts that are linked to control of macrophage differentiation or functional states, such as Malat1, Neat1, and Etv3 (Cui et al., 2019;Gao et al., 2020;Villar et al., 2023;Zhang et al., 2019;Figure 6-figure supplement 1D). Furthermore, a recent study identified a set of 13 'microglia-specific genes' that represent a unique transcriptional overlap between microglia in the CNS and intestinal macrophages (Verheijden et al., 2015). In macrophages from C1qa fl/fl mice, we observed the expression of eight 'microglia-specific genes' whose expression was lowered or lost in macrophages from C1qa ΔMϕ mice (Figure 6-figure supplement 1E). Thus, it is possible that altered intestinal motility could arise in part from cell-intrinsic functional alterations in C1q-deficient intestinal macrophages. Such alterations could arise from a C1q autocrine signaling loop or C1q could imprint a neuronal function that feeds back to regulate macrophage gene expression as exemplified in Muller et al., 2014. A fourth possibility is that C1q + macrophages engulf specific neurons. Indeed, macrophages restrain neurogenesis in the enteric nervous system through phagocytosis of apoptotic neurons, which is consistent with the ability of C1q to opsonize dying host cells (Kulkarni et al., 2017;Botto et al., 1998;Korb and Ahearn, 1997). However, we observed no marked differences in the overall numbers of enteric neurons or numbers of excitatory and inhibitory neurons when comparing C1qa ΔMϕ and C1qa fl/fl mice, which argues against this possibility. A fifth possibility is that C1q acts directly on enteric smooth muscle cells that regulate gut motility. Although we cannot rule out this possibility, our transcriptional profile of the colonic myenteric plexus of C1qa ΔMϕ mice suggests that most of the transcriptional changes were associated with neuronal function and homeostasis.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b15",
+          "text": "(Cui et al., 2019;",
+          "offset_start": 927,
+          "offset_end": 945
+        },
+        {
+          "type": "bibr",
+          "target": "#b26",
+          "text": "Gao et al., 2020;",
+          "offset_start": 945,
+          "offset_end": 962
+        },
+        {
+          "type": "bibr",
+          "target": "#b67",
+          "text": "Villar et al., 2023;",
+          "offset_start": 962,
+          "offset_end": 982
+        },
+        {
+          "type": "bibr",
+          "target": "#b75",
+          "text": "Zhang et al., 2019;",
+          "offset_start": 982,
+          "offset_end": 1001
+        },
+        {
+          "type": "bibr",
+          "target": "",
+          "text": "Figure 6-figure supplement 1D)",
+          "offset_start": 1001,
+          "offset_end": 1031
+        },
+        {
+          "type": "bibr",
+          "target": "#b66",
+          "text": "(Verheijden et al., 2015)",
+          "offset_start": 1215,
+          "offset_end": 1240
+        },
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "Muller et al., 2014.",
+          "offset_start": 1783,
+          "offset_end": 1803
+        },
+        {
+          "type": "bibr",
+          "target": "#b36",
+          "text": "(Kulkarni et al., 2017;",
+          "offset_start": 2064,
+          "offset_end": 2087
+        },
+        {
+          "type": "bibr",
+          "target": "#b9",
+          "text": "Botto et al., 1998;",
+          "offset_start": 2087,
+          "offset_end": 2106
+        },
+        {
+          "type": "bibr",
+          "target": "#b34",
+          "text": "Korb and Ahearn, 1997)",
+          "offset_start": 2106,
+          "offset_end": 2128
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_98bbd6f2",
+      "text": "Given that the C1qa ΔMϕ mice showed altered neuronal gene expression, a sixth possibility is that C1q interacts directly with enteric neurons or glial cells as a signaling molecule. Like macrophageproduced BMP2 (Muller et al., 2014), C1q might bind to specific receptors on neurons to regulate their activity. In support of this idea, we observed that mouse enteric neurons express Adgrb1, which encodes BAI1 (Figure 6-figure supplement 2A and B), a recently identified C1q receptor on human neural stem cells (Benavente et al., 2020). These data suggest a possible signaling axis for C1qmediated control of enteric nervous system function.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "(Muller et al., 2014)",
+          "offset_start": 211,
+          "offset_end": 232
+        },
+        {
+          "type": "bibr",
+          "target": "#b4",
+          "text": "(Benavente et al., 2020)",
+          "offset_start": 510,
+          "offset_end": 534
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_1bdd59ee",
+      "text": "Our findings on intestinal C1q have implications for human intestinal disease. Indeed, singlecell RNAseq analysis shows that macrophages recovered from the human intestinal muscularis selectively express C1q when compared to lamina propria macrophages (Domanska et al., 2022). Dysregulated peristalsis is a characteristic of irritable bowel syndrome (Vrees et al., 2002) and is present in a subset of inflammatory bowel disease patients (Bassotti et al., 2014). Our finding that macrophage C1q regulates gut motility could suggest new strategies to prevent or treat these diseases. Additionally, most humans with C1q deficiency develop systemic lupus erythematosus (SLE). Since C1q can target cellular debris for phagocytosis, it is thought that C1q deficiency results in increased exposure of self-antigen to the immune system, thereby reducing immune tolerance and causing autoimmune disease (Macedo and Isaac, 2016). Furthermore, roughly 42.5% of SLE patients report gastrointestinal symptoms that range from acute abdominal pain to chronic intestinal obstruction (Fawzy et al., 2016;Tian and Zhang, 2010). The exact cause of these symptoms is unclear. Given that C1q deficiency is strongly correlated with SLE in humans and alters gut motility in mice, we suggest that C1q could be a therapeutic target for SLE patients that present with chronic constipation or other forms of dysregulated intestinal motility.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b19",
+          "text": "(Domanska et al., 2022)",
+          "offset_start": 252,
+          "offset_end": 275
+        },
+        {
+          "type": "bibr",
+          "target": "#b68",
+          "text": "(Vrees et al., 2002)",
+          "offset_start": 350,
+          "offset_end": 370
+        },
+        {
+          "type": "bibr",
+          "target": "#b2",
+          "text": "(Bassotti et al., 2014)",
+          "offset_start": 437,
+          "offset_end": 460
+        },
+        {
+          "type": "bibr",
+          "target": "#b39",
+          "text": "(Macedo and Isaac, 2016)",
+          "offset_start": 894,
+          "offset_end": 918
+        },
+        {
+          "type": "bibr",
+          "target": "#b23",
+          "text": "(Fawzy et al., 2016;",
+          "offset_start": 1067,
+          "offset_end": 1087
+        },
+        {
+          "type": "bibr",
+          "target": "#b62",
+          "text": "Tian and Zhang, 2010)",
+          "offset_start": 1087,
+          "offset_end": 1108
+        }
+      ],
+      "head_section": "Discussion"
+    },
+    {
+      "id": "p_2f66a3bc",
+      "text": "Key resources table",
+      "coords": [],
+      "refs": [],
+      "head_section": "Continued on next page"
+    },
+    {
+      "id": "p_cc795786",
+      "text": "Reagent type (species) or resource Designation Source or reference Identifiers Additional information Strain, strain background (Mus musculus) C1qa fl/fl ; B6(SJL)-C1qa tm1c(EUCOMM) Wtsi /TennJ Jackson Laboratory; Fonseca et al., 2017 Stock #031261 Strain, strain background (Mus musculus) LysM-Cre; B6.129P2-Lyz2 tm1(cre)Ifo /J Jackson Laboratory; Clausen et al., 1999 Stock #004781 Strain, strain background (Mus musculus) C1qa ∆MΦ this paper Generated by crossing C1qa fl/fl mice with LysM-Cre mice Strain, strain background (Mus musculus) C3 -/-; B6.129S4-C3 tm1Crr /J Jackson Laboratory; Wessels et al., 1995 Stock #029661 Strain, strain background (Mus musculus) Germ-free C57BL/6 J mice UT Southwestern Gnotobiotics Core Facility Strain, strain background (Salmonella enterica) Salmonella enterica subsp. enterica serovar Typhimurium strain SL1344 Dr. Vanessa Sperandio; Eichelberg and Galán, 1999 Strain, strain background (Citrobacter rodentium) Citrobacter rodentium strain DBS100 ATCC Strain# 51459 Antibody Anti-Actin HRP (rabbit monoclonal) Cell Signaling Clone: 13E5 Immunoblot (1:5000) Antibody Anti-ARG1 (sheep monoclonal) R&D Systems Clone: P05089 Flow (1:100) Antibody Anti-B220 (rat monoclonal) Thermo Fisher Clone: RA3-6B2 Flow (1:500) Antibody Anti-C1q (rat monoclonal) Cedarlane Laboratories Clone: RmC7H8 Flow (1:50) Antibody Anti-C1q (rabbit polyclonal) Thermo Fisher Cat# PA5-29586 Immunoblot (1:500) Antibody Anti-C1q-biotin (mouse monoclonal) Abcam Clone: JL1 ELISA (1:1000); Immunofluorescence (1:100) Antibody Anti-CD3 (rat monoclonal) Thermo Fisher Clone: 17A2 Flow (1:200) Antibody Anti-CD4 (rat monoclonal) BioLegend Clone: GK1.5 Flow (1:500) Antibody Anti-CD11b (rat monoclonal) Thermo Fisher Clone: M1/70 Flow (1:200) Antibody Anti-CD11c (Armenian hamster monoclonal) Thermo Fisher Clone: N418 Flow (1:500) Antibody Anti-CD16/32 (rat monoclonal) BioLegend Clone: 93 Fc receptor block (1:1000) Antibody Anti-CD19 (rat monoclonal) BioLegend Clone: 1D3 Flow (1:500) Antibody Anti-CD45 (rat monoclonal) BioLegend Clone: 30-F11 Flow (1:500) Antibody Anti-CD90.2 (rat monoclonal) BioLegend Clone: 30-H12 Flow (1:500) Antibody Anti-CD169 (rat monoclonal) BioLegend Clone: 3D6.112 Flow (1:200) Reagent type (species) or resource Designation Source or reference Identifiers Additional information Antibody Anti-CD169 (rat monoclonal) Abcam Clone: 3D6.112 Immunofluorescence (1:200) Antibody Anti-CSF1R (rat monoclonal) Bio X Cell Cat# AFS98 Macrophage depletion (100 mg/kg) Antibody Anti-F4/80 (rat monoclonal) BioLegend Clone: BM8 Flow (1:100) Antibody Anti-FoxP3 (rat monoclonal) Thermo Fisher Clone: FJK-16s Flow (1:50) Antibody Anti-GATA3 (mouse monoclonal) BD Biosciences Clone: L50-823 Flow (1:50) Antibody Anti-IgA (rat monoclonal) Thermo Fisher Clone: 11-44-2 Flow (1:50) Antibody Anti-LY6C (rat monoclonal) BioLegend Clone: RB6-8C5 Flow (1:500) Antibody Anti-MHCII (rat monoclonal) Thermo Clone: M5/114.15.2 Flow (1:500) Antibody Anti-REG3G antiserum (rabbit polyclonal) Cash et al., 2006; antiserum generated by Pacific Biosciences Immunoblot (1:1000) Antibody Anti-RORγt (rat monoclonal) Thermo Fisher Clone: AFKJS-9 Flow (1:50) Antibody Anti-T-BET (mouse monoclonal) BioLegend Clone: 4B10 Flow (1:50) Antibody Anti-TREM2 (rat monoclonal) R&D Systems Clone: 237920 Flow (1:200) Antibody Anti-TUBB3 (rabbit polyclonal) Abcam Cat# ab18207 Immunofluorescence (1:200) Antibody Anti-S100β (rabbit polyclonal) Dako Cat# GA504 Immunofluorescence Antibody Anti-HuC/D (rabbit monoclonal) Abcam Cat# ab184267 Immunofluorescence (1:400) Antibody Goat anti-rabbit IgG HRP conjugate Abcam Cat# ab6721 Immunoblot (1:5000) Antibody secondary antibodies -donkey polyclonal anti-rabbit/rat/mouse AlexaFluor 488/594/647 Invitrogen Immunofluorescence (1:400) Antibody mouse IgG1 Abcam Cat# ab18443 ELISA (10 μg/ml) Antibody Rat IgG2a Thermo Fisher Clone: 2A3 Isotype control for anti-CSF1R macrophage depletion (100 mg/kg) Antibody Rat IgG1 PE isotype control Cedarlane Laboratories Cat# CLCR104 Flow (1:50) Sequencebased reagent mouse C1qa TaqMan assay Thermo Fisher Assay ID: Mm00432142_m1 Sequencebased reagent mouse C1qb TaqMan assay Thermo Fisher Assay ID: Mm01179619_m1 Sequencebased reagent mouse C1qc TaqMan assay Thermo Fisher Assay ID: Mm00776126_m1 Sequencebased reagent mouse Chat TaqMan assay Thermo Fisher Assay ID: Mm01221880_m1 Sequencebased reagent mouse Nos1 TaqMan assay Thermo Fisher Assay ID: Mm01208059_m1 Sequencebased reagent mouse S100b TaqMan assay Thermo Fisher Assay ID: Mm00485897_m1 Sequencebased reagent mouse Reg3g TaqMan assay Thermo Fisher Assay ID: Mm00441127_m1 Sequencebased reagent mouse Ifng TaqMan assay Thermo Fisher Assay ID: Mm01168134_m1 Sequencebased reagent mouse Il4 TaqMan assay Thermo Fisher Assay ID: Mm00445259_m1 Continued Continued on next page Reagent type (species) or resource Designation Source or reference Identifiers Additional information Sequencebased reagent mouse IL5 TaqMan assay Thermo Fisher Assay ID: Mm00439646_m1 Sequencebased reagent mouse Il10 TaqMan assay Thermo Fisher Assay ID: Mm01288386_m1 Sequencebased reagent mouse Il13 TaqMan assay Thermo Fisher Assay ID: Mm00434204_m1 Sequencebased reagent mouse Il17a TaqMan assay Thermo Fisher Assay ID: Mm00439618_m1 Sequencebased reagent mouse Il17f TaqMan assay Thermo Fisher Assay ID: Mm00521423_m1 Sequencebased reagent mouse 18 S gene TaqMan assay Thermo Fisher Assay ID: Mm03928990_g1 Sequencebased reagent bacterial 16 S universal rRNA forward primer Gift from Dr. Andrew Koh 5'-ACTC CTAC GGGA GGCA GCAG T-3 ' Sequencebased reagent Bacterial 16 S universal rRNA reverse primer Gift from Dr. Andrew Koh 5'-ATTA CCGC GGCT GCTG GC-3' Sequencebased reagent bacterial 16 S V3 -rRNA gene forward primer Thermo Fisher; (Klindworth et al., 2013) 16 S rRNA gene sequencing 5'-TCGT CGGC AGCG TCAG ATGTGTA TAAG AGAC AGCC TACG GGNG GCWGCAG-3′ Sequencebased reagent bacterial 16 S v4 -rRNA gene reverse primer Thermo Fisher; Klindworth et al., 2013 16 S rRNA gene sequencing 5′-GTCT CGTG GGCT CGGA GATGTGTA TAAG AGAC AGGA CTAC HVGG GTAT CTAATCC-3′ Sequencebased reagent mouse C1qa RNAscope probe (C1) Advanced Cell Diagnostics Cat# 498241 Sequencebased reagent mouse C1qa RNAscope probe (C3) Advanced Cell Diagnostics Cat# 498241-C3 Sequencebased reagent mouse Chat RNAscope probe (C1) Advanced Cell Diagnostics Cat# 408731 Sequencebased reagent mouse Nos1 RNAscope probe (C2) Advanced Cell Diagnostics Cat# 437651-C2 Sequencebased reagent mouse Adgrb1 RNAscope probe (C1) Advanced Cell Diagnostics Cat# 317901 Sequencebased reagent mouse Csf1r RNAscope probe (C2) Advanced Cell Diagnostics Cat# 428191-C2 Peptide, recombinant protein recombinant mouse C1q Complementech Cat# M099 Commercial assay or kit Chromium Next GEM Single Cell 3' Kit v3.1 10 x Genomics Cat# PN-1000269 Commercial assay or kit Chromiium Next GEM Chip G Single Cel Kit 10 x Genomics Cat# PN-1000127 Commercial assay or kit Dual Index Kit TT Set A 10 x Genomics Cat# PN-1000215 Commercial assay or kit FOXP3/Transcription Factor Fixation/Permeabilization Buffer Set Thermo Fisher Cat# 00-5523-00 Continued Continued on next page Reagent type (species) or resource Designation Source or reference Identifiers Additional information Commercial assay or kit MMLV Reverse Transcriptase Kit Thermo Fisher Cat# 28025-021 Commercial assay or kit NextSeq 500/550 High Output Kit v2.5 Illumina Cat# 20024907 Commercial assay or kit PE300 (Paired end 300 bp) v3 kit Illumina Cat# MS-102-3001 commercial assay or kit RNAscope Fluorescent Multiple Reagent Kit Advanced Cell Diagnostics Cat# 320850 Commercial assay or kit RNeasy Universal Mini Kit Qiagen Cat# 73404 Commercial assay or kit DNEasy Blood & Tissue Kit Qiagen Cat# 69504 Commercial assay or kit TaqMan Master Mix Thermo Fisher Cat# 4369542 Commercial assay or kit TruSeq RNA sample preparation kit Illumina Cat# RS-122-2001 Commercial assay or kit SsoAdvanced Universal SYBR Green Supermix BioRad Cat# 1725270 Chemical compound, drug Agencourt AmpureXP beads Beckman Coulter Genomics Cat# A63880 Chemical compound, drug Carmine Red Sigma Cat# C1022-25G Chemical compound, drug Collagenase IV Sigma Cat# C5138-1G Chemical compound, drug Borosilicate glass beads (2 mm) Millipore Sigma Cat# Z273627-1EA Chemical compound, drug Dextran sulfate sodium Thomas Scientific Cat# 216011090 Chemical compound, drug DNase I Sigma Cat# DN25 Chemical compound, drug Dispase II Sigma Cat# D4693-1G Chemical compound, drug FITC-dextran (4000 Da) Sigma Cat# FD4-1g Chemical compound, drug Ghost 710 Tonbo Biosciences Cat# 13-0871 T100 Flow cytometry viability dye Chemical compound, drug Methylcellulose Sigma Cat# M0262-100G Chemical compound, drug Nalidixic acid, sodium salt Research Products International Cat# N23100-25.0 Continued Continued on next page Other Agilent 2100 Bioanalyzer Agilent Technologies G2939A RNA integrity analysis Other Amicon Ultra centrifugal filters Millipore Cat #UFC900324 Fecal protein extraction Other BioRad ChemiDoc Touch System BioRad Cat# 1708370 Western blot imaging: Other Chromium Controller & Next GEM Accessory Kit 10 X Genomics Cat# PN-120223 Single cell RNA sequencing library construction Other CMOS camera Teledyne Photometrics MOMENT Ex vivo peristalsis: Other Leica CM1950 (Cryostat) Leica Cryosectioning Other FACSAria BD Biosciences Flow cytometric cell sorting Other ORCA-Fusion sCMOS camera Hamamatsu Photonics C14440-20UP Imaging Other Illumina MiSeq Illumina RRID:SCR_016379 16 S rRNA Other Illumina NextSeq 550 Illumina Bulk RNA sequencing and single cell RNA sequencing Other Keyence Fluorescence Microscope Keyence BZ-X800 Immunofluorescence Other NovoCyte 3005 Agilent Technologies Flow cytometry analysis Other Organ bath chamber Tokai Hit Ex vivo peristalsis Other Peristaltic pump Gilson MINIPULS3 Ex vivo peristalsis Other QuantStudio 7 Flex Real-Time PCR System Applied Biosystems Cat #4485701 qPCR analysis Other SpectraMax M5 plate reader Molecular Devices ELISA and small intestinal motility analysis Other Zeiss Axio Imager M1 Microscope Zeiss Immunofluorescence Continued",
+      "coords": [],
+      "refs": [],
+      "head_section": "Continued on next page"
+    },
+    {
+      "id": "p_63df3e96",
+      "text": "Wild-type C57BL/6 J (Jackson Laboratory) and C3 -/-mice (Jackson Laboratory; Wessels et al., 1995) were bred and maintained in the SPF barrier facility at the University of Texas Southwestern Medical Center. C1qa ΔMϕ mice were generated by crossing C1qa fl/fl mice (Jackson Laboratory; Fonseca et al., 2017) with a mouse expressing Cre recombinase controlled by the macrophage-specific mouse Lyz2 promoter (LysM-Cre mice; Jackson Laboratory; Clausen et al., 1999). Mice that were 8-12 weeks of age were used for all experiments and cohoused littermates were used as controls (i.e. Cre + and Cre -mice were from the same breeding pair). Both male and female mice were analyzed in experiments involving wild-type mice. Males were used for experiments involving C1qa fl/fl and C1qa ΔMϕ mice.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b70",
+          "text": "Wessels et al., 1995)",
+          "offset_start": 77,
+          "offset_end": 98
+        },
+        {
+          "type": "bibr",
+          "target": "#b24",
+          "text": "Fonseca et al., 2017)",
+          "offset_start": 286,
+          "offset_end": 307
+        },
+        {
+          "type": "bibr",
+          "target": "#b13",
+          "text": "Clausen et al., 1999)",
+          "offset_start": 442,
+          "offset_end": 463
+        }
+      ],
+      "head_section": "Mice"
+    },
+    {
+      "id": "p_27be23aa",
+      "text": "Germ-free C57BL/6 J mice were bred and maintained in isolators at the University of Texas Southwestern Medical Center. All procedures were performed in accordance with protocols approved by the Institutional Animal Care and Use Committees (IACUC) of the UT Southwestern Medical Center.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Mice"
+    },
+    {
+      "id": "p_5ad27a33",
+      "text": "Tissue RNA was isolated using the RNeasy Universal Mini kit (Qiagen, Hilden, Germany). Cellular RNA was isolated using the RNAqueous Micro kit (Thermo Fisher). cDNA was generated from the purified RNA using the M-MLV Reverse Transcriptase kit (Thermo Fisher). qPCR analysis was performed using TaqMan primer/probe sets and master mix (Thermo Fisher) on a Quant-Studio 7 Flex Real-Time PCR System (Applied Biosystems). Transcript abundances were normalized to 18 S rRNA abundance.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Quantitative polymerase chain reaction (qPCR)"
+    },
+    {
+      "id": "p_22405602",
+      "text": "TaqMan probe assay IDs are provided in the Key Resources table.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Quantitative polymerase chain reaction (qPCR)"
+    },
+    {
+      "id": "p_63b3757f",
+      "text": "Lamina propria cells were isolated from the intestine using a published protocol (Yu et al., 2013;Yu et al., 2014). Briefly, intestines were dissected from mice and Peyer's patches were removed. Intestines were cut into small pieces and thoroughly washed with ice-cold phosphate-buffered saline (PBS) containing 5% fetal bovine serum (PBS-FBS). Epithelial cells were removed by incubating intestinal tissues in Hank's buffered salt solution (HBSS) supplemented with 2 mM EDTA, followed by extensive washing with PBS-FBS. Residual tissues were digested twice with Collagenase IV (Sigma), DNase I (Sigma), and Dispase (BD Biosciences) for 45 min at 37 °C with agitation. Cells were filtered through 70 μm cell strainers (Thermo Fisher) and applied onto a 40%:80% Percoll gradient (GE Healthcare). Subepithelial cell populations were recovered at the interface of the 40% and 80% fractions. For small intestinal cell suspensions, the epithelial fraction was kept and combined with enzymatically liberated subepithelial cells. Cells were washed with 2 mM EDTA/3% FBS in PBS and Fc receptors were blocked with anti-CD16/32 (93). Cells were then stained with the viability dye Ghost 710 (Tonbo Biosciences) followed by antibodies against cell surface markers including anti-CD45 (30-F11), anti-CD11b (M1/70), anti-MHCII (M5/114.15.2), anti-F4/80 (BM8), anti-CD3 (17A2), anti-CD4 (GK1.5), anti-CD19 (1D3), anti-B220 (RA3-6B2), anti-CD11c (N418), anti-CD169 (3D6.112), anti-TREM2 (237920), and anti-LY6C (RB6-8C5). Cells were fixed and permeabilized with the eBioscience FOXP3/Transcription Factor Fixation/Permeabilization buffer set (Thermo Fisher) and then subjected to intracellular staining with anti-C1Q (RmC7H8), anti-FOXP3 (FJK-16s), anti-GATA3 (L50), anti-T-BET (4B10), anti-RORγ (AFKJS-9), and anti-ARG1 (P05089). Cells were sorted using a FACSAria (BD Biosciences) or analyzed using a NovoCyte 3005 (Agilent Technologies). Data were processed with FlowJo software (BD Biosciences) or NovoExpress (Agilent Technologies).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b73",
+          "text": "(Yu et al., 2013;",
+          "offset_start": 81,
+          "offset_end": 98
+        },
+        {
+          "type": "bibr",
+          "target": "#b74",
+          "text": "Yu et al., 2014)",
+          "offset_start": 98,
+          "offset_end": 114
+        }
+      ],
+      "head_section": "Isolation and analysis of intestinal immune cells"
+    },
+    {
+      "id": "p_2d96ea38",
+      "text": "Anti-mouse CSF1R (Thermo Fisher; AFS98) and rat IgG2a isotype control (Thermo Fisher; 2A3) antibodies were administered intraperitoneally at a concentration of 100 mg/kg. Mice were sacrificed 72 hr post-injection and terminal ileum and colon were collected for qPCR analysis.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Macrophage depletion"
+    },
+    {
+      "id": "p_196b8c55",
+      "text": "To isolate proteins from intestinal cell suspensions, cell pellets were resuspended in 100 μl of RIPA Lysis Buffer (Thermo Fisher) supplemented with protease inhibitors (Millipore Sigma) and vortexed vigorously every 5 min for 20 min. Lysates were cleared of cellular debris by centrifugation at 13,000 g for 5 min. To isolate proteins from the intestinal lumen, the entire gastrointestinal tract (from the duodenum to distal colon) was recovered from five wild-types C57BL/6 J mice. The intestines were flushed with ~50 ml cold PBS containing protease inhibitors (Millipore Sigma, 11836153001). The flushes and fecal pellets were homogenized by rotor and stator (TH Tissue Homogenizer; OMNI; TH01) and large particles were centrifuged at 100 g for 10 min at room temperature. The supernatants were carefully decanted and centrifuged further at 3000 g for 20 min at room temperature. The clarified supernatants were precipitated with 40% ammonium sulfate overnight at 4 °C. Precipitated protein was centrifuged at 3000 g for 30 min at 4 °C, then resuspended in cold 40% ammonium sulfate and centrifuged again. The pellets were resuspended in room temperature PBS and allowed to mix for 10 min. Protein concentrations were determined by Bradford assay (BioRad).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "",
+          "text": "(Millipore Sigma, 11836153001)",
+          "offset_start": 564,
+          "offset_end": 594
+        }
+      ],
+      "head_section": "Protein extraction from intestinal cells and feces"
+    },
+    {
+      "id": "p_5fd5a9a9",
+      "text": "Immunoblot 50 μg of fecal protein or 25 μg of cellular protein was loaded onto a 4-20% gradient SDS-PAGE and transferred to a PVDF membrane. Membranes were blocked in 5% nonfat dry milk in Trisbuffered saline (TBS) with 0.1% Tween-20 and then incubated overnight with the following primary antibodies: anti-C1Q (PA5-29586, Thermo Fisher) and anti-actin (13E5, Cell Signaling). REG3G was detected by incubating membranes with rabbit anti-REG3G antiserum (Cash et al., 2006). After washing, membranes were incubated with goat anti-rabbit IgG HRP and then visualized with a BioRad ChemiDoc Touch system.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b11",
+          "text": "(Cash et al., 2006)",
+          "offset_start": 453,
+          "offset_end": 472
+        }
+      ],
+      "head_section": "Protein extraction from intestinal cells and feces"
+    },
+    {
+      "id": "p_aeb66007",
+      "text": "Mouse C1q ELISA was performed as previously described (Petry et al., 2001). Briefly, microtiter plates were coated overnight with mouse IgG1 and were then blocked with 5% BSA in PBS. Serum samples were diluted 1:50 and plated for 1 hr at room temperature. After washing with 0.05% Tween-20 in PBS, bound C1q was incubated with a biotinylated anti-C1q antibody (JL1, Abcam). Biotinylated anti-C1q was detected with a streptavidin-HRP conjugate (Abcam). Optical density was measured using a wavelength of 492 nm. Plates were analyzed using a SpectraMax M5 microplate reader (Molecular Devices).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b49",
+          "text": "(Petry et al., 2001)",
+          "offset_start": 54,
+          "offset_end": 74
+        }
+      ],
+      "head_section": "Enzyme-linked immunosorbent assay (ELISA)"
+    },
+    {
+      "id": "p_cafbde10",
+      "text": "Intestinal permeability assays were performed by treating mice with fluorescein isothiocyanate dextran (FITC-dextran; 4000 Da) by oral gavage. The non-steroidal anti-inflammatory drug (NSAID) indomethacin was administered to mice as a positive control. For the experimental group, mice were treated with 190 μl 7% dimethyl sulfoxide (DMSO) in PBS by oral gavage. For the positive control group, mice were treated with 190 μl indomethacin (1.5 mg/ml in 7% DMSO in PBS) by oral gavage. After 1 hr, all mice were treated with 190 μl FITC-dextran (80 mg/ml in PBS) by oral gavage. Mice were sacrificed after 4 hr and sera were collected. Serum samples were centrifuged for 20 min at 4 °C at 800 g and supernatants were collected. Serum FITC-dextran levels were measured by a fluorescence microplate assay against a standard curve using a Spectramax plate reader (Molecular Devices).",
+      "coords": [],
+      "refs": [],
+      "head_section": "Intestinal permeability assay"
+    },
+    {
+      "id": "p_0aa11b61",
+      "text": "Age and sex-matched mice were sacrificed and mesenteric lymph nodes were harvested and weighed. Total DNA was extracted using the Qiagen DNEasy kit. Microbial genomic DNA was quantified against a standard curve by qPCR analysis using universal 16S rRNA gene primers and the SsoAdvanced SYBR Green Supermix (BioRad). Total copy numbers of bacterial 16S RNA genes were normalized to tissue weight.",
+      "coords": [],
+      "refs": [],
+      "head_section": "16S rRNA gene quantification (absolute copy number)"
+    },
+    {
+      "id": "p_3d945426",
+      "text": "Age and sex-matched mice were provided with 3% dextran sulfate sodium (weight/volume) in autoclaved drinking water for seven days. Animal weight and health were monitored in accordance with institutional IACUC guidelines. On day 7, animals were sacrificed and colon lengths were recorded. Terminal colon segments were fixed in Bouin's fixative for 24 hr followed by washes in 70% ethanol. Tissues were paraffin-embedded and sectioned by the UT Southwestern Histopathology Core facility. Tissue specimens were scored by a pathologist who was blinded as to the mouse genotypes. Disease severity was scored using five different parameters on a scale of 0-4: inflammation severity, edema severity, epithelial cell loss severity, hyperplasia, and fibrosis. Scores for each individual parameter were added together to represent the overall histology score.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Dextran sulfate sodium (DSS) treatment"
+    },
+    {
+      "id": "p_8ad06e0a",
+      "text": "To prepare bacteria for infection, Salmonella enterica serovar typhimurium (SL1344) was cultured in Luria-Bertani (LB) broth containing 50 μg/ml streptomycin in a shaking incubator at 37 °C (Eichelberg and Galán, 1999). The overnight culture was diluted the next day and grown to the mid-log phase (OD 600 = 0.3-0.5). C1qa fl/fl and C1qa ΔMϕ littermates were inoculated intragastrically with 10 9 CFU. All mice were sacrificed 24 hr post-infection and small intestinal tissues were harvested for analysis.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b21",
+          "text": "(Eichelberg and Galán, 1999)",
+          "offset_start": 190,
+          "offset_end": 218
+        }
+      ],
+      "head_section": "Salmonella typhimurium infection"
+    },
+    {
+      "id": "p_e5cc7cb0",
+      "text": "To prepare bacteria for infection, an overnight culture of C. rodentium (DBS100, ATCC) was grown in LB broth containing nalidixic acid (100 μg/ml) in a shaking incubator at 37 °C. The culture was diluted the next day and grown to the mid-log phase (OD 600 = 0.4-0.6). Bacteria were pelleted, washed, and resuspended in PBS. Sex-matched littermates were inoculated intragastrically with 5 × 10 8 CFU. Fecal pellets were collected at a fixed time every 48 hr, homogenized in sterile PBS, diluted, and plated on LB agar with nalidixic acid (100 μg/ml).",
+      "coords": [],
+      "refs": [],
+      "head_section": "Citrobacter rodentium infection"
+    },
+    {
+      "id": "p_292eaee6",
+      "text": "Mouse small intestines and colons were flushed with PBS and embedded with Optimal Cutting Temperature compound (OCT) (Thermo Fisher). Sections were fixed in ice-cold acetone, blocked with 1% BSA, 10% FBS, 1% Triton X-100 in PBS, and then incubated overnight at 4 °C with the following antibodies: mouse anti-C1q biotin (JL-1), rat anti-CD169 (3D6.112), and rabbit anti-TUBB3 (ab18207, Abcam). Slides were then washed with PBS containing 0.2% Tween-20 (PBS-T) and incubated with donkey anti-rabbit AlexaFluor 488, donkey anti-rat AlexaFluor 594, and Streptavidin-Cy5 (Thermo Fisher) for 1 hr at room temperature in the dark. Slides were then washed in PBS-T and mounted with DAPI-Fluoromount-G (Southern Biotech). Mounted slides were cured overnight at 4 °C until imaging.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Immunofluorescence analysis of mouse intestines"
+    },
+    {
+      "id": "p_26cd43ed",
+      "text": "For immunofluorescence analysis of longitudinal muscle-myenteric plexus wholemounts, intestines were prepared by first removing the adipose tissues and flushing the luminal contents. A 1 ml pipette tip was inserted into the intestinal lumen to fully extend the intestinal wall. The longitudinal muscle-myenteric plexus layer was then separated from the mucosa using cotton swabs as previously described (Ahrends et al., 2022;Obata et al., 2020). The longitudinal muscle-myenteric plexus layer was then stretched by pinning the tissues on a Sylgard-coated Petri dish (Fisher Scientific) containing cold PBS and fixed with 4% PFA overnight at 4 °C. The fixed tissues were rinsed five times with PBS at room temperature with shaking and then permeabilized and blocked with PBS containing 1% Triton X-100 and 10% normal donkey serum (NDS) for 1 hr at room temperature. The tissues were incubated with primary antibodies in the same solution overnight at 4 °C. The tissues were then washed with PBS containing 1% Triton X-100 and incubated with secondary antibodies in the blocking buffer for 2 hr at room temperature. Immunostained tissues were washed four times with PBS containing 1% Triton X-100. After a final wash with PBS, tissues were mounted on Superfrost Microscope Slides using VECTASHIELD (Vector Laboratories).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b0",
+          "text": "(Ahrends et al., 2022;",
+          "offset_start": 403,
+          "offset_end": 425
+        },
+        {
+          "type": "bibr",
+          "target": "#b46",
+          "text": "Obata et al., 2020)",
+          "offset_start": 425,
+          "offset_end": 444
+        }
+      ],
+      "head_section": "Immunofluorescence analysis of mouse intestines"
+    },
+    {
+      "id": "p_297e19e1",
+      "text": "Fluorescence in situ hybridization on the longitudinal muscle-myenteric plexus was carried out using the Advanced Cell Diagnostics RNAscope Fluorescent Multiplex Kit according to the manufacturer's instructions with some modifications as described previously (Obata et al., 2020;Obata et al., 2022). After hybridization, tissues were counterstained for neuronal nuclei as previously described and mounted on Superfrost Microscope Slides (Fisher Scientific) using VECTASHIELD (Vector Laboratories).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b46",
+          "text": "(Obata et al., 2020;",
+          "offset_start": 259,
+          "offset_end": 279
+        },
+        {
+          "type": "bibr",
+          "target": "#b47",
+          "text": "Obata et al., 2022)",
+          "offset_start": 279,
+          "offset_end": 298
+        }
+      ],
+      "head_section": "RNAscope analysis"
+    },
+    {
+      "id": "p_8c0dbabd",
+      "text": "Fluorescently labeled longitudinal muscle-myenteric plexus preparations were imaged by a spinning disk confocal microscope (Nikon) with a Hamamatsu Orca-Fusion sCMOS camera using the NIS-Elements Advanced Research software (Nikon). All image analyses were performed using the imageprocessing package Fiji and ImageJ. The number of HuC/D + neurons in the myenteric plexus was quantified using a semi-automated image analysis pipeline Gut Analysis Toolbox (Sorensen et al., 2022).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b58",
+          "text": "(Sorensen et al., 2022)",
+          "offset_start": 454,
+          "offset_end": 477
+        }
+      ],
+      "head_section": "Image processing"
+    },
+    {
+      "id": "p_02e914cd",
+      "text": "The colonic longitudinal muscle-myenteric plexus was collected from five age-matched male C1qa fl/fl and C1qa ΔMϕ mice by manual dissection using a 2 mm metal probe (Fisher Scientific). RNA was isolated using the RNeasy Mini kit according to the manufacturer's protocol (Qiagen). Quantity and quality of RNA samples were assessed on a Bioanalyzer 2100 (Agilent Technologies). RNA-seq libraries were prepared using the TruSeq RNA sample preparation kit (Illumina) according to the manufacturer's protocol. Libraries were validated on a Bioanalyzer 2100 (Agilent Technologies). Indexed libraries were sequenced on an Illumina NextSeq550 for single-end 75 bp length reads. CLC Genomics Workbench 7 was used for bioinformatics and statistical analysis of the sequencing data. The approach used by CLC Genomics Workbench is based on a method developed previously (Mortazavi et al., 2008). To identify differentially enriched biological pathways, all genes were ranked based on their log 2 foldchange, and pathway enrichment was identified using the R packages 'clusterProfiler' and 'msigdbr.' For analysis of differentially expressed genes, gene counts were analyzed using DESeq-2, and differentially expressed genes were defined as having an adjusted p-value < 0.05. A Fisher's Exact Test was conducted to assess the overlap between differentially expressed genes in C1qa ΔMϕ mice and the TashT mouse (Bergeron et al., 2015).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b43",
+          "text": "(Mortazavi et al., 2008)",
+          "offset_start": 858,
+          "offset_end": 882
+        },
+        {
+          "type": "bibr",
+          "target": "#b6",
+          "text": "(Bergeron et al., 2015)",
+          "offset_start": 1397,
+          "offset_end": 1420
+        }
+      ],
+      "head_section": "RNA-seq analysis of colonic longitudinal muscle-myenteric plexus"
+    },
+    {
+      "id": "p_3ae6e207",
+      "text": "Single-cell RNA sequencing was done in the Microbiome Research Laboratory at UT Southwestern Medical Center. Lamina propria cell suspensions were prepared as previously described (Yu et al., 2013;Yu et al., 2014) from the small intestines of three C1qa fl/fl and three C1qa ΔMϕ littermates. Total small intestinal cells were pooled according to genotype and live CD45 + CD11b + MHCI-I + F4/80 hi macrophages were sorted using a FACSAria (BD Biosciences). 5000-10,000 macrophages from each genotype with a viability score of >70% were input into each library. A 10 X Genomics Chromium controller instrument was used for Gel Bead-in Emulsion (GEMs) preparation. Chromium Next GEM Single Cell 3' Kit v3.1 (PC-1000269), Chromium Next GEM Chip G Single Cell Kit (PC-1000127), and Dual Index Kit TT Set A Kit (PC-1000215) were used for single-cell library preparation. cDNA and final barcoded sequencing libraries were generated according to the manufacturer's specifications and their quality and concentration were assessed using a Bioanalyzer 2100 (Agilent Technologies) and qPCR, respectively. Single-cell libraries that passed the quality checks were sequenced on a NextSeq550 sequencer using a paired-end 75 bp High Output sequencing kit. About 20,000-30,000 sequencing reads were generated per single cell. Unique molecular identifier (UMI) counts for each cellular barcode were quantified and used to estimate the number of cells successfully captured and sequenced. The Cell Ranger Single-Cell Software suite (10 X Genomics) was used for demultiplexing, barcode processing, alignment, and initial clustering of the raw scRNAseq profiles.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b73",
+          "text": "(Yu et al., 2013;",
+          "offset_start": 179,
+          "offset_end": 196
+        },
+        {
+          "type": "bibr",
+          "target": "#b74",
+          "text": "Yu et al., 2014)",
+          "offset_start": 196,
+          "offset_end": 212
+        }
+      ],
+      "head_section": "Single-cell RNA sequencing (scRNAseq) analysis"
+    },
+    {
+      "id": "p_ebed03df",
+      "text": "The Seurat V3 R package was used to filter and analyze the Cell Ranger output (Stuart et al., 2019). Features that were in less than three cells and cells with less than 50 features were first filtered. To filter out dead or dying single cells, only cells that expressed more than 200 but less than 2500 features and cells in which mitochondrial transcripts accounted for less than five percent of all cell transcripts were used for further analysis. The single-cell data of these high-quality cells was then lognormalized and scaled. For further correction, the percentage of transcripts from mitochondria was regressed out. Dimension reduction was performed in Seurat and further differential gene expression was performed using limma (Ritchie et al., 2015). Pathway enrichment analysis was performed with Gene Set Enrichment Analysis (GSEA) via clusterProfiler (Yu et al., 2012). Visual representations of data were made using ggplot2 and Seurat R packages (Love et al., 2015).",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b60",
+          "text": "(Stuart et al., 2019)",
+          "offset_start": 78,
+          "offset_end": 99
+        },
+        {
+          "type": "bibr",
+          "target": "#b51",
+          "text": "(Ritchie et al., 2015)",
+          "offset_start": 737,
+          "offset_end": 759
+        },
+        {
+          "type": "bibr",
+          "target": "#b72",
+          "text": "(Yu et al., 2012)",
+          "offset_start": 864,
+          "offset_end": 881
+        },
+        {
+          "type": "bibr",
+          "target": "#b37",
+          "text": "(Love et al., 2015)",
+          "offset_start": 960,
+          "offset_end": 979
+        }
+      ],
+      "head_section": "Single-cell RNA sequencing (scRNAseq) analysis"
+    },
+    {
+      "id": "p_54471687",
+      "text": "The hypervariable regions V3 and V4 of the bacterial 16S rRNA gene were prepared using the Illumina Nextera protocol (Part # 15044223 Rev. B). An amplicon of 460 bp was amplified using the 16S Forward Primer and 16S Reverse Primer as described in the manufacturer's protocol. Primer sequences are given in the Key Resources Table . The PCR product was purified using Agencourt AmpureXP beads (Beckman Coulter Genomics). Illumina adapter and barcode sequences were ligated to the amplicon to attach them to the MiSeqDx flow cell and for multiplexing. Quality and quantity of each sequencing library were assessed using Bioanalyzer (Agilent Technologies) and Picogreen (Thermo Fisher) measurements, respectively. Libraries were loaded onto a MiSeqDX flow cell and sequenced using the Paired End 300 (PE300) v3 kit. Raw fastq files were demultiplexed based on unique barcodes and assessed for quality. Samples with more than 50,000 quality control pass sequencing reads were used for downstream analysis. Taxonomic classification and operational taxonomic unit analysis were done using the CLC Microbial Genomics Module. Individual sample reads were annotated with the Greengene database and taxonomic features were assessed.",
+      "coords": [],
+      "refs": [],
+      "head_section": "16S rRNA gene sequencing and analysis"
+    },
+    {
+      "id": "p_6d95c84f",
+      "text": "Motility assays were adapted from previous studies (Luo et al., 2018;Maurer, 2016;Muller et al., 2014). To determine transit time through the entire gastrointestinal tract, age-matched male mice were fasted overnight and water was removed 1 hr prior to the start of the experiment. Mice were then singly housed for 1 hr and then gavaged with 100 μl of Carmine Red (5% weight/volume; Sigma) in 1.5% methylcellulose. Fecal pellets were collected every 15 min and transit time was recorded when the dye was first observed in the feces.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b38",
+          "text": "(Luo et al., 2018;",
+          "offset_start": 51,
+          "offset_end": 69
+        },
+        {
+          "type": "bibr",
+          "target": "#b42",
+          "text": "Maurer, 2016;",
+          "offset_start": 69,
+          "offset_end": 82
+        },
+        {
+          "type": "bibr",
+          "target": "#b44",
+          "text": "Muller et al., 2014)",
+          "offset_start": 82,
+          "offset_end": 102
+        }
+      ],
+      "head_section": "Gastrointestinal motility assays"
+    },
+    {
+      "id": "p_6efb9384",
+      "text": "For small intestinal motility measurements, age-matched male mice were fasted overnight and then gavaged with 100 μl of rhodamine B-dextran (5 mg/ml; Thermo Fisher) in 2% methylcellulose. After 90 min, mice were sacrificed and their stomachs, small intestines, ceca, and colons were collected. Small intestines were cut into eight segments of equal length and colons were cut into five segments of equal length. Segments were cut open lengthwise and vortexed in 1 ml PBS to release rhodamine B-dextran. Fluorescence was then measured on a SpectraMax M5 microplate reader (Molecular Devices). The geometric center of the dye was calculated as: GC = Σ (% of total fluorescent signal per segment × segment number). Relative fluorescence per segment was calculated as: (fluorescence signal in segment/total fluorescence recovered) × 100.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Gastrointestinal motility assays"
+    },
+    {
+      "id": "p_453a4bf0",
+      "text": "To measure colonic motility, age-matched male mice were fasted overnight and lightly anesthetized with isoflurane. A 2 mm glass bead was inserted 2 cm intrarectally using a 2 mm surgical probe. Mice were then returned to empty cages and the time to reappearance of the bead was recorded.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Gastrointestinal motility assays"
+    },
+    {
+      "id": "p_a33eb09b",
+      "text": "To account for potential circadian differences in gut motility, the time of day for the initiation of all experiments was held constant.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Gastrointestinal motility assays"
+    },
+    {
+      "id": "p_4eb39059",
+      "text": "Ex vivo video imaging and analysis of colonic peristalsis were carried out as described previously (Obata et al., 2020) on age-matched male mice. Colons were dissected, flushed with sterile PBS, and pinned into an organ bath chamber (Tokai Hit, Japan) filled with Dulbecco's Modified Eagle Medium (DMEM). DMEM was oxygenated (95% O 2 and 5% CO 2 ), run through the chamber using a peristaltic pump (MINIPULS 3, Gilson), and kept at 37 °C. Colons were allowed to equilibrate to the organ chamber for 20 min before video recording. Time-lapse images of colonic peristalsis were captured with a camera (MOMENT, Teledyne photometrics) using PVCAM software (500 ms time-lapse delay) and recorded for 45 min.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b46",
+          "text": "(Obata et al., 2020)",
+          "offset_start": 99,
+          "offset_end": 119
+        }
+      ],
+      "head_section": "Ex vivo peristaltic imaging"
+    },
+    {
+      "id": "p_1d615058",
+      "text": "For analysis of colonic migrating motor complexes (CMMC), videos consisting of 5400 sequential image frames were stitched together in Fiji and read into Igor Pro 9 (WaveMetrics) to generate spatiotemporal maps using a customized algorithm developed by the Pieter Vanden Berghe lab at the University of Leuven, Belgium (Roosen et al., 2012). The generated spatiotemporal maps were used to determine the frequency and period of CMMCs. Each CMMC on the spatiotemporal map was further projected onto the axes to obtain the distance traveled (millimeters) and the time for the CMMC to travel such distance (seconds), allowing us to calculate the velocity (millimeter/second) of CMMCs.",
+      "coords": [],
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "#b53",
+          "text": "(Roosen et al., 2012)",
+          "offset_start": 318,
+          "offset_end": 339
+        }
+      ],
+      "head_section": "Ex vivo peristaltic imaging"
+    },
+    {
+      "id": "p_31148718",
+      "text": "Graphed data are presented as means ± standard error of the mean (SEM). Statistics were determined with GraphPad Prism software. Statistical analyses were performed using a two-tailed Student's t-test when comparing two groups, oneway ANOVA when comparing multiple groups, and Fisher's exact test to assess overlap between groups of differentially expressed genes. The statistical tests used are indicated in the figure legends. *p<0.05; **p<0.01; ***p<0.001; ****p<0.0001; and ns, not significant (p>0.05).",
+      "coords": [],
+      "refs": [],
+      "head_section": "Statistical analysis"
+    },
+    {
+      "id": "p_ccb1ed96",
+      "text": "Cancer Institute Cancer Center Support Grant P30 CA142543-01 and NIH 1S10OD028630-01. Citrobacter rodentium strain DBS100 was a gift from Vanessa Sperandio (UT Southwestern). The laboratory of Pieter Vanden Berghe (University of Leuven, Belgium) provided the algorithm used to generate spatiotemporal maps of colonic migrating motor complexes. This work was supported by NIH grants R01 DK070855 (LVH), Welch Foundation Grant I-1874 (LVH), the Walter M and Helen D Bader Center for Research on Arthritis and Autoimmune Diseases (LVH), and the Howard Hughes Medical Institute (LVH). MP was supported by NIH T32 AI005284. AAC was supported by NIH T32 AI005284 and NIH F32 DK132913. EK was supported by NIH F31 DK126391. YO is the Nancy Cain Marcus and Jeffrey A Marcus Scholar in Medical Research, in Honor of Dr. Bill S Vowell.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Statistical analysis"
+    },
+    {
+      "id": "p_e3bee818",
+      "text": "We thank Shai Bel for assistance with immunofluorescence imaging experiments, the UT Southwestern Genomics Core for assistance with RNA sequencing experiments, the UT Southwestern Flow Cytometry Core for assistance with flow cytometry experiments, Bret Evers (UT Southwestern Histo Pathology Core) for pathology scoring, and the Quantitative Light Microscopy Core (QLMC), a Shared Resource of the Harold C Simmons Cancer Center. The QLMC is supported in part by the National",
+      "coords": [],
+      "refs": [],
+      "head_section": "Acknowledgements"
+    },
+    {
+      "id": "p_8805c424",
+      "text": "This study was performed in strict accordance with the recommendations in the Guide for the Care and Use of Laboratory Animals of the National Institutes of Health. All of the animals were handled according to approved institutional animal care and use committee (IACUC) protocols (protocol #2015-101212) of the",
+      "coords": [],
+      "refs": [],
+      "head_section": "Ethics"
+    },
+    {
+      "id": "p_c5d1d658",
+      "text": "16S rRNA gene sequencing data (Figure 3D) and RNA sequencing data (Figure 6A and B; Figure 1figure supplement 1; Figure 6-figure supplement 1) are available from the Sequence Read Archive under BioProject ID PRJNA793870. All mouse strains used are available commercially.",
+      "coords": [],
+      "refs": [],
+      "head_section": "Data availability"
+    },
+    {
+      "id": "p_014d5872",
+      "text": "Mihir Pendse, Conceptualization, Data curation, Formal analysis, Supervision, Investigation, Methodology, Writing -original draft, Writing -review and editing; Haley De Selle, Nguyen Vo, Data curation, Formal analysis, Investigation, Methodology; Gabriella Quinn, Alexander A Crofts, Data curation, Formal analysis; Chaitanya Dende, Daniel C Propheter, Investigation, Writing -review and editing; Yun Li, Cristine N Salinas, Tarun Srinivasan, Brian Hassell, Kelly A Ruhn, Investigation; Eugene Koo, Investigation, Methodology; Prithvi Raj, Data curation, Formal analysis, Investigation; Yuuki Obata, Investigation, Methodology, Writing -original draft, Writing -review and editing; Lora V Hooper, Conceptualization, Supervision, Funding acquisition, Writing -original draft, Project administration, Writing -review and editing",
+      "coords": [],
+      "refs": [],
+      "head_section": "Author contributions"
+    },
+    {
+      "id": "p_26d8e94e",
+      "text": "Reagent type (species) or resource Designation Source or reference Identifiers Additional information Chemical compound, drug Optimal Cutting Temperature Compound (OCT) Thermo Fisher Cat# 23-730-571 Chemical compound, drug Percoll Plus GE Healthcare Cat# GE17-0891-09 Chemical compound, drug 4% Paraformaldehyde Solution Thermo Fisher Cat# J19943.K2 Chemical compound, drug Normal donkey serum Southern Biotech Cat# 0030-01 Chemical compound, drug Triton X-100 Thermo Fisher Cat# A16046.AP Chemical compound, drug Protease inhibitors Millipore Sigma Cat# 11836153001 Chemical compound, drug Rhodamine B-dextran Thermo Fisher Cat# D1841 Chemical compound, drug Streptavidin-Cy5 Thermo Fisher Cat# 434316 Chemical compound, drug Streptavidin-HRP conjugate Abcam Cat# ab7403 ELISA Chemical compound, drug Sylgard 184 Silicone Elastomer Fisher Scientific Cat# 4019862 Chemical compound, drug VECTASHIELD Antifade Mounting Medium with 4′,6-diamidino-2-phenylindole (DAPI) Vector Labs Cat# H-1200-10 Software, algorithm Cell Ranger Single-Cell Software Suite 10 X Genomics Software, algorithm clusterProfiler Yu et al., 2012 Software, algorithm CLC Genomics Workbench Qiagen Software, algorithm CLC Bio microbial genomics module Qiagen https://digitalinsights.qiagen.com/plugins/clc- microbial-genomics-module/ Software, algorithm FlowJo BD Biosciences Software, algorithm ggplot2 Love et al., 2015 Software, algorithm GraphPad PRISM GraphPad Software Version 7.0; RRID:SCR_002798 Software, algorithm Gut Analysis Toolbox Sorensen et al., 2022 Continued Continued on next page Reagent type (species) or resource Designation Source or reference Identifiers Additional information Software, algorithm Igor Pro 9 WaveMetrics Software, algorithm Illumina Nextera Protocol Illumina Part # 15044223 Rev. B Software, algorithm ImageJ National Institutes of Health https://imagej.nih.gov/ij/ Software, algorithm Limma Ritchie et al., 2015 Software, algorithm NovoExpress Agilent Technologies Software, algorithm PVCAM software Teledyne Photometrics Software, algorithm Seurat V3 R Package Stuart et al., 2019 Additional information Funding Funder Grant reference number Author National Institutes of Health R01 DK070855 Lora V Hooper Welch Foundation I-1874 Lora V Hooper Howard Hughes Medical Institute Lora V Hooper National Institutes of Health T32 AI005284 Mihir Pendse National Institutes of Health F32 DK132913 Alexander A Crofts National Institutes of Health F31 DK126391 Eugene Koo The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication. Additional files Supplementary files • MDAR checklist The following dataset was generated: Author(s) Year Dataset title Dataset URL Database and Identifier Pendse M, Raj P, Hooper LV 2022 Macrophages control gastrointestinal motility through complement component 1q https://www. ncbi. nlm. nih. gov/ bioproject/ PRJNA793870/ NCBI BioProject, PRJNA793870 The following previously published dataset was used: Author(s) Year Dataset title Dataset URL Database and Identifier Gattu S, Bang Y, Chara A, Harris T, Kuang Z, Ruhn K, Sockanathan S, Hooper LV 2019 Epithelial retinoic acid receptor beta regulates serum amyloid A expression and vitamin A-dependent intestinal immunity https://www. ncbi. nlm. nih. gov/ geo/ query/ acc. cgi? acc= GSE122471 NCBI Gene Expression Omnibus, GSE122471",
+      "coords": [],
+      "refs": []
+    }
+  ],
+  "figures_and_tables": [
+    {
+      "id": "fig_0",
+      "label": "1",
+      "head": "Figure 1 .",
+      "type": "figure",
+      "desc": "Figure 1. Complement component 1q (C1q) is expressed by macrophages in the mouse small intestine. (A) RNA-seq analysis of soluble defense collagen expression in the small intestines (ileum) of C57BL/6 mice. Data were adapted from a previously published RNA-seq analysis (Gattu et al., 2019). Data are available in the Gene Expression Omnibus repository under accession number GSE122471. Each column represents one mouse. (B) Quantitative PCR (qPCR) measurement of C1qa, C1qb, and C1qc transcript abundance in CD45 + and CD45 -cells purified from mouse small intestines by flow cytometry. Each data point represents one mouse, and the results are representative of two independent experiments. (C) qPCR measurement of C1qa, C1qb, and C1qc transcript abundance in subepithelial and intraepithelial cells recovered from mouse small intestines. Each data point represents one mouse, and the results are representative of three independent experiments. (D) Representative immunoblot of subepithelial and intraepithelial cells recovered from mouse small intestines, with detection of C1q and actin (control). Each lane represents cells from one mouse and the immunoblot is representative of three independent experiments. (E) Flow cytometry gating strategy for analysis of mouse small intestinal cell suspensions in panels F, G, and H. Cells were pre-gated as live CD45 + cells. SSC, side-scatter; MHCII, major histocompatibility complex II. (F) qPCR measurement of C1qa, C1qb, and C1qc transcript abundance in cells isolated by flow cytometry from mouse small intestines as indicated in (E). Each data point represents cells pooled from three mice, and the results are representative of three independent experiments. (G) Flow cytometry analysis of intracellular C1q in small intestinal subepithelial cells identified as indicated in (E). (H) Quantitation of flow cytometry analysis in (G). Each data point represents one mouse, and the results are representative of two independent experiments. Sm. int., mouse small intestine; Error bars represent SEM. **p<0.01; ***p<0.001; ****p<0.0001; ns, not significant by one-way ANOVA (A,F) or two-tailed Student's t-test (B,C,H). The online version of this article includes the following source data and figure supplement(s) for figure 1: Source data 1. Unedited, uncropped immunoblot for Figure 1D.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_1",
+      "label": "1",
+      "head": "Figure supplement 1 .",
+      "type": "figure",
+      "desc": "Figure supplement 1. Complement component 1q (C1q) is expressed in the mouse colon.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_2",
+      "label": "2",
+      "head": "Figure 2 .",
+      "type": "figure",
+      "desc": "Figure 2. Macrophages are the primary source of complement component 1q (C1q) in the mouse gastrointestinal tract. (A) Macrophages were selectively depleted in C57BL/6 mice by intraperitoneal injection of anti-CSF1R antibody. Control mice were injected with isotype-matched non-specific antibodies. Mice were analyzed 72 hr after antibody injection. Panel was generated at Biorender.com. (B) Representative flow cytometry analysis of mouse small intestines after intraperitoneal injection of anti-CSF1R or isotype control antibody. All cells were gated as live CD45 + . Macrophages were MHCII + F4/80 hi ; B cells were CD19 + ; T cells were CD3 + . Total small intestinal cell yields were 1.5 × 10 6 ± 4.9 × 10 5 cells. (C) Quantitative PCR (qPCR) measurement of C1qa, C1qb, and C1qc transcript abundance in mouse small intestines after intraperitoneal injection of anti-CSF1R or rat IgG2a (isotype control). Each data point represents one mouse and results are pooled from two independent experiments. (D) C1qa fl/fl mice were crossed with LysM-Cre transgenic mice to generate mice having a macrophage-selective deletion of C1qa (C1qa ∆Mφ mice). Panel was generated at Biorender.com. (E) Representative flow cytometry analysis of intracellular C1q expression in small intestinal macrophages from C1qa fl/fl and C1qa ∆Mφ mice. Mice were littermates from heterozygous crosses that remained co-housed. Cells were gated on live CD45 + CD11b + MHCII + . (F) Quantitation of the flow cytometry analysis in (E). Each data point represents one mouse. Results are representative of two independent experiments. (G) qPCR measurement of C1qa transcript abundance in the small intestines (sm. int.) and colons of C1qa fl/fl and C1qa ∆Mφ littermates. Each data point represents one mouse. Error bars represent SEM. **p<0.01; ***p<0.001; ****p<0.0001; ns, not significant by the two-tailed Student's t-test. The online version of this article includes the following figure supplement(s) for figure 2: Figure supplement 1. Complement component 1q (C1q) expression is lost systemically but preserved in the central nervous system of C1qa ∆Mφ mice.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_3",
+      "label": "3",
+      "head": "Figure 3 .",
+      "type": "figure",
+      "desc": "Figure 3. C1qa ∆Mφ mice do not show altered microbiota composition, barrier function, or resistance to enteric infection. (A) Small intestinal C1qa expression is not induced by the intestinal microbiota. Quantitative PCR (qPCR) measurement of Reg3g and C1qa transcript abundances in the small intestines of germ-free (GF) and conventional (CV) C57BL/6 mice. Each data point represents one mouse and the results are representative of two independent experiments. (B) C1q is not detected in the mouse intestinal lumen or feces. Representative immunoblot of an ammonium sulfate precipitation of intestinal luminal contents and feces from germ-free and conventional mice with detection of C1q. C1q in small intestinal tissue is shown for comparison at right. REG3G was analyzed as a control, as it is secreted into the intestinal lumen of conventional mice(Cash et al., 2006). Each lane represents multiple mice pooled (n=5 and 9 for germ-free and conventional, respectively) and the immunoblot is representative of three independent experiments. (C) C1q gene expression is not altered by acute enteric infection",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_4",
+      "label": "",
+      "head": "",
+      "type": "figure",
+      "desc": "). C1q was absent in C1qa ΔMϕ mice despite the presence of similar overall numbers of CD169 + macrophages (Figure4-figure supplement 1A). Although C1q immunoreactivity in the myenteric plexus was less pronounced, flow with Salmonella typhimurium. qPCR measurement of C1qa transcript abundance in small intestinal tissue after oral inoculation of mice with 10 9 colony-forming units of S. typhimurium strain SL1344. Each data point represents one mouse, and the results are representative of two independent experiments. (D) Intestinal microbiota composition is not altered in C1qa ∆Mφ mice. Phylogenetic analysis of 16 S rRNA gene sequences from fecal pellets collected from C1qa fl/fl and C1qa ∆Mφ littermates. Operational taxonomic units with an average of 100 reads and populations greater than or equal to 1% were included in the graphical analysis. Each bar represents one mouse. Data are available from the Sequence Read Archive under BioProject ID PRJNA793870. (E) C1qa ∆Mφ mice do not show altered translocation of bacteria to mesenteric lymph nodes (mLN). 16 S rRNA gene copy numbers were measured by qPCR with reference to a standard curve. Each data point represents one mouse. (F) C1qa ∆Mφ mice do not show altered susceptibility to dextran sulfate sodium (DSS)-induced colitis. Mice were provided with 3% DSS in drinking water and body weights were monitored for 7 days. n=4 and 6 for C1qa fl/fl and C1qa ∆Mφ littermates, respectively. Differences at each time point were not significant by the two-tailed Student's t-test. (G) C1qa ∆Mφ mice do not show altered intestinal permeability. To measure intestinal permeability, C1qa fl/fl and C1qa ∆Mφ littermates were gavaged with fluorescein isothiocyanate (FITC)-dextran (4 kDa), and serum FITC-dextran levels were determined by fluorescence microplate assay against a FITC-dextran standard curve. Indomethacin induces intestinal damage in mice and was used as a positive control. Each data point represents one mouse. (H) Time course of fecal Citrobacter rodentium burden following oral gavage of C1qa fl/fl and C1qa ∆Mφ mice with 5×10 8 colony forming units (CFU) of C. rodentium. n=5 and 5 for C1qa fl/fl and C1qa∆Mφ littermates, respectively. Differences at each time point were not significant by the two-tailed Student's t-test. (I) qPCR measurement of transcripts encoding secreted immune effectors in the small intestines of C1qa fl/fl and C1qa ∆Mφ littermates. Each data point represents one mouse. (J) Flow cytometry analysis of small intestinal immune cell subsets from C1qa fl/fl and C1qa ∆Mφ littermates. Gating strategies are shown in Figure 3-figure supplement 1 through 4. ILC, innate lymphoid cell. Total small intestinal cell yields were 8.8 × 10 6 ± 2.9 × 10 6 cells. Each data point represents one mouse. Sm. int., small intestine. Error bars represent SEM. **p<0.01; ns, not significant by the two-tailed Student's t-test. The online version of this article includes the following source data and figure supplement(s) for figure 3: Source data 1. Unedited, uncropped immunoblot for Figure 3B.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_5",
+      "label": "1",
+      "head": "Figure supplement 1 .",
+      "type": "figure",
+      "desc": "Figure supplement 1. Histological analysis of dextran sulfate sodium (DSS)-treated mice.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_6",
+      "label": "2",
+      "head": "Figure supplement 2 .",
+      "type": "figure",
+      "desc": "Figure supplement 2. Colon histology of Citrobacter rodentium-infected mice.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_7",
+      "label": "3",
+      "head": "Figure supplement 3 .",
+      "type": "figure",
+      "desc": "Figure supplement 3. Flow cytometry gating strategy for comparison of T cell populations in C1qa fl/fl and C1qa ∆Mφ mice.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_8",
+      "label": "4",
+      "head": "Figure supplement 4 .",
+      "type": "figure",
+      "desc": "Figure supplement 4. Flow cytometry gating strategy for comparison of B cell and plasma cell populations in C1qa fl/fl and C1qa ∆Mφ mice.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_9",
+      "label": "5",
+      "head": "Figure supplement 5 .",
+      "type": "figure",
+      "desc": "Figure supplement 5. Flow cytometry gating strategy for comparison of myeloid cell populations in C1qa fl/fl and C1qa ∆Mφ mice.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_10",
+      "label": "6",
+      "head": "Figure supplement 6 .",
+      "type": "figure",
+      "desc": "Figure supplement 6. Flow cytometry gating strategy for comparison of innate lymphoid cell populations in C1qa fl/fl and C1qa ∆Mφ mice.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_11",
+      "label": "4",
+      "head": "Figure 4 .",
+      "type": "figure",
+      "desc": "Figure3 continued",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_12",
+      "label": "",
+      "head": "",
+      "type": "figure",
+      "desc": "Figure supplement 1. Flow cytometry analysis of complement component 1q (C1q) and CD169 expression on small intestinal macrophages.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_13",
+      "label": "5",
+      "head": "Figure 5 .",
+      "type": "figure",
+      "desc": "Figure4 continued",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_14",
+      "label": "6",
+      "head": "CFigure 6 .",
+      "type": "figure",
+      "desc": "Figure 6. C1qa ∆Mφ mice have altered gastrointestinal motility. (A) RNA-seq was performed on colonic LMMP from C1qa ∆Mφ and C1qa fl/fl littermates. Annotated gene ontology (GO) biological processes were assigned to genes that were differentially expressed in C1qa ∆Mφ mice when compared to their C1qa fl/fl littermates. GO biological processes associated with neurons are in bold type. The dotted line indicates the cutoff for statistical significance. Five mice per group were analyzed as pooled biological replicates. Data are available from the Sequence Read Archive under BioProject ID PRJNA793870. (B) The colonic longitudinal muscle myenteric plexus of C1qa ∆Mφ mice have a transcriptional profile like that of mice with a gastrointestinal motility disorder. RNA-seq was performed on the colonic longitudinal muscle-myenteric plexus from five C1qa fl/fl and five C1qa ∆Mφ littermates. Genes that were differentially expressed are represented in a heatmap that depicts log 2 (fold change). Genes that also showed altered expression in the TashT mouse line, which is a model of human Hirschsprung's disease (Bergeron et al., 2015), are indicated in red. Statistical significance of the overlap between differentially expressed genes in C1qa ∆Mφ and TashT mice was determined by Fisher's exact test (p=0.0032). (C) Measurement of total intestinal transit time in C1qa fl/fl and C1qa ∆Mφ littermates and C3 -/-mice. Mice were gavaged with 100 μl of Carmine Red [5% (w/v in 1.5% methylcellulose)]. Fecal pellets were collected every 15 min and transit time was recorded when the dye was first observed in the feces. Each data point represents one mouse and the results are pooled from five independent experiments. (D) Intestinal tract length is not altered in C1qa ∆Mφ mice. Small intestines and colons from C1qa fl/fl and C1qa ∆Mφ littermates were excised and measured. Each data point represents one mouse. (E) Transit of rhodamine B-dextran through the intestines of C1qa fl/fl and C1qa ∆Mφ littermates. Mice were sacrificed 90 min after gavage with rhodamine B-dextran. The intestines were divided into 16 segments, the rhodamine B fluorescence was measured in each segment (top panel), and the geometric center of the fluorescence was determined for each mouse (bottom panel). Each data point represents one mouse and the results were pooled from four independent experiments. (F) Colonic motility was measured by determining the expulsion time of a glass bead inserted intrarectally into C1qa fl/fl and C1qa ∆Mφ littermates. Each data point represents one mouse and the results are representative of three independent experiments. (G) Representative spatiotemporal maps of colonic migrating motor complex (CMMC) formation in colons of C1qa fl/fl and C1qa ∆Mφ mice. Representative video recordings were captured in Figure 6-video 1 (C1qa fl/fl mice) and Figure 6-video 2 (C1qa ∆Mφ mice). Each map represents one mouse and is representative of two independent experiments. (H) Analysis of CMMC parameters in colons of C1qa fl/fl and C1qa ∆Mφ mice. Each data point represents one mouse (for CMMC frequency and CMMC period) Figure 6 continued on next page",
+      "note": "",
+      "coords": [
+        {
+          "x": 12.0,
+          "y": 230.42,
+          "width": 390.63,
+          "height": 98.06
+        }
+      ]
+    },
+    {
+      "id": "fig_15",
+      "label": "",
+      "head": "",
+      "type": "figure",
+      "desc": "Figure supplement 1. Single-cell RNA-seq analysis of intestinal macrophages from C1qa ∆Mφ and C1qa fl/fl littermates.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_16",
+      "label": "2",
+      "head": "Figure supplement 2 .",
+      "type": "figure",
+      "desc": "Figure supplement 2. The gene encoding complement component 1q (C1q) receptor BAI1 (Adgrb1) is expressed by enteric neurons.",
+      "note": "",
+      "coords": []
+    },
+    {
+      "id": "fig_17",
+      "label": "6",
+      "head": "Figure 6 -",
+      "type": "figure",
+      "desc": "Figure 6-video 1. Ex vivo recording of colonic peristalsis in C1qa fl/fl mice. https://elifesciences.org/articles/78558/figures#fig6video1 Figure 6-video 2. Ex vivo recording of colonic peristalsis in C1qa ∆Mφ mice. https://elifesciences.org/articles/78558/figures#fig6video2",
+      "note": "",
+      "coords": []
+    }
+  ],
+  "references": [
+    {
+      "id": "b1",
+      "target": "b0",
+      "title": "Isolation of myenteric and submucosal plexus from mouse gastrointestinal tract and subsequent flow cytometry and immunofluorescence",
+      "authors": [
+        "T Ahrends",
+        "M Weiner",
+        "D Mucida"
+      ],
+      "journal": "STAR Protocols",
+      "publication_date": "2022",
+      "year": 2022,
+      "volume": "3",
+      "pages": "101157",
+      "doi": "10.1016/j.xpro.2022.101157",
+      "pmid": "35146454",
+      "urls": [
+        "https://doi.org/10.1016/j.xpro.2022.101157",
+        "https://doi.org/10.1016/j.xpro.2022.101157"
+      ]
+    },
+    {
+      "id": "b2",
+      "target": "b1",
+      "title": "Cytokine-Induced alterations of gastrointestinal motility in gastrointestinal disorders",
+      "authors": [
+        "H Akiho",
+        "E Ihara",
+        "Y Motomura",
+        "K Nakamura"
+      ],
+      "journal": "World Journal of Gastrointestinal Pathophysiology",
+      "publication_date": "2011",
+      "year": 2011,
+      "volume": "2",
+      "page_start": "72",
+      "page_end": "81",
+      "doi": "10.4291/wjgp.v2.i5.72",
+      "pmid": "22013552",
+      "urls": [
+        "https://doi.org/10.4291/wjgp.v2.i5.72",
+        "https://doi.org/10.4291/wjgp.v2.i5.72"
+      ]
+    },
+    {
+      "id": "b3",
+      "target": "b2",
+      "title": "Gastrointestinal motility disorders in inflammatory bowel diseases",
+      "authors": [
+        "G Bassotti",
+        "E Antonelli",
+        "V Villanacci",
+        "M Salemme",
+        "M Coppola",
+        "V Annese"
+      ],
+      "journal": "World Journal of Gastroenterology",
+      "publication_date": "2014",
+      "year": 2014,
+      "volume": "20",
+      "pages": "37",
+      "doi": "10.3748/wjg.v20.i1.37",
+      "urls": [
+        "https://doi.org/10.3748/wjg.v20.i1.37",
+        "https://doi.org/10.3748/wjg.v20.i1.37"
+      ]
+    },
+    {
+      "id": "b4",
+      "target": "b3",
+      "title": "The role of specific IgG and complement in combating aprimary mucosal infection of the gut epithelium",
+      "authors": [
+        "C Belzer",
+        "Q Liu",
+        "M Carroll",
+        "L Bry"
+      ],
+      "journal": "European Journal of Microbiology and Immunology",
+      "publication_date": "2011",
+      "year": 2011,
+      "volume": "1",
+      "page_start": "311",
+      "page_end": "318",
+      "doi": "10.1556/EuJMI.1.2011.4.7",
+      "urls": [
+        "https://doi.org/10.1556/EuJMI.1.2011.4.7",
+        "https://doi.org/10.1556/EuJMI.1.2011.4.7"
+      ]
+    },
+    {
+      "id": "b5",
+      "target": "b4",
+      "title": "Novel C1q receptor-mediated signaling controls neural stem cell behavior and neurorepair",
+      "authors": [
+        "F Benavente",
+        "K Piltti",
+        "M Hooshmand",
+        "A Nava",
+        "A Lakatos",
+        "B Feld",
+        "D Creasman",
+        "P Gershon",
+        "Anderson"
+      ],
+      "publication_date": "2020",
+      "year": 2020,
+      "volume": "9",
+      "pages": "55732",
+      "doi": "10.7554/eLife.55732",
+      "pmid": "32894219",
+      "urls": [
+        "https://doi.org/10.7554/eLife.55732",
+        "https://doi.org/10.7554/eLife.55732"
+      ]
+    },
+    {
+      "id": "b6",
+      "target": "b5",
+      "title": "Complement protein C1q-mediated neuroprotection is correlated with regulation of neuronal gene and microRNA expression",
+      "authors": [
+        "M Benoit",
+        "A Tenner"
+      ],
+      "journal": "The Journal of Neuroscience",
+      "publication_date": "2011",
+      "year": 2011,
+      "volume": "31",
+      "page_start": "3459",
+      "page_end": "3469",
+      "doi": "10.1523/JNEUROSCI.3932-10.2011",
+      "pmid": "21368058",
+      "urls": [
+        "https://doi.org/10.1523/JNEUROSCI.3932-10.2011",
+        "https://doi.org/10.1523/JNEUROSCI.3932-10.2011"
+      ]
+    },
+    {
+      "id": "b7",
+      "target": "b6",
+      "title": "Male-Biased aganglionic megacolon in the tasht mouse line due to perturbation of silencer elements in a large gene desert of chromosome 10",
+      "authors": [
+        "K Bergeron",
+        "T Cardinal",
+        "A Touré",
+        "M Béland",
+        "D Raiwet",
+        "D Silversides",
+        "N Pilon"
+      ],
+      "journal": "PLOS Genetics",
+      "publication_date": "2015",
+      "year": 2015,
+      "volume": "11",
+      "pages": "1005093",
+      "doi": "10.1371/journal.pgen.1005093",
+      "pmid": "25786024",
+      "urls": [
+        "https://doi.org/10.1371/journal.pgen.1005093",
+        "https://doi.org/10.1371/journal.pgen.1005093"
+      ]
+    },
+    {
+      "id": "b8",
+      "target": "b7",
+      "title": "Neuroanatomy of extrinsic afferents supplying the gastrointestinal tract",
+      "authors": [
+        "H Berthoud",
+        "L Blackshaw",
+        "Sjh Brookes",
+        "D Grundy"
+      ],
+      "journal": "Neurogastroenterology and Motility",
+      "publication_date": "2004",
+      "year": 2004,
+      "volume": "16",
+      "issue": "1",
+      "page_start": "28",
+      "page_end": "33",
+      "doi": "10.1111/j.1743-3150.2004.00471.x",
+      "pmid": "15066001",
+      "urls": [
+        "https://doi.org/10.1111/j.1743-3150.2004.00471.x",
+        "https://doi.org/10.1111/j.1743-3150.2004.00471.x"
+      ]
+    },
+    {
+      "id": "b9",
+      "target": "b8",
+      "title": "Origin of the lamina propria dendritic cell network",
+      "authors": [
+        "M Bogunovic",
+        "F Ginhoux",
+        "J Helft",
+        "L Shang",
+        "D Hashimoto",
+        "M Greter",
+        "K Liu",
+        "C Jakubzick",
+        "M Ingersoll",
+        "M Leboeuf",
+        "E Stanley",
+        "M Nussenzweig",
+        "S Lira",
+        "G Randolph",
+        "M Merad"
+      ],
+      "journal": "Immunity",
+      "publication_date": "2009",
+      "year": 2009,
+      "volume": "31",
+      "page_start": "513",
+      "page_end": "525",
+      "doi": "10.1016/j.immuni.2009.08.010",
+      "pmid": "19733489",
+      "urls": [
+        "https://doi.org/10.1016/j.immuni.2009.08.010",
+        "https://doi.org/10.1016/j.immuni.2009.08.010"
+      ]
+    },
+    {
+      "id": "b10",
+      "target": "b9",
+      "title": "Homozygous C1q deficiency causes glomerulonephritis associated with multiple apoptotic bodies",
+      "authors": [
+        "F Bossi",
+        "C Tripodo",
+        "L Rizzi",
+        "R Bulla",
+        "C Agostinis",
+        "C Guarnotta",
+        "C Munaut",
+        "G Baldassarre",
+        "G Papa",
+        "S Zorzet",
+        "B Ghebrehiwet",
+        "G Ling",
+        "M Botto",
+        "F ; Tedesco",
+        "M Botto",
+        "C Dell'agnola",
+        "A Bygrave",
+        "E Thompson",
+        "H Cook",
+        "F Petry",
+        "M Loos",
+        "P Pandolfi",
+        "M Walport"
+      ],
+      "journal": "Nature Genetics",
+      "publication_date": "1998",
+      "year": 1998,
+      "volume": "111",
+      "page_start": "56",
+      "page_end": "59",
+      "doi": "10.1038/ng0598-56",
+      "pmid": "9590289",
+      "notes": "C1Q as a unique player in angiogenesis with therapeutic implication in wound healing PNAS",
+      "urls": [
+        "https://doi.org/10.1038/ng0598-56",
+        "https://doi.org/10.1038/ng0598-56"
+      ]
+    },
+    {
+      "id": "b11",
+      "target": "b10",
+      "title": "Soluble defense collagens: sweeping up immune threats",
+      "authors": [
+        "C Casals",
+        "B García-Fojeda",
+        "C Minutti"
+      ],
+      "journal": "Molecular Immunology",
+      "publication_date": "2019",
+      "year": 2019,
+      "volume": "112",
+      "page_start": "291",
+      "page_end": "304",
+      "doi": "10.1016/j.molimm.2019.06.007",
+      "pmid": "31228661",
+      "urls": [
+        "https://doi.org/10.1016/j.molimm.2019.06.007",
+        "https://doi.org/10.1016/j.molimm.2019.06.007"
+      ]
+    },
+    {
+      "id": "b12",
+      "target": "b11",
+      "title": "Symbiotic bacteria direct expression of an intestinal bactericidal lectin",
+      "authors": [
+        "H Cash",
+        "C Whitham",
+        "C Behrendt",
+        "L Hooper"
+      ],
+      "journal": "Science",
+      "publication_date": "2006",
+      "year": 2006,
+      "volume": "313",
+      "page_start": "1126",
+      "page_end": "1130",
+      "doi": "10.1126/science.1127119",
+      "pmid": "16931762",
+      "urls": [
+        "https://doi.org/10.1126/science.1127119",
+        "https://doi.org/10.1126/science.1127119"
+      ]
+    },
+    {
+      "id": "b13",
+      "target": "b12",
+      "title": "Enhanced synaptic connectivity and epilepsy in C1q knockout mice",
+      "authors": [
+        "Y Chu",
+        "Jin Parada",
+        "I Pesic",
+        "A Stevens",
+        "B Barres",
+        "B Prince",
+        "D"
+      ],
+      "journal": "PNAS",
+      "publication_date": "2010",
+      "year": 2010,
+      "volume": "107",
+      "page_start": "7975",
+      "page_end": "7980",
+      "doi": "10.1073/pnas.0913449107",
+      "pmid": "20375278",
+      "urls": [
+        "https://doi.org/10.1073/pnas.0913449107",
+        "https://doi.org/10.1073/pnas.0913449107"
+      ]
+    },
+    {
+      "id": "b14",
+      "target": "b13",
+      "title": "Conditional gene targeting in macrophages and granulocytes using lysmcre mice",
+      "authors": [
+        "B Clausen",
+        "C Burkhardt",
+        "W Reith",
+        "R Renkawitz",
+        "I Förster"
+      ],
+      "journal": "Transgenic Research",
+      "publication_date": "1999",
+      "year": 1999,
+      "volume": "8",
+      "page_start": "265",
+      "page_end": "277",
+      "doi": "10.1023/a:1008942828960",
+      "pmid": "10621974",
+      "urls": [
+        "https://doi.org/10.1023/a:1008942828960",
+        "https://doi.org/10.1023/a:1008942828960"
+      ]
+    },
+    {
+      "id": "b15",
+      "target": "b14",
+      "title": "TREMs in the immune system and beyond",
+      "authors": "M Colonna",
+      "journal": "Nature Reviews. Immunology",
+      "publication_date": "2003",
+      "year": 2003,
+      "volume": "3",
+      "page_start": "445",
+      "page_end": "453",
+      "doi": "10.1038/nri1106",
+      "pmid": "12776204",
+      "urls": [
+        "https://doi.org/10.1038/nri1106",
+        "https://doi.org/10.1038/nri1106"
+      ]
+    },
+    {
+      "id": "b16",
+      "target": "b15",
+      "title": "Long noncoding RNA MALAT1 regulates differential activation of macrophages and response to lung injury",
+      "authors": [
+        "H Cui",
+        "S Banerjee",
+        "S Guo",
+        "N Xie",
+        "J Ge",
+        "D Jiang",
+        "M Zörnig",
+        "V Thannickal",
+        "G Liu"
+      ],
+      "journal": "JCI Insight",
+      "publication_date": "2019",
+      "year": 2019,
+      "volume": "4",
+      "pages": "124522",
+      "doi": "10.1172/jci.insight.124522",
+      "pmid": "30676324",
+      "urls": [
+        "https://doi.org/10.1172/jci.insight.124522",
+        "https://doi.org/10.1172/jci.insight.124522"
+      ]
+    },
+    {
+      "id": "b17",
+      "target": "b16",
+      "title": "Serum complement levels in infancy: age related changes",
+      "authors": [
+        "C Davis",
+        "E Vallota",
+        "J Forristal"
+      ],
+      "journal": "Pediatric Research",
+      "publication_date": "1979",
+      "year": 1979,
+      "volume": "13",
+      "page_start": "1043",
+      "page_end": "1046",
+      "doi": "10.1203/00006450-197909000-00019",
+      "pmid": "503656",
+      "urls": [
+        "https://doi.org/10.1203/00006450-197909000-00019",
+        "https://doi.org/10.1203/00006450-197909000-00019"
+      ]
+    },
+    {
+      "id": "b18",
+      "target": "b17",
+      "title": "Muscularis macrophages: key players in intestinal homeostasis and disease",
+      "authors": [
+        "De Schepper",
+        "S Stakenborg",
+        "N Matteoli",
+        "G Verheijden",
+        "S Boeckxstaens",
+        "G"
+      ],
+      "journal": "Cellular Immunology",
+      "publication_date": "2018",
+      "year": 2018,
+      "volume": "330",
+      "page_start": "142",
+      "page_end": "150",
+      "doi": "10.1016/j.cellimm.2017.12.009",
+      "pmid": "29291892",
+      "urls": [
+        "https://doi.org/10.1016/j.cellimm.2017.12.009",
+        "https://doi.org/10.1016/j.cellimm.2017.12.009"
+      ]
+    },
+    {
+      "id": "b19",
+      "target": "b18",
+      "title": "2018b. Self-maintaining gut macrophages are essential for intestinal homeostasis",
+      "authors": [
+        "De Schepper",
+        "S Verheijden",
+        "S Aguilera-Lizarraga",
+        "J Viola",
+        "M Boesmans",
+        "W Stakenborg",
+        "N Voytyuk",
+        "I Schmidt",
+        "I Boeckx",
+        "B",
+        "Dierckx De Casterlé",
+        "I Baekelandt",
+        "V",
+        "Gonzalez Dominguez",
+        "E Mack",
+        "M Depoortere",
+        "I",
+        "De Strooper",
+        "B Sprangers",
+        "B Himmelreich",
+        "U Soenen",
+        "S Guilliams",
+        "M",
+        "Vanden Berghe",
+        "P"
+      ],
+      "journal": "Cell",
+      "volume": "175",
+      "page_start": "400",
+      "page_end": "415",
+      "doi": "10.1016/j.cell.2018.07.048",
+      "pmid": "30173915",
+      "urls": [
+        "https://doi.org/10.1016/j.cell.2018.07.048",
+        "https://doi.org/10.1016/j.cell.2018.07.048"
+      ]
+    },
+    {
+      "id": "b20",
+      "target": "b19",
+      "title": "Single-Cell transcriptomic analysis of human colonic macrophages reveals niche-specific subsets",
+      "authors": [
+        "D Domanska",
+        "U Majid",
+        "V Karlsen",
+        "M Merok",
+        "A-Cr Beitnes",
+        "S Yaqub",
+        "E Baekkevold",
+        "F Jahnsen"
+      ],
+      "journal": "The Journal of Experimental Medicine",
+      "publication_date": "2022",
+      "year": 2022,
+      "volume": "219",
+      "doi": "10.1084/jem.20211846",
+      "pmid": "35139155",
+      "urls": [
+        "https://doi.org/10.1084/jem.20211846",
+        "https://doi.org/10.1084/jem.20211846"
+      ]
+    },
+    {
+      "id": "b21",
+      "target": "b20",
+      "title": "Critical role for a subset of intestinal macrophages in shaping gut microbiota in adult zebrafish",
+      "authors": [
+        "A Earley",
+        "C Graves",
+        "C Shiau"
+      ],
+      "journal": "Cell Reports",
+      "publication_date": "2018",
+      "year": 2018,
+      "volume": "25",
+      "page_start": "424",
+      "page_end": "436",
+      "doi": "10.1016/j.celrep.2018.09.025",
+      "pmid": "30304682",
+      "urls": [
+        "https://doi.org/10.1016/j.celrep.2018.09.025",
+        "https://doi.org/10.1016/j.celrep.2018.09.025"
+      ]
+    },
+    {
+      "id": "b22",
+      "target": "b21",
+      "title": "Differential regulation of Salmonella typhimurium type III secreted proteins by pathogenicity island 1 (Spi-1) -encoded transcriptional activators invf and hila",
+      "authors": [
+        "K Eichelberg",
+        "J Galán"
+      ],
+      "journal": "Infection and Immunity",
+      "publication_date": "1999",
+      "year": 1999,
+      "volume": "67",
+      "page_start": "4099",
+      "page_end": "4105",
+      "doi": "10.1128/IAI.67.8.4099-4105.1999",
+      "pmid": "10417179",
+      "urls": [
+        "https://doi.org/10.1128/IAI.67.8.4099-4105.1999",
+        "https://doi.org/10.1128/IAI.67.8.4099-4105.1999"
+      ]
+    },
+    {
+      "id": "b23",
+      "target": "b22",
+      "title": "The complement system and C1q in chronic hepatitis C virus infection and mixed cryoglobulinemia",
+      "authors": [
+        "A El-Shamy",
+        "A Branch",
+        "T Schiano",
+        "P Gorevic"
+      ],
+      "journal": "Frontiers in Immunology",
+      "publication_date": "2018",
+      "year": 2018,
+      "volume": "9",
+      "pages": "1001",
+      "doi": "10.3389/fimmu.2018.01001",
+      "pmid": "29910796",
+      "urls": [
+        "https://doi.org/10.3389/fimmu.2018.01001",
+        "https://doi.org/10.3389/fimmu.2018.01001"
+      ]
+    },
+    {
+      "id": "b24",
+      "target": "b23",
+      "title": "Gastrointestinal manifestations in systemic lupus erythematosus",
+      "authors": [
+        "M Fawzy",
+        "A Edrees",
+        "H Okasha",
+        "El Ashmaui",
+        "A Ragab",
+        "G"
+      ],
+      "journal": "Lupus",
+      "publication_date": "2016",
+      "year": 2016,
+      "volume": "25",
+      "page_start": "1456",
+      "page_end": "1462",
+      "doi": "10.1177/0961203316642308",
+      "pmid": "27055518",
+      "urls": [
+        "https://doi.org/10.1177/0961203316642308",
+        "https://doi.org/10.1177/0961203316642308"
+      ]
+    },
+    {
+      "id": "b25",
+      "target": "b24",
+      "title": "Cell-Specific deletion of C1qA identifies microglia as the dominant source of C1q in mouse brain",
+      "authors": [
+        "M Fonseca",
+        "S Chu",
+        "M Hernandez",
+        "M Fang",
+        "L Modarresi",
+        "P Selvan",
+        "G Macgregor",
+        "A Tenner"
+      ],
+      "journal": "Journal of Neuroinflammation",
+      "publication_date": "2017",
+      "year": 2017,
+      "volume": "14",
+      "pages": "48",
+      "doi": "10.1186/s12974-017-0814-9",
+      "pmid": "28264694",
+      "urls": [
+        "https://doi.org/10.1186/s12974-017-0814-9",
+        "https://doi.org/10.1186/s12974-017-0814-9"
+      ]
+    },
+    {
+      "id": "b26",
+      "target": "b25",
+      "title": "Neuro-Immune interactions drive tissue programming in intestinal macrophages",
+      "authors": [
+        "I Gabanyi",
+        "P Muller",
+        "L Feighery",
+        "T Oliveira",
+        "F Costa-Pinto",
+        "D Mucida"
+      ],
+      "journal": "Cell",
+      "publication_date": "2016",
+      "year": 2016,
+      "volume": "164",
+      "page_start": "378",
+      "page_end": "391",
+      "doi": "10.1016/j.cell.2015.12.023",
+      "pmid": "26777404",
+      "urls": [
+        "https://doi.org/10.1016/j.cell.2015.12.023",
+        "https://doi.org/10.1016/j.cell.2015.12.023"
+      ]
+    },
+    {
+      "id": "b27",
+      "target": "b26",
+      "title": "Lncrna NEAT1 sponges miR-214 to regulate M2 macrophage polarization by regulation of B7-H3 in multiple myeloma",
+      "authors": [
+        "Y Gao",
+        "P Fang",
+        "W Li",
+        "J Zhang",
+        "G Wang",
+        "D Jiang",
+        "F Chen"
+      ],
+      "journal": "Molecular Immunology",
+      "publication_date": "2020",
+      "year": 2020,
+      "volume": "117",
+      "page_start": "20",
+      "page_end": "28",
+      "doi": "10.1016/j.molimm.2019.10.026",
+      "pmid": "31731055",
+      "urls": [
+        "https://doi.org/10.1016/j.molimm.2019.10.026",
+        "https://doi.org/10.1016/j.molimm.2019.10.026"
+      ]
+    },
+    {
+      "id": "b28",
+      "target": "b27",
+      "title": "Epithelial retinoic acid receptor β regulates serum amyloid A expression and vitamin A-dependent intestinal immunity",
+      "authors": [
+        "S Gattu",
+        "Y Bang",
+        "M Pendse",
+        "C Dende",
+        "A Chara",
+        "T Harris",
+        "Y Wang",
+        "K Ruhn",
+        "Z Kuang",
+        "S Sockanathan",
+        "L Hooper"
+      ],
+      "journal": "PNAS",
+      "publication_date": "2019",
+      "year": 2019,
+      "volume": "116",
+      "page_start": "10911",
+      "page_end": "10916",
+      "doi": "10.1073/pnas.1812069116",
+      "pmid": "31097581",
+      "urls": [
+        "https://doi.org/10.1073/pnas.1812069116",
+        "https://doi.org/10.1073/pnas.1812069116"
+      ]
+    },
+    {
+      "id": "b29",
+      "target": "b28",
+      "title": "Macrophages in gastrointestinal homeostasis and inflammation",
+      "authors": [
+        "J Grainger",
+        "J Konkel",
+        "T Zangerle-Murray",
+        "T Shaw"
+      ],
+      "journal": "Pflugers Archiv",
+      "publication_date": "2017",
+      "year": 2017,
+      "volume": "469",
+      "page_start": "527",
+      "page_end": "539",
+      "doi": "10.1007/s00424-017-1958-2",
+      "pmid": "28283748",
+      "urls": [
+        "https://doi.org/10.1007/s00424-017-1958-2",
+        "https://doi.org/10.1007/s00424-017-1958-2"
+      ]
+    },
+    {
+      "id": "b30",
+      "target": "b29",
+      "title": "Complement-Dependent synapse loss and microgliosis in a mouse model of multiple sclerosis",
+      "authors": [
+        "J Hammond",
+        "M Bellizzi",
+        "C Ware",
+        "W Qiu",
+        "P Saminathan",
+        "H Li",
+        "S Luo",
+        "S Ma",
+        "Y Li",
+        "H Gelbard"
+      ],
+      "journal": "Brain, Behavior, and Immunity",
+      "publication_date": "2020",
+      "year": 2020,
+      "volume": "87",
+      "page_start": "739",
+      "page_end": "750",
+      "doi": "10.1016/j.bbi.2020.03.004",
+      "pmid": "32151684",
+      "urls": [
+        "https://doi.org/10.1016/j.bbi.2020.03.004",
+        "https://doi.org/10.1016/j.bbi.2020.03.004"
+      ]
+    },
+    {
+      "id": "b31",
+      "target": "b30",
+      "title": "Complement and microglia mediate early synapse loss in Alzheimer mouse models",
+      "authors": [
+        "S Hong",
+        "V Beja-Glasser",
+        "B Nfonoyim",
+        "A Frouin",
+        "S Li",
+        "S Ramakrishnan",
+        "K Merry",
+        "Q Shi",
+        "A Rosenthal",
+        "B Barres",
+        "C Lemere",
+        "D Selkoe",
+        "B Stevens"
+      ],
+      "journal": "Science",
+      "publication_date": "2016",
+      "year": 2016,
+      "volume": "352",
+      "page_start": "712",
+      "page_end": "716",
+      "doi": "10.1126/science.aad8373",
+      "pmid": "27033548",
+      "urls": [
+        "https://doi.org/10.1126/science.aad8373",
+        "https://doi.org/10.1126/science.aad8373"
+      ]
+    },
+    {
+      "id": "b32",
+      "target": "b31",
+      "title": "Deletion of choline acetyltransferase in enteric neurons results in postnatal intestinal dysmotility and dysbiosis",
+      "authors": [
+        "C Johnson",
+        "A Barlow-Anacker",
+        "J Pierre",
+        "K Touw",
+        "C Erickson",
+        "J Furness",
+        "M Epstein",
+        "A Gosain"
+      ],
+      "journal": "FASEB Journal",
+      "publication_date": "2018",
+      "year": 2018,
+      "volume": "32",
+      "page_start": "4744",
+      "page_end": "4752",
+      "doi": "10.1096/fj.201701474RR",
+      "pmid": "29570391",
+      "urls": [
+        "https://doi.org/10.1096/fj.201701474RR",
+        "https://doi.org/10.1096/fj.201701474RR"
+      ]
+    },
+    {
+      "id": "b33",
+      "target": "b32",
+      "title": "C1Q: Structure, function, and receptors",
+      "authors": [
+        "U Kishore",
+        "K Reid"
+      ],
+      "journal": "Immunopharmacology",
+      "publication_date": "2000",
+      "year": 2000,
+      "volume": "49",
+      "page_start": "159",
+      "page_end": "170",
+      "doi": "10.1016/s0162-3109(00)80301-x",
+      "pmid": "10904115",
+      "urls": [
+        "https://doi.org/10.1016/s0162-3109(00)80301-x",
+        "https://doi.org/10.1016/s0162-3109(00)80301-x"
+      ]
+    },
+    {
+      "id": "b34",
+      "target": "b33",
+      "title": "Evaluation of general 16S ribosomal RNA gene PCR primers for classical and next-generation sequencing-based diversity studies",
+      "authors": [
+        "A Klindworth",
+        "E Pruesse",
+        "T Schweer",
+        "J Peplies",
+        "C Quast",
+        "M Horn",
+        "F Glöckner"
+      ],
+      "journal": "Nucleic Acids Research",
+      "publication_date": "2013",
+      "year": 2013,
+      "volume": "41",
+      "issue": "1",
+      "doi": "10.1093/nar/gks808",
+      "pmid": "22933715",
+      "urls": [
+        "https://doi.org/10.1093/nar/gks808",
+        "https://doi.org/10.1093/nar/gks808"
+      ]
+    },
+    {
+      "id": "b35",
+      "target": "b34",
+      "title": "C1Q binds directly and specifically to surface blebs of apoptotic human keratinocytes: complement deficiency and systemic lupus erythematosus revisited",
+      "authors": [
+        "L Korb",
+        "J Ahearn"
+      ],
+      "journal": "Journal of Immunology",
+      "publication_date": "1997",
+      "year": 1997,
+      "volume": "158",
+      "page_start": "4525",
+      "page_end": "4528",
+      "pmid": "9144462"
+    },
+    {
+      "id": "b36",
+      "target": "b35",
+      "title": "Emerging and novel functions of complement protein C1q",
+      "authors": [
+        "L Kouser",
+        "S Madhukaran",
+        "A Shastri",
+        "A Saraon",
+        "J Ferluga",
+        "M Al-Mozaini",
+        "U Kishore"
+      ],
+      "journal": "Frontiers in Immunology",
+      "publication_date": "2015",
+      "year": 2015,
+      "volume": "6",
+      "pages": "317",
+      "doi": "10.3389/fimmu.2015.00317",
+      "pmid": "26175731",
+      "urls": [
+        "https://doi.org/10.3389/fimmu.2015.00317",
+        "https://doi.org/10.3389/fimmu.2015.00317"
+      ]
+    },
+    {
+      "id": "b37",
+      "target": "b36",
+      "title": "Adult enteric nervous system in health is maintained by a dynamic balance between neuronal apoptosis and neurogenesis",
+      "authors": [
+        "S Kulkarni",
+        "M Micci",
+        "J Leser",
+        "C Shin",
+        "S Tang",
+        "Y Fu",
+        "L Liu",
+        "Q Li",
+        "M Saha",
+        "C Li",
+        "G Enikolopov",
+        "L Becker",
+        "N Rakhilin",
+        "M Anderson",
+        "X Shen",
+        "X Dong",
+        "M Butte",
+        "H Song",
+        "E Southard-Smith",
+        "R Kapur"
+      ],
+      "journal": "PNAS",
+      "publication_date": "2017",
+      "year": 2017,
+      "volume": "114",
+      "page_start": "3709",
+      "page_end": "E3718",
+      "doi": "10.1073/pnas.1619406114",
+      "pmid": "28420791",
+      "urls": [
+        "https://doi.org/10.1073/pnas.1619406114",
+        "https://doi.org/10.1073/pnas.1619406114"
+      ]
+    },
+    {
+      "id": "b38",
+      "target": "b37",
+      "title": "Rna-Seq workflow: gene-level exploratory analysis and differential expression",
+      "authors": [
+        "M Love",
+        "S Anders",
+        "V Kim",
+        "W Huber"
+      ],
+      "journal": "F1000Research",
+      "publication_date": "2015",
+      "year": 2015,
+      "volume": "4",
+      "pages": "1070",
+      "doi": "10.12688/f1000research.7035.1",
+      "pmid": "26674615",
+      "urls": [
+        "https://doi.org/10.12688/f1000research.7035.1",
+        "https://doi.org/10.12688/f1000research.7035.1"
+      ]
+    },
+    {
+      "id": "b39",
+      "target": "b38",
+      "title": "Trpv4 channel signaling in macrophages promotes gastrointestinal motility via direct effects on smooth muscle cells",
+      "authors": [
+        "J Luo",
+        "A Qian",
+        "L Oetjen",
+        "W Yu",
+        "P Yang",
+        "J Feng",
+        "Z Xie",
+        "S Liu",
+        "S Yin",
+        "D Dryn",
+        "J Cheng",
+        "T Riehl",
+        "A Zholos",
+        "W Stenson",
+        "B Kim",
+        "H Hu"
+      ],
+      "journal": "Immunity",
+      "publication_date": "2018",
+      "year": 2018,
+      "volume": "49",
+      "page_start": "107",
+      "page_end": "119",
+      "doi": "10.1016/j.immuni.2018.04.021",
+      "pmid": "29958798",
+      "urls": [
+        "https://doi.org/10.1016/j.immuni.2018.04.021",
+        "https://doi.org/10.1016/j.immuni.2018.04.021"
+      ]
+    },
+    {
+      "id": "b40",
+      "target": "b39",
+      "title": "Systemic lupus erythematosus and deficiencies of early components of the complement classical pathway",
+      "authors": [
+        "Acl Macedo",
+        "L Isaac"
+      ],
+      "journal": "Frontiers in Immunology",
+      "publication_date": "2016",
+      "year": 2016,
+      "volume": "7",
+      "pages": "55",
+      "doi": "10.3389/fimmu.2016.00055",
+      "pmid": "26941740",
+      "urls": [
+        "https://doi.org/10.3389/fimmu.2016.00055",
+        "https://doi.org/10.3389/fimmu.2016.00055"
+      ]
+    },
+    {
+      "id": "b41",
+      "target": "b40",
+      "title": "Ablation of tacr2 in mice leads to gastric emptying disturbance",
+      "authors": [
+        "Y Mao",
+        "C Shen",
+        "T Zhou",
+        "B Ma",
+        "L Tang",
+        "W Wu",
+        "H Zhang",
+        "H Lu",
+        "W Xu",
+        "Z Wang"
+      ],
+      "journal": "Neurogastroenterology and Motility",
+      "publication_date": "2017",
+      "year": 2017,
+      "volume": "29",
+      "pages": "13117",
+      "doi": "10.1111/nmo.13117",
+      "pmid": "28585346",
+      "urls": [
+        "https://doi.org/10.1111/nmo.13117",
+        "https://doi.org/10.1111/nmo.13117"
+      ]
+    },
+    {
+      "id": "b42",
+      "target": "b41",
+      "title": "Adrenergic signaling in muscularis macrophages limits infection-induced neuronal loss",
+      "authors": [
+        "F Matheis",
+        "P Muller",
+        "C Graves",
+        "I Gabanyi",
+        "Z Kerner",
+        "D Costa-Borges",
+        "T Ahrends",
+        "P Rosenstiel",
+        "D Mucida"
+      ],
+      "journal": "Cell",
+      "publication_date": "2020",
+      "year": 2020,
+      "volume": "180",
+      "page_start": "64",
+      "page_end": "78",
+      "doi": "10.1016/j.cell.2019.12.002",
+      "pmid": "31923400",
+      "urls": [
+        "https://doi.org/10.1016/j.cell.2019.12.002",
+        "https://doi.org/10.1016/j.cell.2019.12.002"
+      ]
+    },
+    {
+      "id": "b43",
+      "target": "b42",
+      "title": "Gastrointestinal motility, part 2: small-bowel and colon transit",
+      "authors": "A Maurer",
+      "journal": "Journal of Nuclear Medicine Technology",
+      "publication_date": "2016",
+      "year": 2016,
+      "volume": "44",
+      "page_start": "12",
+      "page_end": "18",
+      "doi": "10.2967/jnumed.113.134551",
+      "pmid": "26940448",
+      "urls": [
+        "https://doi.org/10.2967/jnumed.113.134551",
+        "https://doi.org/10.2967/jnumed.113.134551"
+      ]
+    },
+    {
+      "id": "b44",
+      "target": "b43",
+      "title": "Mapping and quantifying mammalian transcriptomes by RNA-seq",
+      "authors": [
+        "A Mortazavi",
+        "B Williams",
+        "K Mccue",
+        "L Schaeffer",
+        "B Wold"
+      ],
+      "journal": "Nature Methods",
+      "publication_date": "2008",
+      "year": 2008,
+      "volume": "5",
+      "page_start": "621",
+      "page_end": "628",
+      "doi": "10.1038/nmeth.1226",
+      "urls": [
+        "https://doi.org/10.1038/nmeth.1226",
+        "https://doi.org/10.1038/nmeth.1226"
+      ]
+    },
+    {
+      "id": "b45",
+      "target": "b44",
+      "title": "Crosstalk between muscularis macrophages and enteric neurons regulates gastrointestinal motility",
+      "authors": [
+        "P Muller",
+        "B Koscsó",
+        "G Rajani",
+        "K Stevanovic",
+        "M Berres",
+        "D Hashimoto",
+        "A Mortha",
+        "M Leboeuf",
+        "X Li",
+        "D Mucida",
+        "E Stanley",
+        "S Dahan",
+        "K Margolis",
+        "M Gershon",
+        "M Merad",
+        "M Bogunovic"
+      ],
+      "journal": "Cell",
+      "publication_date": "2014",
+      "year": 2014,
+      "volume": "158",
+      "pages": "1210",
+      "doi": "10.1016/j.cell.2014.08.002",
+      "pmid": "28917294",
+      "urls": [
+        "https://doi.org/10.1016/j.cell.2014.08.002",
+        "https://doi.org/10.1016/j.cell.2014.08.002"
+      ]
+    },
+    {
+      "id": "b46",
+      "target": "b45",
+      "title": "Overview of complement activation and regulation",
+      "authors": [
+        "M Noris",
+        "G Remuzzi"
+      ],
+      "journal": "Seminars in Nephrology",
+      "publication_date": "2013",
+      "year": 2013,
+      "volume": "33",
+      "page_start": "479",
+      "page_end": "492",
+      "doi": "10.1016/j.semnephrol.2013.08.001",
+      "pmid": "24161035",
+      "urls": [
+        "https://doi.org/10.1016/j.semnephrol.2013.08.001",
+        "https://doi.org/10.1016/j.semnephrol.2013.08.001"
+      ]
+    },
+    {
+      "id": "b47",
+      "target": "b46",
+      "title": "Neuronal programming by microbiota regulates intestinal physiology",
+      "authors": [
+        "Y Obata",
+        "Á Castaño",
+        "S Boeing",
+        "A Bon-Frauches",
+        "C Fung",
+        "T Fallesen",
+        "M De Agüero",
+        "B Yilmaz",
+        "R Lopes",
+        "A Huseynova",
+        "S Horswell",
+        "M Maradana",
+        "W Boesmans",
+        "Vanden Berghe",
+        "P Murray",
+        "A Stockinger",
+        "B Macpherson",
+        "A Pachnis",
+        "V"
+      ],
+      "journal": "Nature",
+      "publication_date": "2020",
+      "year": 2020,
+      "volume": "578",
+      "page_start": "284",
+      "page_end": "289",
+      "doi": "10.1038/s41586-020-1975-8",
+      "pmid": "32025031",
+      "urls": [
+        "https://doi.org/10.1038/s41586-020-1975-8",
+        "https://doi.org/10.1038/s41586-020-1975-8"
+      ]
+    },
+    {
+      "id": "b48",
+      "target": "b47",
+      "title": "Molecular profiling of enteric nervous system cell lineages",
+      "authors": [
+        "Y Obata",
+        "Á Castaño",
+        "T Fallesen",
+        "A Bon-Frauches",
+        "S Boeing",
+        "A Huseynova",
+        "S Mccallum",
+        "R Lasrado",
+        "T Heanue",
+        "V Pachnis"
+      ],
+      "journal": "Nature Protocols",
+      "publication_date": "2022",
+      "year": 2022,
+      "volume": "17",
+      "page_start": "1789",
+      "page_end": "1817",
+      "doi": "10.1038/s41596-022-00697-4",
+      "pmid": "35676375",
+      "urls": [
+        "https://doi.org/10.1038/s41596-022-00697-4",
+        "https://doi.org/10.1038/s41596-022-00697-4"
+      ]
+    },
+    {
+      "id": "b49",
+      "target": "b48",
+      "title": "Mutations in two genes encoding different subunits of a receptor signaling complex result in an identical disease phenotype",
+      "authors": [
+        "J Paloneva",
+        "T Manninen",
+        "G Christman",
+        "K Hovanes",
+        "J Mandelin",
+        "R Adolfsson",
+        "M Bianchin",
+        "T Bird",
+        "R Miranda",
+        "A Salmaggi",
+        "L Tranebjaerg",
+        "Y Konttinen",
+        "L Peltonen"
+      ],
+      "journal": "American Journal of Human Genetics",
+      "publication_date": "2002",
+      "year": 2002,
+      "volume": "71",
+      "page_start": "656",
+      "page_end": "662",
+      "doi": "10.1086/342259",
+      "pmid": "12080485",
+      "urls": [
+        "https://doi.org/10.1086/342259",
+        "https://doi.org/10.1086/342259"
+      ]
+    },
+    {
+      "id": "b50",
+      "target": "b49",
+      "title": "Reconstitution of the complement function in c1q-deficient (c1qa-/-) mice with wild-type bone marrow cells",
+      "authors": [
+        "F Petry",
+        "M Botto",
+        "R Holtappels",
+        "M Walport",
+        "M Loos"
+      ],
+      "journal": "Journal of Immunology",
+      "publication_date": "2001",
+      "year": 2001,
+      "volume": "167",
+      "page_start": "4033",
+      "page_end": "4037",
+      "doi": "10.4049/jimmunol.167.7.4033",
+      "pmid": "11564823",
+      "urls": [
+        "https://doi.org/10.4049/jimmunol.167.7.4033",
+        "https://doi.org/10.4049/jimmunol.167.7.4033"
+      ]
+    },
+    {
+      "id": "b51",
+      "target": "b50",
+      "title": "The bowel and beyond: the enteric nervous system in neurological disorders",
+      "authors": [
+        "M Rao",
+        "M Gershon"
+      ],
+      "journal": "Gastroenterology & Hepatology",
+      "publication_date": "2016",
+      "year": 2016,
+      "volume": "13",
+      "page_start": "517",
+      "page_end": "528",
+      "doi": "10.1038/nrgastro.2016.107",
+      "pmid": "27435372",
+      "notes": "Nature Reviews",
+      "urls": [
+        "https://doi.org/10.1038/nrgastro.2016.107",
+        "https://doi.org/10.1038/nrgastro.2016.107"
+      ]
+    },
+    {
+      "id": "b52",
+      "target": "b51",
+      "title": "Limma powers differential expression analyses for RNA-sequencing and microarray studies",
+      "authors": [
+        "M Ritchie",
+        "B Phipson",
+        "D Wu",
+        "Y Hu",
+        "C Law",
+        "W Shi",
+        "G Smyth"
+      ],
+      "journal": "Nucleic Acids Research",
+      "publication_date": "2015",
+      "year": 2015,
+      "volume": "43",
+      "pages": "47",
+      "doi": "10.1093/nar/gkv007",
+      "pmid": "25605792",
+      "urls": [
+        "https://doi.org/10.1093/nar/gkv007",
+        "https://doi.org/10.1093/nar/gkv007"
+      ]
+    },
+    {
+      "id": "b53",
+      "target": "b52",
+      "title": "The enteric nervous system promotes intestinal health by constraining microbiota composition",
+      "authors": [
+        "A Rolig",
+        "E Mittge",
+        "J Ganz",
+        "J Troll",
+        "E Melancon",
+        "T Wiles",
+        "K Alligood",
+        "W Stephens",
+        "J Eisen",
+        "K Guillemin"
+      ],
+      "journal": "PLOS Biology",
+      "publication_date": "2017",
+      "year": 2017,
+      "volume": "15",
+      "doi": "10.1371/journal.pbio.2000689",
+      "pmid": "28207737",
+      "urls": [
+        "https://doi.org/10.1371/journal.pbio.2000689",
+        "https://doi.org/10.1371/journal.pbio.2000689"
+      ]
+    },
+    {
+      "id": "b54",
+      "target": "b53",
+      "title": "Specific hunger-and satiety-induced tuning of guinea pig enteric nerve activity",
+      "authors": [
+        "L Roosen",
+        "W Boesmans",
+        "M Dondeyne",
+        "I Depoortere",
+        "J Tack",
+        "Vanden Berghe",
+        "P"
+      ],
+      "journal": "The Journal of Physiology",
+      "publication_date": "2012",
+      "year": 2012,
+      "volume": "590",
+      "page_start": "4321",
+      "page_end": "4333",
+      "doi": "10.1113/jphysiol.2012.231134",
+      "urls": [
+        "https://doi.org/10.1113/jphysiol.2012.231134",
+        "https://doi.org/10.1113/jphysiol.2012.231134"
+      ]
+    },
+    {
+      "id": "b55",
+      "target": "b54",
+      "title": "Microglia sculpt postnatal neural circuits in an activity and complement-dependent manner",
+      "authors": [
+        "D Schafer",
+        "E Lehrman",
+        "A Kautzman",
+        "R Koyama",
+        "A Mardinly",
+        "R Yamasaki",
+        "R Ransohoff",
+        "M Greenberg",
+        "B Barres",
+        "B Stevens"
+      ],
+      "journal": "Neuron",
+      "publication_date": "2012",
+      "year": 2012,
+      "volume": "74",
+      "page_start": "691",
+      "page_end": "705",
+      "doi": "10.1016/j.neuron.2012.03.026",
+      "pmid": "22632727",
+      "urls": [
+        "https://doi.org/10.1016/j.neuron.2012.03.026",
+        "https://doi.org/10.1016/j.neuron.2012.03.026"
+      ]
+    },
+    {
+      "id": "b56",
+      "target": "b55",
+      "title": "The role of complement and its receptor in the elimination of immune complexes",
+      "authors": [
+        "J Schifferli",
+        "Y Ng",
+        "D Peters"
+      ],
+      "journal": "The New England Journal of Medicine",
+      "publication_date": "1986",
+      "year": 1986,
+      "volume": "315",
+      "page_start": "488",
+      "page_end": "495",
+      "doi": "10.1056/NEJM198608213150805",
+      "pmid": "2942776",
+      "urls": [
+        "https://doi.org/10.1056/NEJM198608213150805",
+        "https://doi.org/10.1056/NEJM198608213150805"
+      ]
+    },
+    {
+      "id": "b57",
+      "target": "b56",
+      "title": "Rasgrf2 Rac-GEF activity couples NMDA receptor calcium flux to enhanced synaptic transmission",
+      "authors": [
+        "B Schwechter",
+        "C Rosenmund",
+        "K Tolias"
+      ],
+      "journal": "PNAS",
+      "publication_date": "2013",
+      "year": 2013,
+      "volume": "110",
+      "page_start": "14462",
+      "page_end": "14467",
+      "doi": "10.1073/pnas.1304340110",
+      "pmid": "23940355",
+      "urls": [
+        "https://doi.org/10.1073/pnas.1304340110",
+        "https://doi.org/10.1073/pnas.1304340110"
+      ]
+    },
+    {
+      "id": "b58",
+      "target": "b57",
+      "title": "C1Q deficiency promotes pulmonary vascular inflammation and enhances the susceptibility of the lung endothelium to injury",
+      "authors": [
+        "D Shah",
+        "F Romero",
+        "Y Zhu",
+        "M Duong",
+        "J Sun",
+        "Walsh Summer",
+        "R"
+      ],
+      "journal": "The Journal of Biological Chemistry",
+      "publication_date": "2015",
+      "year": 2015,
+      "volume": "290",
+      "page_start": "29642",
+      "page_end": "29651",
+      "doi": "10.1074/jbc.M115.690784",
+      "pmid": "26487714",
+      "urls": [
+        "https://doi.org/10.1074/jbc.M115.690784",
+        "https://doi.org/10.1074/jbc.M115.690784"
+      ]
+    },
+    {
+      "id": "b59",
+      "target": "b58",
+      "authors": [
+        "L Sorensen",
+        "A Saito",
+        "S Poon",
+        "M Han",
+        "A Humenick",
+        "K Mutunduwe",
+        "C Glennan",
+        "N Mahdavian",
+        "Sjh Brookes",
+        "R Mcquade",
+        "Jpp Foong",
+        "E Gómez-De-Mariscal",
+        "A Muñoz-Barrutia",
+        "S King",
+        "R Haase",
+        "S Carbone",
+        "N Veldhuis",
+        "D Poole",
+        "P Rajasekhar"
+      ],
+      "publication_date": "2022",
+      "year": 2022,
+      "doi": "10.5281/zenodo.6399524",
+      "notes": "Gut analysis toolbox. 1.0.0. Zenodo",
+      "urls": [
+        "https://doi.org/10.5281/zenodo.6399524",
+        "https://doi.org/10.5281/zenodo.6399524"
+      ]
+    },
+    {
+      "id": "b60",
+      "target": "b59",
+      "title": "The classical complement cascade mediates CNS synapse elimination",
+      "authors": [
+        "B Stevens",
+        "N Allen",
+        "L Vazquez",
+        "G Howell",
+        "K Christopherson",
+        "N Nouri",
+        "K Micheva",
+        "A Mehalow",
+        "A Huberman",
+        "B Stafford",
+        "A Sher",
+        "A Litke",
+        "J Lambris",
+        "S Smith",
+        "Swm John",
+        "B Barres"
+      ],
+      "journal": "Cell",
+      "publication_date": "2007",
+      "year": 2007,
+      "volume": "131",
+      "page_start": "1164",
+      "page_end": "1178",
+      "doi": "10.1016/j.cell.2007.10.036",
+      "pmid": "18083105",
+      "urls": [
+        "https://doi.org/10.1016/j.cell.2007.10.036",
+        "https://doi.org/10.1016/j.cell.2007.10.036"
+      ]
+    },
+    {
+      "id": "b61",
+      "target": "b60",
+      "title": "Comprehensive integration of single-cell data",
+      "authors": [
+        "T Stuart",
+        "A Butler",
+        "P Hoffman",
+        "C Hafemeister",
+        "E Papalexi",
+        "W Mauck",
+        "Iii",
+        "Y Hao",
+        "M Stoeckius",
+        "P Smibert",
+        "R Satija"
+      ],
+      "journal": "Cell",
+      "publication_date": "2019",
+      "year": 2019,
+      "volume": "177",
+      "page_start": "1888",
+      "page_end": "1902",
+      "doi": "10.1016/j.cell.2019.05.031",
+      "urls": [
+        "https://doi.org/10.1016/j.cell.2019.05.031",
+        "https://doi.org/10.1016/j.cell.2019.05.031"
+      ]
+    },
+    {
+      "id": "b62",
+      "target": "b61",
+      "title": "C1Q: A fresh look upon an old molecule",
+      "authors": [
+        "N Thielens",
+        "F Tedesco",
+        "S Bohlson",
+        "C Gaboriaud",
+        "A Tenner"
+      ],
+      "journal": "Molecular Immunology",
+      "publication_date": "2017",
+      "year": 2017,
+      "volume": "89",
+      "page_start": "73",
+      "page_end": "83",
+      "doi": "10.1016/j.molimm.2017.05.025",
+      "pmid": "28601358",
+      "urls": [
+        "https://doi.org/10.1016/j.molimm.2017.05.025",
+        "https://doi.org/10.1016/j.molimm.2017.05.025"
+      ]
+    },
+    {
+      "id": "b63",
+      "target": "b62",
+      "title": "Gastrointestinal involvement in systemic lupus erythematosus: insight into pathogenesis, diagnosis and treatment",
+      "authors": [
+        "X Tian",
+        "X Zhang"
+      ],
+      "journal": "World Journal of Gastroenterology",
+      "publication_date": "2010",
+      "year": 2010,
+      "volume": "16",
+      "page_start": "2971",
+      "page_end": "2977",
+      "doi": "10.3748/wjg.v16.i24.2971",
+      "pmid": "20572299",
+      "urls": [
+        "https://doi.org/10.3748/wjg",
+        "https://doi.org/10.3748/wjg"
+      ]
+    },
+    {
+      "id": "b64",
+      "target": "b63",
+      "title": "Development of the intrinsic and extrinsic innervation of the gut",
+      "authors": [
+        "T Uesaka",
+        "H Young",
+        "V Pachnis",
+        "H Enomoto"
+      ],
+      "journal": "Developmental Biology",
+      "publication_date": "2016",
+      "year": 2016,
+      "volume": "417",
+      "page_start": "158",
+      "page_end": "167",
+      "doi": "10.1016/j.ydbio.2016.04.016",
+      "pmid": "27112528",
+      "urls": [
+        "https://doi.org/10.1016/j.ydbio.2016.04.016",
+        "https://doi.org/10.1016/j.ydbio.2016.04.016"
+      ]
+    },
+    {
+      "id": "b65",
+      "target": "b64",
+      "title": "Identification of a nerve-associated, lungresident interstitial macrophage subset with distinct localization and immunoregulatory properties",
+      "authors": [
+        "B Ural",
+        "S Yeung",
+        "P Damani-Yokota",
+        "J Devlin",
+        "M De Vries",
+        "P Vera-Licona",
+        "T Samji",
+        "C Sawai",
+        "G Jang",
+        "O Perez",
+        "Q Pham",
+        "L Maher",
+        "P Loke",
+        "M Dittmann",
+        "B Reizis",
+        "K Khanna"
+      ],
+      "journal": "Science Immunology",
+      "publication_date": "2020",
+      "year": 2020,
+      "volume": "5",
+      "pages": "8756",
+      "doi": "10.1126/sciimmunol.aax8756",
+      "pmid": "32220976",
+      "urls": [
+        "https://doi.org/10.1126/sciimmunol.aax8756",
+        "https://doi.org/10.1126/sciimmunol.aax8756"
+      ]
+    },
+    {
+      "id": "b66",
+      "target": "b65",
+      "title": "The production and secretion of complement component C1q by human mast cells",
+      "authors": [
+        "R Van Schaarenburg",
+        "J Suurmond",
+        "Kll Habets",
+        "M Brouwer",
+        "D Wouters",
+        "Fas Kurreeman",
+        "Twj Huizinga",
+        "Rem Toes",
+        "L Trouw"
+      ],
+      "journal": "Molecular Immunology",
+      "publication_date": "2016",
+      "year": 2016,
+      "volume": "78",
+      "page_start": "164",
+      "page_end": "170",
+      "doi": "10.1016/j.molimm.2016.09.001",
+      "pmid": "27648858",
+      "urls": [
+        "https://doi.org/10.1016/j.molimm.2016.09.001",
+        "https://doi.org/10.1016/j.molimm.2016.09.001"
+      ]
+    },
+    {
+      "id": "b67",
+      "target": "b66",
+      "title": "Neuron-macrophage crosstalk in the intestine: a `` microglia'' perspective",
+      "authors": [
+        "S Verheijden",
+        "De Schepper",
+        "S Boeckxstaens",
+        "G"
+      ],
+      "journal": "Frontiers in Cellular Neuroscience",
+      "publication_date": "2015",
+      "year": 2015,
+      "volume": "9",
+      "pages": "403",
+      "doi": "10.3389/fncel.2015.00403",
+      "pmid": "26528133",
+      "urls": [
+        "https://doi.org/10.3389/fncel.2015.00403",
+        "https://doi.org/10.3389/fncel.2015.00403"
+      ]
+    },
+    {
+      "id": "b68",
+      "target": "b67",
+      "title": "ETV3 and ETV6 enable monocyte differentiation into dendritic cells by repressing macrophage fate commitment",
+      "authors": [
+        "J Villar",
+        "A Cros",
+        "De Juan",
+        "A Alaoui",
+        "L Bonte",
+        "P Lau",
+        "C Tiniakou",
+        "I Reizis",
+        "B Segura",
+        "E"
+      ],
+      "journal": "Nature Immunology",
+      "publication_date": "2023",
+      "year": 2023,
+      "volume": "24",
+      "page_start": "84",
+      "page_end": "95",
+      "doi": "10.1038/s41590-022-01374-0",
+      "pmid": "36543959",
+      "urls": [
+        "https://doi.org/10.1038/s41590-022-01374-0",
+        "https://doi.org/10.1038/s41590-022-01374-0"
+      ]
+    },
+    {
+      "id": "b69",
+      "target": "b68",
+      "title": "Abnormal motility in patients with ulcerative colitis: The role of inflammatory cytokines",
+      "authors": [
+        "M Vrees",
+        "V Pricolo",
+        "F Potenti",
+        "W Cao"
+      ],
+      "journal": "Archives of Surgery",
+      "publication_date": "2002",
+      "year": 2002,
+      "volume": "137",
+      "page_start": "439",
+      "page_end": "445",
+      "doi": "10.1001/archsurg.137.4.439",
+      "pmid": "11926949",
+      "urls": [
+        "https://doi.org/10.1001/archsurg.137.4.439",
+        "https://doi.org/10.1001/archsurg.137.4.439"
+      ]
+    },
+    {
+      "id": "b70",
+      "target": "b69",
+      "title": "Increased susceptibility of c1q-deficient mice to Salmonella enterica serovar typhimurium infection",
+      "authors": [
+        "J Warren",
+        "P Mastroeni",
+        "G Dougan",
+        "M Noursadeghi",
+        "J Cohen",
+        "M Walport",
+        "M Botto"
+      ],
+      "journal": "Infection and Immunity",
+      "publication_date": "2002",
+      "year": 2002,
+      "volume": "70",
+      "page_start": "551",
+      "page_end": "557",
+      "doi": "10.1128/IAI.70.2.551-557.2002",
+      "pmid": "11796582",
+      "urls": [
+        "https://doi.org/10.1128/IAI.70.2.551-557.2002",
+        "https://doi.org/10.1128/IAI.70.2.551-557.2002"
+      ]
+    },
+    {
+      "id": "b71",
+      "target": "b70",
+      "title": "Studies of group B streptococcal infection in mice deficient in complement component C3 or C4 demonstrate an essential role for complement in both innate and acquired immunity",
+      "authors": [
+        "M Wessels",
+        "P Butko",
+        "M Ma",
+        "H Warren",
+        "A Lage",
+        "Carroll Mc"
+      ],
+      "journal": "PNAS",
+      "publication_date": "1995",
+      "year": 1995,
+      "volume": "92",
+      "page_start": "11490",
+      "page_end": "11494",
+      "doi": "10.1073/pnas.92.25.11490",
+      "pmid": "8524789",
+      "urls": [
+        "https://doi.org/10.1073/pnas.92.25.11490",
+        "https://doi.org/10.1073/pnas.92.25.11490"
+      ]
+    },
+    {
+      "id": "b72",
+      "target": "b71",
+      "title": "NEAP/ DUSP26 suppresses receptor tyrosine kinases and regulates neuronal development in zebrafish",
+      "authors": [
+        "C Yang",
+        "Y Yeh",
+        "J Wang",
+        "Y Liu",
+        "Y Chen",
+        "H Cheng",
+        "C Cheng",
+        "Y Chuang",
+        "C Yuh",
+        "Y Chen"
+      ],
+      "journal": "Scientific Reports",
+      "publication_date": "2017",
+      "year": 2017,
+      "volume": "7",
+      "pages": "5241",
+      "doi": "10.1038/s41598-017-05584-7",
+      "pmid": "28701747",
+      "urls": [
+        "https://doi.org/10.1038/s41598-017-05584-7",
+        "https://doi.org/10.1038/s41598-017-05584-7"
+      ]
+    },
+    {
+      "id": "b73",
+      "target": "b72",
+      "title": "ClusterProfiler: An R package for comparing biological themes among gene clusters",
+      "authors": [
+        "G Yu",
+        "L Wang",
+        "Y Han",
+        "Q He"
+      ],
+      "journal": "OMICS",
+      "publication_date": "2012",
+      "year": 2012,
+      "volume": "16",
+      "page_start": "284",
+      "page_end": "287",
+      "doi": "10.1089/omi.2011.0118",
+      "pmid": "22455463",
+      "urls": [
+        "https://doi.org/10.1089/omi.2011.0118",
+        "https://doi.org/10.1089/omi.2011.0118"
+      ]
+    },
+    {
+      "id": "b74",
+      "target": "b73",
+      "title": "Th17 cell differentiation is regulated by the circadian clock",
+      "authors": [
+        "X Yu",
+        "D Rollins",
+        "K Ruhn",
+        "J Stubblefield",
+        "C Green",
+        "M Kashiwada",
+        "P Rothman",
+        "J Takahashi",
+        "L Hooper"
+      ],
+      "journal": "Science",
+      "publication_date": "2013",
+      "year": 2013,
+      "volume": "342",
+      "page_start": "727",
+      "page_end": "730",
+      "doi": "10.1126/science.1243884",
+      "pmid": "24202171",
+      "urls": [
+        "https://doi.org/10.1126/science.1243884",
+        "https://doi.org/10.1126/science.1243884"
+      ]
+    },
+    {
+      "id": "b75",
+      "target": "b74",
+      "title": "The basic leucine zipper transcription factor NFIL3 directs the development of a common innate lymphoid cell precursor",
+      "authors": [
+        "X Yu",
+        "Y Wang",
+        "M Deng",
+        "Y Li",
+        "K Ruhn",
+        "C Zhang",
+        "L Hooper"
+      ],
+      "publication_date": "2014",
+      "year": 2014,
+      "doi": "10.7554/eLife.04406",
+      "pmid": "25310240",
+      "notes": "eLife 3:e04406",
+      "urls": [
+        "https://doi.org/10.7554/eLife.04406",
+        "https://doi.org/10.7554/eLife.04406"
+      ]
+    },
+    {
+      "id": "b76",
+      "target": "b75",
+      "title": "The lncRNA NEAT1 promotes activation of inflammasomes in macrophages",
+      "authors": [
+        "P Zhang",
+        "L Cao",
+        "R Zhou",
+        "X Yang",
+        "M Wu"
+      ],
+      "journal": "Nature Communications",
+      "publication_date": "2019",
+      "year": 2019,
+      "volume": "10",
+      "pages": "1495",
+      "doi": "10.1038/s41467-019-09482-6",
+      "pmid": "30940803",
+      "urls": [
+        "https://doi.org/10.1038/s41467-019-09482-6",
+        "https://doi.org/10.1038/s41467-019-09482-6"
+      ]
+    }
+  ]
+}
