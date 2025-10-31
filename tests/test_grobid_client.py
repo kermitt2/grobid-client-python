@@ -259,7 +259,7 @@ class TestGrobidClient:
         with patch('grobid_client.grobid_client.GrobidClient._test_server_connection'):
             with patch('grobid_client.grobid_client.GrobidClient._configure_logging'):
                 with patch('grobid_client.grobid_client.GrobidClient.process_batch') as mock_batch:
-                    mock_batch.return_value = (2, 0)  # Return tuple as expected
+                    mock_batch.return_value = (2, 0, 0)  # Return tuple as expected (processed, errors, skipped)
                     client = GrobidClient(check_server=False)
                     client.logger = Mock()
 
@@ -424,7 +424,7 @@ class TestGrobidClient:
                                 verbose=False
                             )
 
-                            assert result == (1, 0)  # One file processed, zero errors
+                            assert result == (1, 0, 0)  # One file processed, zero errors, zero skipped
 
 
 class TestVerboseParameter:
@@ -508,7 +508,7 @@ class TestEdgeCases:
             markdown_output=False
         )
 
-        assert result == (0, 0)  # No files processed, no errors
+        assert result == (0, 0, 0)  # No files processed, no errors, no skipped
 
     @patch('grobid_client.grobid_client.GrobidClient._test_server_connection')
     @patch('grobid_client.grobid_client.GrobidClient._configure_logging')
