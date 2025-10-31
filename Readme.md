@@ -43,7 +43,8 @@ A simple, efficient Python client for [GROBID](https://github.com/kermitt2/grobi
 
 
 > [!IMPORTANT]
-> GROBID supports Windows only through Docker containers. See the [Docker documentation](https://grobid.readthedocs.io/en/latest/Grobid-docker/) for details.
+> GROBID supports Windows only through Docker containers. See
+> the [Docker documentation](https://grobid.readthedocs.io/en/latest/Grobid-docker/) for details.
 
 ## 🚀 Installation
 
@@ -239,7 +240,8 @@ Configuration can be provided via a JSON file. When using the CLI, the `--server
 | `logging`       | Logging configuration (level, format, file output)                                                              | See Logging section     |
 
 > [!TIP]
-> Since version 0.0.12, the config file is optional. The client will use default localhost settings if no configuration is provided.
+> Since version 0.0.12, the config file is optional. The client will use default localhost settings if no configuration
+> is provided.
 
 ### Logging Configuration
 

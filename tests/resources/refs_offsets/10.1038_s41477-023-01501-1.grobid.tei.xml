@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">nature plants Article</title>
+				<funder>
+					<orgName type="full">Natural Sciences and Engineering Research Council of Canada</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-08-17">17 August 2023</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bradley</forename><forename type="middle">C</forename><surname>Paasch</surname></persName>
+							<idno type="ORCID">0000-0002-6799-0796</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Reza</forename><surname>Sohrab</surname></persName>
+							<idno type="ORCID">0000-0002-9017-0462</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">James</forename><forename type="middle">M</forename><surname>Kremer</surname></persName>
+							<idno type="ORCID">0009-0007-7244-8719</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Energy Plant Research Laboratory</orgName>
+								<orgName type="institution">Michigan State University</orgName>
+								<address>
+									<settlement>East Lansing</settlement>
+									<region>MI</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kinya</forename><surname>Nomura</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Y</forename><forename type="middle">Ti</forename><surname>Cheng</surname></persName>
+							<idno type="ORCID">0000-0002-9017-0462</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jennif</forename><surname>Martz</surname></persName>
+							<idno type="ORCID">0009-0007-7244-8719</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Energy Plant Research Laboratory</orgName>
+								<orgName type="institution">Michigan State University</orgName>
+								<address>
+									<settlement>East Lansing</settlement>
+									<region>MI</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Brian</forename><surname>Kvitko</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Plant Pathology</orgName>
+								<orgName type="institution">University of Georgia</orgName>
+								<address>
+									<settlement>Athens</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">James</forename><forename type="middle">M</forename><surname>Tiedje</surname></persName>
+							<idno type="ORCID">0000-0002-8992-6218</idno>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Microbiology and Molecular Genetics</orgName>
+								<orgName type="institution">Michigan State University</orgName>
+								<address>
+									<settlement>East Lansing</settlement>
+									<region>MI</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">&amp;</forename><surname>Sheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Biology</orgName>
+								<orgName type="institution">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Howard Hughes Medical Institute</orgName>
+								<orgName type="institution" key="instit2">Duke University</orgName>
+								<address>
+									<settlement>Durham</settlement>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>He</surname></persName>
+							<idno type="ORCID">0000-0003-1308-498X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Reza</forename><surname>Sohrabi</surname></persName>
+						</author>
+						<title level="a" type="main">nature plants Article</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2023-08-17">17 August 2023</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C5087BBBCD122C8CD8677DE5CC8462BB</idno>
+					<idno type="DOI">10.1038/s41477-023-01501-1</idno>
+					<note type="submission">Received: 30 November 2022 Accepted: 27 July 2023</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="unknown" ident="GROBID" when="2025-10-31T09:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">unknown</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Although many studies have shown that microbes can ectopically stimulate or suppress plant immune responses, the fundamental question of whether the entire preexisting microbiota is indeed required for proper development of plant immune response remains unanswered. Using a recently developed peat-based gnotobiotic plant growth system, we found that Arabidopsis grown in the absence of a natural microbiota lacked age-dependent maturation of plant immune response and were defective in several aspects of pattern-triggered immunity. Axenic plants exhibited hypersusceptibility to infection by the bacterial pathogen Pseudomonas syringae pv. tomato DC3000 and the fungal pathogen Botrytis cinerea. Microbiota-mediated immunocompetence was suppressed by rich nutrient conditions, indicating a tripartite interaction between the host, microbiota and abiotic environment. A synthetic microbiota composed of 48 culturable bacterial strains from the leaf endosphere of healthy Arabidopsis plants was able to substantially restore immunocompetence similar to plants inoculated with a soil-derived community. In contrast, a 52-member dysbiotic synthetic leaf microbiota overstimulated the immune transcriptome. Together, these results provide evidence for a causal role of a eubiotic microbiota in gating proper immunocompetence and age-dependent immunity in plants.</p><p>The aboveground and belowground parts of land plants host a variety of microorganisms, which collectively constitute the plant microbiota. Microbiota members can reside on or inside plants and appear to be taxonomically conserved at the phylum level <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref> . The broad conservation of plant microbiota suggests that plants probably have evolved mechanisms to select and maintain the abundance, composition and function of microbiota to achieve homoeostasis 9 . A correctly assembled microbiota (that is, eubiotic microbiota) is probably essential for plant health and survival as recent studies have begun to reveal deleterious effects of genetically induced dysbiotic microbiotas on plant health <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> . Although individual or groups of members of the microbiota have been shown to improve nutrient uptake, growth and resistance to abiotic and biotic stresses <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b1">2,</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref> , the contribution of a plant's entire indigenous microbiota to plant functions is not well understood. This is largely due to poorly dissected microbe-microbe and microbe-plant interactions at the community level.</p><p>Different members of the plant microbiota can form mutualistic, commensal or pathogenic interactions with plants. To protect</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>performed the classical flg22 protection assays using 2.5-week-old and 3.5-week-old Arabidopsis plants, which were conventionally grown in a potting soil substrate in air-circulating growth chambers. In 2.5-week-old plants, we observed a modest level of flg22-mediated resistance to virulent Pst DC3000 in flg22-treated plants compared with mock-treated plants. Older, 3.5-week-old plants, however, exhibited a significantly enhanced level of flg22-triggered resistance compared with 2.5-week-old plants (Fig. <ref type="figure">1a</ref>). This result demonstrated age-dependent development of PTI in soil-grown Arabidopsis plants, which is consistent with a recent study showing that FLS2-dependent immunity increased in the first 6 d of young seedling growth in agar medium without microbes <ref type="bibr" target="#b43">44</ref> .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Age-dependent PTI maturation requires microbiota</head><p>Traditionally, age-related resistance has been attributed to developmental transition processes <ref type="bibr" target="#b44">45</ref> . We examined an additional hypothesis that the endogenous microbiome might be involved in age-dependent PTI in plants. For this purpose, we investigated the temporal maturation of flg22-mediated resistance in peat-based gnotobiotic plant growth systems. Holoxenic (HO) plants colonized with a natural, soil-derived microbial community ('MSU', collected from agricultural soil located at Michigan State University, East Lansing, Michigan; see Methods) and corresponding axenic (AX) plants, which were mock inoculated with autoclaved 'microbial community derived from the same 'MSU' soil', were used. As shown in Fig. <ref type="figure">1b</ref>,<ref type="figure">c</ref>, HO plants exhibited progressively more robust flg22-mediated resistance against Pst DC3000 over time, which is consistent with age-dependent PTI observed in plants grown conventionally in potting soil (Fig. <ref type="figure">1a</ref>). In contrast, AX plants mock-inoculated with the autoclaved microbial community were greatly reduced in age-dependent flg22-mediated resistance phenotype (Fig. <ref type="figure">1b</ref>,<ref type="figure">c</ref>). Arabidopsis mutant bak1-5 bkk1-1 cerk1 (bbc) (ref. 46), which is defective in PTI signalling downstream of multiple PRRs, including the flg22 receptor FLS2, did not show flg22-mediated resistance in HO plants at any age (Extended Data Fig. <ref type="figure">1</ref>), suggesting that microbiota-mediated age-dependent resistance requires canonical PTI signalling co-receptors.</p><p>Next, we quantified induction of the PTI marker gene FLG22-INDUCED RECEPTOR-LIKE KINASE 1 (FRK1) to further characterize age-dependent activation of PTI in HO plants and apparent lack thereof in AX plants. While basal expression of FRK1 was similar for both 3.5-and 5.5-week-old HO plants (Fig. <ref type="figure">1d</ref>), flg22 induced a higher level of FRK1 expression in old HO plants than in younger HO plants (Fig. <ref type="figure">1e</ref>). Interestingly, basal expression of FRK1 was lower in AX plants compared with either young or old HO plants (Fig. <ref type="figure">1d</ref>) and, notably, no significant age-dependent increase in flg22-induced FRK1 expression was observed in AX plants (Fig. <ref type="figure">1e</ref>). Thus, the reduced age-dependent maturation of PTI in AX is correlated with a lack of robust increase in age-dependent expression of FRK1 gene.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Axenic plants lack normal expression of defence genes</head><p>To capture genome-wide gene expression in AX and HO plants beyond the FRK1 marker gene, we conducted transcriptome analysis of AX and HO Arabidopsis plants grown in the peat gnotobiotic system. To reduce the possibility of community-specific bias due to the use of a single microbiota, microbial communities collected from two distinct soils were used: 'MSU', which was collected as Alfisol soil type, and 'Malaka', which was collected from undisturbed grassland soil in Malaka Township, Iowa (see Methods) and is a Mollisol soil. Principal component analysis (PCA) of RNA-seq gene expression data revealed distinct expression patterns between HO plants and AX plants (PC1, 26% variance; Fig. <ref type="figure" target="#fig_0">2a</ref>). Using |log 2 FC| ≥ 1 and false discovery rate (FDR) &lt; 0.05 cut-off, we identified a total of 435 differentially expressed genes (DEGs) between HO and AX plants across both microbiota inputs: 352 were depleted in AX plants and 83 were enriched in AX plants (Fig. <ref type="figure" target="#fig_0">2b</ref>,<ref type="figure">c</ref> and Supplementary Data 1). Of the 352 DEGs depleted in AX plants, 138 were depleted irrespective of the microbiota input source (that is, enriched in both HO plants colonized by the 'MSU' community and HO plants against potentially harmful exploitations by microorganisms, plants have evolved cell surface and intracellular immune receptors that recognize evolutionarily conserved microbe-associated molecular patterns (PAMPs) or pathogen-derived effector proteins, resulting in pattern-triggered immunity (PTI) or effector-triggered immunity (ETI), respectively. While ETI appears to be specific for pathogens, PTI represents a basal line of plant defence against both pathogenic and non-pathogenic microbes and is required for maintaining a eubiotic phyllosphere microbiota in Arabidopsis to prevent dysbiosis <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> . PTI signalling is initiated upon perception of PAMPs by plasma membrane-localized pattern recognition receptors (PRRs) <ref type="bibr" target="#b16">17</ref> . For example, a 22-amino-acid epitope derived from bacterial flagellin (flg22) is a well characterized elicitor of PTI and is recognized by the PRR FLAGELLIN-SENSITIVE 2 (FLS2) (ref. 18). FLS2 forms a complex with co-receptor BRASSINOS-TEROID INSENSITIVE 1-ASSOCIATED RECEPTOR KINASE 1 (BAK1) (ref. 19). Phosphorelays between FLS2, BAK1, BOTRYTIS-INDUCED KINASE 1 (BIK1) and a MAPK cascade initiate downstream PTI signalling events, including the production of reactive oxygen species (ROS), calcium fluxes, expression of a large suite of defence-related genes, cell wall remodelling and stomatal closure <ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref> . Activation of PTI before an infection can also result in enhanced pathogen resistance <ref type="bibr" target="#b25">26,</ref><ref type="bibr" target="#b26">27</ref> .</p><p>Age-related resistance (ARR) is a widely observed phenomenon in plants in which young plants exhibit greater disease susceptibility compared with older plants <ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b28">29</ref> . This is observed across many flowering plants against a variety of pathogens <ref type="bibr" target="#b29">30</ref> . In Arabidopsis, for instance, the basal susceptibility of young plants to the foliar bacterial pathogen Pseudomonas syringae pv. tomato (Pst) DC3000 is greater compared with older plants <ref type="bibr" target="#b30">31</ref> . One hypothesis to explain ARR involves the growth-defence trade-off concept: to balance resource allocations during vigorous vegetative growth early in life, young plants prioritize growth over defence <ref type="bibr" target="#b31">32,</ref><ref type="bibr" target="#b32">33</ref> . Indeed, there is evidence of direct molecular connections between plant growth and immunity <ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref> , including common dual-function signalling components as in the case of PTI and brassinosteroid-dependent plant growth <ref type="bibr" target="#b36">37</ref> . However, it is unclear whether molecular connections such as these are a sole basis for ARR in plants. In the animal kingdom, development of gnotobiotic animals such as germ-free mice led researchers to discover an important contribution of endogenous microbiota in postnatal maturation of innate immune responses in newborn animals <ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39</ref> . This raises the possibility that plant microbiota may also contribute to the maturation of plant immunity. However, it remains an open question whether age-dependent immunity is entirely intrinsic to plant development or whether maturation of PTI is, in part, the result of colonization of a microbiota. Furthermore, in animals, the presence of dysbiotic microbial communities can be linked to exaggerated immune responses, which have debilitating clinical consequences <ref type="bibr" target="#b39">40</ref> . Genetically induced and naturally occurring dysbiotic microbial communities have recently been described in plants <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b40">41,</ref><ref type="bibr" target="#b41">42</ref> , but it is not clear whether dysbiotic microbiota in plants are associated with overactive immune responses. Addressing these basic microbiome questions requires the development of proper gnotobiotic plant growth systems and establishment of well characterized normal (eubiotic) and dysbiotic microbial communities.</p><p>In a recent study, we reported two peat-based gnotobiotic plant growth systems, FlowPot and GnotoPot <ref type="bibr" target="#b42">43</ref> , and two synthetic bacterial communities, a eubiotic community from healthy Arabidopsis leaves and a dysbiotic community from leaves of the Arabidopsis min7 fls2 efr cerk1 (mfec) quadruple mutant, which lacks the ability to maintain a eubiotic endophytic bacterial community <ref type="bibr" target="#b9">10</ref> . Here we employed these tools to address the questions regarding the role of the endogenous microbiome in the development of ARR and a possible role of eubiosis in gating proper plant basal immunity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Age-dependent PTI in conventionally grown plants</head><p>We began this project by characterizing possible maturation of PTI over time in conventionally grown Arabidopsis plants. For this purpose, we Article <ref type="url" target="https://doi.org/10.1038/s41477-023-01501-1">https://doi.org/10.1038/s41477-023-01501-1</ref> colonized by the 'Malaka' community; Fig. <ref type="figure" target="#fig_0">2d</ref>). Gene ontology (GO) term enrichment analysis of these 138 'core' AX-depleted genes revealed an over-representation of terms involved in plant immunity (Fig. <ref type="figure" target="#fig_0">2e</ref> and Supplementary Data 2). The genes enriched in AX plants did not display any significant GO term enrichment. Closer examination of depleted DEGs in AX plants revealed numerous genes involved in PTI, defence hormone salicylic acid (SA)-mediated defence and defence-associated metabolite biosynthesis (Fig. <ref type="figure" target="#fig_0">2c</ref> and Supplementary Data 1). These genes included FRK1; several leucine-rich repeat protein kinases such as IMPAIRED OOMYCETE SUSCEPTIBILITY 1 (IOS1), AT1G51890, AT1G51790, AT1G51860 and AT5G59680; systemic immunity-associated genes AZELAIC ACID INDUCED 1 (AZI1) and AZI3; PATHOGENESIS RELATED 2 (PR2) and PR4; glucosinolate biosynthesis genes such as FAD-LINKED OXIDOREDUCTASE (FOX1) and the cytochrome P450 monooxygenases CYP71A12 and CYP71B15; and defence-associated transcription factors MYB15 and WRKY 30 (Fig. <ref type="figure" target="#fig_0">2c</ref> and Supplementary Data 1). Thus, consistent with the targeted FRK1 gene expression analysis shown in Fig. <ref type="figure">1d</ref>, results from the transcriptome analysis using two independent soil-derived microbiotas pointed to a broadly depleted PTI/SA defence gene expression in AX plants compared with HO plants, which collectively contribute to induced and basal innate immunity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Axenic Arabidopsis is underdeveloped in PTI</head><p>In addition to depleted immune gene expression, we found that AX plants exhibited significantly lower levels of other PTI-associated immune responses compared with HO plants. For example, 6-week-old AX plants exhibited significantly reduced flg22-, elf18-and Pep1-induced ROS production compared with HO plants both in the magnitude of maximum ROS production (peak amplitude) and in the time to reach the maximum (Fig. <ref type="figure" target="#fig_1">3a</ref> and Extended Data Fig. <ref type="figure" target="#fig_0">2</ref>). AX plants also exhibited significantly reduced PAMP/DAMP-induced FRK1 gene expression compared with HO plants (Fig. <ref type="figure" target="#fig_1">3b</ref>). Western blot analysis revealed that despite possessing similar levels of total MPK3 and MPK6 (Fig. <ref type="figure" target="#fig_1">3c</ref>,<ref type="figure">d</ref>), less MPK was phosphorylated in AX plants after the activation of PTI by treatment with flg22 (Fig. <ref type="figure" target="#fig_1">3e</ref>). Although reverse transcription-quantitative polymerase chain reaction (RT-qPCR) analysis consistently showed that both basal and flg22-induced expression of the FLS2 receptor gene is significantly reduced in AX plant leaf tissue compared with HO plant leaf tissue (Fig. <ref type="figure" target="#fig_1">3f</ref>), total FLS2 protein abundance was variable and only occasionally reduced in AX plant leaves (Extended Data Fig. <ref type="figure" target="#fig_1">3</ref>). In contrast, the co-receptor BAK1 protein was consistently found in lower relative abundance in AX plants compared with HO plants (Fig. <ref type="figure" target="#fig_1">3g</ref>). In addition, quantification of the defence hormone SA, which is downstream of PTI signalling, revealed that AX plants possess lower basal levels of SA compared with HO plants (Extended Data Fig. <ref type="figure" target="#fig_2">4a</ref>,<ref type="figure">b</ref>). Finally, AX plants were hypersensitive to infection by the virulent foliar hemibiotrophic bacterial pathogen Pst DC3000 and the necrotrophic fungal pathogen B. cinerea compared with HO plants (Fig. <ref type="figure" target="#fig_1">3h</ref>,<ref type="figure">i</ref>). Together, these studies demonstrate multiple compromised PTI immune phenotypes in axenic plants. b d e 2.5 3.5 4.5 5.5 0 2 4 6 8 AX-mock AX-flg22 HO-mock HO-flg22 A A' a a' A A A A' A' A' a a a b' c' c' Plant age (weeks) Plant age (weeks) AX HO AX HO 3.5 5.5 0 1 2 3 FRK1 expression (2 -∆∆Ct ) FRK1 expression (2 -∆∆Ct ) B A B A 3.5 5.5 0 20 40 60 80 B C A A Plant age (weeks) log 10 (c.f.u. cm -2 ) Mock Flg22 a 2.5 3.5 0 2 4 6 8 10 Plant age (weeks) log 10 (c.f.u. cm -2 ) A B A C c 2.5 3.5 4.5 5.5 0 1 2 3 Plant age (weeks) log 10 fold change AX HO A A A B A BC A C Fig. 1 | Age-dependent flg22-triggered immunity in Arabidopsis. a, flg22 protection assay showing enhanced resistance against Pst DC3000 triggered by pretreatment with 500 nM flg22 in 2.5-week-old and 3.5-week-old plants. Each bar represents the mean (±s.d.) bacterial titre 24 h after inoculation as log-transformed c.f.u. cm -2 (n = 6 plants). Different letters above bars represent a significant difference (P &lt; 0.05, two-way analysis of variance (ANOVA) with Tukey's honest significant difference (HSD) post-hoc test). b, Age-dependent flg22 protection. AX or HO plants were treated 24 h before inoculation with Pst DC3000 with either a water (mock) or 100 nM flg22 solution. Each bar represents the mean (±s.d.) bacterial titre 24 h after inoculation as log-transformed c.f.u. cm -2 (n = 3 plants). Different letters represent a significant difference (P &lt; 0.05, two-way ANOVA with Tukey's HSD post-hoc test). c, Relative protection displayed as fold change in bacterial cell counts between flg22-and mock-treated samples. Derived from absolute counts quantified in b. Error bars represent s.d. Different letters represent a significant difference (P &lt; 0.05, two-way ANOVA with Tukey's HSD post-hoc test). d,e, Basal (d) and flg22-induced (e) age-dependent FRK1 gene expression in 3.5-week-old and 5.5-week-old AX and HO plants. Total RNA was extracted 4 h after treatment with a mock solution lacking flg22 for basal expression or 100 nM flg22 for flg22-induced expression. Expression levels displayed as relative to mock-treated 3.5-week-old HO plants for both panels. PP2AA3 was used for normalization. Results represent the mean ± s.d. (n = 4 plants). Different letters represent a significant difference (P &lt; 0.05, two-way ANOVA with Tukey's HSD post-hoc test). a-e, Experiments were repeated three independent times with similar results. Exact P values for all comparisons are detailed in the Source data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A eubiotic leaf synthetic community confers immunocompetence</head><p>We recently assembled a 48-member eubiotic SynCom (SynCom Col-0 ) composed of endophytic bacteria from leaves of healthy Arabidopsis Col-0 plants <ref type="bibr" target="#b9">10</ref> . To determine to what extent an eubiotic SynCom derived from the leaf endosphere could restore immunocompetence to AX plants, we compared the PTI phenotypes of Col-0 plants grown with and without SynCom (SynCom Col-0 vs MgCl 2 ). Col-0 plants grown with the 'MSU' soil-derived microbiota were used as control. We observed robust flg22-induced production of ROS in HO plants inoculated with the 'MSU' soil-derived microbiota and SynCom Col-0 -inoculated plants (Fig. <ref type="figure" target="#fig_2">4a</ref> and Extended Data Fig. <ref type="figure" target="#fig_3">5a</ref>). We next quantified flg22-induced FRK1 gene expression and observed that plants colonized by SynCom Col-0 were restored in basal and flg22-induced FRK1 expression (Fig. <ref type="figure" target="#fig_2">4b</ref>,<ref type="figure">c</ref>), which was again similar to that observed for HO plants (Fig. <ref type="figure">1d</ref>,<ref type="figure">e</ref>). In addition, plants colonized by SynCom Col-0 had an increased level of BAK1 protein (Extended Data Fig. <ref type="figure" target="#fig_3">5b</ref>) and were more resistant to Pst DC3000 infection (Fig. <ref type="figure" target="#fig_2">4d</ref>) compared with AX plants mock-inoculated with the same volume of 10 mM MgCl 2 . Taken together, these results suggest that a leaf endosphere-derived bacterial SynCom can substantially restore immune competence to AX plants similar to a natural soil-derived microbiota. To evaluate possible redundancy of SynCom Col-0 members in contribution to immune competence, we assembled a simplified version of SynCom Col-0 with only 19 strains (SynCom  ) to cover the taxonomic diversity at the genus level (Supplementary Data 3). We found that SynCom Col-mix19 could effectively restore ROS production in response to flg22 (Extended Data Fig. <ref type="figure" target="#fig_4">6</ref>). Furthermore, among strains with high representation in SynCom Col-0 , we randomly chose a mix of three strains that are present in SynCom Col-mix19 and found that these three strains (SynCom Col-mix3 , representing Achromobacter, Comamonas and Stenotrophomonas genera) also partially restored ROS production in response to flg22 (Extended Data Fig. <ref type="figure" target="#fig_4">6</ref>). This suggests that there might be significant redundancy among strains of SynCom Col-0 that can endow immunocompetence.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Impact of abiotic conditions</head><p>During the development and optimization of the peat-based gnotobiotic system, we noticed a correlation between levels of microbiota-mediated restoration of immune competency and concentrations of Linsmaier and Skoog <ref type="bibr" target="#b46">47</ref> (LS) nutrient media (which contains mineral salts as well as some organic compounds such as myo-inositol and MES buffer; see Methods for nutrient content) added during preparation of the gnotobiotic system. To systematically determine the effects of nutrients on microbiota-mediated immunocompetence, we measured flg22-induced production of ROS in AX and HO plants along a nutrient concentration gradient. Using the same volume of liquid, GnotoPots were prepared with full strength (1x) LS, half strength (0.5x) LS and one tenth strength (0.1x) LS. We observed a significant impact of nutrients on flg22-mediated ROS production in HO plants. Decreasing nutrient strength significantly increased ROS burst magnitude and shortened time to reach the maximum ROS production (Fig. <ref type="figure" target="#fig_3">5a</ref>) in HO plants. At intermediate nutrient levels (0.5x LS), ROS burst magnitude was moderately increased and time to reach the maximum was reduced compared with higher (1x LS) nutrient concentrations, but the total ROS produced was not significantly different (Fig. <ref type="figure" target="#fig_3">5a</ref> and Extended Data Fig. <ref type="figure">7a</ref>). At low nutrient levels (0.1x LS), ROS burst magnitude was increased, time to maximum shortened and total ROS increased (Fig. <ref type="figure" target="#fig_3">5a</ref> and Extended Data Fig. <ref type="figure">7a</ref>). Nutrient concentration did not have an clustering with Euclidean distance and complete linkage. Label superscript indicates community used for inoculation of HO plants or mock inoculation of AX plants. A subset of the differentially regulated genes in HO and AX is shown on right. d, Venn diagram of upregulated DEGs showed 138 common genes in response to HO MSU and HO Malaka treatments. e, GO term enrichment (GO:BP biological process) analysis on 'core' depleted DEGs in AX plants. Top enriched GO terms displayed, ranked by significance (FDR &lt; 0.05 cut-off). a-e, n = 3 biologically independent plant samples per condition.</p><p>Article <ref type="url" target="https://doi.org/10.1038/s41477-023-01501-1">https://doi.org/10.1038/s41477-023-01501-1</ref> effect on the timing of ROS production in AX plants, and only a marginal impact on total ROS production was observed. We next examined the effects of individual components of LS medium, including nitrogen, phosphorus and iron as well as carbon-containing compounds myo-inositol and MES, on microbiota-mediated immunocompetence by supplementing 0.5x LS with each nutrient/compound at the concentration present in 1x LS. Only 1x nitrogen (supplied as NH 4 NO 3 and KNO 3 salts) suppressed flg22-induced ROS production and FRK1 gene expression in HO plants to levels similar to 1x LS (Extended Data Fig. <ref type="figure">7b-d</ref>), indicating that high N content plays a major role in suppressing microbiota-mediated immunocompetence.</p><p>To determine whether microbial colonization is affected by nutrient level, we determined the absolute and relative abundance of phyllosphere bacterial microbiota using enumeration of culturable bacteria and 16S ribosomal (r)RNA gene amplicon sequencing in plants supplemented with 0.5x LS or 1x LS. Plants grown with 1x LS harboured approximately 10-fold lower total phyllosphere bacteria microbiota levels compared with plants grown with 0.5x LS (Fig. <ref type="figure" target="#fig_3">5b</ref>). Principal coordinates analysis (PCoA) on weighted UniFrac distances indicated a significant compositional difference between phyllosphere bacterial communities associated with plants grown under the two nutrient levels (Fig. <ref type="figure" target="#fig_3">5c</ref>). Actinobacteriota, Bacteroidota and Gammaproteobactera (belonging to the order Pseudomonadales) were observed to be more abundant in the phyllosphere of plants grown with 0.5x LS, whereas their relative abundance was greatly reduced in plants grown with 1x LS. Conversely, Gammaproteobacteria belonging to order Burkholderiales increased in relative abundance in plants grown with 1x LS compared with those grown with 0.5x LS (Fig. <ref type="figure" target="#fig_3">5d</ref>). Together, these findings illustrate a tripartite interaction among immunity, microbiota and environment during microbiota-mediated maturation of flg22-triggered immunity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dysbiotic microbiota overstimulates immune gene expression</head><p>Several recent reports have begun to show an important contribution of plant immunity, including PTI and vesicular trafficking pathways, Article <ref type="url" target="https://doi.org/10.1038/s41477-023-01501-1">https://doi.org/10.1038/s41477-023-01501-1</ref> to maintaining microbiota homoeostasis in Arabidopsis leaves <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> . In particular, we were able to establish two parallel leaf endosphere-derived bacterial SynComs: 48-member SynCom Col-0 derived from healthy Col-0 leaves and 52-member SynCom mfec derived from dysbiotic mfec mutant leaves <ref type="bibr" target="#b9">10</ref> . To investigate the impact of a normal (eubiotic) microbiota vs a dysbiotic microbiota on plant immunity, we examined the expression of several immunity-associated marker genes (FRK1, PR1 and CYP71A12) in plants colonized with SynCom mfec or SynCom Col-0 in comparison to AX plants in a plate-based gnotobiotic system. We found a gradient of expression of these genes, with the highest expression observed in Col-0 plants colonized by SynCom mfec , an intermediate level in SynCom Col-0 -colonized plants and the lowest level in AX plants (Fig. <ref type="figure" target="#fig_7">6a-c</ref>).</p><p>To gain a better understanding of plant transcriptional responses to eubiotic microbiota vs a dysbiotic microbiota, we performed RNA-seq analysis of Col-0 plants colonized by SynCom mfec and SynCom Col-0 grown in parallel in the GnotoPot system. Colonization with SynCom Col-0 compared to SynCom mfec resulted in 774 DEGs (|log 2 FC| &gt; 1 and FDR &lt; 0.05) (Fig. <ref type="figure" target="#fig_7">6d</ref> and Supplementary Data 4). GO term analysis of the 609 DEGs upregulated upon colonization with SynCom mfec vs SynCom Col-0 showed an over-representation of GO terms associated with biotic stress and immunity (Fig. <ref type="figure" target="#fig_7">6e</ref> and Supplementary Data 5). In addition, several immunity pathways including the systemic acquired resistance, PTI signalling and glucosinolate biosynthetic processes were upregulated. Further analysis showed that several dysbiosis-associated genes were involved in pathogenesis-related processes during biotic stresses, which are associated with immunity, cell death and its regulation (Fig. <ref type="figure" target="#fig_7">6f</ref>). Collectively, our results showed that dysbiotic SynCom mfec overstimulates immune gene expression compared with eubiotic SynCom Col-0 .</p><p>Next, we examined the capacity of individual SynCom members to potentiate immune stimulation. To facilitate the analysis of immune gene expression involving a large number of microbiota strains (48 SynCom Col-0 strains and 52 SynCom mfec strains), we first performed qualitative β-glucuronidase (GUS) assays with 12-day-old seedlings of the CYP71A12 Pro :GUS reporter line grown in liquid LS media inoculated with each of the 100 individual SynCom members. We found that the Stenotrophomonas maltophilia strains from both SynCom Col-0 (4 strains) and SynCom mfec (8 strains) induced CYP71A12 Pro :GUS reporter in leaves. In addition, 4 other strains that are unique to SynCom mfec , including Stenotrophomonas acidaminiphila (mfec-41), Stenotrophomonas sp. (mfec-48), Microbacterium sp. (mfec-31) and Pseudomonas citronellolis (mfec-34), showed CYP71A12 Pro :GUS reporter activity in seedling leaves (Extended Data Fig. <ref type="figure">8</ref>). Thus, SynCom mfec has higher number and more diverse strains that can induce CYP71A12 promoter activity in leaves. We then performed an independent RT-qPCR-based analysis of CYP71A12 gene expression in leaves of 5-week-old, soil-grown Arabidopsis Col-0 plants, revealing a pattern of CYP71A12 gene expression similar to that of the CYP71A12 Pro :GUS reporter assay, despite very different plant growth conditions in these two independent experiments (Supplementary Data 6). Notably, most of the CYP71A12-induced SynCom members were previously shown to cause dysbiotic symptoms <ref type="bibr" target="#b9">10</ref> .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>Here we show that Arabidopsis plants grown without exposure to a microbiota are greatly compromised in age-dependent immunity that occurs in plants colonized naturally by microbiota. Axenically grown plants exhibit significant defects in PTI and are hypersusceptible to infection by the bacterial pathogen Pst DC3000 and the fungal pathogen B. cinerea. We also show that immunocompetence can be restored by natural soil-derived microbiota as well as a 48-member eubiotic bacterial synthetic community (SynCom Col-0 ) derived from leaf endophytic bacteria. In contrast, a 52-member dysbiotic synthetic community derived from leaf endophytic bacteria overstimulates immune gene expression. Finally, our results show that the immune-modulation function of microbiota can be influenced by environmental conditions. Together, these results have notable implications in the formulation of a framework for explaining age-dependent immunity, microbiota-immunity interplay and 'immunity-microbiome-environment' tritrophic interactions in plants.</p><p>With respect to age-dependent immunity, a previous study characterized the ontogeny of flg22-triggered immunity in very young Arabidopsis seedlings (within 6 d after germination) in axenic nutrient agar plates <ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b47">48</ref> , providing insight into the developmentally controlled maturation of immune responses immediately after germination. Results presented here, however, show that flg22-triggered immunity exhibits an age-dependent maturation period that extends through at least the first 2-3 weeks of vegetative growth and that full-scale age-dependent immune maturation requires exposure to microbiota. As demonstrated here, microbiota-colonized HO plants in peat-based gnotobiotic systems developed age-dependent PTI over time, mirroring plants grown conventionally in potting soil. In contrast, development of age-dependent PTI was greatly reduced in AX plants. The microbiota-mediated age-dependent maturation bears striking conceptual parallels to that observed in germ-free mice in which an represent the mean (±s.d.) expression value (n = 3 plants). Basal expression P = 0.0011; flg22-induced P = 0.0006, two-tailed unpaired t-test. d, Pst DC3000 populations in axenic plants mock-inoculated with 10 mM MgCl 2 and SynCom Col- 0 -inoculated plants. Each bar represents the mean (±s.d.) bacterial titre 3 d after inoculation as log-transformed c.f.u. cm -2 (n = 4 plants). P = 4.80 × 10 -5 , two-tailed unpaired t-test. a-d, Experiments were repeated three independent times with similar results.</p><p>Article <ref type="url" target="https://doi.org/10.1038/s41477-023-01501-1">https://doi.org/10.1038/s41477-023-01501-1</ref> important contribution of endogenous microbiota in postnatal maturation of mammalian innate immunity is well recognized <ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39</ref> . While ARR has typically been proposed to be caused by developmental processes that antagonize immune responses <ref type="bibr" target="#b44">45</ref> , results presented here revealed that microbiota-assisted immune maturation is a previously unrecognized contributor that plays an important role in age-dependent immune maturation in plants.</p><p>It should be pointed out that the discovery of a causal role of microbiota in age-dependent immune maturation required the use of a gnotobiotic system capable of growing plants with or without a natural or synthetic community of microbes. Because agar plates, a commonly used gnotobiotic system, are not ideal for natural colonization of plants by a complex microbial community due to artificial overgrowth of some microbes, this has been achieved in this study by using Flow-Pot and GnotoPot gnotobiotic systems with a peat-based substrate, which partially simulates the natural soil substrate. We used FlowPots and GnotoPots interchangeably and some initial experiments were repeated using both systems with similar results. For most subsequent experiments, we used GnotoPots because they allowed plants to grow for a longer duration compared with FlowPots <ref type="bibr" target="#b42">43</ref> . An important realization during this study is that peat-based plant gnotobiotic systems can be fine-tuned to simulate a range of various abiotic conditions, such as nutrients. This was useful for our study because many of the microbiota functions in nature seem to be context dependent. For example, high nitrogen fertilizer regimes have been shown to increase susceptibility of plants grown in a non-sterile hydroponic system <ref type="bibr" target="#b48">49</ref> . However, it was not known whether the effect of high-nitrogen nutrients is mediated in part by microbiota. In this study, fine-tuning the nutrient conditions of GnotoPots enabled us to discover that nutrient-mediated immune suppression was most obvious in the presence of microbiota and that high nitrogen has a prominent effect on microbiota level and composition, suggesting an intricate interplay between plant, microbiota and nutrient conditions.</p><p>Recent studies began to illustrate the importance of immunitymicrobiome interplays in plants. For example, we and others have recently shown that PTI-associated PRRs and ROS-generating RBOHD/F are essential components of a plant genetic network in configuring a normal eubiotic leaf microbiota to prevent health-damaging dysbiosis <ref type="bibr" target="#b0">1,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> . Similarly, bacterial members of both leaf and root microbiotas either stimulate or suppress PTI-associated gene expression <ref type="bibr" target="#b49">50,</ref><ref type="bibr" target="#b50">51</ref> . In this study, we found that a synthetic community composed of 48 culturable Arabidopsis phyllosphere bacteria (SynCom Col-0 ) was sufficient to restore immunocompetence in the leaves of AX plants at a level similar to that conferred by a natural soil-derived microbial community. This is interesting considering that most members of the leaf bacterial microbiota live on the surfaces and less than 5% of leaf bacteria reside inside the leaves <ref type="bibr" target="#b9">10</ref> . Results presented here suggest either the importance of endophytic leaf bacteria in maturing immune responses in Arabidopsis leaves or the presence of multiple functionally redundant subcommunities of any given microbiota, with each subcommunity capable of independently conferring immune maturation to plants. In either scenario, there seems to be substantial redundancy among different phyllosphere strains in endowing immunocompetence (Extended Data Fig. <ref type="figure" target="#fig_4">6</ref>). The role of microbiota in modulating immunocompetence seems robust across different plant growth conditions used in our study. When we analysed the transcriptome profiles of plants colonized by SynCom Col-0 vs natural microbiota (HO Malaka or HO MSU ), compared to the corresponding axenic plants, enrichment of immune-associated genes was observed in both cases (Extended Data Fig. <ref type="figure">9</ref>), even though plants were grown under different conditions, including different growth-substrate mixtures and photoperiods (see Methods). Interestingly, enriched immune genes observed in our study include 20 so-called 'general non-self response (GNSR)' genes that are commonly induced by 13 individual strains from the At-LSPHERE collection <ref type="bibr" target="#b51">52</ref> . The GNSR genes constitute 9% of the upregulated genes (20/213) commonly enriched in plants inoculated with natural microbiotas and SynCom Col-0 in this study. Overall, our study is consistent with the existence of a broader core microbiota-associated transcriptome response and highlights the importance of a natural or eubiotic community in shaping the transcriptome landscape of basal immune responses in plants.</p><p>Another important implication of the findings from this study is that not only do Arabidopsis plants require a microbiota to properly develop PTI, but also that the composition of the microbiota is important. We found that SynCom Col-0 , a eubiotic microbiota derived from healthy Arabidopsis leaves, was sufficient to restore immunocompetence to AX plants. In contrast, SynCom mfec , a dysbiotic microbiota derived from leaves of the Arabidopsis mfec quadruple mutant, overstimulated immune gene expression (Fig. <ref type="figure" target="#fig_4">6</ref>). This observation suggests that a healthy, eubiotic microbiota is necessary to properly gate the plant immune system. We think that this is an important observation because in human-microbiome interactions, dysbiosis is associated with autoimmune ailments such as inflammatory bowel disease, diabetes, allergies and other health issues <ref type="bibr" target="#b52">53,</ref><ref type="bibr" target="#b53">54</ref> . Thus, an intimate interplay between immunity and microbiota appears to be core to host-microbiome interactions in both animal and plant kingdoms. Deviations from a eubiotic microbiota could result in immunodeficiency (as in the case of AX plants) or immune overstimulation (as in the case of SynCom mfec -inoculated plants). Thus, a eubiotic microbiota has a fundamental role in gating plant immune response during growth and development.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Arabidopsis growth conditions</head><p>The following Arabidopsis thaliana genotypes were used in this study: Col-0, bak1-5 bkk1-1 cerk1 mutant (bbc) (ref. 46). Conventionally grown plants were grown using potting soil composed of equal parts Suremix</p><p>0 A X S y n C o m C o l-0 S y n C o m m f e c A X S y n C o m C o l-0 S y n C o m m f e c A X S y n C o m C o l-0 S y n C o m m f e c 1 2 3 4 5 FRK1 expression (2 -∆∆Ct ) CYP71A12 expression (2 -∆∆Ct ) PR1 expression (2 -∆∆Ct ) A A B a b 0 2 4 6 A A B c 0 20 40 60</p><p>A A B d e f Response to external biotic stimulus Response to other organism Response to oxygen-containing compound Interaction between organisms Response to external stimulus Immune system process Immune response Defence response to other organism Defence response # of genes 70 80 90 100 -log 10 (FDR) 10 Fold enrichment 2.4 2.6 2.8 16 -log 10 (P adj ) 8 -4 0 4 10 5 0 15 20 Up (609) Down (165) log 2 FC 4 2 0 -2 -4 z-score PR1 FOX2 FOX1 AtRLP20 FOX4 CYP710A1 MDAR3 WRKY71 CHIB1 AtRLP7 SAG13 JUB1 WRKY48 FRK1 ATTI1 EARLI1 CYP82C2 LTPG5 CHI PME17 KTI1 MAM3 WRKY51 MSRB8 WRKY45 UGT76B1 RMG1 FOX5 WRKY8 CYP71A12 WRKY60 LECRK92 PBL13 MSRB7 PAD3 AZI3 GLIP1 AtRLP28 CAT1 AMT1;3 DLO1 PDF1.4 STMP7 ANAC046 SynCom Col-0 SynCom mfec SynCom mfec vs SynCom Col-0 |log 2 FC| &gt; 1 and FDR &lt; 0.05 (Benjamini-Hochberg-corrected Wald test), with the number of genes corresponding to each group indicated in parentheses. e, GO term enrichment for upregulated DEGs in SynCom mfec -colonized plants compared to SynCom Col-0 -colonized plants, ranked by significance (FDR &lt; 0.05 cut-off). f, Heat map for selected genes from hierarchical clustering of all DEGs. Gene descriptions are listed in Supplementary Data 4. d-f, n = 3 biologically independent plant samples per condition.</p><p>Article <ref type="url" target="https://doi.org/10.1038/s41477-023-01501-1">https://doi.org/10.1038/s41477-023-01501-1</ref> (Michigan Grower Products), medium vermiculite and perlite. The resulting potting soil was autoclaved once to eliminate pests. Plants were grown in an air-circulating growth chamber with the following conditions: 60% relative humidity, 22 °C, 12 h day/12 h night photoperiod cycle, daytime photon flux of ~90-100 μmol m -2 s -1 and supplementation with 0.5x Hoagland nutrient solution <ref type="bibr" target="#b54">55</ref> as needed.</p><p>For experiments using peat-based gnotobiotic systems <ref type="bibr" target="#b42">43</ref> , plants were grown in FlowPots or GnotoPots. Nutrients were supplemented with buffered 0.5x LS liquid media (pH 5.7) (Caisson Labs), unless indicated otherwise. Full strength LS contains 1,900 mg l -1 KNO 3 , 1,650 mg l -1 NH 4 NO 3 , 332.2 mg l -1 CaCl 2 , 200 mg l -1 MES buffer, 180.7 mg l -1 MgSO 4 , 170 mg l -1 KH 2 PO 4 , 100 mg l -1 myo-inositol, 98 mg l -1 KHCO 3 , 37.26 mg l -1 EDTA, 27.8 mg l -1 FeSO 4 ⋅ 7H 2 O, 16.9 mg l -1 MnSO 4 ⋅ H 2 O, 8.6 mg l -1 ZnSO 4 ⋅ 7H 2 O, 6.2 mg l -1 H 3 BO 3 , 0.83 mg l -1 KI, 0.4 mg l -1 thiamine HCl, 0.25 mg l -1 Na 2 MoO 4 ⋅ 2H 2 O, 0.025 mg l -1 CoCl 2 ⋅ 6H 2 O and 0.025 mg l -1 CuSO 4 ⋅ 5H 2 O. Soil for natural microbiota inoculation was collected from a Miscanthus plot at Michigan State University (42.716989° N, 84.462711° W; 'MSU' microbiota input). For the transcriptome experiment using HO communities, a second natural microbiota input was obtained from soil collected from an undisturbed grassland in Malaka Township, Iowa (41.836100° N, 93.007800° W; 'Malaka' microbiota input). For natural community microbiota experiments, AX plants were mock inoculated with an autoclaved soil slurry (50 g soil per litre water) and HO plants were inoculated with the same unautoclaved soil slurry. For experiments using synthetic communities, plants were inoculated as previously described <ref type="bibr" target="#b9">10</ref> . Briefly, individual microbiota members were cultured individually on individual R2A (Sigma, 17209) plates before being pooled together in equal ratios (optical density (OD) 600 ) in 10 mM MgCl 2 . For GnotoPot assays, bacterial suspensions were adjusted to a final OD 600 = 0.04 (~2 × 10 7 colony-forming units (c.f.u.) ml -1 ) and 1 ml was used to inoculate each GnotoPot. For plate-based assays, 2 μl of bacterial suspension with final OD 600 = 0.01 (~5 × 10 6 c.f.u. ml -1 ) was spotted directly onto seeds. AX plants for synthetic community experiments were mock inoculated with an equal volume of 10 mM MgCl 2 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pathogen infection assays</head><p>For flg22 protection assays with conventional potting soil-grown Arabidopsis, plants of the indicated ages were hand infiltrated using a blunt-end syringe with 500 nM flg22 and allowed to dry until no longer water-soaked in appearance. At 16-24 h after pretreatment with flg22, leaves were infiltrated with 5 × 10 7 c.f.u. ml -1 Pst DC3000 using a blunt-end syringe. Infected plants were partially covered with a clear plastic dome to increase humidity. Bacterial populations were determined 24 h after infiltration.</p><p>For flg22 protection assays in gnotobiotic Arabidopsis, plants were grown in FlowPots with 0.5x LS. Sow date was staggered and plants of the indicated ages were treated at the same time to allow direct comparison. Plants were pretreated with 100 nM flg22 using a blunt-end syringe and allowed to dry until no longer water-soaked in appearance. Control and flg22-treated plants were kept in microboxes with the lid on overnight. At 24 h after flg22 pretreatment, plants were syringe infiltrated with Pst DC3000 at 1 × 10 6 c.f.u. ml -1 . Infected plants were allowed to dry until no longer water-soaked in appearance and then covered with a clear plastic dome to maintain high humidity. Bacterial populations were determined 24 h after infiltration.</p><p>For disease assays (without flg22 pretreatment) in gnotobiotic Arabidopsis, plants were grown in FlowPots or GnotoPots with 0.5x LS and hand infiltrated with Pst DC3000 at 1 × 10 5 c.f.u. ml -1 . Infected plants were allowed to dry then kept at high humidity (&gt;95% relative humidity). Bacterial populations were determined 3 d after infiltration. For B. cinerea inoculation, spores were diluted in 1% Sabouraud Maltose Broth (BD, 242910) to a final concentration of 1 × 10 5 spores per ml. Two 2 μl droplets were spotted per leaf on three leaves per plant. Infected plants were kept at high humidity (&gt;95% relative humidity). Lesions were imaged 5 d after inoculation and quantified using ImageJ v.1.51.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Transcriptome analysis</head><p>For transcriptome experiments with natural community inputs, total RNA was extracted from whole rosettes of FlowPot-grown Arabidopsis inoculated with 'MSU' or 'Malaka' soil-derived input microbiota, or in the case of AX plants, mock-inoculated with a corresponding input microbiota that had been autoclaved. A biological replicate is defined as a pool of eight rosettes collected from four FlowPots within the same microbox. Three biological replicates per condition were collected, totalling six holoxenic and six axenic replicates. RNA was extracted using the RNeasy Plant Mini kit (Qiagen, 74904) according to manufacturer protocol, with optional on-column DNase digestion. Purified RNA was eluted in TE buffer (Tris-HCl 10 mM, pH 7.5, EDTA 1 mM). RNA concentrations were determined using an ND-1000 NanoDrop spectrophotometer (Thermo Scientific) or by Qubit RNA HS fluorometric assay (Thermo Fisher, Q32855). Total RNA samples were collected in 2.0 ml nucleic acid LoBind tubes (Eppendorf, 022431048) and stored at -80 °C. RNA was checked for quality using a Bioanalyzer 2100 (Agilent) and all samples were determined to have an RNA integrity score of six or greater. Stranded sequencing libraries were prepared using the NuGEN Ovation RNA-SEQ System for Model Organisms (Arabidopsis) according to manufacturer protocol (NuGEN). Library preparation and sequencing were performed by the Michigan State University Research Technology Service Facility (RTSF). Sequencing was performed on the HiSeq 2500 (Illumina) with a 1 ×50-bp single-read stranded format using Illumina HiSeq SBS reagents (v.4). Base calling was done using Illumina Real Time Analysis (RTA) v.1.18.64.</p><p>For transcriptome experiments with SynComs, plants were grown in GnotoPots under long day (16 h day/8 h night) condition and sampled at day 26 after germination. At harvest, two leaves from a single plant were pooled per sample and a total of three biologically independent plant samples per condition were collected. RNA extraction was performed as described above, but samples were eluted in RNase/ DNase-free water. RNA quality controls were performed using Qubit (Thermo Fisher) and TapeStation (Agilent). Stranded RNA-seq libraries were pooled and sequenced on the Illumina NovaSeq 6000 S1 to obtain 50-bp paired-end reads. Base calling was done using Illumina RTA 3. Library preparation and sequencing were performed by the Sequencing and Genomic Technologies Core at Duke University's Center for Genomic and Computational Biology.</p><p>Raw transcriptome reads for both transcriptome experiments were processed on the Duke Compute Cluster as follows: read quality control was performed using FastQC (<ref type="url" target="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">https://www.bioinformatics.  babraham.ac.uk/projects/fastqc/</ref>) <ref type="bibr" target="#b55">56</ref> , adapter trimming and sequence mapping were achieved using Trimmomatic <ref type="bibr" target="#b56">57</ref>  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ROS burst assay</head><p>Leaf discs (4 mm in diameter) were taken from the center of leaves from plants of various ages and floated with abaxial side down in wells of a white 96-well plate containing 200 μl sterile water in each well. Plates were covered with foil and leaf discs were kept in sterile water overnight to attenuate wounding response. After 24 h, water was removed from wells and replaced with 100 μl of an immune-eliciting solution containing 34 μg ml -1 luminol (Sigma, A8511), 20 μg ml -1 horseradish peroxidase (Sigma, P6782) and 100-250 nM of the indicated PAMP/DAMP. Luminescence measurements were collected (total photon counting) over 40 min immediately after the addition of immune-eliciting </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RT-qPCR analysis gene expression</head><p>For RT-qPCR analysis of elicitor-induced gene expression, whole plants were sprayed with or leaf discs were floated on an elicitor solution. For spray elicitation (Figs. <ref type="figure">1d</ref>,<ref type="figure">e</ref> and <ref type="figure" target="#fig_1">3f</ref>), plants of the indicated ages were treated with a foliar spray of elicitor solution consisting of 100 nM flg22, 0.1% dimethylsulfoxide and 0.025% Silwet-L77 (Bioworld, 30630216), or a mock solution that lacked flg22. Foliar sprays were applied, ensuring that the treatment solution came in contact with both the adaxial and abaxial sides of leaves. Aboveground tissue was harvested for further processing. For leaf disc elicitation (Figs. <ref type="figure" target="#fig_1">3b</ref> and <ref type="figure" target="#fig_2">4c</ref>, and Extended Data Fig. <ref type="figure">7d</ref>), 4 mm leaf discs were taken from 4.5-6-week-old plants and floated on sterile water overnight. The next day the water was removed and replaced with an elicitor solution containing 250 nM of the indicated PAMP/DAMP. For basal gene expression analysis of plate-grown plants (Fig. <ref type="figure" target="#fig_7">6a-c</ref>), full rosettes of 16-day-old seedlings were snipped and transferred to 2 ml screw-top tubes before being frozen in liquid N 2 and stored at -80 °C until further processing. The aboveground tissue of 5 plants from a single plate was pooled to constitute one biological replicate. For transcriptional analysis of SynCom leaf infiltration (Supplementary Data 6), 4.5-5-week-old plants were hand infiltrated with each strain at OD 600 of 0.2 and three biological replicates were harvested after 24 h for RNA extraction.</p><p>Total RNA was extracted from leaf tissues using either Trizol (Thermo Fisher, 15596026) and a Direct-zol RNA extraction kit (Zymo Research, R2055) or an RNeasy Plant Mini kit (Qiagen, 74904) according to manufacturer instructions using the optional on-column DNase treatment. Complementary (c)DNA synthesis was accomplished in 10 μl volumes with SuperScript IV VILO master mix (Thermo Fisher, 11766500) or M-MLV Reverse Transcriptase (Thermo Fisher, 28025013) according to manufacturer instructions using 640-1,000 ng total RNA as input. Upon synthesis, cDNA was diluted 10-fold and qPCR was performed in duplicate on a minimum of three biological replicates in 10 μl reaction volumes containing 5 μl SYBR Green PCR master mix (Applied Biosystems, 4309155), 0.25 μl of each primer and 2 μl of template cDNA. qPCR was performed on an ABI 7500 Fast (Applied Biosystems) or a QuantStudio 5 RT-qPCR system (Applied Biosystems) and analysed with SDS v.2.0 software (Applied Biosystems) or Design and Analysis v.1.5.2 software (Applied Biosystems), respectively, using the default settings. PP2AA3 was used for normalization. The primer sets used to quantify gene expression in this study are listed in Supplementary Data 9.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SA and glucosylated SA (SAG) quantification</head><p>Plant hormones SA and SAG were extracted as previously described <ref type="bibr" target="#b62">63</ref> .</p><p>In brief, 2-3 leaves harvested from 4.5-week-old plants grown in FlowPots were pooled, weighed, frozen then ground to fine powders with a TissueLyser (Qiagen). Frozen powders were resuspended in 1 ml extraction buffer containing 80% methanol, 0.1% formic acid, 0.1 mg ml -1 butylated hydroxytoluene and 100 nM deuterated abscisic acid (ABA-2 H 6 ) in water. Samples were extracted overnight at 4 °C with gentle agitation. The next day, samples were cleared by centrifugation at 12,000 × g for 10 min, filtered through a 0.2 μm PTFE membrane (Millipore, UFC30LG25) and transferred to autosampler vials. Injections (10 μl) of prepared extracts were separated using an Ascentis Express fused-core C18 column (2.1 × 50 m, 2.7 μm) heated to 50 °C on an Acquity ultra performance liquid chromatography system (Waters Corporation). A gradient of 0.15% formic acid in water (solvent A) and methanol (solvent B) was applied over 2.5 min at a flow rate of 0.4 ml min -1 . Separation consisted of a linear increase from A:B (49:1) to 100% B. Transitions from deprotonated molecules to characteristic product ions were monitored for ABA-2 H 6 (m/z 269.1 &gt; 159.1), SA (m/z 137.0 &gt; 93.0) and SAG (m/z 299.1 &gt; 137.0) on a Quattro Premier tandem mass spectrometer (Waters Corporation) in negative ion mode. The capillary voltage, cone voltage and extractor voltage were 3,500 V, 25 V and 5 V, respectively. The flow rates were 50 l h -1 for the cone gas (N 2 ) and 600 l h -1 for the desolvation gas (N 2 ). ABA-2 H 6 served as the internal standard for hormone quantification. MassLynx v.4.1 (Waters) was used for data acquisition and processing. Collision energies and source cone potentials were optimized using the MassLynx v.4.1 QuanOptimize package (Waters). Peaks were integrated and the analytes quantified on the basis of standard curves normalized to the internal standard.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Immunoblot analysis</head><p>Protein was extracted from leaves as previously described <ref type="bibr" target="#b18">19</ref> with slight modification. First, frozen leaf tissues were ground to fine powders with a TissueLyser (Qiagen) using two 45 s cycles at 28 Hz. Powders were taken up into a protein extraction buffer containing 50 mM Tris-HCl (pH 8.0), 150 mM NaCl, 10% (v/v) glycerol, 1% (v/v) IGEPAL CA-630 (NP-40) (Sigma, I3021), 0.5% (w/v) sodium deoxycholate and 1x Complete EDTA-free Protease Inhibitor tablet (Roche, 11836170001), and incubated on ice for 15 min with periodic inversion. Leaf lysates were cleared by centrifugation at 10,000 × g for 5 min and total protein normalized via Bradford assay (Biorad, 5000006). Extracts were prepared for SDS-PAGE with a 5x loading buffer containing 10% (w/v) sodium dodecyl sulfate, 20% glycerol, 0.2 M Tris-HCl (pH 6.8) and 0.05% bromophenol blue, and gradually denatured on a thermocycler using the following sequence: 37 °C for 20 min, 50 °C for 15 min, 70 °C for 8 min and 95 °C for 5 min. Protein was subsequently separated on NuPAGE 4-12% bis-tris gels (Thermo Fisher, NP0321) for 2.5 h using 100 V. Proteins were then transferred to a polyvinylidene fluoride membrane using an iBlot 2 dry blotting system (Thermo Fisher), blocked in 3% milk + 2% BSA and immunoblotted overnight at 4 °C with antibodies specific to Arabidopsis FLS2 (Agrisera, AS12 1857; 1:5,000 dilution), BAK1 (Agrisera, AS12 1858; 1:5,000 dilution), MPK3 (Sigma, M8318; 1:500 dilution) or MPK6 (Sigma, A7104; 1:2,000 dilution) at the indicated dilutions. Blots for detecting phosphorylated MAPK were blocked in 5% BSA and immunoblotted with a phosphor-p44/42 MAPK (Erk1/2) (Thr202/Tyr204) antibody (Cell Signaling, 9101; 1:1,000 dilution). Horseradish peroxidase-conjugated anti-rabbit antibody produced in goat (Agrisera, AS09 602; 1:40,000) was used as a secondary antibody and the resulting proteins of interest were visualized with SuperSignal West chemiluminescent substrate (Thermo Fisher) in an iBright 1500 system (Invitrogen). Ponceau S or Amido Black staining was performed to verify equal loading. Bands were quantified using ImageJ v.1.51.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Phyllosphere bacterial enumeration</head><p>A culture-based approach was used to quantify phyllosphere bacterial communities as previously described <ref type="bibr" target="#b9">10</ref> . Briefly, leaves were rinsed in sterile water twice and air dried to remove residual surface water. Leaves were then weighed and ground in 10 mM MgCl 2 and a serial dilution was plated on R2A (Sigma, 17209) supplemented with 50 μg ml -1 cycloheximide. Plates were incubated at room temperature for 2 d, then at 4 °C for 4 d and colonies counted.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Microbial community profiling</head><p>16S rRNA gene amplicon sequencing was used to estimate the relative abundance of bacterial taxa. Total DNA was extracted from phyllosphere and input communities using DNeasy PowerSoil Pro kit (Qiagen, 47014) according to manufacturer instructions. For phyllosphere samples, 2-3 leaves were pooled from a single plant per biological sample (n = 12). For input samples, 500 μl of soil slurry was saved during inoculation (n = 5). PCR was performed with AccuPrime high-fidelity Taq DNA polymerase (Thermo Fisher, 12346086) using barcoded primers with heterogeneity adapters targeting the v5/v6 region of the 16S rRNA gene (799F and 1193R, see Supplementary Data 9 for primer sequences). Primary amplicons were separated via electrophoresis Article <ref type="url" target="https://doi.org/10.1038/s41477-023-01501-1">https://doi.org/10.1038/s41477-023-01501-1</ref> on a 1% agarose gel. DNA in the ~400-bp band was recovered using the Zymoclean Gel DNA Recovery kit (Zymo Research, D4008). The concentration of the recovered DNA was measured with a PicoGreen dsDNA assay kit (Invitrogen, P7589) and normalized to 1-10 ng μl -1 . Samples were submitted to the RTSF Genomics Core at Michigan State University for library preparation and 16S rRNA gene sequencing.</p><p>The RTSF Genomics Core performed secondary PCR using dual-indexed, Illumina-compatible primers that target the Fluidigm CS1/CS2 oligomers at the ends of the primary PCR products. Amplicons were batch normalized using SequalPrep DNA Normalization plates (Invitrogen, A1051001) and the recovered product was pooled. The pools were quality controlled and quantified using a combination of Qubit dsDNA HS (Thermo Fisher, Q32855), 4200 TapeStation HS DNA1000 (Agilent) and Collibri Library Quantification qPCR (Invitrogen, A38524100) assays. The library pool was loaded onto a MiSeq v2 flow cell and sequencing performed in a 2 ×250-bp paired-end format using a MiSeq v.2 500 cycle reagent cartridge. Custom sequencing and index primers complementary to the Fluidigm CS1 and CS2 oligomers were added to appropriate wells of the reagent cartridge. Base calling was done by Illumina RTA v.1.18.54 and the output of RTA was demultiplexed and converted to FastQ format with Illumina Bcl2fastq v.2.20.0.</p><p>Raw fastq files from the MiSeq instrument were demultiplexed and processed using the QIIME 2 Core 2022.2 distribution <ref type="bibr" target="#b63">64</ref> . In brief, primers and heterogeneity spacers were removed using Cutadapt <ref type="bibr" target="#b64">65</ref> and DADA2 (ref. 66) was used to trim, quality filter and denoise sequences, remove chimaeric sequences and obtain amplicon sequence variants. Taxonomic assignment of each amplicon sequence variant was performed using a Naïve Bayes classifier <ref type="bibr" target="#b66">67</ref> pre-trained on the SILVA 16S rRNA gene reference database (release 138) (ref. 68) formatted for QIIME using the RESCRIPt <ref type="bibr" target="#b68">69</ref> plugin. Unassigned sequences or sequences identified as plant chloroplast or mitochondria were removed. Diversity analyses were performed within QIIME 2. Samples were rarified to 5,765 reads for calculating diversity metrics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CYP71A12 pro :GUS histochemical assay</head><p>GUS assay was performed as described previously <ref type="bibr" target="#b69">70</ref> with minor modifications. Briefly, seedlings were grown in 24-well plates containing liquid LS medium supplemented with 0.5% sucrose under 16 h/8 h day/night cycle in a Percival plant growth chamber at 22 °C under a light intensity of 50 μmol m -2 s -1 . Plants were inoculated at day 12 with bacterial strains. Bacterial strains were grown on R2A plates at 22 °C for 3 d, resuspended in 10 mM MgCl 2 and added to seedlings in LS medium without sucrose at OD 600 of 0.002. After treatment with Syn-Com strains for 5 h, seedlings were rinsed with 0.5 ml 50 mM sodium phosphate buffer (pH 7) and submerged in 0.5 ml GUS staining solution (50 mM sodium phosphate (pH 7), 0.5 mM K 4 [Fe(CN) 6 ], 0.5 mM K 3 [Fe(CN) 6 ], 1 mM X-Gluc (GoldBio, G1281C) and 0.01% Silwet-L77 (Bioworld, 30630216)). After vacuum infiltration for 10 min, plates were incubated at 37 °C overnight. Plants were fixed with a 3:1 ethanol:acetic acid solution at 4 °C for 1 d followed by transfer to 95% ethanol. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 2 |</head><label>2</label><figDesc>Fig. 2 | Axenic Arabidopsis plants are depleted in the basal expression of defence-related transcripts. a, PCA analysis of genes expressed under AX and HO conditions using microbial communities from two different locations/ soil types ('MSU': Michigan, Alfisol soil type; 'Malaka': Iowa, Mollisol soil type). b, Volcano plot of DEGs. Coloured regions represent significant differential expression with |log 2 FC| &gt; 1 and FDR &lt; 0.05 cut-off (Benjamini-Hochbergcorrected Wald test) with the number of genes corresponding to each group indicated in parentheses. c, Heat map of DEGs generated using hierarchical</figDesc><graphic coords="4,233.29,228.92,66.48,66.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 3 |</head><label>3</label><figDesc>Fig. 3 | Axenic Arabidopsis plants exhibit defects in PTI compared with colonized plants. a, ROS burst dynamics induced by 250 nM flg22, elf18 and Pep1 in AX and HO plants in GnotoPots. Results represent the mean ± s.e.m. (n = 8 plants). b, FRK1 gene expression in AX and HO plants induced by 250 nM flg22, elf18 and Pep1. Total RNA was extracted from leaf discs 1.5 h after treatment. Bars represent the mean ± s.d. (n = 8 plants; flg22 P = 0.009, elf18 P = 0.017, Pep1 P = 0.034; two-way ANOVA with Šidák's multiple comparisons test). c,d, Representative blots of total MPK3 (c) or MPK6 (d) proteins in 4.5-week-old AX and HO plants. Protein was detected with MPK3 or MPK6-specific antibodies. Numbers indicate band intensity relative to that of Ponceau S, normalized to HO = 1.00. e, Representative blot of phosphorylated MPK3/6 proteins detected using an α-p44/42-ERK antibody upon treatment with 100 nM flg22. Samples were taken at the indicated times after treatment. f, Basal and flg22-induced expression of FLS2 gene in AX and HO plant leaf tissue. Total RNA was extracted 1 h after treatment with 100 nM flg22 or mock solution. Bars represent the mean ± s.d. (n = 3 biologically independent plant samples). Different letters represent a significant difference (P &lt; 0.05, two-way ANOVA with Tukey's HSD post-hoc test). g, Total BAK1 protein detected in leaf lysates of AX and HO plants. Numbers indicate band intensity relative to Amido Black, normalized to HO = 1.00. h, Pst DC3000 populations in AX and HO plants. Each bar represents the mean (±s.d.) bacterial titre 3 d after inoculation as log-transformed c.f.u. cm -2 (n = 3 plants). P = 0.0006, two-tailed unpaired t-test. i, Size of lesions formed in AX and HO plants by B. cinerea. Each bar represents the mean (±s.d.) lesion diameter 5 d after inoculation (n = 6 plants). P = 2.26 × 10 -6 , two-tailed unpaired t-test. a-i, Experiments were repeated three independent times with similar results. b,f, Exact P values for all comparisons are detailed in the Source data. c-e,g, See Source data for image cropping.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4 |</head><label>4</label><figDesc>Fig. 4 | Natural microbiota and SynCom Col-0 restore immunocompetence. a, ROS burst dynamics induced by 100 nM flg22 in axenic plants mock-inoculated with 10 mM MgCl 2 and plants colonized by HO or SynCom Col-0 . Results represent the mean ± s.e.m. (n = 12 plants). b,c, Basal (b) and flg22-induced (c) FRK1 expression in axenic MgCl 2 mock-inoculated plants and plants inoculated with SynCom Col-0 . Total RNA was extracted 3 h after treatment with a mock solution lacking flg22 (b) or 100 nM flg22 (c). Results relative to basal expression in SynCom Col-0 -inoculated plants. PP2AA3 was used for normalization. Bars</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 5 |</head><label>5</label><figDesc>Fig. 5 | Microbiota-mediated immunocompetence is nutrient dependent. a, ROS burst dynamics induced by 100 nM flg22 in AX and HO plants grown in GnotoPots supplied with 0.1x, 0.5x or 1x LS nutrient solution concentrations. Results represent the mean ± s.e.m. (n = 6 plants). b, Absolute abundance of phyllosphere bacterial populations associated with HO plants grown in GnotoPots supplied with either 0.5x or 1x LS nutrient solution. Each bar represents the mean (±s.d.) bacterial titre as log-transformed c.f.u. cm -2 (n = 12 plants). P = 6.20 × 10 -5 , two-tailed unpaired t-test. a,b, Experiments were repeated a minimum of two independent times with similar results. c, PCoA of weighted UniFrac distances obtained from 16S rRNA gene sequence profiles</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 6 |</head><label>6</label><figDesc>Fig. 6 | Dysbiotic microbiota overstimulates immune gene expression. a-c, Basal expression of defence-related genes FRK1 (a), CYP71A12 (b) and PR1 (c) in AX, SynCom Col-0 -and SynCom mfec -inoculated plants grown in agar plates. PP2AA3 was used for normalization. Bars represent the mean ± s.d. (n = 4 biologically independent plant samples). Different letters represent a significant difference (P &lt; 0.05, one-way ANOVA with Tukey's HSD post-hoc test). d, Volcano plot of genes differentially expressed in SynCom Col-0 -and SynCom mfec -colonized plants. Coloured regions represent significant differential expression with</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><figDesc>and STAR (v.9.3.0) (ref. 58). Gene expression was quantified using the R package Rsubreads (v.2.8.2) (ref. 59). DEGs were identified using the R package DESeq2 (ref. 60). Read transformation and normalization for PCoA and clustering were done using the EdgeR package on the iDEP platform (v.1.0) (ref. 61). Genes with differential expression were selected using |log 2 FC| &gt; 1 and FDR &lt; 0.05 (calculated using default DESeq2 settings based on Benjamini-Hochberg-corrected Wald test) as selection criteria, and GO analysis was performed using ShinyGO (v.0.76.2) (ref. 62) with an FDR cut-off of 0.05 and 4 genes per group selection criteria.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><figDesc>Article https://doi.org/10.1038/s41477-023-01501-1 solution using a SpectraMax L microplate reader with SoftMax Pro v.7.0.3 (Molecular Devices). Total ROS was calculated for each sample in Prism v.10.0.0 (GraphPad) using the 'Area under curve' analysis.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Extended Data Fig. 6 |</head><label>6</label><figDesc>A simplified SynCom restores immunocompetency. a, ROS burst kinetics after induction by 250 nM flg22 in plants colonized by SynCom Col-mix19 , SynCom Col-mix3 or mock-inoculated with 10 mM MgCl 2 as a control in GnotoPots. Results represent the mean values ± s.e.m. (n = 8 plants). b, Total ROS production calculated by determining the area under each curve displayed in panel a. Results represent the mean value ± SD (n = 8 plants). Different letters represent a significant difference (p &lt; 0.05, one-way ANOVA with Tukey's HSD post-hoc test). Exact p-values for all comparisons are detailed in the Source Data. This experiment was repeated two independent times with similar results. Extended Data Fig. 8 | Induction of CYP17A12 gene expression by individual members of SynCom Col-0 and SynCom mfec in CYP71A12 pro :GUS reporter line. GUS histochemical staining was performed after treatment of 12-days old seedling of CYP71A12 pro :GUS reporter line with individual SynCom strains.Representative pictures of plants after GUS assay are depicted here. This experiment was repeated two independent times with similar results.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><graphic coords="14,174.35,48.96,252.24,237.36" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><graphic coords="15,116.21,48.96,368.52,206.88" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><graphic coords="16,120.47,48.96,360.00,146.16" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><graphic coords="17,116.21,48.96,368.52,223.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><graphic coords="20,103.91,48.96,393.12,356.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><graphic coords="21,41.09,48.96,518.76,258.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><graphic coords="22,123.11,48.96,354.72,418.80" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Nature Plants | Volume 9 | September 2023 | 1468-1480</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank undergraduates <rs type="person">C. Griffin</rs>, <rs type="person">T. Ulrich</rs>, <rs type="person">F. Dion</rs> and <rs type="person">T. Johnson</rs>, and lab technician <rs type="person">D. Rhodes</rs> for assistance in gnotobiotic system design and construction and for performing critical experiments that led to these published results; <rs type="person">H. Jin</rs> for sharing B. cinerea; <rs type="person">F. Ausubel</rs> for sharing the CYP71A12 Pro :GUS line seeds; and members of the <rs type="institution">He Lab</rs> for critical reading of the manuscript. Y.T.C. was supported by the <rs type="funder">Natural Sciences and Engineering Research Council of Canada</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>The RNA-seq raw sequencing and analysed data have been deposited in the NCBI Gene Expression Omnibus database under accession GSE218961 and GSE218962. Raw source 16S rRNA gene sequences from this project are available in the Sequence Read Archive database under BioProject PRJNA977816, accession numbers SAMN35534885 to SAMN35534914. QIIME-compatible SILVA 16S rRNA gene reference sequences and taxonomy (release 138) can be downloaded from <ref type="url" target="https://docs.qiime2.org/2022.2/data-resources/">https://  docs.qiime2.org/2022.2/data-resources/</ref>. Source data are provided with this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability</head><p>The code used for RNA-seq raw data analysis can be found at <ref type="url" target="https://github.com/rsohrabi/MIP_ms">https://  github.com/rsohrabi/MIP_ms</ref>. The entire sequence analysis workflow for 16S amplicon analysis is available at <ref type="url" target="https://github.com/BradCP/A-critical-role-of-a-eubiotic-microbiota-in-gating-proper-immunocompetence-in-Arabidopsis">https://github.com/Bra  dCP/A-critical-role-of-a-eubiotic-microbiota-in-gating-proper-imm  unocompetence-in-Arabidopsis</ref>.</p></div>
+			</div>
+
+
+			<div type="conflict">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p>The authors declare no competing interests.</p></div>
+			</div>
+
+
+			<div type="contribution">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head><p>J.M.K., J.M.T. and S.Y.H. conceptualized the initial project. B.C.P., R.S., J.M.K., J.M.T. and S.Y.H. designed the study and analysed the data. B.C.P. performed gnotobiotic plant assays and 16S analyses. R.S. performed gnotobiotic plant assays and RNA-seq analyses. J.M.K. performed RNA-seq in FlowPots and preliminary gnotobiotic plant assays. K.N. performed temporal assays in conventional and gnotobiotic plants. Y.T.C. designed 16S PCR primers with heterogeneity spacers and generated primary amplicons. J.M. assisted with nutrient gnotobiotic assays. B.K. performed temporal flg22 protection assays in conventionally grown plants. B.C.P., R.S. and S.Y.H. wrote the manuscript with input from all authors.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reporting summary</head><p>Further information on research design is available in the Nature Portfolio Reporting Summary linked to this article.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional information</head><p>Extended data is available for this paper at <ref type="url" target="https://doi.org/10.1038/s41477-023-01501-1">https://doi.org/10.1038/s41477-023-01501-1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary information</head><p>The online version contains supplementary material available at <ref type="url" target="https://doi.org/10.1038/s41477-023-01501-1">https://doi.org/10.1038/s41477-023-01501-1</ref>.</p><p>Correspondence and requests for materials should be addressed to Sheng Yang He.</p><p>Peer review information Nature Plants thanks Yang Bai, Steven Lindow and the other, anonymous, reviewer(s) for their contribution to the peer review of this work.</p><p>Reprints and permissions information is available at <ref type="url" target="http://www.nature.com/reprints">www.nature.com/reprints</ref>.</p><p>Publisher's note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p><p>Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit <ref type="url" target="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>© The Author(s) 2023</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><head>Extended Data Fig. 1 |</head><label>1</label><figDesc>oloxenic bbc plants do not show robust flg22 protection. H 4-week-old wildtype (Col-0) and bbc mutant HO plants were treated 24 hours before inoculation with Pst DC3000 (OD 600 = 0.002) with either a water (mock) or 100 nM flg22 solution. Each column represents the mean bacterial titer 24 hours after inoculation as log transformed cfu/cm 2 (n = 3 plants). Error bars indicate SD. (Col-0: p = 7.74 × 10 -9 , bbc: not significant; two-way ANOVA with Šidák's multiple comparison test). This experiment was repeated three independent times with similar results. Exact p-values for all comparisons are detailed in the Source Data. Extended Data Fig. 2 | Axenic Arabidopsis plants exhibit decreased total ROS production upon PTI elicitation compared to holoxenic plants. Total ROS production induced by 250 nM flg22, elf18, and Pep1 in AX and HO plants in GnotoPots. Results calculated from data presented in Fig. 2a by determining the mean area under curve (n = 8 plants). Error bars indicate SD (flg22: p = 6.07 × 10 -5 , elf18: p = 3.77 × 10 -5 , Pep1: p = 0.03; two-way ANOVA with Fisher's LSD test). This experiment was repeated three independent times with similar results. Extended Data Fig. 3 | FLS2 protein abundance in axenic and holoxenic plants. Total FLS2 protein detected in whole leaf tissue lysate of four pooled plants. Two experimental repeats show variability in FLS2 relative abundance. Ponceau S stain of all blots show equal loading. This experiment was repeated five times with variable results. Blots from two representative experiments shown. See Source Data for image cropping. Extended Data Fig. 4 | SA and glucosylated SA abundance in axenic and holoxenic plants. a,b, Total levels of salicylic acid (SA) (a) and glucosylated SA (b) in AX and HO plants. Each bar represents the mean values (n = 6 biologically independent plant samples). Error bars represent SD (SA: p = 0.003, SAG: p = 0.002; two-tailed unpaired t-test). This experiment was repeated three independent times with similar results. Extended Data Fig. 5 | SynComCol-0 restores immunocompetence. a, Total ROS production induced by 100 nM flg22 in plants colonized by HO or SynCom Col-0 . Results calculated from data presented in Fig. 3a by determining the mean area under curve ± SD (n = 12 plants). Different letters represent a significant difference (p &lt; 0.05, one-way ANOVA with Tukey's HSD post-hoc test). Exact p-values for all comparisons are detailed in the Source Data. b, Total BAK1 protein detected in leaf lysates of 6-week-old plants mock-inoculated with 10 mM MgCl 2 and plants colonized by SynCom Col-0 . Numbers below blot indicates band intensity relative to that of Ponceau S, normalized to HO = 1.00. See Source Data for image cropping. a,b, Experiments were repeated two times with similar results. Extended Data Fig. 7 | Excess nutrients suppress microbiota-mediated immune maturation. a, Total ROS production induced by 100 nM flg22 in AX and HO plants grown in GnotoPots supplied with 0.1x, 0.5x, or 1x LS nutrient solution concentrations. Results calculated from data presented in Fig. 5a by determining the mean area under curve ± SD (n = 6 plants). Different letters represent a significant difference (p &lt; 0.05, two-way ANOVA with Fisher's LSD test). This experiment was repeated three times with similar results. b, ROS burst dynamics induced by 250 nM flg22 in HO plants grown in GnotoPots supplied with 0.5x LS, 0.5x LS supplemented with additional components of LS up to 1x, and 1x LS. AX plants included as a control. Results represent the mean value ± s.e.m. (n = 8 plants). c, Total ROS production calculated by determining the area under each curve in panel b. Results represent the mean value (n = 8 plants). Error bars represent SD (compared to 0.5x LS: p = 0.0051 ( + N), p = 0.0009 (1x LS), q = 0.0184 (AX), all others ns; one-way ANOVA with Dunnett test). d, FRK1 gene expression in AX and HO plants induced by 250 nM flg22. Total RNA was extracted from leaf disks 1.5 h after treatment. PP2AA3 was used for normalization. Bars represent the mean value (n = 8 plants). Error bars indicate SD (compared to 0.5x LS: p = 0.0180 ( + N), p = 0.0169 (1x LS), p = 0.0234 (AX), all others ns; one-way ANOVA with Dunnett test). a-d, Experiments were repeated a minimum of two independent times with similar results. a,c,d, Exact p-values for all comparisons are detailed in the Source Data. Extended Data Fig. 9 | Leaf transcriptomes of plants colonized with natural community and SynCom Col-0 share common immune-related gene expression. a. Venn diagram of upregulated DEGs showed 213 common Arabidopsis genes in response to natural microbiota and SynCom Col-0 colonization. Significant DEGs were identified using DESEq2 with |log 2 FC | &gt; 1 and FDR &lt; 0.05 (Benjamini-Hochberg corrected Wald Test) criteria in a comparison of HO plants (colonized by microbial communities from two different locations/ soil types 'MSU' and 'Malaka') and SynCom Col-0 -colonizedplants with their corresponding AX control. b, A subset of the differentially regulated genes in HO and SynCom Col-0 plants, compared to corresponding AX plants, is shown. Heat map of the DEGs was generated using hierarchical clustering with Euclidean distance and complete linkage. c-e, Gene Ontology (GO) term enrichment (GO:BP biological process) analysis on 213 common enriched DEGs in both HO and SynCom Col-0 , only in HO or only in SynCom Col-0 plants, compared to their respective AX control plants. Top enriched GO terms are displayed, ranked by significance (FDR &lt; 0.05 cutoff). The 213 enriched DEGs common in both HO and SynCom Col-0 (panel c) showed highest fold enrichment for immunity-associated GO terms. GNSR genes present in the subset of 213 DEGs common in both HO and SynCom Col-0 are marked in red in panel b. a-e, n = 3 biologically independent plant samples per condition.</figDesc></figure>
+			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct status="extracted"  xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Toward understanding microbiota homeostasis in the plant kingdom</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Paasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Pathog</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">1009472</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Phyllosphere microbiome</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sohrabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Paasch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Plant Biol</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="539" to="568" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Structure and functions of the bacterial microbiota of plants</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bulgarelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Schlaeppi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Spaepen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V L</forename><surname>Van Themaat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Schulze-Lefert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Plant Biol</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page" from="807" to="838" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Defining the core Arabidopsis thaliana root microbiome</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Lundberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">488</biblScope>
+			<biblScope unit="page" from="86" to="90" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The plant microbiota: systems-level insights and perspectives</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vogel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Vorholt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Genet</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="211" to="234" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Combining whole-genome shotgun sequencing and rRNA gene amplicon analyses to improve detection of microbe-microbe interaction networks in plant leaves</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Regalado</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ISME J</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="2116" to="2130" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Microbiology of the phyllosphere</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Lindow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Brandl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Environ. Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page" from="1875" to="1883" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Functional overlap of the Arabidopsis leaf and root microbiota</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">528</biblScope>
+			<biblScope unit="page" from="364" to="369" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The plant microbiome: from ecology to reductionism and beyond</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Fitzpatrick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="81" to="100" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b9">
+	<analytic>
+		<title level="a" type="main">A plant genetic network for preventing dysbiosis in the phyllosphere</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">580</biblScope>
+			<biblScope unit="page" from="653" to="657" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The plant NADPH oxidase RBOHD is required for microbiota homeostasis in leaves</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pfeilmeier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="852" to="864" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Dysbiosis of a leaf microbiome is caused by enzyme secretion of opportunistic Xanthomonas strains</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pfeilmeier</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/2023.05.09.539948</idno>
+		<ptr target="https://doi.org/10.1101/2023.05.09.539948" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at bioRxiv</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Commensal lifestyle regulated by a negative feedback loop between Arabidopsis ROS and the bacterial T2SS</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Entila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Schulze-Lefert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tsuda</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/2023.05.09.539802</idno>
+		<ptr target="https://doi.org/10.1101/2023.05.09.539802" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>Preprint at bioRxiv</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The rhizosphere microbiome and plant health</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Berendsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Pieterse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Bakker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Plant Sci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="478" to="486" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Plantmicrobiome interactions: from community assembly to plant health</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Trivedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Leach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Tringe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename><surname>Singh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="607" to="621" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The rhizosphere microbiome: significance of plant beneficial, plant pathogenic, and human pathogenic microorganisms</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mendes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Garbeva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Raaijmakers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FEMS Microbiol. Rev</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="634" to="663" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Plant pattern-recognition receptors</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zipfel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Immunol</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="345" to="351" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The Arabidopsis receptor kinase FLS2 binds flg22 and determines the specificity of flagellin perception</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chinchilla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Regenass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Boller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Felix</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Cell</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="465" to="476" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A flagellin-induced complex of the receptor FLS2 and BAK1 initiates plant defence</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chinchilla</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">448</biblScope>
+			<biblScope unit="page" from="497" to="500" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Plant immunity triggered by microbial molecular signatures</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Zhou</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41477-023-01501-1</idno>
+		<ptr target="https://doi.org/10.1038/s41477-023-01501-1" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Plant</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="783" to="793" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Plant PRRs and the activation of innate immune signaling</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Macho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zipfel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="263" to="272" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Regulation of pattern recognition receptor signalling in plants</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Couto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zipfel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Immunol</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="537" to="552" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Transcriptional regulation of pattern-triggered immunity in plants</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Shan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Host Microbe</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="641" to="650" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b23">
+	<analytic>
+		<title level="a" type="main">MAPK cascades in plant disease resistance signaling</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Phytopathol</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="245" to="266" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Signaling mechanisms in pattern-triggered immunity (PTI)</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bigeard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Colcombet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hirt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Plant</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="521" to="539" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Bacterial disease resistance in Arabidopsis through flagellin perception</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zipfel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">428</biblScope>
+			<biblScope unit="page" from="764" to="767" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Plant immunity directly or indirectly restricts the injection of type III effectors by the Pseudomonas syringae type III secretion system</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Crabill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Joe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Block</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Van Rooyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Alfano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Physiol</title>
+		<imprint>
+			<biblScope unit="volume">154</biblScope>
+			<biblScope unit="page" from="233" to="244" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Resistance to pathogens and host developmental stage: a multifaceted relationship within the plant kingdom</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Develey-Rivière</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Galiana</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">New Phytol</title>
+		<imprint>
+			<biblScope unit="volume">175</biblScope>
+			<biblScope unit="page" from="405" to="416" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Age-related resistance in Arabidopsis is a developmentally regulated defense response to Pseudomonas syringae</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Kus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sarkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Cameron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Cell</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="479" to="490" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Age-related resistance to plant pathogens</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Panter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Bot. Res</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="251" to="280" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Age-related resistance to Pseudomonas syringae pv. tomato is associated with the transition to flowering in Arabidopsis and is effective against Peronospora parasitica</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rusterucci</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol. Mol. Plant Pathol</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="222" to="231" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Dual impact of elevated temperature on plant defence and bacterial virulence in Arabidopsis</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Huot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1808</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Growth-defense trade-offs in plants</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Webster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="634" to="R639" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Salicylic acid inhibits pathogen growth in plants through repression of the auxin signaling pathway</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pajerowska-Mukhtar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Culler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Dong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1784" to="1790" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Plant hormone jasmonate prioritizes defense over growth by interfering with gibberellin signaling cascade</title>
+		<author>
+			<persName><forename type="first">D.-L</forename><surname>Yang</surname></persName>
+		</author>
+		<idno>1192-E1200</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b35">
+	<monogr>
+		<title level="m" type="main">The transcriptional regulator BZR1 mediates trade-off between plant innate immunity and growth</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lozano-Durán</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">983</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The multifaceted function of BAK1/SERK3: plant immunity to pathogens and responses 1 to insect herbivores</title>
+		<author>
+			<persName><forename type="first">D.-H</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hettenhausen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">T</forename><surname>Baldwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Signal. Behav</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1322" to="1324" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Interactions between the microbiota and the immune system</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">V</forename><surname>Hooper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Littman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Macpherson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">336</biblScope>
+			<biblScope unit="page" from="1268" to="1273" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Maturation of the enteric mucosal innate immune system during the postnatal period</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fulde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Hornef</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Immunol. Rev</title>
+		<imprint>
+			<biblScope unit="volume">260</biblScope>
+			<biblScope unit="page" from="21" to="34" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Dysbiosis and the immune system</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Levy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Kolodziejczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Thaiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Elinav</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Immunol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="219" to="232" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Tryptophan metabolism and bacterial commensals prevent fungal dysbiosis in Arabidopsis roots</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Wolinska</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page">2111521118</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Distinct phyllosphere microbiome of wild tomato species in central Peru upon dysbiosis</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Runge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ventura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kemen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Stam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Microb. Ecol</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="168" to="183" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Peat-based gnotobiotic plant growth systems for Arabidopsis microbiome research</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Kremer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Protoc</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="2450" to="2470" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b43">
+	<analytic>
+		<title level="a" type="main">MiR172b-TOE1/2 module regulates plant innate immunity in an age-dependent manner</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem. Biophys. Res. Commun</title>
+		<imprint>
+			<biblScope unit="volume">531</biblScope>
+			<biblScope unit="page" from="503" to="507" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Some things get better with age: differences in salicylic acid accumulation and defense signaling in young and mature Arabidopsis</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Carella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Cameron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Plant Sci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">775</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Bacteria establish an aqueous living space in plants crucial for virulence</title>
+		<author>
+			<persName><forename type="first">X.-F</forename><surname>Xin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">539</biblScope>
+			<biblScope unit="page" from="524" to="529" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Organic growth factor requirements of tobacco tissue cultures</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Linsmaier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Skoog</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Physiol. Plant</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="100" to="127" />
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Transcriptional regulation of the immune receptor FLS2 controls the ontogeny of plant innate immunity</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Cell</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="2779" to="2794" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Nitrogen forms and metabolism affect plant defence to foliar and root pathogens in tomato</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ding</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plant Cell Environ</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="1596" to="1610" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Coordination of microbe-host homeostasis by crosstalk with plant innate immunity</title>
+		<author>
+			<persName><forename type="first">K.-W</forename><surname>Ma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Plants</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="814" to="825" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Specific modulation of the root immune system by a community of commensal bacteria</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Teixeira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page">2100678118</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b51">
+	<analytic>
+		<title level="a" type="main">A general non-self response as part of plant immunity</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Maier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Plants</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="696" to="705" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b52">
+	<analytic>
+		<title level="a" type="main">The human microbiome</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Blum</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Med. Sci</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="414" to="420" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Intestinal dysbiosis and probiotic applications in autoimmune diseases</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L V</forename><surname>De Oliveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Z</forename><surname>Leite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Higuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Gonzaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Mariano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Immunology</title>
+		<imprint>
+			<biblScope unit="volume">152</biblScope>
+			<biblScope unit="page" from="1" to="12" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b54">
+	<monogr>
+		<title level="m" type="main">The Water-culture Method for Growing Plants Without Soil Circular 347</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Hoagland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">I</forename><surname>Arnon</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1950">1950</date>
+			<publisher>Univ. of California College of Agriculture</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b55">
+	<analytic>
+		<title level="a" type="main">A survey of best practices for RNA-seq data analysis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Conesa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Biol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">13</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Trimmomatic: a flexible trimmer for Illumina sequence data</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Bolger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lohse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Usadel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="2114" to="2120" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b57">
+	<analytic>
+		<title level="a" type="main">STAR: ultrafast universal RNA-seq aligner</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dobin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="15" to="21" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b58">
+	<analytic>
+		<title level="a" type="main">The R package Rsubread is easier, faster, cheaper and better for alignment and quantification of RNA sequencing reads</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Smyth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Shi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page">47</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Love</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Anders</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genome Biol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">550</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b60">
+	<analytic>
+		<title level="a" type="main">iDEP: an integrated web application for differential expression and pathway analysis of RNA-Seq data</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">X</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">W</forename><surname>Son</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page">534</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b61">
+	<analytic>
+		<title level="a" type="main">ShinyGO: a graphical gene-set enrichment tool for animals and plants</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">X</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="2628" to="2629" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b62">
+	<analytic>
+		<title level="a" type="main">A genetic screen reveals Arabidopsis stomatal and/or apoplastic defenses against Pseudomonas syringae pv. tomato DC3000</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zeng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Pathog</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">1002291</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bolyen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="852" to="857" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Cutadapt removes adapter sequences from high-throughput sequencing reads</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Martin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">EMBnet J</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="10" to="12" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b65">
+	<analytic>
+		<title level="a" type="main">DADA2: high-resolution sample inference from Illumina amplicon data</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Callahan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Methods</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="581" to="583" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Optimizing taxonomic classification of marker-gene amplicon sequences with QIIME 2&apos;s q2-feature-classifier plugin</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Bokulich</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41477-023-01501-1</idno>
+		<ptr target="https://doi.org/10.1038/s41477-023-01501-1" />
+	</analytic>
+	<monogr>
+		<title level="j">Microbiome</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">90</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b67">
+	<analytic>
+		<title level="a" type="main">The SILVA ribosomal RNA gene database project: improved data processing and web-based tools</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Quast</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="590" to="D596" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b68">
+	<analytic>
+		<title level="a" type="main">RESCRIPt: reproducible sequence taxonomy reference database management</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Robeson</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ii</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS Comput. Biol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">1009581</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Pathogen-secreted proteases activate a novel plant immune pathway</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">521</biblScope>
+			<biblScope unit="page" from="213" to="216" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

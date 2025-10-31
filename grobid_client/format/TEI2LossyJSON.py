@@ -139,14 +139,7 @@ class TEI2LossyJSONConverter:
                                             box_to_dict(coord.split(","))
                                             for coord in sentence['coords'].split(";")
                                         ] if sentence.has_attr("coords") else [],
-                                        "refs": [
-                                            {
-                                                "type": ref["type"],
-                                                "target": ref["target"] if "target" in ref.attrs else "",
-                                                "text": ref.text
-                                            }
-                                            for ref in sentence.find_all("ref", type="bibr")
-                                        ]
+                                        "refs": get_refs_with_offsets(sentence)
                                     }
                                     for id, sentence in enumerate(paragraph.find_all("s"))
                                 ]
@@ -161,14 +154,7 @@ class TEI2LossyJSONConverter:
                                         box_to_dict(coord.split(","))
                                         for coord in paragraph['coords'].split(";")
                                     ] if paragraph.has_attr("coords") else [],
-                                    "refs": [
-                                        {
-                                            "type": ref["type"],
-                                            "target": ref["target"] if "target" in ref.attrs else "",
-                                            "text": ref.text
-                                        }
-                                        for ref in paragraph.find_all("ref", type="bibr")
-                                    ]
+                                    "refs": get_refs_with_offsets(paragraph)
                                 }
                                 for id, paragraph in enumerate(abstract_paragraph_nodes)
                             ]
@@ -826,51 +812,89 @@ def get_random_id(prefix=""):
 def get_refs_with_offsets(element):
     """Extract references with their text offsets from an element."""
     refs = []
-    text = element.get_text()
 
-    # Use BeautifulSoup's position tracking by traversing the DOM tree
-    # and keeping track of character positions as we encounter text
+    # Apply the same text cleaning as get_formatted_passage
+    def _clean_text(text: str) -> str:
+        if not text:
+            return ""
+        import re
+        import html
+        text = re.sub(r'\s+', ' ', text.strip())
+        text = html.unescape(text)
+        return text
 
-    def find_ref_positions(node, start_pos=0):
+    # Now extract references with offsets based on the cleaned text
+    def traverse_and_collect(node, current_pos=0):
         """
-        Recursively traverse the DOM tree to find reference positions.
-        Returns the next character position after processing this node.
+        Recursively traverse the DOM tree, building cleaned text content and tracking exact positions.
+        Returns tuple: (text_content, next_position)
         """
         if hasattr(node, 'name') and node.name:
             # This is an element node
             if node.name == "ref" and node.get("type") == "bibr":
-                # Found a reference - get its text and calculate position
-                ref_text = node.get_text()
-                # Find this reference text starting from current position
-                actual_start = text.find(ref_text, start_pos)
-                if actual_start != -1:
-                    actual_end = actual_start + len(ref_text)
+                # Found a reference - get its cleaned text and record its exact position
+                ref_text = _clean_text(node.get_text())
+                if ref_text:  # Only record non-empty references
                     refs.append({
                         "type": node.get("type", ""),
                         "target": node.get("target", ""),
                         "text": ref_text,
-                        "offset_start": actual_start,
-                        "offset_end": actual_end
+                        "offset_start": current_pos,
+                        "offset_end": current_pos + len(ref_text)
                     })
-                    return actual_end
-                else:
-                    logger.warning(f"Could not find reference text '{ref_text}' at position {start_pos}")
-                    return start_pos
+                # Return the cleaned reference text and advance position
+                return ref_text, current_pos + len(ref_text)
             else:
-                # Process children in document order
-                current_pos = start_pos
+                # Process children in document order and accumulate their cleaned text
+                text_parts = []
+                pos = current_pos
                 for child in node.children:
-                    current_pos = find_ref_positions(child, current_pos)
-                return current_pos
+                    child_text, new_pos = traverse_and_collect(child, pos)
+                    if child_text is not None:
+                        text_parts.append(child_text)
+                    pos = new_pos
+                return "".join(text_parts), pos
         else:
-            # This is a text node (NavigableString) - advance position by text length
+            # This is a text node (NavigableString) - be more careful with cleaning
             text_content = str(node)
-            return start_pos + len(text_content)
 
-    # Start traversal from the beginning
-    find_ref_positions(element, 0)
+            # For text nodes, we need to be more careful about whitespace
+            # Only apply the full cleaning at the end for the complete text
+            return text_content, current_pos + len(text_content)
 
-    return refs
+    # Build raw text with accurate positions first
+    raw_text, _ = traverse_and_collect(element, 0)
+
+    # Now apply the same cleaning as get_formatted_passage to the complete text
+    final_text = _clean_text(raw_text)
+
+    # Adjust all reference offsets to match the cleaned text
+    final_refs = []
+    for ref in refs:
+        # Find the reference text in the cleaned text to get correct offsets
+        ref_text = ref['text']
+
+        # The reference text was also cleaned, so we need to find it in the final cleaned text
+        # We can search around the original position to find the correct occurrence
+        search_start = max(0, ref['offset_start'] - 10)  # Look a bit before the original position
+        search_end = min(len(final_text), ref['offset_start'] + 10)  # Look a bit after
+        search_area = final_text[search_start:search_end]
+
+        # Find the reference in the search area
+        relative_pos = search_area.find(ref_text)
+        if relative_pos != -1:
+            final_start = search_start + relative_pos
+            final_end = final_start + len(ref_text)
+
+            final_refs.append({
+                "type": ref["type"],
+                "target": ref["target"],
+                "text": ref_text,
+                "offset_start": final_start,
+                "offset_end": final_end
+            })
+
+    return final_refs
 
 
 def get_formatted_passage(head_paragraph, head_section, paragraph_id, element):

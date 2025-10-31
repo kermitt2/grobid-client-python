@@ -361,11 +361,12 @@ class GrobidClient(ApiClient):
             self.logger.warning(f"No eligible files found in {input_path}")
             return
 
-        print(f"Found {total_files} file(s) to process")
-
-        # Counter for actually processed files
+        # Counters for processing statistics (initialize before early return)
         processed_files_count = 0
         errors_files_count = 0
+        skipped_files_count = 0
+
+        print(f"Found {total_files} file(s) to process")
         input_files = []
 
         for input_file in all_input_files:
@@ -382,7 +383,7 @@ class GrobidClient(ApiClient):
             input_files.append(input_file)
 
             if len(input_files) == batch_size_pdf:
-                batch_processed, batch_errors = self.process_batch(
+                batch_processed, batch_errors, batch_skipped = self.process_batch(
                     service,
                     input_files,
                     input_path,
@@ -406,7 +407,7 @@ class GrobidClient(ApiClient):
 
         # last batch
         if len(input_files) > 0:
-            batch_processed, batch_errors = self.process_batch(
+            batch_processed, batch_errors, batch_skipped = self.process_batch(
                 service,
                 input_files,
                 input_path,
@@ -426,10 +427,13 @@ class GrobidClient(ApiClient):
             )
             processed_files_count += batch_processed
             errors_files_count += batch_errors
+            skipped_files_count += batch_skipped
 
         # Log final statistics - always visible
         print(f"Processing completed: {processed_files_count} out of {total_files} files processed")
         print(f"Errors: {errors_files_count} out of {total_files} files processed")
+        if skipped_files_count > 0:
+            print(f"Skipped: {skipped_files_count} out of {total_files} files (already existed, use --force to reprocess)")
 
     def process_batch(
             self,
@@ -455,6 +459,7 @@ class GrobidClient(ApiClient):
 
         processed_count = 0
         error_count = 0
+        skipped_count = 0
 
         # we use ThreadPoolExecutor and not ProcessPoolExecutor because it is an I/O intensive process
         with concurrent.futures.ThreadPoolExecutor(max_workers=n) as executor:
@@ -466,6 +471,7 @@ class GrobidClient(ApiClient):
                 if not force and os.path.isfile(filename):
                     self.logger.info(
                         f"{filename} already exists, skipping... (use --force to reprocess pdf input files)")
+                    skipped_count += 1
 
                     # Check if JSON output is needed but JSON file doesn't exist
                     if json_output:
@@ -562,7 +568,7 @@ class GrobidClient(ApiClient):
                 except OSError as e:
                     self.logger.error(f"Failed to write TEI XML file {filename}: {str(e)}")
 
-        return processed_count, error_count
+        return processed_count, error_count, skipped_count
 
     def process_pdf(
             self,
