@@ -30,6 +30,7 @@ A simple, efficient Python client for [GROBID](https://github.com/kermitt2/grobi
 - **Command Line & Library**: Use as a standalone CLI tool or import into your Python projects
 - **Coordinate Extraction**: Optional PDF coordinate extraction for precise element positioning
 - **Sentence Segmentation**: Layout-aware sentence segmentation capabilities
+- **JSON Output**: Convert TEI XML output to structured JSON format with CORD-19-like structure
 
 ## 📋 Prerequisites
 
@@ -40,8 +41,10 @@ A simple, efficient Python client for [GROBID](https://github.com/kermitt2/grobi
   - Default server: `http://localhost:8070`
   - Online demo: https://lfoppiano-grobid.hf.space (usage limits apply), more details [here](https://grobid.readthedocs.io/en/latest/getting_started/#using-grobid-from-the-cloud).
 
+
 > [!IMPORTANT]
-> GROBID supports Windows only through Docker containers. See the [Docker documentation](https://grobid.readthedocs.io/en/latest/Grobid-docker/) for details.
+> GROBID supports Windows only through Docker containers. See
+> the [Docker documentation](https://grobid.readthedocs.io/en/latest/Grobid-docker/) for details.
 
 ## 🚀 Installation
 
@@ -131,6 +134,8 @@ grobid_client [OPTIONS] SERVICE
 | `--teiCoordinates`           | Add PDF coordinates to XML                |
 | `--segmentSentences`         | Segment sentences with coordinates        |
 | `--flavor`                   | Processing flavor for fulltext extraction |
+| `--json`                     | Convert TEI output to JSON format         |
+
 
 #### Examples
 
@@ -141,11 +146,14 @@ grobid_client --input ~/documents --output ~/results processFulltextDocument
 # High concurrency with coordinates
 grobid_client --input ~/pdfs --output ~/tei --n 20 --teiCoordinates processFulltextDocument
 
+# Process with JSON output
+grobid_client --input ~/pdfs --output ~/results --json processFulltextDocument
+
 # Process citations with custom server
 grobid_client --server https://grobid.example.com --input ~/citations.txt processCitationList
 
-# Force reprocessing with sentence segmentation
-grobid_client --input ~/docs --force --segmentSentences processFulltextDocument
+# Force reprocessing with sentence segmentation and JSON output
+grobid_client --input ~/docs --force --segmentSentences --json processFulltextDocument
 ```
 
 ### Python Library
@@ -188,6 +196,14 @@ client.process(
     segmentSentences=True
 )
 
+# Process with JSON output
+client.process(
+    service="processFulltextDocument",
+    input_path="/path/to/pdfs",
+    output_path="/path/to/output",
+    json_output=True
+)
+
 # Process citation lists
 client.process(
     service="processCitationList",
@@ -221,9 +237,79 @@ Configuration can be provided via a JSON file. When using the CLI, the `--server
 | `sleep_time`    | Wait time when server is busy (seconds)                                                                          | 5                       |
 | `timeout`       | Client-side timeout (seconds)                                                                                    | 180                     |
 | `coordinates`   | XML elements for coordinate extraction                                                                           | See above               |
+| `logging`       | Logging configuration (level, format, file output)                                                              | See Logging section     |
 
 > [!TIP]
-> Since version 0.0.12, the config file is optional. The client will use default localhost settings if no configuration is provided.
+> Since version 0.0.12, the config file is optional. The client will use default localhost settings if no configuration
+> is provided.
+
+### Logging Configuration
+
+The client provides configurable logging with different verbosity levels. By default, only essential statistics and warnings are shown.
+
+#### Logging Behavior
+
+- **Without `--verbose`**: Shows only essential information and warnings/errors
+- **With `--verbose`**: Shows detailed processing information at INFO level
+
+#### Always Visible Output
+
+The following information is always displayed regardless of the `--verbose` flag:
+
+```bash
+Found 1000 file(s) to process
+Processing completed: 950 out of 1000 files processed
+Errors: 50 out of 1000 files processed
+Processing completed in 120.5 seconds
+```
+
+#### Verbose Output (`--verbose`)
+
+When the `--verbose` flag is used, additional detailed information is displayed:
+
+- Server connection status
+- Individual file processing details
+- JSON conversion messages
+- Detailed error messages
+- Processing progress information
+
+#### Examples
+
+```bash
+# Clean output - only essential statistics
+grobid_client --input pdfs/ processFulltextDocument
+# Output:
+# Found 1000 file(s) to process
+# Processing completed: 950 out of 1000 files processed
+# Errors: 50 out of 1000 files processed
+# Processing completed in 120.5 seconds
+
+# Verbose output - detailed processing information
+grobid_client --input pdfs/ --verbose processFulltextDocument
+# Output includes all essential stats PLUS:
+# GROBID server http://localhost:8070 is up and running
+# JSON file example.json does not exist, generating JSON from existing TEI...
+# Successfully created JSON file: example.json
+# ... and other detailed processing information
+```
+
+#### Configuration File Logging
+
+The config file can include logging settings:
+
+```json
+{
+    "grobid_server": "http://localhost:8070",
+    "logging": {
+        "level": "WARNING",
+        "format": "%(asctime)s - %(levelname)s - %(message)s",
+        "console": true,
+        "file": null
+    }
+}
+```
+
+**Note**: The `--verbose` command line flag always takes precedence over configuration file logging settings.
 
 ## 🔬 Services
 
@@ -233,6 +319,87 @@ Extracts complete document structure including headers, body text, figures, tabl
 ```bash
 grobid_client --input pdfs/ --output results/ processFulltextDocument
 ```
+
+### JSON Output Format
+
+When using the `--json` flag, the client converts TEI XML output to a structured JSON format similar to CORD-19. This provides:
+
+- **Structured Bibliography**: Title, authors, DOI, publication date, journal information
+- **Body Text**: Paragraphs and sentences with metadata and reference annotations
+- **Figures and Tables**: Structured JSON format for tables with headers, rows, and metadata
+- **Reference Information**: In-text citations with offsets and targets
+
+#### JSON Structure
+
+```json
+{
+  "level": "paragraph",
+  "biblio": {
+    "title": "Document Title",
+    "authors": ["Author 1", "Author 2"],
+    "doi": "10.1000/example",
+    "publication_date": "2023-01-01",
+    "journal": "Journal Name",
+    "abstract": [...]
+  },
+  "body_text": [
+    {
+      "id": "p_12345",
+      "text": "Paragraph text with citations [1].",
+      "head_section": "Introduction",
+      "refs": [
+        {
+          "type": "bibr",
+          "target": "b1",
+          "text": "[1]",
+          "offset_start": 25,
+          "offset_end": 28
+        }
+      ]
+    }
+  ],
+  "figures_and_tables": [
+    {
+      "id": "table_1",
+      "type": "table",
+      "label": "Table 1",
+      "head": "Sample Data",
+      "content": {
+        "headers": ["Header 1", "Header 2"],
+        "rows": [["Value 1", "Value 2"]],
+        "metadata": {
+          "row_count": 1,
+          "column_count": 2,
+          "has_headers": true
+        }
+      }
+    }
+  ]
+}
+```
+
+#### Usage Examples
+
+```bash
+# Generate both TEI and JSON outputs
+grobid_client --input pdfs/ --output results/ --json processFulltextDocument
+
+# JSON output with coordinates and sentence segmentation
+grobid_client --input pdfs/ --output results/ --json --teiCoordinates --segmentSentences processFulltextDocument
+```
+
+```python
+# Python library usage
+client.process(
+    service="processFulltextDocument",
+    input_path="/path/to/pdfs",
+    output_path="/path/to/output",
+    json_output=True
+)
+```
+
+> [!NOTE]
+> When using `--json`, the `--force` flag only checks for existing TEI files. If a TEI file is rewritten (due to `--force`), the corresponding JSON file is automatically rewritten as well.
 
 ### Header Document Processing
 Extracts only document metadata (title, authors, abstract, etc.).

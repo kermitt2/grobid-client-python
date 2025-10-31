@@ -181,7 +181,7 @@ class TestGrobidClientIntegration:
                                         force=True
                                     )
 
-                                    assert processed_count == (5, 0)
+                                    assert processed_count == (5, 0, 0)
 
     def test_error_handling_and_recovery(self):
         """Test error handling and recovery mechanisms."""
@@ -342,4 +342,4 @@ class TestGrobidClientIntegration:
                                         force=True
                                     )
 
-                                    assert processed_count == (20, 0)
+                                    assert processed_count == (20, 0, 0)
