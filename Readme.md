@@ -44,6 +44,7 @@ concurrent processing capabilities for PDF documents, reference strings, and pat
     - Online demo: https://lfoppiano-grobid.hf.space (usage limits apply), more
       details [here](https://grobid.readthedocs.io/en/latest/getting_started/#using-grobid-from-the-cloud).
 
+
 > [!IMPORTANT]
 > GROBID supports Windows only through Docker containers. See
 > the [Docker documentation](https://grobid.readthedocs.io/en/latest/Grobid-docker/) for details.
@@ -350,8 +351,7 @@ grobid_client --input pdfs/ --output results/ processFulltextDocument
 
 ### JSON Output Format
 
-When using the `--json` flag, the client converts TEI XML output to a structured JSON format similar to CORD-19. This
-provides:
+When using the `--json` flag, the client converts TEI XML output to a structured JSON format similar to CORD-19. This provides:
 
 - **Structured Bibliography**: Title, authors, DOI, publication date, journal information
 - **Body Text**: Paragraphs and sentences with metadata and reference annotations
@@ -522,8 +522,7 @@ client.process(
 ```
 
 > [!NOTE]
-> When using `--markdown`, the `--force` flag only checks for existing TEI files. If a TEI file is rewritten (due to
-`--force`), the corresponding Markdown file is automatically rewritten as well.
+> When using `--markdown`, the `--force` flag only checks for existing TEI files. If a TEI file is rewritten (due to `--force`), the corresponding Markdown file is automatically rewritten as well.
 
 ### Header Document Processing
 
