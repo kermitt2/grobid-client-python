@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Incorporating External Knowledge to Enhance Tabular Reasoning</title>
+				<funder>
+					<orgName type="full">Verisk Inc.</orgName>
+				</funder>
+				<funder ref="#_jVhUDQy #_gUdCsDv">
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">J</forename><surname>Neeraja</surname></persName>
+							<email>jneeraja@iitg.ac.in</email>
+							<affiliation key="aff0">
+								<orgName type="department">IIT Guwahati</orgName>
+								<orgName type="institution" key="instit1">University of Utah</orgName>
+								<orgName type="institution" key="instit2">University of Utah</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vivek</forename><surname>Gupta</surname></persName>
+							<email>vgupta@cs.utah.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">IIT Guwahati</orgName>
+								<orgName type="institution" key="instit1">University of Utah</orgName>
+								<orgName type="institution" key="instit2">University of Utah</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vivek</forename><surname>Srikumar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">IIT Guwahati</orgName>
+								<orgName type="institution" key="instit1">University of Utah</orgName>
+								<orgName type="institution" key="instit2">University of Utah</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Incorporating External Knowledge to Enhance Tabular Reasoning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A865E57304B72949D7A3BC3FC4FB3F75</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-11-04T10:18+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-32-gd9cc9048d</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Reasoning about tabular information presents unique challenges to modern NLP approaches which largely rely on pre-trained contextualized embeddings of text. In this paper, we study these challenges through the problem of tabular natural language inference. We propose easy and effective modifications to how information is presented to a model for this task. We show via systematic experiments that these strategies substantially improve tabular inference performance.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Natural Language Inference (NLI) is the task of determining if a hypothesis sentence can be inferred as true, false, or undetermined given a premise sentence <ref type="bibr" target="#b5">(Dagan et al., 2013)</ref>. Contextual sentence embeddings such as BERT <ref type="bibr" target="#b6">(Devlin et al., 2019)</ref> and RoBERTa <ref type="bibr" target="#b13">(Liu et al., 2019)</ref>, applied to large datasets such as SNLI <ref type="bibr" target="#b2">(Bowman et al., 2015)</ref> and MultiNLI <ref type="bibr" target="#b20">(Williams et al., 2018)</ref>, have led to nearhuman performance of NLI systems.</p><p>In this paper, we study the harder problem of reasoning about tabular premises, as instantiated in datasets such as TabFact <ref type="bibr" target="#b3">(Chen et al., 2019)</ref> and InfoTabS <ref type="bibr" target="#b8">(Gupta et al., 2020)</ref>. This problem is similar to standard NLI, but the premises are Wikipedia tables rather than sentences. Models similar to the best ones for the standard NLI datasets struggle with tabular inference. Using the InfoTabS dataset as an example, we present a focused study that investigates (a) the poor performance of existing models, (b) connections to information deficiency in the tabular premises, and, (c) simple yet effective mitigations for these problems.</p><p>We use the table and hypotheses in Figure  fer to the left column as its keys.</p><p><ref type="foot" target="#foot_0">foot_0</ref> Tabular inference is challenging for several reasons: (a) Poor table representation: The table does not explicitly state the relationship between the keys and values. (b) Missing implicit lexical knowledge due to limited training data: This affects interpreting words like 'fewer', and 'over' in H1 and H2 respectively. (c) Presence of distracting information: All keys except No. of listings are unrelated to the hypotheses H1 and H2. (d) Missing domain knowledge about keys: We need to interpret the key Volume in the financial context for this table.</p><p>In the absence of large labeled corpora, any modeling strategy needs to explicitly address these problems. In this paper, we propose effective approaches for addressing them, and show that they lead to substantial improvements in prediction quality, especially on adversarial test sets. This focused study makes the following contributions:</p><p>1. We analyse why the existing state-of-the-art BERT class models struggle on the challenging task of NLI over tabular data. 2. We propose solutions to overcome these challenges via simple modifications to inputs using existing language resources.</p><p>3. Through extensive experiments, we show significant improvements to model performance, especially on challenging adversarial test sets. The updated dataset, along with associated scripts, are available at <ref type="url" target="https://github.com/utahnlp/knowledge_infotabs">https://github.com/   utahnlp/knowledge_infotabs</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Challenges and Proposed Solutions</head><p>We examine the issues highlighted in §1 and propose simple solutions to mitigate them below.</p><p>Better Paragraph Representation (BPR): One way to represent the premise table is to use a universal template to convert each row of the table into sentence which serves as input to a BERT-style model. <ref type="bibr" target="#b8">Gupta et al. (2020)</ref> suggest that in a table titled t, a row with key k and value v should be converted to a sentence using the template: "The k of t are v." Despite the advantage of simplicity, the approach produces ungrammatical sentences.</p><p>In our example, the template converts the Founded row to the sentence "The Founded of New York Stock Exchange are May 17, 1792; 226 years ago.".</p><p>We note that keys are associated with values of specific entity types such as MONEY, DATE, CAR-DINAL, and BOOL, and the entire table itself has a category. Therefore, we propose type-specific templates, instead of using the universal one. <ref type="foot" target="#foot_1">2</ref> In our example, the table category is Organization and the key Founded has the type DATE. A better template for this key is "t was k on v", which produces the more grammatical sentence "New York Stock Exchange was Founded on May 17, 1792; 226 years ago.". Furthermore, we observe that including the table category information i.e. "New York Stock Exchange is an Organization." helps in better premise context understanding. <ref type="foot" target="#foot_2">3</ref> Appendix A provides more such templates.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Implicit Knowledge Addition (KG implicit):</head><p>Tables represent information implicitly; they do not employ connectives to link their cells. As a result, a model trained only on tables struggles to make lexical inferences about the hypothesis, such as the difference between the meanings of 'before' and 'after', and the function of negations. This is surprising, because the models have the benefit of being pre-trained on large textual corpora. <ref type="formula">Recently, Andreas (2020) and Pruksachatkun  et al. (2020)</ref>showed that we can pre-train models on specific tasks to incorporate such implicit knowledge. <ref type="bibr" target="#b7">Eisenschlos et al. (2020)</ref> use pre-training on synthetic data to improve the performance on the TabFact dataset. Inspired by these, we first train our model on the large, diverse and human-written MultiNLI dataset. Then, we fine tune it to the InfoTabS task. Pre-training with MultiNLI data exposes the model to diverse lexical constructions. Furthermore, it increases the training data size by 433K (MultiNLI) example pairs. This makes the representation better tuned to the NLI task, thereby leading to better generalization.</p><p>Distracting Rows Removal (DRR) Not all premise table rows are necessary to reason about a given hypothesis. In our example, for the hypotheses H1 and H2, the row corresponding to the key No. of listings is sufficient to decide the label for the hypothesis. The other rows are an irrelevant distraction. Further, as a practical concern, when longer tables are encoded into sentences as described above, the resulting number of tokens is more than the input size restrictions of existing models, leading to useful rows potentially being cropped. Appendix F shows one such example on the InfoTabS. Therefore, it becomes important to prune irrelevant rows.</p><p>To identify relevant rows, we employ a simplified version of the alignment algorithm used by <ref type="bibr" target="#b21">Yadav et al. (2019</ref><ref type="bibr" target="#b22">Yadav et al. ( , 2020) )</ref> for retrieval in reading comprehension.</p><p>First, every word in the hypothesis sentence is aligned with the most similar word in the table sentences using cosine similarity. We use fast-Text <ref type="bibr" target="#b10">(Joulin et al., 2016;</ref><ref type="bibr" target="#b14">Mikolov et al., 2018)</ref> embeddings for this purpose, which preliminary experiments revealed to be better than other embeddings. Then, we rank rows by their similarity to the hypothesis, by aggregating similarity over content words in the hypothesis. <ref type="bibr" target="#b21">Yadav et al. (2019)</ref> used inverse document frequency for weighting words, but we found that simple stop word pruning was sufficient. We took the top k rows by similarity as the pruned representative of the table for this hypothesis. The hyper-parameter k is selected by tuning on a development set. Appendix B gives more details about these design choices.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Explicit Knowledge Addition (KG explicit):</head><p>We found that adding explicit information to enrich keys improves a model's ability to disambiguate and understand them. We expand the pruned table premises with contextually relevant key information from existing resources such as WordNet (definitions) or Wikipedia (first sentence, usually a definition). <ref type="foot" target="#foot_3">4</ref>To find the best expansion of a key, we use the sentential form of a row to obtain the BERT embedding (on-the-fly) for its key. We also obtain the BERT embeddings of the same key from WordNet examples (or Wikipedia sentences). <ref type="foot" target="#foot_4">5</ref> Finally, we concatenate the WordNet definition (or the Wikipedia sentence) corresponding to the highest key embedding similarity to the table. As we want the contextually relevant definition of the key, we use the BERT embeddings rather than noncontextual ones (e.g., fastText). For example, the key volume can have different meanings in various contexts. For our example, the contextually best definition is "In capital markets, volume, is the total number of a security that was traded during a given period of time." rather than the other definition "In thermodynamics, the volume of a system is an extensive parameter for describing its thermodynamic state.".</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">Experiment and Analysis</head><p>Our experiments are designed to study the research question: Can today's large pre-trained models exploit the information sources described in §2 to better reason about tabular information?</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Experimental setup</head><p>Datasets Our experiments uses InfoTabS, a tabular inference dataset from <ref type="bibr" target="#b8">Gupta et al. (2020)</ref>. The dataset is heterogeneous in the types of tables and keys, and relies on background knowledge and common sense. Unlike the TabFact dataset <ref type="bibr" target="#b3">(Chen et al., 2019)</ref>, it has all three inference labels, namely entailment, contradiction and neutral. Importantly, for the purpose of our evaluation, it has three test sets. In addition to the usual development set and the test set (called α 1 ), the dataset has two adversarial test sets: a contrast set α 2 that is lexically similar to α 1 , but with minimal changes in the hypotheses and flip entail-contradict label, and a zero-shot set α 3 which has long tables from different domains with little key overlap with the training set.</p><p>Models For a fair comparison with earlier baselines, we use RoBERTa-large (RoBERTa L ) for all our experiments. We represent the premise table by converting each table row into a sentence, and then appending them into a paragraph, i.e. the Para representation of <ref type="bibr" target="#b8">Gupta et al. (2020)</ref>.</p><p>Hyperparameters Settings<ref type="foot" target="#foot_5">foot_5</ref> For the distracting row removal (+DRR) step, we have a hyperparameter k.</p><p>We experimented with k ∈ {2, 3, 4, 5, 6}, by predicting on +DRR development premise on model trained on orignal training set (i.e. BPR), as shown in Table <ref type="table">1</ref>. The development accuracy increases significantly as k increases from 2 to 4 and then from 4 to 6, increases marginally ( 1.5% improvement). Since our goal is to remove distracting rows, we use the lowest hyperparameter with good performance i.e. k = 4.<ref type="foot" target="#foot_6">foot_6</ref> .</p><p>Train Dev k = 2 k = 3 k = 4 k = 5 k = 6 BPR DRR 71.72 74.83 77.50 78.50 79. <ref type="table">00</ref> Table 1: Dev accuracy on increasing hyperparameter k.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Results and Analysis</head><p>Table 2 shows the results of our experiments. Premise Dev α1 α2 α3 Human 79.78 84.04 83.88 79.33 Para 75.55 74.88 65.55 64.94 BPR 76.42 75.29 66.50 64.26 +KG implicit 79.57 78.27 71.87 66.77 +DRR 78.77 78.13 70.90 68.98 +KG explicit 79.44 78.42 71.97 70.03</p><p>Table 2: Accuracy with the proposed modifications on the Dev and test sets. Here, + represents the change with respect to the previous row. Reported numbers are the average over three random seed runs with standard deviation of 0.33 (+KG explicit), 0.46 (+DRR), 0.61 (+KG implicit), 0.86 (BPR), over all sets. All improvements are statistically significant with p &lt; 0.05, except α 1 for BPR representation w.r.t to Para (Original). Here the Human and Para results are taken from <ref type="bibr" target="#b8">Gupta et al. (2020)</ref>.</p><p>BPR As shown in Table <ref type="table">2</ref>, with BPR, we observe that the RoBERTa L model improves performance on all dev and test sets except α 3 . There are two main reasons behind this poor performance on α 3 .</p><p>First, the zero-shot α 3 data includes unseen keys. The number of keys common to α 3 and the training set is 94, whereas for, dev, α 1 and α 2 it is 334, 312, and 273 respectively (i.e., 3-5 times more). Second, despite being represented by better sentences, due to the input size restriction of RoBERTa L some relevant rows are still ignored.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>KG implicit</head><p>We observe that implicit knowledge addition via MNLI pre-training helps the model reason and generalize better. From Table <ref type="table">2</ref>, we can see significant performance improvement in the dev and all three test sets.</p><p>DRR This leads to significant improvement in the α 3 set. We attribute this to two primary reasons: First, α 3 tables are longer (13.1 keys per table on average, vs. 8.8 keys on average in the others), and DRR is important to avoid automatically removing keys from the bottom of a table due to the limitations in RoBERTa L model's input size. Without these relevant rows, the model incorrectly predicts the neutral label. Second, α 3 is a zero-shot dataset and has significant proportion of unseen keys which could end up being noise for the model. The slight decrease in performance on the dev, α 1 and α 2 sets can be attributed to model utilising spurious patterns over irrelevant keys for prediction. 8 We validated this experimentally by testing the original premise trained model on the DRR test tables. Table <ref type="table">5</ref> in the Appendix C shows that without pruning, the model focuses on irrelevant rows for prediction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>KG explicit</head><p>With explicit contextualized knowledge about the table keys, we observe a marginal improvement in dev, α 1 test sets and a significant performance gain on the α 2 and α 3 test sets. Improvement in the α 3 set shows that adding external knowledge helps in the zero-shot setting. With α 2 , the model can not utilize spurious lexical correlations 9 due to its adversarial nature, and is forced to use the relevant keys in the premise tables, thus 8 Performance drop of dev and α2 is also marginal i.e. (dev: 79.57 to 78.77, α1: 78.27 to 78.13, α2: 71.87 to 70.90), as compared to InfoTabS WMD-top3 i.e (dev: 75.5 to 72.55,α1: 74.88 to 70.38, α2: 65.44 to 62.55), here WMD-top3 performance numbers are taken from <ref type="bibr" target="#b8">Gupta et al. (2020)</ref>. 9 The hypothesis-only baseline for α2 is 48.5% vs. α1: 60.5 % and dev: 60.5 % <ref type="bibr" target="#b8">(Gupta et al., 2020)</ref> adding explicit information about the key improves performance more for α 2 than α 1 or dev. Appendix F shows some qualitative examples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3">Ablation Study</head><p>We perform an ablation study as shown in table 3, where instead of doing all modification sequentially one after another (+), we do only one modification at a time to analyze its effects.</p><p>Through our ablation study we observe that: (a) DRR improves performance on the dev, α 1 , and α 2 sets, but slightly degrades it on the α 3 set. The drop in performance on α 3 is due to spurious artifact deletion as explained in details in Appendix E. (b) KG explicit gives performance improvement in all sets. Furthermore, there is significant boost in performance of the adversarial α 2 and α 3 sets.<ref type="foot" target="#foot_7">foot_7</ref> (c) Similarly, KG implicit shows significant improvement in all test sets. The large improvements on the adversarial sets α 2 and α 3 sets, suggest that the model can now reason better. Although, implicit knowledge provides most performance gain, all modifications are needed to obtain the best performance for all sets (especially on the α 3 set). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Comparison with Related Work</head><p>Recently, there have been many papers which study several NLP tasks on semi-structured tabular data. These include tabular NLI and fact verification tasks such as TabFact <ref type="bibr" target="#b3">(Chen et al., 2019)</ref>, and In-foTabS <ref type="bibr" target="#b8">(Gupta et al., 2020)</ref>, various question answering and semantic parsing tasks <ref type="bibr" target="#b16">(Pasupat and Liang, 2015;</ref><ref type="bibr" target="#b11">Krishnamurthy et al., 2017;</ref><ref type="bibr" target="#b0">Abbas et al., 2016;</ref><ref type="bibr" target="#b19">Sun et al., 2016;</ref><ref type="bibr" target="#b4">Chen et al., 2020;</ref><ref type="bibr">Lin et al., 2020, inter alia)</ref>, and table-to-text generation and its evaluation (e.g., <ref type="bibr" target="#b15">Parikh et al., 2020;</ref><ref type="bibr" target="#b18">Radev et al., 2020)</ref>. Several, models for better representation of tables such as TAPAS <ref type="bibr" target="#b9">(Herzig et al., 2020)</ref>, TaBERT <ref type="bibr" target="#b23">(Yin et al., 2020)</ref>, and Tab-Struc <ref type="bibr" target="#b26">(Zhang et al., 2020)</ref> were recently proposed. <ref type="formula">Yu et al. (2018, 2021) and Eisenschlos et al. (2020)</ref>study pre-training for improving tabular inference, similar to our MutliNLI pre-training.</p><p>The proposed modifications in this work are simple and intuitive. Yet, existing table reasoning papers have not studied the impact of such input modifications. Furthermore, much of the recent work focuses on building sophisticated neural models, without explicit focus on how these models (designed for raw text) adapt to the tabular data. In this work, we argue that instead of relying on the neural network to "magically" work for tabular structures, we should carefully think about the representation of semi-structured data, and the incorporation of both implicit and explicit knowledge into neural models. Our work highlights that simple pre-processing steps are important, especially for better generalization, as evident from the significant improvement in performance on adversarial test sets with the same RoBERTa models. We recommend that these pre-processing steps should be standardized across table reasoning tasks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Conclusion &amp; Future Work</head><p>We introduced simple and effective modifications that rely on introducing additional knowledge to improve tabular NLI. These modifications governs what information is provided to a tabular NLI and how the given information is presented to the model. We presented a case study with the recently published InfoTabS dataset and showed that our proposed changes lead to significant improvements. Furthermore, we also carefully studied the effect of these modifications on the multiple test-sets, and why a certain modification seems to help a particular adversarial set.</p><p>We believe that our study and proposed solutions will be valuable to researchers working on question answering and generation problems involving both tabular and textual inputs, such as tabular/hybrid question answering and table-to-text generation, especially with difficult or adversarial evaluation. Looking ahead, our work can be extended to include explicit knowledge for hypothesis tokens as well. To increase robustness, we can also integrate structural constraints via data augmentation through NLI training. Moreover, we expect that structural information such as position encoding could also help better represent tables.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A BPR Templates</head><p>Here, we are listing down some of the diverse example templates we have framed.</p><p>• For the</p><p>table category Bus/Train Lines and key Disabled access with BOOL value YES, follow template: "t has k." Orignal Premise Sentence "The Disabled access of Tukwila International Boulevard Station are Yes." BPR Sentence "Tukwila International Boulevard Station has Disabled access." • For the table category Movie and key Box office with MONEY type, follow template: "In the k, t made v." Orignal Premise Sentence "The Box office of Brokeback Mountain are $178.1 million." BPR Sentence "In the Box office, Brokeback Mountain made $178.1 million." • For the table category City and key Total with CARDINAL type, follow template: "The k area of t is v." Orignal Premise Sentence "The Total of Cusco are 435,114." BPR Sentence "The Total area of Cusco is 435,114." • For the table category Painting and key Also known as, follow template: "The k of t is v." Orignal Premise Sentence "The Also known as of Et in Arcadia ego are Les Bergers d'Arcadie." BPR Sentence "Et in Arcadia ego is Also known as Les Bergers d'Arcadie." • For the table category Person and key Died with DATE type , follow template: "t k on v." Orignal Premise Sentence "The Died of Jesse Ramsden are November 1800 (1800-11-05) (aged 65) Brighton, Sussex."</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>BPR Sentence "Jesse Ramsden Died on 5</head><p>November 1800 (1800-11-05) (aged 65) Brighton, Sussex." B DRR: fastText and Binary weighting fastText: For word representation, <ref type="bibr" target="#b21">(Yadav et al., 2019)</ref> have used BERT and Glove embeddings. In our case, we prefer to use fastText word embeddings over Glove because fastText embedding uses sub-word information which helps in capturing different variations of the context words. Furthermore, fastText embeddings is also as better choice than BERT for our task because 1. Firstly, we are embedding single sentential form of diverse rows instead of longer context similar paragraphs, 2. Secondly, all words (especially keys) of the rows across all the tables are used only in one context, whereas BERT is useful when same word is used with different contexts across paragraphs, 3. Thirdly, in all tables, the number sentences to select from is bounded by maximum rows in the table, which is a small number (8.8 in train, dev, α 1 , α 2 and 13.1 in α 3 ), and 4. Lastly, using fastText is much faster to compute than BERT for obtaining embeddings.</p><p>Binary weighting: Since, we are embedding single sentential form of diverse rowsinstead of longer context related paragraphs, we found that using binary weighting 0 for stop words and 1 for others is more effective than the idf weighting, which is useful only for longer paragraph context with several lexical terms.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C Hyperparameters k vs test-sets accuracy</head><p>We also trained a model both train and tested on the DRR table premise for increasing values of the hyper parameter k, as shown in Table <ref type="table">1</ref>. We also test the model trained on the entire para on pruned para with increasing value of hyperparameters k ∈ {2, 3, 4, 5, 6} for the test sets α 1 , α 2 , and α 3 . In all cases, except α 3 , the performance with larger k is better. The increase in performance, even with k &gt; 4, shows that the model is using more then required keys for prediction. Thus, the model is utlising the spurious pattern in irrelevant rows for the prediction. Table 5: Accuracy of model trained with orignal table but tested with DRR table with increasing hyper parameter k on all test sets.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D TabFact Representation Experiment</head><p>Table <ref type="table" target="#tab_2">6</ref> implicit knowledge addition effect on nonpara Struc representation i.e. a key value linearize representation as "key k : value v", rows separated by semicolon ";" <ref type="bibr" target="#b8">(Gupta et al., 2020;</ref><ref type="bibr" target="#b3">Chen et al., 2019)</ref>. Here too the implicit knowledge addition leads to improvement in performance on all the sets. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E Artifacts and Model Predictions</head><p>In Table <ref type="table">7</ref> we show percentage of example which were corrected after modification and vice versa. Surprisingly, there is a small percentage of examples which are predicted correctly earlier with original premise (Para) but predicted wrongly after all the modifications (Mod), although such examples are much lesser than opposite case. We suspect that earlier model was also relying on spurious pattern (artifacts) for correct prediction on these examples earlier, which are now corrupted after the proposed modifications. Hence, the new model struggle to predict correctly on such examples.</p><p>Para Mod Dev α1 α2 α3 × 6.77 7.83 9.27 10.01 × 10.94 12.55 14.33 16.05</p><p>Table <ref type="table">7</ref>: Correct vs Incorrect Predictions for Para model <ref type="bibr" target="#b8">(Gupta et al., 2020)</ref> and the model after the modifcations (Mod).</p><p>In the next section F, we also shows qualitative examples, where modification helps model predict correctly. We also provide some examples via distracting row removal modification, where model fails after modification.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F Qualitative Examples</head><p>In this section, we provide examples where model is able to predict well after the proposed modifications. We also provide some examples, where model struggles to make the correct prediction after distracting row removal (DRR) modification.  Table 11: Prediction after DRR. Here, + represents the change with respect to the previous row.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Result and Explanation</head><p>In this example from the α 3 set, removing distracting rows (sentence except the one in green and blue) definitely helps as there are irrelevant distracting noise and also make premise paragraph long beyond BERT maximum tokenization limits. Before DRR is applied, the model predicts neutral due to a) distracting rows and b) required information i.e. relevant keysrows highlighted as green being removed due to maximum tokenization limitation (it's second last sentence). However, after DRR, the prune information retained is only the relevant keys highlighted as green and thus the model is able to predict the correct label.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Negative Example</head><p>In some examples distracting row removal for DRR remove an relevant rows and hence the model failed to predict correctly on the DRR premise, as shown below: Table 13: Prediction after DRR. Here, + represents the change with respect to the previous row.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Original Premise</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><figDesc>1 as a running example through this paper, and re- * *The first two authors contributed equally to the work. The first author was a remote intern at University of Utah during the work. has fewer than 3,000 stocks listed. H2: Over 2,500 stocks are listed in the NYSE. H3: S&amp;P 500 stock trading volume is over $10 trillion.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: A tabular premise example. The hypotheses H1 is entailed by it, H2 is a contradiction and H3 is neutral i.e. neither entailed nor contradictory.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>F. 1</head><label>1</label><figDesc>BPR Original Premise The Birth name of Eva Mendes are Eva de la Caridad Méndez. Eva Mendes was Born on March 5, 1974 (1974-03-05) (age 44) Miami, Florida, U.S.. The Occupation of Eva Mendes are Actress, model, businesswoman. The Years active of Eva Mendes are 1998 -present. The Partner(s) of Eva Mendes are Ryan Gosling (2011 -present). The Children of Eva Mendes are 2. Better Paragraph Premise Eva Mendes is a person. The birth name of Eva Mendes is Eva de la Caridad Méndez. Eva Mendes was born on March 5, 1974 (1974-03-05) (age 44) Miami, Florida, U.S.. The occupation of Eva Mendes is Actress, model, businesswoman. The years active of Eva Mendes was on 1998 -present. The partner(s) of Eva Mendes is Ryan Gosling (2011 -present). The number of children of Eva Mendes are 2.Hypothesis Eva Mendes has two children.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 3 :</head><label>3</label><figDesc>Ablation results with individual modifications.</figDesc><table><row><cell>11</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 4 :</head><label>4</label><figDesc>Dev accuracy with increasing hyper parameter k trained with both BPR and +DRR table.</figDesc><table><row><cell>Train Dev</cell><cell>k=2 k=3 k=4 k=5 k=6</cell></row><row><cell cols="2">+DRR +DRR 77.61 77.94 78.16 78.38 79.00</cell></row><row><cell cols="2">BPR +DRR 71.72 74.83 77.50 78.50 79.00</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 6 :</head><label>6</label><figDesc>Accuracy on InfoTabS data for Struc representation of Tables. Here, + represents the change with respect to the previous row.</figDesc><table><row><cell>Premise</cell><cell>Dev</cell><cell>α1</cell><cell>α2</cell><cell>α3</cell></row><row><cell>Struc</cell><cell cols="4">77.61 75.06 69.02 64.61</cell></row><row><cell cols="5">+ KG implicit 79.55 78.66 72.33 70.44</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 8 :</head><label>8</label><figDesc>Prediction after BPR. Here, + represents the change with respect to the previous row.</figDesc><table><row><cell>Result and Explanation In this example from</cell></row><row><cell>α 2 , the model predicts Neutral for this hypothe-</cell></row><row><cell>sis with orignal premise. However, forming better</cell></row><row><cell>sentences by adding the "number of children are</cell></row><row><cell>2" (highlighted as green) in case of CARDINAL</cell></row><row><cell>type for the category PERSON helps the model</cell></row><row><cell>understand the relation and reasoning behind the</cell></row><row><cell>children and the number two and arrive at the cor-</cell></row><row><cell>rect prediction of entailment.</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 12 :</head><label>12</label><figDesc>Et in Arcadia ego is a painting. Et in Arcadia ego is also known as Les Bergers d'Arcadie. Et in Arcadia ego is a painting. The artist of Et in Arcadia ego is Nicolas Poussin. The medium of Et in Arcadia ego is oil on canvas. The dimensions of Et in Arcadia ego is 87 cm 120 cm (34.25 in 47.24 in).Prediction after DRR. Here, + represents the change with respect to the previous row.Result and ExplanationIn this example from the Dev set, the DRR technique used removes the required key "Location" (highlighted in red) from the para representation. Hence, the model here predicts neutral as the information regarding where the painting is stored i.e. "Location" is removed in the DRR, which the model require for making the correct inference. While in original para, this information is still present and the model is able to arrive at the correct label. Another interesting observation is RoBERTa L knows Musee du Louvre is a museum in the United Kingdom, showing sign of world-knowledge.Negative Example In another negative examples distracting row removal for DRR got the relevant rows correct but still the model failed to predict correct label due to spurious correlation, as shown below:OriginalPremise Idiocracy is a movie. Idiocracy was directed by Mike Judge. Idiocracy was produced by Mike Judge, Elysa Koplovitz, Michael Nelson. Idiocracy was written by Etan Cohen, Mike Judge. Idiocracy was starring Luke Wilson, Maya Rudolph, Dax Shepard. Idiocracy was music by Theodore Shapiro. The cinematography of Idiocracy was by Tim Suhrstedt. Idiocracy was edited by David Rennie. The production company of Idiocracy is Ternion. Idiocracy was distributed by 20th Century Fox. The release date of Idiocracy is September 1, 2006. The running time of Idiocracy is 84 minutes. The country of Idiocracy is United States. The language of Idiocracy is English. The budget of Idiocracy is $2-4 million. In the box office, Idiocracy made $495,303 (worldwide). Idiocracy was directed by Mike Judge. Idiocracy was produced by Mike Judge, Elysa Koplovitz, Michael Nelson. Idiocracy was written by Etan Cohen, Mike Judge. Idiocracy was edited by David Rennie.</figDesc><table><row><cell cols="2">The artist of Et in Arcadia ego is Nicolas Poussin. The</cell><cell></cell><cell></cell></row><row><cell cols="2">year of Et in Arcadia ego is 1637 -1638. The medium of</cell><cell></cell><cell></cell></row><row><cell cols="2">Et in Arcadia ego is oil on canvas. The dimensions of Et</cell><cell></cell><cell></cell></row><row><cell cols="2">in Arcadia ego is 87 cm 120 cm (34.25 in 47.24 in). The</cell><cell></cell><cell></cell></row><row><cell cols="2">location of Et in Arcadia ego is Musee du Louvre.</cell><cell></cell><cell></cell></row><row><cell cols="2">Hypothesis The art piece Et in Arcadia ego is stored in the United Kingdom</cell><cell>.</cell><cell cols="2">Distracting Row Removal (DRR) Hypothesis Idiocracy was directed and written by the same person.</cell></row><row><cell>Premise</cell><cell>Label</cell><cell></cell><cell>Premise</cell><cell>Label</cell></row><row><cell cols="2">Human Label (Gold) Contradiction</cell><cell></cell><cell cols="2">Human Label (Gold) Entailed</cell></row><row><cell>Orignal Premise</cell><cell>Contradiction</cell><cell></cell><cell>Orignal Premise</cell><cell>Entailed</cell></row><row><cell>+DRR</cell><cell>Neutral</cell><cell></cell><cell>+DRR</cell><cell>Neutral</cell></row></table><note><p>Distracting Row Removal (DRR)</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p>Keys in the InfoTabS tables are similar to column headers in the TabFact database-style tables.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p>The construction of the template sentences based on entity type is a one-time manual step.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2"><p>This category information is provided in the InfoTabS and TabFact datasets. For other datasets, it can be inferred easily by clustering over the keys of the training tables.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_3"><p>Usually multi-word keys are absent in WordNet, in this case we use Wikipedia. The WordNet definition of each word in the key is used if the multi-word key is absent in Wikipedia.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_4"><p>We prefer using WordNet examples over definition for BERT embedding because (a) an example captures the context in which key is used, and (b) the definition may not always contain the key tokens.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_5"><p>Appendix C has more details about hyperparameters.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_6"><p>Indeed, the original InfoTabs work points out that no more than four rows in a table are needed for any hypothesis.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10" xml:id="foot_7"><p>The KG explicit step is performed only for relevant keys (after DRR).</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="11" xml:id="foot_8"><p>We show in Appendix D, Table6, that implicit knowledge addition to a non-sentential table representation i.e. Struc<ref type="bibr" target="#b3">(Chen et al., 2019;</ref><ref type="bibr" target="#b8">Gupta et al., 2020)</ref> leads to performance improvement as well.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We thank members of the <rs type="institution">Utah NLP group</rs> for their valuable insights and suggestions at various stages of the project; and reviewers their helpful comments. We also thank the support of <rs type="funder">NSF</rs> grants #<rs type="grantNumber">1801446</rs> (SATC) and #<rs type="grantNumber">1822877</rs> (Cyberlearning) and a generous gift from <rs type="funder">Verisk Inc.</rs></p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_jVhUDQy">
+					<idno type="grant-number">1801446</idno>
+				</org>
+				<org type="funding" xml:id="_gUdCsDv">
+					<idno type="grant-number">1822877</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Table 10: Prediction on Hypothesis B (from α 2 ). Here, + represents the change with respect to the previous row</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Result and Explanation</head><p>In this example from α 2 , the model without implicit knowledge and the model with implicit knowledge addition predict the correct label on the Hypothesis A. However for Hypothesis B which is an example from α 2 , and originally generated by replacing the word "over" to word "under" in the Hypothesis A and flipping gold label from entail to contradiction, the ealier model which is using artifacts over lexical patterns arrive to predict the original wrong label entail instead of contradiction. On adding implicit knowledge while training, the model is now able to reason rather than relying on artifacts and correctly predicts contradiction. Note, that both hypothesis A and hypothesis B require exactly same reasoning for inference i.e. they are equally hard. The discovery of Fluorine is André-Marie Ampère (1810).</p><p>The first isolation of Fluorine is Henri Moissan (June 26, 1886). The named by of Fluorine is Humphry Davy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Distracting Row Removal (DRR)</head><p>The first isolation of Fluorine is Henri Moissan (June 26, 1886). The group of Fluorine is group 17 (halogens). The discovery of Fluorine is André-Marie Ampère (1810). Fluorine was ionization energies on 1st: 1681 kJ/mol, 2nd: 3374 kJ/mol, 3rd: 6147 kJ/mol, (more).</p><p>Hypothesis Flourine was discovered in the 18th century.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Result and Explanation</head><p>In this example from the Dev set, the model before DRR predicts the correct label but however on DRR, it predicts incorrect label of neutral. Despite the fact that both the relevant rows require for inference (highlighted in green) is present after DRR. This shows, that the model is looking at more keys than required in the initial case, which are eliminated in the DRR, which force the model to change it prediction. Thus, model is utilising spurious correlation from irrelevant rows to predict the label.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Orignal Premise</head><p>Julius Caesar was born on 12 or 13 July 100 BC Rome. Julius Caesar died on 15 March 44 BC (aged 55) Rome. The resting place of Julius Caesar is Temple of Caesar, Rome. The spouse(s) of Julius Caesar are Cornelia (84-69 BC; her death), Pompeia (67-61 BC; divorced), Calpurnia (59-44 BC; his death). Orignal Premise + KG explicit Julius Caesar died on 15 March 44 BC (aged 55) Rome. The resting place of Julius Caesar is Temple of Caesar, Rome. Julius Caesar was born on 12 or 13 July 100 BC Rome. The spouse(s) of Julius Caesar Cornelia (84-69 BC; her death), Pompeia (67-61 BC; divorced), Calpurnia (59-44 BC; his death). KEY: Died is defined as pass from physical life and lose all bodily attributes and functions necessary to sustain life . KEY: Resting place is defined as a cemetery or graveyard is a place where the remains of dead people are buried or otherwise interred . KEY: Born is defined as british nuclear physicist (born in germany) honored for his contributions to quantum mechanics (1882-1970) . KEY:</p><p>Spouse is defined as a spouse is a significant other in a marriage, civil union, or common-law marriage .</p><p>Hypothesis Julius Caesar was buried in Rome.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model Label</head><p>Human Label (Gold) Entailed Original Premise Neutral + KG explicit Entailed Table <ref type="table">14</ref>: Prediction after KG explicit addition. Here, + represents the change with respect to the previous row.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Result and Explanation</head><p>In this example from α 2 , the model without explicit knowledge predicts neutral for the hypothesis as it is not able to infer that resting place is where people are buried, so it predicts neutral as it implicitly lack buried key understanding. On explicit KG addition (highlighted as blue+ green), we add the definition of resting place to be the place where remains of the dead are buried (highlighted as green). Now the model uses this extra information (highlighted as green) plus the original key related to death (highlighted in bold) to correctly infer that the statement Caesar is buried in Rome is entailed.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>F</head><figDesc>een, -in, -yn) and(FLOR-een, -in, -yn).The allotropes of Fluorine is alpha, beta. The appearance of Fluorine is gas: very pale yellow , liquid: bright yellow , solid: alpha is opaque, beta is transparent. The standard atomic weight are, std(f) of Fluorine is 18.998403163(6). The atomic number (z) of Fluorine is 9. The group of Fluorine is group 17 (halogens). The period of Fluorine is period 2. The block of Fluorine is p-block. The element category of Fluorine is Reactive nonmetal. The electron configuration of Fluorine is [He] 2s 2 2p 5. The electrons per shell of Fluorine is 2, 7. The phase at stp of Fluorine is gas. The melting point of Fluorine is (F-2) 53.48 K (-219.67 °C, -363.41 °F). The boiling point of Fluorine is (F 2 ) 85.03 K (-188.11 °C, -306.60 °F). The density (at stp) of Fluorine is 1.696 g/L. The when liquid (at b.p.) of Fluorine is 1.505 g/cm 3. The triple point of Fluorine is 53.48 K, 90 kPa. The critical point of Fluorine is 144.41 K, 5.1724 MPa. The heat of vaporization of Fluorine is 6.51 kJ/mol. The molar heat capacity of Fluorine is C p : 31 J/(mol•K) (at 21.1 °C) , C v : 23 J/(mol•K) (at 21.1 °C). The oxidation states of Fluorine is -1 (oxidizes oxygen). The electronegativity of Fluorine is Pauling scale: 3.98. Fluorine was ionization energies on 1st: 1681 kJ/mol, 2nd: 3374 kJ/mol, 3rd: 6147 kJ/mol, (more). The covalent radius of Fluorine is 64 pm. The van der waals radius of Fluorine is 135 pm. The natural occurrence of Fluorine is primordial. The thermal conductivity of Fluorine is 0.02591 W/(m•K). The magnetic ordering of Fluorine is diamagnetic (-1.2×10 -4 ). The cas number of Fluorine is 7782-41-4. The naming of Fluorine is after the mineral fluorite, itself named after Latin fluo (to flow, in smelting).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 9 :</head><label>9</label><figDesc>Hypothesis A Janet Leigh's career spanned over 55 years long.Prediction on Hypothesis A. Here, + represents the change with respect to the previous row</figDesc><table><row><cell cols="2">Hypothesis B Janet Leigh's career spanned under 55</cell></row><row><cell>years long.</cell><cell></cell></row><row><cell>Premise</cell><cell>Label</cell></row><row><cell cols="2">Human Label (Gold) Entailed</cell></row><row><cell>Orignal Premise</cell><cell>Entailed</cell></row><row><cell>+ KG implicit</cell><cell>Entailed</cell></row><row><cell>Premise</cell><cell>Label</cell></row><row><cell cols="2">Human Label (Gold) Contradiction</cell></row><row><cell>Orignal Premise</cell><cell>Entailed</cell></row><row><cell>+ KG implicit</cell><cell>Contradiction</cell></row></table></figure>
+			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct status="extracted"  xml:id="b0">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Faheem Abbas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Malik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rizwan</forename><surname>Rashid</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zafar</surname></persName>
+		</author>
+		<title level="m">Wikiqa -a question answering system on wikipedia using freebase, dbpedia and infobox</title>
+		<imprint>
+			<publisher>INTECH</publisher>
+			<date type="published" when="2016">2016. 2016</date>
+			<biblScope unit="page" from="185" to="193" />
+		</imprint>
+	</monogr>
+	<note>Sixth International Conference on Innovative Computing Technology</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Good-enough compositional data augmentation</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Andreas</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.acl-main.676</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="7556" to="7566" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A Large Annotated Corpus for Learning Natural Language Inference</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Samuel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabor</forename><surname>Bowman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Angeli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Potts</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Manning</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D15-1075</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2015 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Tabfact: A large-scale dataset for table-based fact verification</title>
+		<author>
+			<persName><forename type="first">Wenhu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongmin</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianshu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yunkai</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hong</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shiyang</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiyou</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wang</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b4">
+	<monogr>
+		<author>
+			<persName><forename type="first">Wenhu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanwen</forename><surname>Zha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiyu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenhan</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hong</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Wang</surname></persName>
+		</author>
+		<title level="m">Hybridqa: A dataset of multi-hop question answering over tabular and textual data. Findings of EMNLP</title>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Recognizing textual entailment: Models and applications</title>
+		<author>
+			<persName><forename type="first">Ido</forename><surname>Dagan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Roth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Sammons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fabio</forename><forename type="middle">Massimo</forename><surname>Zanzotto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Synthesis Lectures on Human Language Technologies</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1" to="220" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b6">
+	<analytic>
+		<title level="a" type="main">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Wei</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenton</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristina</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N19-1423</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference of the North American Chapter</title>
+		<meeting>the 2019 Conference of the North American Chapter</meeting>
+		<imprint>
+			<publisher>Human Language Technologies</publisher>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Understanding tables with intermediate pre-training</title>
+		<author>
+			<persName><forename type="first">Julian</forename><surname>Eisenschlos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Syrine</forename><surname>Krichene</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Mueller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: Findings</title>
+		<meeting>the 2020 Conference on Empirical Methods in Natural Language Processing: Findings</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="281" to="296" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b8">
+	<analytic>
+		<title level="a" type="main">INFOTABS: Inference on tables as semi-structured data</title>
+		<author>
+			<persName><forename type="first">Vivek</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maitrey</forename><surname>Mehta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pegah</forename><surname>Nokhiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vivek</forename><surname>Srikumar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="2309" to="2324" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b9">
+	<analytic>
+		<title level="a" type="main">TaPas: Weakly supervised table parsing via pre-training</title>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Herzig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krzysztof</forename><surname>Pawel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Nowak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Francesco</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julian</forename><surname>Piccinno</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Eisenschlos</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.acl-main.398</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="4320" to="4333" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b10">
+	<monogr>
+		<author>
+			<persName><forename type="first">Armand</forename><surname>Joulin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edouard</forename><surname>Grave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Piotr</forename><surname>Bojanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthijs</forename><surname>Douze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hérve</forename><surname>Jégou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1612.03651</idno>
+		<title level="m">Fasttext.zip: Compressing text classification models</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Neural semantic parsing with type constraints for semi-structured tables</title>
+		<author>
+			<persName><forename type="first">Jayant</forename><surname>Krishnamurthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pradeep</forename><surname>Dasigi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matt</forename><surname>Gardner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2017 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="1516" to="1526" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Bridging textual and tabular data for crossdomain text-to-sql semantic parsing</title>
+		<author>
+			<persName><forename type="first">Victoria</forename><surname>Xi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caiming</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Xiong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: Findings</title>
+		<meeting>the 2020 Conference on Empirical Methods in Natural Language Processing: Findings</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="4870" to="4888" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b13">
+	<monogr>
+		<author>
+			<persName><forename type="first">Yinhan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Myle</forename><surname>Ott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naman</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingfei</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mandar</forename><surname>Joshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Danqi</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Omer</forename><surname>Levy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luke</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Veselin</forename><surname>Stoyanov</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1907.11692</idno>
+		<title level="m">Roberta: A Robustly Optimized BERT Pretraining Approach</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Advances in pre-training distributed word representations</title>
+		<author>
+			<persName><forename type="first">Tomas</forename><surname>Mikolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edouard</forename><surname>Grave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Piotr</forename><surname>Bojanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><surname>Puhrsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Armand</forename><surname>Joulin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference on Language Resources and Evaluation</title>
+		<meeting>the International Conference on Language Resources and Evaluation</meeting>
+		<imprint>
+			<publisher>LREC</publisher>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b15">
+	<analytic>
+		<title level="a" type="main">ToTTo: A controlled table-totext generation dataset</title>
+		<author>
+			<persName><forename type="first">Xuezhi</forename><surname>Ankur P Parikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Manaal</forename><surname>Gehrmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bhuwan</forename><surname>Faruqui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diyi</forename><surname>Dhingra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dipanjan</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Das</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of EMNLP</title>
+		<meeting>EMNLP</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Compositional semantic parsing on semi-structured tables</title>
+		<author>
+			<persName><forename type="first">Panupong</forename><surname>Pasupat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Percy</forename><surname>Liang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Long Papers</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1470" to="1480" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Intermediate-task transfer learning with pretrained language models: When and why does it work?</title>
+		<author>
+			<persName><forename type="first">Yada</forename><surname>Pruksachatkun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Phang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haokun</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mon</forename><surname>Phu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoyi</forename><surname>Htut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><forename type="middle">Yuanzhe</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Clara</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Katharina</forename><surname>Vania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><surname>Kann</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bowman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="5231" to="5247" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Dart: Open-domain structured data record to text generation</title>
+		<author>
+			<persName><forename type="first">Dragomir</forename><surname>Radev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amrit</forename><surname>Rau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abhinand</forename><surname>Sivaprasad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chiachun</forename><surname>Hsieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nazneen</forename><surname>Fatema Rajani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiangru</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aadit</forename><surname>Vyas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neha</forename><surname>Verma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pranav</forename><surname>Krishna</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2007.02871</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Table cell search for question answering</title>
+		<author>
+			<persName><forename type="first">Huan</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wen-Tau</forename><surname>Yih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xifeng</forename><surname>Yan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 25th International Conference on World Wide Web</title>
+		<meeting>the 25th International Conference on World Wide Web</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="771" to="782" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference</title>
+		<author>
+			<persName><forename type="first">Adina</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nikita</forename><surname>Nangia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><surname>Bowman</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N18-1101</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Alignment over heterogeneous embeddings for question answering</title>
+		<author>
+			<persName><forename type="first">Vikas</forename><surname>Yadav</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Bethard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mihai</forename><surname>Surdeanu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference of the North American Chapter</title>
+		<title level="s">Long and Short Papers</title>
+		<meeting>the 2019 Conference of the North American Chapter</meeting>
+		<imprint>
+			<publisher>the Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2681" to="2691" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Unsupervised alignment-based iterative evidence retrieval for multi-hop question answering</title>
+		<author>
+			<persName><forename type="first">Vikas</forename><surname>Yadav</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Bethard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mihai</forename><surname>Surdeanu</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.acl-main.414</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="4514" to="4525" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b23">
+	<analytic>
+		<title level="a" type="main">TaBERT: Pretraining for joint understanding of textual and tabular data</title>
+		<author>
+			<persName><forename type="first">Pengcheng</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Graham</forename><surname>Neubig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wen-Tau</forename><surname>Yih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Riedel</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.acl-main.745</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="8413" to="8426" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Grappa: Grammar-augmented pre-training for table semantic parsing</title>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chien-Sheng</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xi</forename><surname>Victoria Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bailin</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Chern Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinyi</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dragomir</forename><surname>Radev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caiming</forename><surname>Xiong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference of Learning Representation</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Spider: A large-scale human-labeled dataset for complex and cross-domain semantic parsing and text-to-sql task</title>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michihiro</forename><surname>Yasunaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongxu</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zifan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Irene</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qingning</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shanelle</forename><surname>Roman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2018 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="3911" to="3921" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Table fact verification with structure-aware transformer</title>
+		<author>
+			<persName><forename type="first">Hongzhi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yingyao</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sirui</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuezhi</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fuzheng</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhongyuan</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+		<meeting>the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="1624" to="1629" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b27">
+	<monogr>
+		<title level="m" type="main">KG implicit Original Premise Janet Leigh is a person</title>
+		<author>
+			<persName><forename type="first">F</forename></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>Janet Leigh was born as Jeanette Helen Morrison (1927-07-06</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b28">
+	<analytic>
+		<title level="a" type="main">The resting place of Janet Leigh is Westwood Village Memorial Park Cemetery. The alma mater of Janet Leigh is University of the Pacific. The occupation of Janet Leigh are Actress, singer, dancer, author. The years active of Janet Leigh was on 1947-2004. The political party of Janet Leigh is Democratic. The spouse(s) of</title>
+		<author>
+			<persName><forename type="first">California</forename><surname>Merced</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">S</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Janet</forename><surname>Leigh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Stanley Reames (m. 1945; div. 1949)</title>
+		<meeting><address><addrLine>Los Angeles, California, U.S.; Tony Curtis</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2004-10-03">2004. 2004-10-03</date>
+			<biblScope unit="volume">3</biblScope>
+		</imprint>
+	</monogr>
+	<note>aged 77 Janet Leigh are John Carlisle (m. 1942; annulled 1942 m. 1951; div. 1962 Robert Brandt (m. 1962). The children of Janet Leigh are Kelly Curtis, Jamie Lee Curtis</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

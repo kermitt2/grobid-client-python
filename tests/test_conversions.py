@@ -621,3 +621,30 @@ class TestTEIConversions:
                     print(f"*** DETECTED {total_offset_differences} OFFSET ISSUES ***")
                 else:
                     print("No offset differences detected between conversion and expected output")
+
+
+    def test_conversion_JSON(self):
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        converter = TEI2LossyJSONConverter()
+        refs_offsets_dir = os.path.join(TEST_DATA_PATH, 'refs_offsets')
+
+        xml_path = os.path.join(refs_offsets_dir, "2021.naacl-main.224.grobid.tei.xml")
+
+        converted_json = converter.convert_tei_file(xml_path, stream=False)
+
+        body = converted_json['body_text']
+
+        for paragraph in body:
+            if 'refs' in paragraph and paragraph['refs']:
+                for ref in paragraph['refs']:
+                    offset_start = ref['offset_start']
+                    offset_end = ref['offset_end']
+                    ref_text = ref['text']
+                    paragraph_text = paragraph['text']
+
+                    # Validate the offset actually points to the correct text
+                    if 0 <= offset_start < offset_end <= len(paragraph_text):
+                        actual_text = paragraph_text[offset_start:offset_end]
+                        assert actual_text == ref_text, f"Reference text at offsets ({offset_start}-{offset_end}) should match '{ref_text}' but got '{actual_text}'"
+

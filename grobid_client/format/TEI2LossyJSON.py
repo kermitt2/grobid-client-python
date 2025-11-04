@@ -877,7 +877,7 @@ def get_refs_with_offsets(element):
         # The reference text was also cleaned, so we need to find it in the final cleaned text
         # We can search around the original position to find the correct occurrence
         search_start = max(0, ref['offset_start'] - 10)  # Look a bit before the original position
-        search_end = min(len(final_text), ref['offset_start'] + 10)  # Look a bit after
+        search_end = min(len(final_text), ref['offset_end'] + 10)  # Look a bit after
         search_area = final_text[search_start:search_end]
 
         # Find the reference in the search area
