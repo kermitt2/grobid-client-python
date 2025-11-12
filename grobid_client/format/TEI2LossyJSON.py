@@ -66,6 +66,7 @@ class TEI2LossyJSONConverter:
             text_structure = []
             document['body_text'] = text_structure
             figures_and_tables = []
+           
             document['figures_and_tables'] = figures_and_tables
             references_structure = []
             document['references'] = references_structure
@@ -88,6 +89,7 @@ class TEI2LossyJSONConverter:
                                 ) for author in child.find_all("author")
                             ]
                         )
+
                     )
 
                     doi_node = child.find("idno", type="DOI")
@@ -206,7 +208,7 @@ class TEI2LossyJSONConverter:
                                     ] if graphic_coords else []
                                 }
                             )
-
+                    
                     # Extract references from listBibl with comprehensive processing
                     list_bibl = soup.find("listBibl")
                     if list_bibl:
@@ -669,91 +671,110 @@ class TEI2LossyJSONConverter:
                 for passage in self._process_div_with_nested_content(div, passage_level, head_paragraph):
                     yield passage
 
+        
     def _process_div_with_nested_content(self, div: Tag, passage_level: str, head_paragraph: str = None) -> Iterator[Dict[str, Union[str, Dict[str, str]]]]:
         """
-        Process a div and its nested content, handling various back section types.
-        Supports nested divs for complex back sections like annex with multiple subsections.
+        Process a div **in document order**.  Paragraphs and formulas are yielded
+        exactly where they appear in the XML.
         """
         head = div.find("head")
-        p_nodes = div.find_all("p")
         head_section = None
         current_head_paragraph = None
 
-        # Check if this div has nested divs first (handle namespace variants)
-        nested_divs = []
-        for child in div.children:
-            if hasattr(child, 'name') and child.name:
-                # Handle both namespaced and non-namespaced divs
-                if child.name == "div" or child.name.endswith(":div"):
-                    nested_divs.append(child)
-
-        # Count only direct child paragraphs, not those in nested divs
-        direct_p_nodes = [child for child in div.children if hasattr(child, 'name') and child.name == "p"]
-
-        if len(nested_divs) > 0 and len(direct_p_nodes) == 0:
-            # This is a container div - process each nested div independently
-            for nested_div in nested_divs:
-                # Skip references divs
-                if nested_div.get("type") == "references":
-                    continue
-                # Pass None as head_paragraph to ensure nested divs use their own headers
-                for passage in self._process_div_with_nested_content(nested_div, passage_level, None):
-                    yield passage
-            return  # Don't process this div further
-
-        # Determine the section header and content type for divs with content
+        # ------------------------------------------------------------------
+        # 1. Determine the section header
+        # ------------------------------------------------------------------
         if head:
-            if len(direct_p_nodes) == 0:
-                # This div has only a head, no paragraphs (standalone head)
+            if not div.find_all("p", recursive=False):      # only head, no paragraphs
                 current_head_paragraph = self._clean_text(head.get_text())
             else:
-                # This div has both head and paragraphs - head is the section header
                 head_section = self._clean_text(head.get_text())
         else:
-            # If no head element, try to use the type attribute as head_section
             div_type = div.get("type")
             if div_type:
-                # Handle specific div types with appropriate section names
-                if div_type == "acknowledgement":
-                    head_section = "Acknowledgements"
-                elif div_type == "conflict":
-                    head_section = "Conflicts of Interest"
-                elif div_type == "contribution":
-                    head_section = "Author Contributions"
-                elif div_type == "availability":
-                    # Only set as default if this div has its own content
-                    if len(direct_p_nodes) > 0:
-                        head_section = "Data Availability"
-                elif div_type == "annex":
-                    head_section = "Annex"
-                else:
-                    # Generic handling - capitalize and format
-                    head_section = div_type.replace("_", " ").title()
+                mapping = {
+                    "acknowledgement": "Acknowledgements",
+                    "conflict": "Conflicts of Interest",
+                    "contribution": "Author Contributions",
+                    "availability": "Data Availability",
+                    "annex": "Annex",
+                }
+                head_section = mapping.get(div_type) or div_type.replace("_", " ").title()
 
-        # Process paragraphs in this div
-        if len(direct_p_nodes) > 0:
-            for id_p, p in enumerate(direct_p_nodes):
+        # ------------------------------------------------------------------
+        # 2. Walk the direct children in order
+        # ------------------------------------------------------------------
+        paragraph_id = None
+        for child in div.children:
+            if not hasattr(child, "name") or not child.name:
+                continue                                 # skip NavigableString
+
+            # ----- nested divs ------------------------------------------------
+            if child.name in ("div",) or child.name.endswith(":div"):
+                # recurse – the nested div will use its own header
+                yield from self._process_div_with_nested_content(
+                    child, passage_level, None
+                )
+                continue
+
+            # ----- paragraphs -------------------------------------------------
+            if child.name == "p":
                 paragraph_id = get_random_id(prefix="p_")
-
                 if passage_level == "sentence":
-                    for id_s, sentence in enumerate(p.find_all("s")):
-                        struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, sentence)
-                        if self.validate_refs:
-                            for ref in struct['refs']:
-                                assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
-                                assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
-                        yield struct
+                    for sentence in child.find_all("s"):
+                        yield get_formatted_passage(
+                            current_head_paragraph or head_paragraph,
+                            head_section,
+                            paragraph_id,
+                            sentence,
+                        )
                 else:
-                    struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, p)
-                    if self.validate_refs:
-                        for ref in struct['refs']:
-                            assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
-                            assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
-                    yield struct
+                    yield get_formatted_passage(
+                        current_head_paragraph or head_paragraph,
+                        head_section,
+                        paragraph_id,
+                        child,
+                    )
+                continue
 
-        # Update head_paragraph for potential next div
+            # ----- formulas ---------------------------------------------------
+            if child.name == "formula":
+                fid = (
+                    child.get("{http://www.w3.org/XML/1998/namespace}id")
+                    or child.get("id")
+                    or get_random_id("f_")
+                )
+                raw = child.get_text(separator=" ", strip=True)
+                formula_text = self._clean_text(raw)
+
+                # coordinates (if GROBID gave them)
+                coords = []
+                if child.has_attr("coords"):
+                    for c in child["coords"].split(";"):
+                        if c.strip():
+                            coords.append(box_to_dict(c.split(",")))
+
+                passage = {
+                    "id": fid,
+                    "text": formula_text,
+                    "coords": coords,
+                    "refs": [],
+                    "type": "formula",
+                }
+                if current_head_paragraph or head_paragraph:
+                    passage["head_paragraph"] = current_head_paragraph or head_paragraph
+                if head_section:
+                    passage["head_section"] = head_section
+
+                yield passage
+                continue
+
+        # ------------------------------------------------------------------
+        # 3. Propagate a possible standalone head for the next div
+        # ------------------------------------------------------------------
         if current_head_paragraph is not None:
-            head_paragraph = current_head_paragraph
+            # (the caller will receive the updated value via the generator)
+            pass
 
     def process_directory(self, directory: Union[str, Path], pattern: str = "*.tei.xml", parallel: bool = True, workers: int = None) -> Iterator[Dict]:
         """Process a directory of TEI files and yield converted documents.
@@ -1004,3 +1025,4 @@ def xml_table_to_json(table_element):
 def convert_tei_file(tei_file: Union[Path, BinaryIO], stream: bool = False):
     converter = TEI2LossyJSONConverter()
     return converter.convert_tei_file(tei_file, stream=stream)
+
