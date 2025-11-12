@@ -681,11 +681,8 @@ class TEI2LossyJSONConverter:
         head_section = None
         current_head_paragraph = None
 
-        # ------------------------------------------------------------------
-        # 1. Determine the section header
-        # ------------------------------------------------------------------
         if head:
-            if not div.find_all("p", recursive=False):      # only head, no paragraphs
+            if not div.find_all("p", recursive=False):      
                 current_head_paragraph = self._clean_text(head.get_text())
             else:
                 head_section = self._clean_text(head.get_text())
@@ -701,15 +698,12 @@ class TEI2LossyJSONConverter:
                 }
                 head_section = mapping.get(div_type) or div_type.replace("_", " ").title()
 
-        # ------------------------------------------------------------------
-        # 2. Walk the direct children in order
-        # ------------------------------------------------------------------
         paragraph_id = None
         for child in div.children:
             if not hasattr(child, "name") or not child.name:
-                continue                                 # skip NavigableString
+                continue                               
 
-            # ----- nested divs ------------------------------------------------
+            # nested divs
             if child.name in ("div",) or child.name.endswith(":div"):
                 # recurse – the nested div will use its own header
                 yield from self._process_div_with_nested_content(
@@ -717,7 +711,7 @@ class TEI2LossyJSONConverter:
                 )
                 continue
 
-            # ----- paragraphs -------------------------------------------------
+            # paragraphs 
             if child.name == "p":
                 paragraph_id = get_random_id(prefix="p_")
                 if passage_level == "sentence":
@@ -737,7 +731,7 @@ class TEI2LossyJSONConverter:
                     )
                 continue
 
-            # ----- formulas ---------------------------------------------------
+            # formulas 
             if child.name == "formula":
                 fid = (
                     child.get("{http://www.w3.org/XML/1998/namespace}id")
@@ -769,11 +763,8 @@ class TEI2LossyJSONConverter:
                 yield passage
                 continue
 
-        # ------------------------------------------------------------------
-        # 3. Propagate a possible standalone head for the next div
-        # ------------------------------------------------------------------
+     
         if current_head_paragraph is not None:
-            # (the caller will receive the updated value via the generator)
             pass
 
     def process_directory(self, directory: Union[str, Path], pattern: str = "*.tei.xml", parallel: bool = True, workers: int = None) -> Iterator[Dict]:
