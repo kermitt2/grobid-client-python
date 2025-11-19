@@ -730,25 +730,32 @@ class TEI2LossyJSONConverter:
                     # Generic handling - capitalize and format
                     head_section = div_type.replace("_", " ").title()
 
-        # Process paragraphs in this div
-        if len(direct_p_nodes) > 0:
-            for id_p, p in enumerate(direct_p_nodes):
-                paragraph_id = get_random_id(prefix="p_")
-
-                if passage_level == "sentence":
-                    for id_s, sentence in enumerate(p.find_all("s")):
-                        struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, sentence)
+        # Process direct children of div in order to maintain proper sequence
+        for child in div.children:
+            if hasattr(child, 'name') and child.name:
+                if child.name == "p":
+                    # Process paragraphs
+                    paragraph_id = get_random_id(prefix="p_")
+                    
+                    if passage_level == "sentence":
+                        for id_s, sentence in enumerate(child.find_all("s")):
+                            struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, sentence)
+                            if self.validate_refs:
+                                for ref in struct['refs']:
+                                    assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
+                                    assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                            yield struct
+                    else:
+                        struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, child)
                         if self.validate_refs:
                             for ref in struct['refs']:
                                 assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
                                 assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
                         yield struct
-                else:
-                    struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, p)
-                    if self.validate_refs:
-                        for ref in struct['refs']:
-                            assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
-                            assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                elif child.name == "formula":
+                    # Process formulas in their natural position
+                    formula_id = get_random_id(prefix="formula_")
+                    struct = get_formatted_formula(current_head_paragraph or head_paragraph, head_section, formula_id, child)
                     yield struct
 
         # Update head_paragraph for potential next div
@@ -928,6 +935,62 @@ def get_formatted_passage(head_paragraph, head_section, paragraph_id, element):
         passage["head_section"] = head_section
 
     return passage
+
+
+def get_formatted_formula(head_paragraph, head_section, formula_id, element):
+    """Format a formula element with metadata."""
+    # Import the clean_text method
+    def _clean_text_local(text: str) -> str:
+        if not text:
+            return ""
+        import re
+        import html
+        text = re.sub(r'\s+', ' ', text.strip())
+        text = html.unescape(text)
+        return text
+    
+    # Extract formula text and label separately
+    formula_text = ""
+    label_text = ""
+    
+    for child in element.children:
+        if hasattr(child, 'name'):
+            if child.name == "label":
+                label_text = _clean_text_local(child.get_text())
+            else:
+                formula_text += child.get_text()
+        else:
+            # NavigableString - direct text content
+            formula_text += str(child)
+    
+    formula_text = _clean_text_local(formula_text)
+    
+    # Create the formula structure
+    formula_data = {
+        "id": formula_id,
+        "type": "formula",
+        "text": formula_text,
+        "coords": [
+            box_to_dict(coord.split(","))
+            for coord in element.get("coords", "").split(";")
+        ] if element.has_attr("coords") else []
+    }
+    
+    # Add label if present
+    if label_text:
+        formula_data["label"] = label_text
+    
+    # Add xml:id if present
+    xml_id = element.get("xml:id")
+    if xml_id:
+        formula_data["xml_id"] = xml_id
+    
+    if head_paragraph:
+        formula_data["head_paragraph"] = head_paragraph
+    if head_section:
+        formula_data["head_section"] = head_section
+    
+    return formula_data
 
 
 def xml_table_to_markdown(table_element):

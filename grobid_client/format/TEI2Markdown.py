@@ -213,12 +213,19 @@ class TEI2MarkdownConverter:
                 section_title = head.get_text().strip()
                 fulltext_sections.append(f"### {section_title}\n")
 
-            # Get paragraphs
-            paragraphs = div.find_all("p")
-            for p in paragraphs:
-                paragraph_text = self._process_paragraph(p)
-                if paragraph_text.strip():
-                    fulltext_sections.append(f"{paragraph_text}\n\n")
+            # Process direct children of div in order to maintain structure
+            for child in div.children:
+                if hasattr(child, 'name'):
+                    if child.name == "p":
+                        # Process paragraphs
+                        paragraph_text = self._process_paragraph(child)
+                        if paragraph_text.strip():
+                            fulltext_sections.append(f"{paragraph_text}\n\n")
+                    elif child.name == "formula":
+                        # Process formulas that are direct children of div
+                        formula_md = self._formula_to_markdown(child)
+                        if formula_md:
+                            fulltext_sections.append(f"{formula_md}\n\n")
         
         return "".join(fulltext_sections)
 
@@ -320,6 +327,11 @@ class TEI2MarkdownConverter:
                 # Handle references - keep the text but don't add special formatting
                 ref_text = element.get_text()
                 text_parts.append(ref_text)
+            elif element.name == "formula":
+                # Handle formulas/equations
+                formula_md = self._formula_to_markdown(element)
+                if formula_md:
+                    text_parts.append(f"\n{formula_md}\n")
             elif element.name == "figure":
                 # Handle figures
                 fig_desc = element.find("figDesc")
@@ -351,6 +363,35 @@ class TEI2MarkdownConverter:
                 markdown_lines.append("| " + " | ".join(cells) + " |")
         
         return "\n".join(markdown_lines) if markdown_lines else ""
+
+    def _formula_to_markdown(self, formula_element: Tag) -> str:
+        """Convert a formula element to markdown format."""
+        # Extract the formula content (text without label)
+        formula_text = ""
+        label_text = ""
+        
+        # Get formula text, excluding the label
+        for child in formula_element.children:
+            if isinstance(child, NavigableString):
+                formula_text += str(child)
+            elif child.name == "label":
+                label_text = child.get_text().strip()
+            else:
+                # For other elements within formula, get their text
+                formula_text += child.get_text()
+        
+        formula_text = formula_text.strip()
+        
+        # Format as inline code or block depending on content
+        if formula_text:
+            if label_text:
+                # If there's a label (equation number), format as block equation
+                return f"```\n{formula_text}  {label_text}\n```"
+            else:
+                # Otherwise, format as inline code
+                return f"`{formula_text}`"
+        
+        return ""
 
     def _format_reference(self, bibl_struct: Tag, ref_num: int) -> str:
         """
