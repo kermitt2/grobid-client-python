@@ -720,7 +720,10 @@ class GrobidClient(ApiClient):
             include_raw_citations,
             include_raw_affiliations,
             tei_coordinates,
-            segment_sentences
+            segment_sentences,
+            flavor=None,
+            start_page=-1,
+            end_page=-1
     ):
         # create request based on file content
         try:
