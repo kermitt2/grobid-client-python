@@ -11,8 +11,7 @@ Markdown format with the following sections:
 - Annex
 - References
 """
-import os
-import uuid
+import re
 from pathlib import Path
 from typing import List, Dict, Union, Optional, BinaryIO
 from bs4 import BeautifulSoup, NavigableString, Tag
@@ -44,9 +43,12 @@ class TEI2MarkdownConverter:
         try:
             # Load with BeautifulSoup
             if isinstance(tei_file, (str, Path)):
-                content = open(tei_file, 'r', encoding='utf-8').read()
+                with open(tei_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
             else:
                 content = tei_file.read()
+                if isinstance(content, bytes):
+                    content = content.decode('utf-8')
                 
             soup = BeautifulSoup(content, 'xml')
 
@@ -77,7 +79,7 @@ class TEI2MarkdownConverter:
             # Extract publication date
             pub_date = self._extract_publication_date(soup)
             if pub_date:
-                markdown_sections.append(f"Publishd on {pub_date}\n\n")
+                markdown_sections.append(f"Published on {pub_date}\n\n")
 
             # Extract abstract
             abstract = self._extract_abstract(soup)
@@ -511,17 +513,25 @@ class TEI2MarkdownConverter:
             unit = bibl_scope.get("unit", "").lower()
             text = bibl_scope.get_text().strip()
 
-            if unit == "vol" and text:
+            if unit in ["vol", "volume"] and text:
                 bib_data['volume'] = text
             elif unit == "issue" and text:
                 bib_data['issue'] = text
             elif unit == "page" and text:
                 # Handle page ranges
-                if "from" in bibl_scope.attrs:
-                    bib_data['pages'] = f"{text}-"
-                elif "to" in bibl_scope.attrs and bib_data.get('pages'):
-                    bib_data['pages'] += text
-                else:
+                from_val = bibl_scope.get("from")
+                to_val = bibl_scope.get("to")
+                if from_val and to_val:
+                    # Both from and to in same element
+                    bib_data['pages'] = f"{from_val}-{to_val}"
+                elif from_val:
+                    # Only from specified, may get combined with another element
+                    bib_data['pages'] = f"{from_val}-"
+                elif to_val and bib_data.get('pages'):
+                    # Only to specified, append to existing from
+                    bib_data['pages'] = bib_data['pages'] + to_val
+                elif text and not bib_data.get('pages'):
+                    # Plain text, no from/to attributes
                     bib_data['pages'] = text
 
     def _extract_author_info(self, author: Tag) -> dict:
@@ -629,6 +639,9 @@ class TEI2MarkdownConverter:
         """Build publication details string from extracted data."""
         details = []
 
+        if ref_data.get('year'):
+            details.append(f"({ref_data['year']})")
+
         if ref_data.get('volume'):
             details.append(ref_data['volume'])
 
@@ -684,7 +697,6 @@ class TEI2MarkdownConverter:
         raw_text = bibl_struct.get_text().strip()
 
         # Remove reference number if present
-        import re
         raw_text = re.sub(r'^\[\d+\]\s*', '', raw_text)
 
         # Clean up excessive whitespace
