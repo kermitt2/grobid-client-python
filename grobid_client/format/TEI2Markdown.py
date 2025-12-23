@@ -213,14 +213,24 @@ class TEI2MarkdownConverter:
             head = div.find("head")
             if head:
                 section_title = head.get_text().strip()
-                fulltext_sections.append(f"### {section_title}\n")
+                if section_title:
+                    fulltext_sections.append(f"### {section_title}\n")
 
-            # Get paragraphs
-            paragraphs = div.find_all("p")
-            for p in paragraphs:
-                paragraph_text = self._process_paragraph(p)
-                if paragraph_text.strip():
-                    fulltext_sections.append(f"{paragraph_text}\n\n")
+            # Process direct children of the div in document order
+            # This captures paragraphs, formulas, and other elements as they appear
+            for child in div.children:
+                if not hasattr(child, 'name') or not child.name:
+                    continue
+                    
+                if child.name == "p":
+                    paragraph_text = self._process_paragraph(child)
+                    if paragraph_text.strip():
+                        fulltext_sections.append(f"{paragraph_text}\n\n")
+                elif child.name == "formula":
+                    # Handle formula elements - extract text and optional label
+                    formula_text = self._process_formula(child)
+                    if formula_text.strip():
+                        fulltext_sections.append(f"{formula_text}\n\n")
         
         return "".join(fulltext_sections)
 
@@ -272,16 +282,23 @@ class TEI2MarkdownConverter:
             if header_text not in annex_sections:
                 annex_sections.append(header_text)
 
-        # Process paragraphs that are direct children of this div (not in nested divs)
+        # Process direct children of this div in document order
+        # This captures paragraphs, formulas, and other elements as they appear
         for child in div.children:
-            if hasattr(child, 'name') and child.name == "p":
+            if not hasattr(child, 'name') or not child.name:
+                continue
+                
+            if child.name == "p":
                 paragraph_text = self._process_paragraph(child)
                 if paragraph_text.strip():
                     annex_sections.append(f"{paragraph_text}\n\n")
-
-        # Process nested div elements
-        for child in div.children:
-            if hasattr(child, 'name') and child.name == "div":
+            elif child.name == "formula":
+                # Handle formula elements
+                formula_text = self._process_formula(child)
+                if formula_text.strip():
+                    annex_sections.append(f"{formula_text}\n\n")
+            elif child.name == "div":
+                # Process nested div elements
                 self._process_div_and_nested_divs(child, annex_sections)
 
     def _extract_references(self, soup: BeautifulSoup) -> str:
@@ -337,6 +354,34 @@ class TEI2MarkdownConverter:
                 text_parts.append(element.get_text())
         
         return "".join(text_parts).strip()
+
+    def _process_formula(self, formula_element: Tag) -> str:
+        """Process a formula element and convert to markdown.
+        
+        Formulas are rendered as italicized text with optional equation label.
+        """
+        # Get the main formula text (excluding the label)
+        formula_text_parts = []
+        label_text = ""
+        
+        for child in formula_element.children:
+            if hasattr(child, 'name') and child.name == "label":
+                # Extract equation label (e.g., "(1)", "(2)")
+                label_text = child.get_text().strip()
+            elif isinstance(child, NavigableString):
+                formula_text_parts.append(str(child))
+            else:
+                # Other elements within formula - get their text
+                formula_text_parts.append(child.get_text())
+        
+        formula_text = "".join(formula_text_parts).strip()
+        
+        if formula_text:
+            # Format as: *formula text* (label) if label exists
+            if label_text:
+                return f"*{formula_text}* {label_text}"
+            return f"*{formula_text}*"
+        return ""
 
     def _table_to_markdown(self, table_element: Tag) -> str:
         """Convert a table element to simple markdown."""

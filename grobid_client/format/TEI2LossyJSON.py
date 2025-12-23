@@ -677,6 +677,7 @@ class TEI2LossyJSONConverter:
         """
         Process a div and its nested content, handling various back section types.
         Supports nested divs for complex back sections like annex with multiple subsections.
+        Also handles formula elements that are direct children of divs.
         """
         head = div.find("head")
         p_nodes = div.find_all("p")
@@ -691,10 +692,12 @@ class TEI2LossyJSONConverter:
                 if child.name == "div" or child.name.endswith(":div"):
                     nested_divs.append(child)
 
-        # Count only direct child paragraphs, not those in nested divs
+        # Count only direct child paragraphs and formulas, not those in nested divs
         direct_p_nodes = [child for child in div.children if hasattr(child, 'name') and child.name == "p"]
+        direct_formula_nodes = [child for child in div.children if hasattr(child, 'name') and child.name == "formula"]
+        has_direct_content = len(direct_p_nodes) > 0 or len(direct_formula_nodes) > 0
 
-        if len(nested_divs) > 0 and len(direct_p_nodes) == 0:
+        if len(nested_divs) > 0 and not has_direct_content:
             # This is a container div - process each nested div independently
             for nested_div in nested_divs:
                 # Skip references divs
@@ -707,11 +710,11 @@ class TEI2LossyJSONConverter:
 
         # Determine the section header and content type for divs with content
         if head:
-            if len(direct_p_nodes) == 0:
-                # This div has only a head, no paragraphs (standalone head)
+            if not has_direct_content:
+                # This div has only a head, no paragraphs or formulas (standalone head)
                 current_head_paragraph = self._clean_text(head.get_text())
             else:
-                # This div has both head and paragraphs - head is the section header
+                # This div has both head and content - head is the section header
                 head_section = self._clean_text(head.get_text())
         else:
             # If no head element, try to use the type attribute as head_section
@@ -726,7 +729,7 @@ class TEI2LossyJSONConverter:
                     head_section = "Author Contributions"
                 elif div_type == "availability":
                     # Only set as default if this div has its own content
-                    if len(direct_p_nodes) > 0:
+                    if has_direct_content:
                         head_section = "Data Availability"
                 elif div_type == "annex":
                     head_section = "Annex"
@@ -734,13 +737,16 @@ class TEI2LossyJSONConverter:
                     # Generic handling - capitalize and format
                     head_section = div_type.replace("_", " ").title()
 
-        # Process paragraphs in this div
-        if len(direct_p_nodes) > 0:
-            for id_p, p in enumerate(direct_p_nodes):
+        # Process direct children (paragraphs and formulas) in document order
+        for child in div.children:
+            if not hasattr(child, 'name') or not child.name:
+                continue
+
+            if child.name == "p":
                 paragraph_id = get_random_id(prefix="p_")
 
                 if passage_level == "sentence":
-                    for id_s, sentence in enumerate(p.find_all("s")):
+                    for id_s, sentence in enumerate(child.find_all("s")):
                         struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, sentence)
                         if self.validate_refs:
                             for ref in struct['refs']:
@@ -748,12 +754,42 @@ class TEI2LossyJSONConverter:
                                 assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text'], "Cannot apply offsets"
                         yield struct
                 else:
-                    struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, p)
+                    struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, child)
                     if self.validate_refs:
                         for ref in struct['refs']:
                             assert ref['offset_start'] < ref['offset_end'], "Wrong offsets"
                             assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text'], "Cannot apply offsets"
                     yield struct
+
+            elif child.name == "formula":
+                # Process formula elements as passages
+                formula_id = get_random_id(prefix="f_")
+                formula_text = self._clean_text(child.get_text())
+                
+                if formula_text:
+                    # Create a passage structure for the formula
+                    formula_passage = {
+                        "id": formula_id,
+                        "text": formula_text,
+                        "coords": [
+                            box_to_dict(coord.split(","))
+                            for coord in child.get("coords", "").split(";")
+                        ] if child.has_attr("coords") else [],
+                        "refs": [],
+                        "type": "formula"
+                    }
+                    
+                    if current_head_paragraph or head_paragraph:
+                        formula_passage["head_paragraph"] = current_head_paragraph or head_paragraph
+                    if head_section:
+                        formula_passage["head_section"] = head_section
+                    
+                    # Extract formula label if present
+                    label = child.find("label")
+                    if label:
+                        formula_passage["label"] = self._clean_text(label.get_text())
+                    
+                    yield formula_passage
 
         # Update head_paragraph for potential next div
         if current_head_paragraph is not None:
