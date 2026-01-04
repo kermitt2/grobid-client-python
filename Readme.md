@@ -224,6 +224,7 @@ client.process(
     markdown_output=True
 )
 
+```python
 # Process citation lists
 client.process(
     service="processCitationList",
@@ -231,6 +232,32 @@ client.process(
     output_path="/path/to/output"
 )
 ```
+
+### Standalone Conversion Tools
+
+The library includes standalone scripts to convert TEI XML files to other formats without using the main client or server.
+
+#### TEI to JSON Converter
+
+Converts TEI XML files to the structured JSON format (similar to `--json` option).
+
+```bash
+# Convert a single file
+python -m grobid_client.format.TEI2LossyJSON_cli --input path/to/file.tei.xml --output path/to/output.json
+
+# Convert with verbose logging
+python -m grobid_client.format.TEI2LossyJSON_cli --input path/to/file.tei.xml --verbose
+```
+
+#### TEI to Markdown Converter
+
+Converts TEI XML files to Markdown format (similar to `--markdown` option).
+
+```bash
+# Convert a single file
+python -m grobid_client.format.TEI2Markdown_cli --input path/to/file.tei.xml --output path/to/output.md
+```
+
 
 ## ⚙️ Configuration
 

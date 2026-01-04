@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Variation in Lipid Species Profiles among Leukemic Cells Significantly Impacts Their Sensitivity to the Drug Targeting of Lipid Metabolism and the Prognosis of AML Patients</title>
+				<funder ref="#_bFNUcmp">
+					<orgName type="full">French League against Cancer</orgName>
+				</funder>
+				<funder ref="#_kF6zG3V">
+					<orgName type="full">Ethics Committee of CHUGA</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>MDPI AG</publisher>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2023-03-22">22 March 2023</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Caroline</forename><surname>Lo Presti</surname></persName>
+							<idno type="ORCID">0000-0002-0166-9115</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yoshiki</forename><surname>Yamaryo-Botté</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Team &quot;Apicolipid&quot;</orgName>
+								<orgName type="department" key="dep2">Institute for Advanced Biosciences</orgName>
+								<orgName type="institution">University Grenoble Alpes (UGA)</orgName>
+								<address>
+									<postBox>INSERM U1209/CNRS 5309</postBox>
+									<postCode>38700</postCode>
+									<settlement>Grenoble</settlement>
+									<country>France;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Julie</forename><surname>Mondet</surname></persName>
+							<email>jmondet@chu-grenoble.fr</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute for Advanced Biosciences</orgName>
+								<orgName type="institution" key="instit1">Team &quot;Epigenetic and Cellular Signaling&quot;</orgName>
+								<orgName type="institution" key="instit2">University Grenoble Alpes (UGA)</orgName>
+								<address>
+									<postBox>INSERM U1209/CNRS 5309</postBox>
+									<postCode>38700</postCode>
+									<settlement>Grenoble</settlement>
+									<country>France;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department" key="dep1">Department of Molecular Pathology</orgName>
+								<orgName type="department" key="dep2">Institute of Biology and Pathology</orgName>
+								<orgName type="institution">Hospital of Grenoble Alpes (CHUGA)</orgName>
+								<address>
+									<postCode>20217 38043 CEDEX 9</postCode>
+									<settlement>Grenoble</settlement>
+									<region>CS</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sylvie</forename><surname>Berthier</surname></persName>
+							<email>sberthier@chu-grenoble.fr</email>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Platform of Cytometry</orgName>
+								<orgName type="department" key="dep2">Institute of Biology and Pathology</orgName>
+								<orgName type="laboratory">Hospital of Grenoble Alpes (CHUGA)</orgName>
+								<address>
+									<postCode>20217 38043 CEDEX 9</postCode>
+									<settlement>Grenoble</settlement>
+									<region>CS</region>
+									<country>France;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Denisa</forename><surname>Nutiu</surname></persName>
+							<email>nutiu.denisa@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute for Advanced Biosciences</orgName>
+								<orgName type="institution" key="instit1">Team &quot;Epigenetic and Cellular Signaling&quot;</orgName>
+								<orgName type="institution" key="instit2">University Grenoble Alpes (UGA)</orgName>
+								<address>
+									<postBox>INSERM U1209/CNRS 5309</postBox>
+									<postCode>38700</postCode>
+									<settlement>Grenoble</settlement>
+									<country>France;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cyrille</forename><surname>Botté</surname></persName>
+							<email>cyrille.botte@univ-grenoble-alpes.fr</email>
+							<idno type="ORCID">0000-0002-2245-536X</idno>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Team &quot;Apicolipid&quot;</orgName>
+								<orgName type="department" key="dep2">Institute for Advanced Biosciences</orgName>
+								<orgName type="institution">University Grenoble Alpes (UGA)</orgName>
+								<address>
+									<postBox>INSERM U1209/CNRS 5309</postBox>
+									<postCode>38700</postCode>
+									<settlement>Grenoble</settlement>
+									<country>France;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pascal</forename><surname>Mossuz</surname></persName>
+							<email>pmossuz@chu-grenoble.fr</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute for Advanced Biosciences</orgName>
+								<orgName type="institution" key="instit1">Team &quot;Epigenetic and Cellular Signaling&quot;</orgName>
+								<orgName type="institution" key="instit2">University Grenoble Alpes (UGA)</orgName>
+								<address>
+									<postBox>INSERM U1209/CNRS 5309</postBox>
+									<postCode>38700</postCode>
+									<settlement>Grenoble</settlement>
+									<country>France;</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Biological Hematology</orgName>
+								<orgName type="department" key="dep2">Institute of Biology and Pathology</orgName>
+								<orgName type="institution">Hospital of Grenoble Alpes (CHUGA)</orgName>
+								<address>
+									<postCode>20217 38043 CEDEX 9</postCode>
+									<settlement>Grenoble</settlement>
+									<region>CS</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Variation in Lipid Species Profiles among Leukemic Cells Significantly Impacts Their Sensitivity to the Drug Targeting of Lipid Metabolism and the Prognosis of AML Patients</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">International Journal of Molecular Sciences</title>
+						<title level="j" type="abbrev">IJMS</title>
+						<idno type="eISSN">1422-0067</idno>
+						<imprint>
+							<publisher>MDPI AG</publisher>
+							<biblScope unit="volume">24</biblScope>
+							<biblScope unit="issue">6</biblScope>
+							<biblScope unit="page">5988</biblScope>
+							<date type="published" when="2023-03-22">22 March 2023</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">15EB2512424C78734D3F20670A682EFE</idno>
+					<idno type="DOI">10.3390/ijms24065988</idno>
+					<note type="submission">Received: 23 November 2022 Revised: 10 March 2023 Accepted: 16 March 2023</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-11-05T15:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.0-44-g7f5b55e1b</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>acute myeloid leukemia</term>
+					<term>metabolism</term>
+					<term>lipid species</term>
+					<term>inhibition of FAO</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Several studies have linked bad prognoses of acute myeloid leukemia (AML) to the ability of leukemic cells to reprogram their metabolism and, in particular, their lipid metabolism. In this context, we performed "in-depth" characterization of fatty acids (FAs) and lipid species in leukemic cell lines and in plasma from AML patients. We firstly showed that leukemic cell lines harbored significant differences in their lipid profiles at steady state, and that under nutrient stress, they developed common mechanisms of protection that led to variation in the same lipid species; this highlights that the remodeling of lipid species is a major and shared mechanism of adaptation to stress in leukemic cells. We also showed that sensitivity to etomoxir, which blocks fatty acid oxidation (FAO), was dependent on the initial lipid profile of cell lines, suggesting that only a particular "lipidic phenotype" is sensitive to the drug targeting of FAO. We then showed that the lipid profiles of plasma samples from AML patients were significantly correlated with the prognosis of patients. In particular, we highlighted the impact of phosphocholine and phosphatidyl-choline metabolism on patients' survival. In conclusion, our data show that balance between lipid species is a phenotypic marker of the diversity of leukemic cells that significantly influences their proliferation and resistance to stress, and thereby, the prognosis of AML patients.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>AML comprises a group of malignant neoplastic disorders characterized by accumulation in the blood and/or in the bone marrow of immature white blood cells called leukemic cells, together with a deficiency in normal hematopoiesis. If conventional treatment based on intensive chemotherapy allows complete remission for 60 to 85% of patients, the prognosis of AML remains very negative, with a global survival rate of around 25 to 30%. In recent years, several studies linked this aggressiveness and the bad prognosis of AML to the ability of the leukemic cells to reprogram their metabolism in order to satisfy their high metabolic needs and to resist chemotherapy. In addition to the universally known Warburg effect, which involves a shift from oxidative phosphorylation as the main energy-producing pathway to high-rate aerobic glycolysis coupled with lactic acid fermentation in the cytosol, many metabolic pathways are deregulated in leukemic cells, sometimes in direct correlation with genetic alterations <ref type="bibr" target="#b0">[1]</ref>; this suggests multimodal metabolism in leukemogenesis. Among these metabolic pathways, lipid metabolism plays a particular role that has already been described in many solid tumors. Alterations, such as accentuated FAO and de novo lipid synthesis, could promote cancer cell survival and contribute to resistance to chemotherapeutic agents and metastasis <ref type="bibr" target="#b1">[2]</ref> through an increase in energy production and in lipid species necessary for the production of new cells. The overexpression of fatty acid synthase (FASN) gives cancer cells a proliferative advantage; conversely, lipolysis, through the activation of lipoprotein lipase (LPL), could increase the availability of FAs to levels necessary for cancer cell proliferation.</p><p>In AML, a recent study showed that patients with rapidly progressive AML who did not respond to treatment had alterations in their lipid metabolism <ref type="bibr" target="#b2">[3]</ref>. Interestingly, both aspects of lipid metabolism were implicated. On one hand, the degradation of FA through FAO may contribute to chemotherapy resistance. Indeed, resistant AML cells show overexpression of CD36, an FA transporter, at their membranes, and very intense FAO. This particular role of FAO in the survival of leukemic cells was also underlined in a demonstration of the overexpression of the enzyme 3-very long chain acyl-CoA dehydrogenase (VLCAD) in AML, of which a decrease in proliferation can be induced by gene attenuation or pharmacological inhibition via alteration of the Krebs cycle <ref type="bibr" target="#b3">[4]</ref>. Additionally, a recent study demonstrated that glycerophospholipid metabolism is involved in drug resistance in chronic myeloid leukemia through downregulation of the G0/G1 switch gene 2 (G0S2), which confers worse overall survival to patients <ref type="bibr" target="#b4">[5]</ref>. Similarly, Carnitine Palmitoyltransferase 1A (CPT1A), a key enzyme in carnitine-dependent transport across the mitochondrial inner membrane of FAs, was found to be overexpressed in bone marrow samples from AML patients with poor prognosis compared to those with normal bone marrow <ref type="bibr" target="#b5">[6]</ref>. These data provide a rationale for studying the impact of etomoxir (Eto), which irreversibly inhibits CPT1A, thereby preventing the entrance of fatty acids into the mitochondria, and their beta-oxidation.</p><p>On the other hand, the synthesis of FAs also plays a critical role. It was shown that low expression of ATP Citrate Lyase (ACL), the enzyme that initiates lipid synthesis through Acetyl-CoA production, is associated with favorable prognosis in patients with AML, and that discontinuation of cell growth was achieved when ACL was inhibited in leukemia cell models <ref type="bibr" target="#b6">[7]</ref>. Similarly, an anti-leukemic role of Acetyl-CoA Carboxylase 1 (ACC1), the enzyme that catalyzes the production of Malonyl-CoA from acetyl-CoA, has been shown <ref type="bibr" target="#b7">[8]</ref>.</p><p>In AML patients, several lipid patterns representative of different subtypes of AML have recently been identified via mass spectrometry. Indeed, significant differences concerning modulation of the synthesis of ceramides and sphingolipids have been highlighted in patients presenting with t(8;21) compared to those presenting with an inv <ref type="bibr" target="#b15">(16)</ref> or a normal karyotype <ref type="bibr" target="#b8">[9]</ref>. Additionally, Stuani et al. compared the dysregulation of lipid metabolism in a cellular model of AML mutated for the IDH1 gene to that in a non-mutated model <ref type="bibr" target="#b9">[10]</ref>. These differences are mainly characterized by an increase in phosphatidylinositol, sphingolipids, free cholesterol and monounsaturated fatty acids in IDH-mutated cells. This, again, highlights the impact of the cytogenetic characteristics and mutational status of AML patients on cellular metabolism. Finally, a recent study showed a decrease in total FAs in the plasma of patients with AML, as well as the attenuation of plasmatic phosphocholine, triglycerides and cholesterol esters <ref type="bibr" target="#b10">[11]</ref>. In addition, arachidonic acid appears to be increased in AML plasma samples, suggesting its involvement in the cancerous phenotype <ref type="bibr" target="#b11">[12]</ref>.</p><p>Interestingly, lipids may play a role in the expression and functionality of certain oncogenes. It was shown that the aberrant localization of FLT3-ITD at the level of the endoplasmic reticulum depended on the palmitoylation of the receptor, and that the pharmacological inhibition of the depalmitoylation of the receptor had a synergistic effect on the inhibitor of FLT3 <ref type="bibr" target="#b12">[13]</ref>. Similarly, in an MLL-AF9 mouse model, a high-fat diet was shown to increase FLT3-dependent signaling via clusterization of the receptor in lipid rafts, and thus, promote the emergence of leukemic clones <ref type="bibr" target="#b13">[14]</ref>. Picou et al. tested the impact of polyunsaturated FAs (PUFAs) on acute myeloid leukemia cell lines and on fresh leukemic cells from patients, and induced the inhibition of mitochondrial respiration, and increased glycolysis and oxidative stress, which lead to the death of leukemic cells <ref type="bibr" target="#b14">[15]</ref>. However, Gyan et al. did not succeed in demonstrating the significant impact of FAs from fish oil emulsion on the complete remission of AML patients <ref type="bibr" target="#b15">[16]</ref>.</p><p>Altogether, these data suggested that the reprogramming of lipid metabolism and the balance of lipid species could play a role in improving the prognosis of AML. In this context, we performed extensive characterization of the lipidome of human leukemic cell lines and plasma samples from AML patients, to decipher the characteristics of the lipid species and evaluate those of potential interest for targeting lipid metabolism in AML.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Characterization of Lipid Profiles of Different Leukemic Cell Lines</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.1.">Quantification and Characterization of Total Fatty Acids</head><p>The overall quantification of total fatty acids (glycerolipids and free fatty acids) in five leukemic cell lines cultured under normal conditions shows significant differences between the cell lines (Figure <ref type="figure" target="#fig_0">1A</ref>). In particular, the K562 cell line exhibits a significant increase in total FAs compared to the other four cell lines (p &lt; 0.0001), with an average of 934.1 nmol/10 7 cells. HEL contains an average of 423.3 nmol/10 7 cells, followed by OCI-AML3 cells, with an average of 302.2 nmol/10 7 cells, and then, KG1, with 234.9 nmol/10 7 cells. HL60 is the cell line with the lowest amount of total fatty acids (136 nmol/10 7 cells).</p><p>Int. J. Mol. Sci. 2023, 24, x FOR PEER REVIEW 3 of 16 doplasmic reticulum depended on the palmitoylation of the receptor, and that the pharmacological inhibition of the depalmitoylation of the receptor had a synergistic effect on the inhibitor of FLT3 <ref type="bibr" target="#b12">[13]</ref>. Similarly, in an MLL-AF9 mouse model, a high-fat diet was shown to increase FLT3-dependent signaling via clusterization of the receptor in lipid rafts, and thus, promote the emergence of leukemic clones <ref type="bibr" target="#b13">[14]</ref>. Picou et al. tested the impact of polyunsaturated FAs (PUFAs) on acute myeloid leukemia cell lines and on fresh leukemic cells from patients, and induced the inhibition of mitochondrial respiration, and increased glycolysis and oxidative stress, which lead to the death of leukemic cells <ref type="bibr" target="#b14">[15]</ref>. However, Gyan et al. did not succeed in demonstrating the significant impact of FAs from fish oil emulsion on the complete remission of AML patients <ref type="bibr" target="#b15">[16]</ref>.</p><p>Altogether, these data suggested that the reprogramming of lipid metabolism and the balance of lipid species could play a role in improving the prognosis of AML. In this context, we performed extensive characterization of the lipidome of human leukemic cell lines and plasma samples from AML patients, to decipher the characteristics of the lipid species and evaluate those of potential interest for targeting lipid metabolism in AML.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Characterization of Lipid Profiles of Different Leukemic Cell Lines</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.1.">Quantification and Characterization of Total Fatty Acids</head><p>The overall quantification of total fatty acids (glycerolipids and free fatty acids) in five leukemic cell lines cultured under normal conditions shows significant differences between the cell lines (Figure <ref type="figure" target="#fig_0">1A</ref>). In particular, the K562 cell line exhibits a significant increase in total FAs compared to the other four cell lines (p &lt; 0.0001), with an average of 934.1 nmol/10 7 cells. HEL contains an average of 423.3 nmol/10 7 cells, followed by OCI-AML3 cells, with an average of 302.2 nmol/10 7 cells, and then, KG1, with 234.9 nmol/10 7 cells. HL60 is the cell line with the lowest amount of total fatty acids (136 nmol/10 7 cells). To obtain detailed information on the composition of the different fatty acids, we chose to compare the two cell lines K562 and KG1, which represent cell lines with very high and low amounts of total FAs, respectively. Interestingly, both cell lines harbored different profiles with overexpression of different fatty acids: C16:0 (palmitic acid), and cis and trans C18:1; C20:1 (gadoleic acid) and C20:3 (DGLA or dihomo-gamma-linolenic acid) were overexpressed in K562 compared to KG1, and conversely, C16:1 (palmitoleic acid), C18:0 (stearic acid) and C20:5 (eicosapentaenoic acid) were overexpressed in KG1 compared to K562 (Figure <ref type="figure" target="#fig_0">1B</ref>). The concentrations of other FAs, C14:0 (myristic acid), C18:2 (linoleic acid), C20:4 (arachidonic acid) and C22:6 (docosahexaenoic acid or DHA), were quite similar.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.2.">Characterization of Lipid Species</head><p>In order to improve the characterization of the lipid profiles of the two cell lines, we carried out a comparative study of the lipid species. In the basal state, many lipid species (&gt;10) were expressed by the two cell lines. However, the lipid species composition of the KG1 and K562 cell lines showed significant differences. The main differences observed were a significant increase in phosphatidyl-choline ((P)C) (p &lt; 0.05), phosphatidyl-ethanolamine ((P)E) (p &lt; 0.01), a triacylglycerol/cholesteryl ester mixture (TAG/CE) (p &lt; 0.05) and cardiolipin (CL) (p &lt; 0.001) in K562 compared to KG1. Interestingly, we did not observe (as we did for FAs) that some lipid species were overexpressed in KG1 compared to K562 (Figure <ref type="figure" target="#fig_0">1C</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Impact of Starvation on Lipid Metabolism in Leukemic Cell Lines</head><p>Since lipid catabolism is a main pathway of energy production, especially in nutritional stress, we studied variations in lipid profiles (total fatty acids and lipid species) after starvation (absence of FBS) in the two cell lines. Under these conditions, we initially observed a decreased rate of proliferation with a decrease in the percentage of viable cells at 24 and 48 h, but the cells quickly adapted and continued to proliferate, with levels rising to reach viability close to that under normal conditions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.1.">Impact on Total Fatty Acids</head><p>Under starvation conditions, the total amount of FAs is significantly reduced in both cell lines compared to their basal state (Figure <ref type="figure" target="#fig_2">2A</ref>,<ref type="figure">B</ref>). Regarding FA composition, very similar modifications in the profiles of the two cell lines were observed (Figure <ref type="figure" target="#fig_2">2C</ref>,<ref type="figure">D</ref>), characterized by a reduction in the quantity of stearic acid (C18:0) (p &lt; 0.001), as well as PUFAs, DGLA (C20:3), arachidonic acid (C20:4), EPA or eicosapentaenoic acid (C20:5) and DHA (C22:6) (p &lt; 0.001) in both cell lines. Interestingly, we observed similar results in the two cell lines, with a very significant increase in the amount of palmitoleic acid (C16:1) in starvation compared to the basal state (p &lt; 0.001).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.2.">Impact on Lipid Species</head><p>As observed with fatty acids, the two leukemic cell lines under starvation conditions show similar decreases in several lipid species. A significant decrease in (P)C (p &lt; 0.05) and cardiolipin (p &lt; 0.001) was thus observed in both KG1 and K562. Other species were reduced in the two cell lines, but with their amplitude depending on the cell line; these were the TAG/CE mixture and lyso-biphosphatidic acid (LBPA), which were significantly reduced only in K562 (p &lt; 0.05). Conversely, phosphatidyl-serine ((P)S), sphingomyelin (SM) and a particular lipid species, PE-Ceramide, which was found only in KG1, were significantly reduced in KG1 (p &lt; 0.01) but remained stable in K562 (Figure <ref type="figure" target="#fig_2">2E</ref>,<ref type="figure">F</ref>). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.2.">Impact on Lipid Species</head><p>As observed with fatty acids, the two leukemic cell lines under starvation conditions show similar decreases in several lipid species. A significant decrease in (P)C (p &lt; 0.05) and cardiolipin (p &lt; 0.001) was thus observed in both KG1 and K562. Other species were reduced in the two cell lines, but with their amplitude depending on the cell line; these were the TAG/CE mixture and lyso-biphosphatidic acid (LBPA), which were significantly reduced only in K562 (p &lt; 0.05). Conversely, phosphatidyl-serine ((P)S), sphingomyelin (SM) and a particular lipid species, PE-Ceramide, which was found only in KG1, were significantly reduced in KG1 (p &lt; 0.01) but remained stable in K562 (Figure <ref type="figure" target="#fig_2">2E</ref>,<ref type="figure">F</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Impact of FAO Inhibition on the Viability of AML Cell Lines KG1 and K562</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.1.">Impact of Etomoxir on Cell Survival</head><p>Our results suggest that the modulation of lipid species is one of the mechanisms used by leukemic cells to counteract starvation. In this context, we studied the impact of etomoxir (Eto), an inhibitor of FAO, on the survival of leukemia cells. To determine the sensitivity of each cell line, we first assessed the effect of Eto on the viability of the two AML cell lines KG1 and K562, cultivated in normal medium culture with FBS. For this first set of experiments, we evaluated, based on data from the literature, two concentrations of Eto: 200 and 400 μM, respectively. As shown in Figure <ref type="figure" target="#fig_4">3A</ref>,B, the percentage of viable cells decreased significantly in both cell lines with dose and time, demonstrating a dose-and time-dependent inhibitory effect of Eto on these leukemic cells. However, the sensitivity levels of the two cell lines were significantly different. The percentage of viable K562 cells after 24 h and 48 h of treatment with Eto was significantly more decreased compared to that of KG1 cells, showing that K562 was more sensitive to the action of Eto than KG1. The calculated IC50 values of etomoxir were 113.7 μM and 320 μM for K562 and KG1, respectively, confirming their differences in sensitivity. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Impact of FAO Inhibition on the Viability of AML Cell Lines KG1 and K562</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.1.">Impact of Etomoxir on Cell Survival</head><p>Our results suggest that the modulation of lipid species is one of the mechanisms used by leukemic cells to counteract starvation. In this context, we studied the impact of etomoxir (Eto), an inhibitor of FAO, on the survival of leukemia cells. To determine the sensitivity of each cell line, we first assessed the effect of Eto on the viability of the two AML cell lines KG1 and K562, cultivated in normal medium culture with FBS. For this first set of experiments, we evaluated, based on data from the literature, two concentrations of Eto: 200 and 400 µM, respectively. As shown in Figure <ref type="figure" target="#fig_4">3A</ref>,<ref type="figure">B</ref>, the percentage of viable cells decreased significantly in both cell lines with dose and time, demonstrating a dose-and time-dependent inhibitory effect of Eto on these leukemic cells. However, the sensitivity levels of the two cell lines were significantly different. The percentage of viable K562 cells after 24 h and 48 h of treatment with Eto was significantly more decreased compared to that of KG1 cells, showing that K562 was more sensitive to the action of Eto than KG1. The calculated IC 50 values of etomoxir were 113.7 µM and 320 µM for K562 and KG1, respectively, confirming their differences in sensitivity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.2.">Impact of Starvation on Sensitivity to Etomoxir</head><p>Secondly, we decided to evaluate whether the combination of Eto with starvation could significantly improve leukemic cell death. Taking into account the differences in sensitivity observed under normal conditions, we used different concentrations of Eto, between K562 and KG1 (200 and 400 µM, respectively) for this evaluation in the absence of serum. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.2.">Impact of Starvation on Sensitivity to Etomoxir</head><p>Secondly, we decided to evaluate whether the combination of Eto with starvation could significantly improve leukemic cell death. Taking into account the differences in sensitivity observed under normal conditions, we used different concentrations of Eto, between K562 and KG1 (200 and 400 μM, respectively) for this evaluation in the absence of serum.</p><p>As shown in Figure <ref type="figure" target="#fig_4">3C</ref>,D, the viability of cells decreased as expected when they were deprived of nutrients, but did not reach high levels (greater than 50%) of dead cells, suggesting that both cell lines could counteract FBS deprivation. Of note, we observed that KG1, despite its lower reserve of total fatty acids, was not more sensitive to FBS withdrawal compared to K562. When the cells were cultivated with etomoxir in serum-deprived medium, we observed a dramatic increase in cell death, reaching almost complete mortality after 48 h. Interestingly, at 24 h, the KG1 cells were almost all dead compared to the K562 cells, of which around 20% were still alive.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4.">Impact of FAO Inhibition on Total Lipid Abundance and Lipid Profiles in KG1 and K562</head><p>As the culture with Eto suggested that FAO is critical for leukemic cell survival, we decided to analyze the impact of FAO inhibition on total lipid abundance and lipid profiles in KG1 and K562, in correlation with their sensitivity to Eto. Based on the results on viability in the presence of Eto, and in order to decipher how the balance of different lipid species could modulate sensitivity to Eto, we analyzed the impact of a low dose of Eto (100 μM). Indeed, at this dose, K562 (IC50 = 113 μM) was sensitive to Eto, and conversely, KG1 (IC50 = 320 μM) was resistant to Eto. Firstly, we did not observe a significant quantitative modification of the total amount of FAs after incubation with Eto in both cell lines, but we observed qualitative variation between the two cell lines. Indeed, we observed that KG1 harbored more alteration (mainly a decrease) in FA levels than K562. We observed a very significant decrease (p &lt; 0.001) in palmitic acid (C16:0), stearic acid (C18:0) and oleic acid (C18:1) in KG1 (Figure <ref type="figure" target="#fig_6">4A</ref>). The only shared variation was for arachidonic acid As shown in Figure <ref type="figure" target="#fig_4">3C</ref>,D, the viability of cells decreased as expected when they were deprived of nutrients, but did not reach high levels (greater than 50%) of dead cells, suggesting that both cell lines could counteract FBS deprivation. Of note, we observed that KG1, despite its lower reserve of total fatty acids, was not more sensitive to FBS withdrawal compared to K562. When the cells were cultivated with etomoxir in serum-deprived medium, we observed a dramatic increase in cell death, reaching almost complete mortality after 48 h. Interestingly, at 24 h, the KG1 cells were almost all dead compared to the K562 cells, of which around 20% were still alive.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4.">Impact of FAO Inhibition on Total Lipid Abundance and Lipid Profiles in KG1 and K562</head><p>As the culture with Eto suggested that FAO is critical for leukemic cell survival, we decided to analyze the impact of FAO inhibition on total lipid abundance and lipid profiles in KG1 and K562, in correlation with their sensitivity to Eto. Based on the results on viability in the presence of Eto, and in order to decipher how the balance of different lipid species could modulate sensitivity to Eto, we analyzed the impact of a low dose of Eto (100 µM). Indeed, at this dose, K562 (IC 50 = 113 µM) was sensitive to Eto, and conversely, KG1 (IC 50 = 320 µM) was resistant to Eto. Firstly, we did not observe a significant quantitative modification of the total amount of FAs after incubation with Eto in both cell lines, but we observed qualitative variation between the two cell lines. Indeed, we observed that KG1 harbored more alteration (mainly a decrease) in FA levels than K562. We observed a very significant decrease (p &lt; 0.001) in palmitic acid (C16:0), stearic acid (C18:0) and oleic acid (C18:1) in KG1 (Figure <ref type="figure" target="#fig_6">4A</ref>). The only shared variation was for arachidonic acid (C20:4), which decrease significantly in KG1 and K562 (Figure <ref type="figure" target="#fig_6">4A</ref>,<ref type="figure">B</ref>). Moreover, the relative proportion of eicosenoic acid (C20:1) increased significantly in KG1, whereas we did not observe significant variation in K562 for this fatty acid. Regarding lipid species, the main result was a clear decrease in TAG (p &lt; 0.001), associated with a weak but significant decrease in (P)C (p &lt; 0.05), which was only observed in KG1 cells (Figure <ref type="figure" target="#fig_6">4C</ref>,<ref type="figure">D</ref>).</p><p>(C20:4) , which decrease significantly in KG1 and K562 (Figure <ref type="figure" target="#fig_6">4A</ref>,<ref type="figure">B</ref>). Moreover, the relative proportion of eicosenoic acid (C20:1) increased significantly in KG1, whereas we did not observe significant variation in K562 for this fatty acid. Regarding lipid species, the main result was a clear decrease in TAG (p &lt; 0.001), associated with a weak but significant decrease in (P)C (p &lt; 0.05), which was only observed in KG1 cells (Figure <ref type="figure" target="#fig_6">4C</ref>,<ref type="figure">D</ref>). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.5.">Impact of FAO Inhibition on Mitochondrial Respiration</head><p>To evaluate the impact of FAO inhibition on mitochondrial function, using the Sea-Horse XF method, we evaluated the respiratory profiles of KG1 and K562, without Eto (control) and with increasing concentrations of Eto, at 24 h of culture (Figure <ref type="figure" target="#fig_8">5A</ref>,<ref type="figure">B</ref>). Based on the results of viable cells, we decided to firstly use 200 μM of Eto since this concentration impacted the cell viability of both cell lines without inducing too many dead cells that could bias the measure of respiratory profiles. We also analyzed, as for the lipid profiles, the impact of a lower dose of Eto (100 μM), which could yield interesting data between K562 (considered sensitive to this dose) and KG1 (considered resistant to this dose). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.5.">Impact of FAO Inhibition on Mitochondrial Respiration</head><p>To evaluate the impact of FAO inhibition on mitochondrial function, using the Sea-Horse XF method, we evaluated the respiratory profiles of KG1 and K562, without Eto (control) and with increasing concentrations of Eto, at 24 h of culture (Figure <ref type="figure" target="#fig_8">5A</ref>,<ref type="figure">B</ref>). Based on the results of viable cells, we decided to firstly use 200 µM of Eto since this concentration impacted the cell viability of both cell lines without inducing too many dead cells that could bias the measure of respiratory profiles. We also analyzed, as for the lipid profiles, the impact of a lower dose of Eto (100 µM), which could yield interesting data between K562 (considered sensitive to this dose) and KG1 (considered resistant to this dose).</p><p>Firstly, we observed a significant decrease in basal respiration (BR) in KG1 and K562 cultured with Eto, when compared to the control cultures (Figure <ref type="figure" target="#fig_8">5C</ref>). The impact started at 100 µM in both cell lines and increased significantly at 200 µM. Similarly, we observed a decrease in the maximal respiration (MR) proportional to the concentration of etomoxir (Figure <ref type="figure" target="#fig_8">5D</ref>). ATP production followed the same trend as BR and MR and was decreased in the case of cultures with etomoxir, dose-dependently, but this decrease was not significant. The spare respiratory capacity (SRC), which is an indicator of the capacity of cells to respond to increased energy demand, remained stable, and even increased slightly in K562 compared to KG1 (not significant). Firstly, we observed a significant decrease in basal respiration (BR) in KG1 and K562 cultured with Eto, when compared to the control cultures (Figure <ref type="figure" target="#fig_8">5C</ref>). The impact started at 100 μM in both cell lines and increased significantly at 200 μM. Similarly, we observed a decrease in the maximal respiration (MR) proportional to the concentration of etomoxir (Figure <ref type="figure" target="#fig_8">5D</ref>). ATP production followed the same trend as BR and MR and was decreased in the case of cultures with etomoxir, dose-dependently, but this decrease was not significant. The spare respiratory capacity (SRC), which is an indicator of the capacity of cells to respond to increased energy demand, remained stable, and even increased slightly in K562 compared to KG1 (not significant). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.6.">Characterization of Lipid Profiles in AML Patients: Correlation with Their Prognosis</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.6.">Characterization of Lipid Profiles in AML Patients: Correlation with Their Prognosis</head><p>First, we analyzed the composition of total fatty acids in the plasma of patients with a favorable (n = 21) versus unfavorable (n = 18) prognosis (according to ELN 2017 <ref type="bibr" target="#b16">[17]</ref>). According to the statistical analysis, no significant difference was observed between the two groups of patients concerning the total content of FAs (Figure <ref type="figure" target="#fig_10">6A</ref>), as well as the total content of phospholipids (PLs) and neutral lipids. We did not observe any major differences between patients with a favorable and unfavorable prognoses (respectively, p = 0.28 and p = 0.20) (Figure <ref type="figure" target="#fig_10">6B</ref>,<ref type="figure">C</ref>).</p><p>First, we analyzed the composition of total fatty acids in the plasma of patients with a favorable (n = 21) versus unfavorable (n = 18) prognosis (according to ELN 2017 <ref type="bibr" target="#b16">[17]</ref>). According to the statistical analysis, no significant difference was observed between the two groups of patients concerning the total content of FAs (Figure <ref type="figure" target="#fig_10">6A</ref>), as well as the total content of phospholipids (PLs) and neutral lipids. We did not observe any major differences between patients with a favorable and unfavorable prognoses (respectively, p = 0.28 and p = 0.20) (Figure <ref type="figure" target="#fig_10">6B</ref>,<ref type="figure">C</ref>). To further our investigation, we compared detailed information on the composition of the lipid species of five patients representative of each group. Concerning FA composition, even though we observed some trends, we did not identify significant differences associated with the prognosis of patients (Figure <ref type="figure" target="#fig_10">6D</ref>). Concerning phospholipids, we were able to identify eight compounds in the ten patients. On the one hand, we identified sphingomyelin, phosphatidyl-choline, phosphatidyl-inositol ((P)I) and phosphatidyl-ethanolamine, which correspond to phospholipids (PLs); on the other hand, we identified a mixture of diacylglycerol and cholesterol (DAG-Cho), free fatty acids (FFAs), triacylglycerol (TAG) and cholesteryl esters (CEs), which correspond to neutral lipids (NLs). After analyzing each lipid spot, we were able to demonstrate a significant increase in SM, (P)C (p &lt; 0.05), (P)I (p &lt; 0.01) and FFAs (p &lt; 0.01) in the plasma of patients with an unfavorable prognosis (Figure <ref type="figure" target="#fig_10">6E</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Discussion</head><p>In this study, we firstly aimed to decipher the characteristics of lipid species in leukemic cells that could be of interest for targeting lipid metabolism for AML survival. Our first results show that, in their basic state, the five leukemic cell lines, which were repre- To further our investigation, we compared detailed information on the composition of the lipid species of five patients representative of each group. Concerning FA composition, even though we observed some trends, we did not identify significant differences associated with the prognosis of patients (Figure <ref type="figure" target="#fig_10">6D</ref>). Concerning phospholipids, we were able to identify eight compounds in the ten patients. On the one hand, we identified sphingomyelin, phosphatidyl-choline, phosphatidyl-inositol ((P)I) and phosphatidyl-ethanolamine, which correspond to phospholipids (PLs); on the other hand, we identified a mixture of diacylglycerol and cholesterol (DAG-Cho), free fatty acids (FFAs), triacylglycerol (TAG) and cholesteryl esters (CEs), which correspond to neutral lipids (NLs). After analyzing each lipid spot, we were able to demonstrate a significant increase in SM, (P)C (p &lt; 0.05), (P)I (p &lt; 0.01) and FFAs (p &lt; 0.01) in the plasma of patients with an unfavorable prognosis (Figure <ref type="figure" target="#fig_10">6E</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Discussion</head><p>In this study, we firstly aimed to decipher the characteristics of lipid species in leukemic cells that could be of interest for targeting lipid metabolism for AML survival. Our first results show that, in their basic state, the five leukemic cell lines, which were representative of a certain diversity of AML, were characterized by very different total quantities of fatty acids, with a ratio of 1 to 7 between the K562 (the highest) and HL60 (the lowest) cell lines. To further characterize the relative proportion of fatty acids and lipid species, independently of the initial quantity of fatty acids, we chose to analyze K562 and KG1, which presented very different levels of FAs at baseline, suggesting very different lipids compositions. In fact, the qualitative analysis of their lipid contents showed very clear differences in the relative proportion of lipid species, demonstrating the diversity of the lipidome of leukemic cells. These results show that, in accordance with the results that we have previously published on the HRMAS profiles of these cell lines <ref type="bibr" target="#b17">[18]</ref>, there are clear differences in the expression levels of metabolites between leukemic cell lines. The most probable hypothesis is a direct link between the metabolic profile and the genetic status of leukemic cells, as has already been shown in patients with t(8;21), inv(16) or IDH mutation <ref type="bibr" target="#b8">[9,</ref><ref type="bibr" target="#b9">10]</ref>.</p><p>These differences in the pattern of lipid expression suggest that leukemic cells might develop different lipid metabolism reprogramming under stress. As our goal was to study the adaptation of leukemic cells to global metabolic stress, and not to a particular deficiency, we chose, in our experiments, to use global serum deprivation. Although the use of serum-free medium that was selectively supplemented with a particular type of lipid species would be more precise, it would not have provided an overall picture of lipid reprogramming in this situation. Moreover, FBS is the major source of lipids in the medium, and the removal of serum is now valid and has been used in a number of publications; moreover, to date, there is no controlled medium whose exact and necessary FA composition is known.</p><p>Under these conditions, we confirmed our previous results, which showed the rapid adaptation of these two cell lines to starvation, allowing them to survive thanks to metabolic reprogramming <ref type="bibr" target="#b17">[18]</ref>. Regarding the lipid level, the first indicator of this adaptation was a significant decrease in their overall level of fatty acids after 48 h of serum deficiency, suggesting that the "basic quantitative reserves" of lipids in the cells are, in themselves, a protective mechanism. A decrease in lipid storage, such as DAG/cholesterol and TAG/cholesteryl ester, can also be attributed to the mobilization of lipids for survival. Interestingly, we observed significant variation in the lipid species that showed many similarities between the two cell lines, suggesting that under this stress condition, the leukemic cells set up common pathways, independently of the differences observed in their basal state. In particular, we observed a decrease in phosphatidyl serine, phosphatidyl-ethanolamine and phosphatidylcholine, which suggests that leukemic cells use phosphatidyl-choline and its substrates to survive. The deregulation of phosphatidyl-choline metabolism has been described in many cancers <ref type="bibr" target="#b18">[19]</ref>. Several papers have noted changes in phosphatidyl-choline levels in cancers, particularly those of the prostate, ovaries and lung <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b20">21]</ref>. Similarly, the dysregulation of phosphatidyl-ethanolamine and phosphatidyl-inositol has been reported in prostate cancer. Moreover, Zheng et al. showed that under serum deprivation, human breast cancer cells exhibited increased phospholipase D (PLD) activity, leading to a decrease in (P)C (via the activation of its catabolism) and increased migration and metastasis potential <ref type="bibr" target="#b21">[22]</ref>. We also observed a significant decrease in arachidonic acid, high levels of which have been described in AML patients with a poor prognosis <ref type="bibr" target="#b10">[11]</ref>. Hence, our results show, for the first time, and to our knowledge, that the remodeling of lipid species is a major and shared mechanism of adaptation to stress in leukemic cells. This role was highlighted in the mechanism of sensitivity of acute promyelocytic leukemia (APL) to all-trans-retinoic acid (ATRA). Highly unsaturated fatty acids (HUFA) containing phosphatidyl-ethanolamine (HUFA-(P)E), such as those found in salmon testes, significantly enhanced dbcAMP-induced cell differentiation <ref type="bibr" target="#b22">[23]</ref>. This effect was suppressed by a protein kinase C inhibitor, suggesting that HUFA-(P)E might enhance dbcAMP-induced differentiation through the modulation of the protein kinase C signaling pathway in HL60 cells.</p><p>Overall, these results suggest that therapeutic targeting of lipid metabolism could be conceived as a complementary treatment to increase the therapeutic efficacy of induction chemotherapy. To assess this hypothesis, we studied the impacts of treating leukemic cells with etomoxir (Eto), which irreversibly inhibits CPT1A, thereby preventing the entrance of fatty acids into the mitochondria, and their beta-oxidation. In the presence of Eto, we observed a decrease in viability time and dose dependence in both cell lines, which increased dramatically in the absence of serum. However, sensitivity to Eto was significantly different between the two cell lines. The seahorse analysis of mitochondrial respiration demonstrated that in both cell lines, Eto-by inhibiting FAO-definitively reduces ATP production, even though KG1 was less impacted than K562, which was consistent with what we observed regarding viability.</p><p>The fact that K562 was significantly more sensitive compared to KG1, despite higher levels of FAs at steady state, could suggest deeper dependence of K562 cells on lipid metabolism, which is prevented by higher levels of lipid stock. Moreover, the IC 50 level in KG1 was more than 300 µM, and we cannot exclude that at these doses, as well as off-target effects such as the inhibition of Complex I of the electron transport chain (ETC) and the production of reactive species of oxygen (ROS), are the main factors responsible for cell death, as previously described <ref type="bibr" target="#b23">[24]</ref>.</p><p>In addition, comparison of the modifications of lipid profiles induced by starvation or inhibition due to FAO, respectively, shows that if the two leukemia cell lines, despite their genotypic and phenotypic differences, have developed very closed mechanisms to fight against starvation, their levels of sensitivity to metabolic inhibitors are different and would depend on their initial lipid profiles. On one hand, K562 cells, with a dose close to their IC 50 value, present a blockade of the use of most of their fatty acids (in coherence with the mechanism of action of etomoxir), since their rates and relative proportions show very few differences compared to their basal profiles. In addition, no modification of the lipid species was observed in this cell line, suggesting that the blockade of FAO actually induced the death of K562 cells. Conversely, the KG1 cells, which are resistant to a dose of 100 µM of Eto (IC 50 = 320 µM), showed very significant variations (p &lt; 0.001) in the rates and relative proportions of several fatty acids. This decrease in the presence of Eto, which blocks FAO, together with the resistance of KG1 cells to etomoxir, suggests that KG1 cells have developed a mechanism of resistance against Eto that involves certain FAs and/or storage lipids. We can hypothesize that these lipid species are used for the renewal of new leukemic cells through their structural role, but also that they could be implicated in mechanism of drug resistance. Indeed, glycosphingolipid biosynthesis was shown to regulate drug sensitivity in clinically relevant models of drug-resistant chronic myeloid leukemias, through modulation of both the expression and activity of the drug efflux proteins ABCB1 and ABCC1 <ref type="bibr" target="#b24">[25]</ref>.</p><p>Altogether, the results of this first part show that in AML, one can discriminate leukemic cells that are highly dependent on FAO, for which the use of an inhibitor of FAO should be efficient, and conversely, leukemic cells that are independent of FAO, for which an inhibitor of FAO would not be a reliable additional therapy. Therefore, the targeting of lipid metabolism should be proposed only for a subset of AML patients who display a sensitive "lipidic phenotype".</p><p>Leukemic cell lines represent a questionable model of what happens in patients. This is why we reinforced the in vitro analysis with an ex vivo analysis of patient samples, in order to assess the role of the patients' lipidome on their survival. We firstly compared total fatty acids, phospholipids and neutral lipids among a cohort of 39 AML patients with high (n = 21) or low (n = 18) prognoses (according to ELN 2017 <ref type="bibr" target="#b16">[17]</ref>). In addition, as all investigations of lipid species (FA and phospholipid composition) using LC-MS and GC-MS are very time-consuming experiences, require very high-level expertise and could not be carried out on large series of patients, we further selected five patients belonging to the high or low prognostic subgroups, respectively, for extensive lipidome analysis. Although this number of patients may seem low (n = 10, 5 patients in each group), to our knowledge, this type of characterization of the lipidome in samples from AML patients has never before been published. In addition, the number of independent measurements for this type of assay is classically n = 3m and in our case, we had five independent values for each parameter; this gives statistical significance to our results, which are quite robust.</p><p>We found an increase in the quantity of neutral lipids (FFAs), which are storage lipids, in patients with an unfavorable prognosis, suggesting that the mobilization of these storage lipids improve the viability of leukemic cells. Moreover, the increase in the quantity of phospholipids, and in particular, of sphingomyelin and phosphocholine (PC), in patients with an unfavorable prognosis confirms that PLs are markers of aggressiveness and tumor progression, which are associated with a poor prognosis in AML. These results are consistent with those described in cancers <ref type="bibr" target="#b25">[26,</ref><ref type="bibr" target="#b26">27]</ref>. Elevated levels of PC indicate intense cell proliferation, commonly observed in cancers, in association with an increase in phosphoethanolamine (PE) <ref type="bibr" target="#b25">[26]</ref>. At the neurological level, two studies have shown that patients with a low-grade glioma that progressed to a high-grade glioma had much higher levels of PC and PE <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b28">29]</ref>. Similarly, Wang et al. observed that PC was expressed at a higher level in the sera of patients with an intermediate prognosis compared to patients with a favorable prognosis. This is in line with an unfavorable impact of PC on prognosis <ref type="bibr" target="#b29">[30]</ref>. The fact that we observed, in a previous study, that an increase in PC was a common mechanism of survival against starvation in leukemic cell lines <ref type="bibr" target="#b17">[18]</ref> strongly suggests that its prognostic role in patients could be explained by a "protective" role of PC, which could increase the resistance of leukemic cells in stressful situations. It is very interesting to note that in this study, we observed a decrease in phosphatidyl-choline in a situation of metabolic stress in our cell lines. Taking into account that the catabolism of phosphatidyl-choline can produce phosphocholine, we can hypothesize that leukemic cells use phosphatidyl-choline catabolism to generate lipid mediators that will increase their survival. Moreover, a team recently created an inventory of lipidome in the plasma of patients with AML, and showed a decrease in total FFAs, including PC; this was probably be due to increased oxidation of FAs in AML cells. Altogether, these data underline the crucial role of phosphatidyl-choline and phosphocholine metabolism in the survival of leukemic cells, suggesting that it could be also an interesting therapeutic target.</p><p>In conclusion, our data show that balanced lipid metabolism is a phenotypic marker of the diversity (very probably genetic) of leukemic cells that significantly influences their proliferation and resistance to stress, and could be a fruitful therapeutic target to improve the survival of some AML patients harboring a particular "lipidic phenotype".</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Materials and Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Cell Culture and Conditions</head><p>The cells used for this experiment were purchased from the ATCC (American Type Culture Collection, Manassas, VA, USA) society. Five human leukemic cell lines were used in our study: HL60, HEL, OCI-AML3, KG1 and K562. The K562 line was derived from a patient who initially had chronic myeloid leukemia, but the cells were collected from this patient in the phase of transformation into AML. It is therefore considered a model of AML. The cells were cultured at a density of 0.5 × 10 5 cells/mL for exponential growth in a medium containing 10% fetal bovine serum (FBS), 1% L-glutamine, 1% penicillin/streptomycin and RPMI 1640. The cells were incubated in a laboratory oven at 37% and 5% CO 2 , and the media were changed every two-three days.</p><p>The conditions used for the experiments were a control, a culture with etomoxir, starvation (medium without serum) and a culture with etomoxir under the conditions of starvation. Etomoxir sodium salt hydrate was purchased from Sigma Aldrich (Saint-Quentin-Fallavier, France) and reconstituted in sterile water for injection into a stock solution of 10 mM. For the cultures with etomoxir, the cells were suspended in a routinely used medium, and etomoxir was diluted directly with the medium to the desired concentration (100 µM, 200 µM or 400 µM). For starvation, the cells were centrifuged and resuspended in a medium deprived of FBS, with 1% L-glutamine, 1% penicillin/streptomycin, RPMI 1640 and 1% insulin-transferrin-selenium. The cultures with etomoxir under the conditions of starvation were prepared using the same protocol as the cultures with etomoxir under non-starvation conditions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Fluorescence-Activated Cell Sorting</head><p>An amount of 0.3 × 10 6 cells were centrifuged at 1400 rpm for 10 min and washed twice with phosphate-buffered saline (PBS) solution. The cells were labeled with 5 µL of Annexin V (FITC Annexin V Apoptosis Detection Kit I from BD Pharmingen, France) and 5 µL of Propidium iodide (PI), and incubated for 15 min at room temperature, protected from the light. Their acquisition was conducted using a FACS Lyric cytometer. Data analysis was performed using BD FACSuite Software. Handling was performed in parallel for each cell line and in three independent experiments.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">Mitochondrial Respiration Assay</head><p>The bioenergetics assay was performed using the Seahorse XF Cell Mito stress test kit and the Seahorse XFe96 analyzer, purchased from Agilent Technologies. The day before the assay, the tissue culture plate was coated using Corning Cell-Tak adhesive, according to the supplier's recommendations. The Seahorse cartridge was hydrated with sterile water and incubated overnight in a CO 2 -free incubator, at 37 • C. The day of the assay, the Seahorse medium was prepared, and the pH solution adjusted to 7.4. The following step involved seeding the cells on the previously coated culture plate. The cells were enumerated and centrifuged for 5 min at 2000 rpm, and the supernatant was removed and replaced with Seahorse medium. The cells were then incubated for 45 min in a CO 2 -free incubator, at 37 • C. During the incubation, the stock solutions were reconstituted and diluted to the appropriate concentrations as follows: ATP synthase inhibitor oligomycin at 1.5 µmol/L, uncoupling agent carbonyl cyanide p-trifluoro-methoxyphenyl hydrazone (FCCP) at 0.5 µmol/L and 2 µmol/L, fatty acid oxidation inhibitor etomoxir at 4 µmol/L, and inhibitors of complex I/III of the electron transport chain antimycin/rotenone at 0.5 µmol/L. The oxygen consumption rate (OCR) was measured at baseline and after sequential injections with the previously mentioned solutions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Determination of IC 50</head><p>The half-maximal inhibitory concentration (IC 50 ) was determined using the PrestoBlue cell viability reagent, purchased from Thermo Fisher Scientific (Waltham, MA, USA). The cell line K562 was cultured at an initial density of 40,000 cells/well with increasing concentrations of etomoxir (0, 50, 100, 150, 200, 250, 300 µM), for 24 h, on a black culture plate with a flat, clear bottom. After 24 h, 10 µL of PrestoBlue reagent was added to each well. The cells were incubated for 30 min at 37 • C. The fluorescence was measured using a Varioskan microplate reader (Thermo Fisher Scientific).</p><p>The measurements were performed in triplicate for each condition. The average fluorescence was calculated for the triplicates corresponding to each concentration, and the background (blank) was subtracted.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.5.">Lipid Analysis</head><p>The cells were collected after 24 h of treatment, followed by quenching in an ethanol/dry ice bath, to stop cell metabolism. After quenching, the pellets were washed twice with PBS and stored at -80 • C until the day of the lipid extraction. Total lipids were extracted in chloroform/methanol (1:2) with an internal standard (10 nmol tridecanoic acid C13:0 and 10 nmol PC C23:0). By adding chloroform and 0.2% KCl/0.5% acetic acid, biphasic separation, at a chloroform/methanol/water ratio of 2:1:0.8 (v/v/v), was generated. The lowest organic phase that was recovered was the total lipid fraction. Total lipid equivalent of 0.2-0.5 M of the cells were dried in vacuo, and the derivatizing agent TMSH (Machery-Nagel, Hoerdt, France) in chloroform/methanol (1:1, v/v) was added, followed by gas chromatography-mass spectrometry (GC-MS, Agilent 5977A-7890B). The total fatty acid amount was quantified using Mass Hunter software (Agilent, Santa Clara, CA, USA) in the form of fatty acid methyl esters, using the calibration curve generated using the authentic standards, followed by normalization using the internal standards and cell number.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.6.">Plasma Analysis</head><p>We recovered the plasma of 39 adult patients with a diagnosis of de novo AML, who received an induction treatment according to the standards for "fit" patients. All subjects gave their informed consent for inclusion before they participated in the study. The study was conducted in accordance with the Declaration of Helsinki, and the protocol was approved by the Ethics Committee of CHUGA (Project 38RC13.209). The patients' prognoses were assessed according to the ELN 2017 classification: 21 patients belonged to the favorable prognosis group and 18 to the unfavorable prognosis group. Plasma was collected upon diagnosis of AML. All the characteristics of the patients are summarized in Supplemental Table <ref type="table">S1</ref>. The analysis of total FAs and lipid species was carried out according to the protocol described in the section "Lipid Analysis". Detailed information on the composition of the lipid species was determined for 5 patients representative of each of the two prognostic subgroups. Thereby, we were able to identify 8 compounds in these 10 patients. Sphingomyelin (SM), phosphatidyl-choline ((P)C), phosphatidyl-inositol ((P)I) and phosphatidyl-ethanolamine ((P)E), which correspond to phospholipids (PLs), appeared after the first migration. On the other hand, a mixture of diacylglycerol and cholesterol (DAG-Cho), free fatty acids (FFAs), triacylglycerol (TAG) and cholesteryl esters (CEs), which correspond to neutral lipids (NLs), appeared after the second migration.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.7.">Statistical Analysis</head><p>For statistical analysis, the Kruskal-Wallis test was used for three or more groups, and the Mann-Whitney test was used to compare two groups. Unless otherwise specified, the experiments were repeated at least three times. The data were analyzed using GraphPad Prism software (version 7). A p-value &lt; 0.05 was considered significant.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Characterization of the lipid profiles of the leukemic cell lines at basal state. (A) Total fatty acid quantification in the five leukemic cell lines. (B) Composition of total fatty acids in KG1 and K562 cells. (C) Lipid species quantification in KG1 and K562 cells. * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001, **** p &lt; 0.0001. Abbreviations: (P)I: phosphatidyl-inositol, (P)S: phosphatidyl-serine, SM: sphingomyelin, (P)C: phosphatidyl-choline, (P)E: phosphatidyl-ethanolamine, DAG: diacylglycerol, Cho: cholesterol, TAG: triacylglycerol, CE: cholesteryl-ester, CL: cardiolipin, LBPA: lyso-biphosphatidic acid, Cer: ceramide.</figDesc><graphic coords="3,85.68,568.87,429.12,83.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Impact of the nutrient depletion on the two cell lines KG1 and K562. (A,B) Total fatty acid amount in KG1 and K562, respectively, at basal state versus in starvation. (C,D) Composition of total fatty acids in KG1 and K562, respectively, at basal state versus in starvation. (E,F) Lipid species quantification in KG1 and K562, respectively, at basal state versus in starvation. * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001.</figDesc><graphic coords="5,36.04,236.17,523.32,89.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Impact of the nutrient depletion on the two cell lines KG1 and K562. (A,B) Total fatty acid amount in KG1 and K562, respectively, at basal state versus in starvation. (C,D) Composition of total fatty acids in KG1 and K562, respectively, at basal state versus in starvation. (E,F) Lipid species quantification in KG1 and K562, respectively, at basal state versus in starvation. * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Impact of etomoxir and/or starvation on cell proliferation in KG1 and K562. (A,B) Percentage of viable cells in basal state, and with two concentrations of etomoxir (200 and 400 μM) in KG1 and K562 cells, respectively. (C,D) Percentage of viable cells in starvation and in starvation with etomoxir in KG1 and K562 cells, respectively. * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Impact of etomoxir and/or starvation on cell proliferation in KG1 and K562. (A,B) Percentage of viable cells in basal state, and with two concentrations of etomoxir (200 and 400 µM) in KG1 and K562 cells, respectively. (C,D) Percentage of viable cells in starvation and in starvation with etomoxir in KG1 and K562 cells, respectively. * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Impact of a low dose of etomoxir on the two cell lines KG1 and K562. (A,B) Composition of total fatty acids in KG1 and K562, respectively, at basal state versus with 100 μM etomoxir. (C,D) Lipid species quantification in KG1 and K562, respectively, at basal state versus with 100 μM etomoxir. * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001, **** p &lt; 0.0001.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Impact of a low dose of etomoxir on the two cell lines KG1 and K562. (A,B) Composition of total fatty acids in KG1 and K562, respectively, at basal state versus with 100 µM etomoxir. (C,D) Lipid species quantification in KG1 and K562, respectively, at basal state versus with 100 µM etomoxir. * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001, **** p &lt; 0.0001.</figDesc><graphic coords="7,38.93,259.71,523.32,120.48" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Variation in the respiratory profiles of the two cell lines KG1 and K562 at 24 h of culture. The profiles of the key parameters of KG1 (A) and K562 (B) in their basal state, and with increasing concentrations of etomoxir (100 and 200 μM) are presented, as are the OCR variations in basal respiration (C) and maximal respiration (D). * p &lt; 0.05. Abbreviations: ATP: adenosine triphosphate, BR: basal respiration, FCCP: carbonyl cyanide p-trifluoro-methoxyphenyl hydrazone, MR: maximal respiration, OCR: oxygen consumption rate, SRC: spare respiratory capacity.</figDesc><graphic coords="8,64.70,391.30,484.98,119.76" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Variation in the respiratory profiles of the two cell lines KG1 and K562 at 24 h of culture. The profiles of the key parameters of KG1 (A) and K562 (B) in their basal state, and with increasing concentrations of etomoxir (100 and 200 µM) are presented, as are the OCR variations in basal respiration (C) and maximal respiration (D). * p &lt; 0.05. Abbreviations: ATP: adenosine triphosphate, BR: basal respiration, FCCP: carbonyl cyanide p-trifluoro-methoxyphenyl hydrazone, MR: maximal respiration, OCR: oxygen consumption rate, SRC: spare respiratory capacity.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Variation in fatty acid content and lipid species in AML patients according to their prognosis. The amounts of total fatty acids (A), phospholipids (B) and neutral lipids (C) were quantified in patients with favorable and adverse prognoses. (D) Composition of total fatty acids in plasma of patients with favorable and adverse prognoses. (E) Lipid species quantification in plasma of patients with favorable (n = 5) versus adverse (n = 5) prognoses. ns: non-significant, * p &lt; 0.05, ** p &lt; 0.01.</figDesc><graphic coords="9,37.09,232.25,523.32,102.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Variation in fatty acid content and lipid species in AML patients according to their prognosis. The amounts of total fatty acids (A), phospholipids (B) and neutral lipids (C) were quantified in patients with favorable and adverse prognoses. (D) Composition of total fatty acids in plasma of patients with favorable and adverse prognoses. (E) Lipid species quantification in plasma of patients with favorable (n = 5) versus adverse (n = 5) prognoses. ns: non-significant, * p &lt; 0.05, ** p &lt; 0.01.</figDesc></figure>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>Funding: This paper was funded by the <rs type="funder">French League against Cancer</rs> (<rs type="grantNumber">Ligue38R16MOSSUZ</rs>).</p></div>
+<div><head>Institutional Review Board Statement:</head><p>The protocol was approved by the <rs type="funder">Ethics Committee of CHUGA</rs> (Project <rs type="grantNumber">38RC13.209</rs>).</p></div>
+<div><head>Informed Consent Statement:</head><p>All subjects gave their informed consent for inclusion before they participated in the study.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_bFNUcmp">
+					<idno type="grant-number">Ligue38R16MOSSUZ</idno>
+				</org>
+				<org type="funding" xml:id="_kF6zG3V">
+					<idno type="grant-number">38RC13.209</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Availability Statement:</head><p>Raw data supporting reported results are available by asking to the corresponding authors.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Materials:</head><p>The supporting information can be downloaded at: <ref type="url" target="https://www.mdpi.com/article/10.3390/ijms24065988/s1">https://www.mdpi.  com/article/10.3390/ijms24065988/s1</ref>.</p><p>Author Contributions: Conceptualization, Y.Y.-B., J.M., C.B. and P.M.; methodology, C.L.P., Y.Y.-B., S.B., D.N. and C.B.; software, D.N.; validation, Y.Y.-B. and J.M.; formal analysis, C.L.P., Y.Y.-B., S.B., D.N. and P.M.; investigation, C.L.P., Y.Y.-B., S.B. and D.N.; resources, J.M.; data curation, C.L.P. and Y.Y.-B.; writing-original draft, P.M.; writing-review and editing, J.M., C.B. and P.M.; supervision, C.B. and P.M.; project administration, P.M.; funding acquisition, P.M. All authors have read and agreed to the published version of the manuscript.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of Interest:</head><p>The authors declare no conflict of interest.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct status="extracted"  xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Targeting Metabolic Reprogramming in Acute Myeloid Leukemia</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Castro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sampaio-Marques</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ludovico</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/cells8090967</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cells</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">967</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Lipids in the tumor microenvironment: From cancer progression to treatment</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Corn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Windham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rafat</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.plipres.2020.101055</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Prog. Lipid Res</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<date type="published" when="2020">2020. 101055</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Systemic Metabolomic Profiling of Acute Myeloid Leukemia Patients before and During Disease-Stabilizing Treatment Based on All-Trans Retinoic Acid, Valproic Acid, and Low-Dose Chemotherapy</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Grønningsaeter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Fredly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">T</forename><surname>Gjertsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Hatfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ø</forename><surname>Bruserud</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/cells8101229</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cells</title>
+		<imprint>
+			<date type="published" when="1229">2019, 8, 1229</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Very long chain fatty acid metabolism is required in acute myeloid leukemia</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tcheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Roma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Jayanth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Minden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Schimmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Hess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hope</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Rea</surname></persName>
+		</author>
+		<idno type="DOI">10.1182/blood.2020008551</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Blood</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="page" from="3518" to="3532" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Loss of G0/G1 switch gene 2 (G0S2) promotes disease progression and drug resistance in chronic myeloid leukaemia (CML) by disrupting glycerophospholipid metabolism</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Olivas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Bencomo-Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Rubio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Barreto-Vargas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Lopez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Solecki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mccall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Astudillo</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/ctm2.1146</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Clin. Transl. Med</title>
+		<imprint/>
+	</monogr>
+	<note>2022, 12, e1146. [CrossRef</note>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b5">
+	<monogr>
+		<title level="m" type="main">High Expression of CPT1A Predicts Adverse Outcomes: A Potential Therapeutic Target for Acute Myeloid Leukemia</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ebiom.2016.11.025</idno>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="55" to="64" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Low expression of ACLY associates with favorable prognosis in acute myeloid leukemia</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jin</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s12967-019-1884-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Transl. Med</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">149</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Stabilization of fatty acid synthesis enzyme acetyl-CoA carboxylase 1 suppresses acute myeloid leukemia development</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nakamae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Y</forename><surname>Kato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Yoneda-Kato</surname></persName>
+		</author>
+		<idno type="DOI">10.1172/JCI141529</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Clin. Investig</title>
+		<imprint>
+			<biblScope unit="page">131</biblScope>
+			<date type="published" when="2021">2021. 141529</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Lipidomic approach for stratification of acute myeloid leukemia patients</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Stefanko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Thiede</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ehninger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Simons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Grzybek</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0168781</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">168781</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Stable Isotope Labeling Highlights Enhanced Fatty Acid and Lipid Metabolism in Human Acute Myeloid Leukemia</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Stuani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Riols</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Millard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sabatier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Batut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Saland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Viars</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tonini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zaghdoudi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">K</forename><surname>Linares</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/ijms19113325</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Mol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The plasma lipidome in acute myeloid leukemia at diagnosis in relation to clinical disease features</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Pabst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Kortz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Fiedler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Ceglarek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Idle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Beyo Glu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bbacli.2017.03.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">BBA Clin</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="105" to="114" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b11">
+	<analytic>
+		<title level="a" type="main">A Role for Lipid Mediators in Acute Myeloid Leukemia</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Loew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Köhnke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rehbeil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pietzner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-H</forename><surname>Weylandt</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/ijms20102425</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Mol. Sci</title>
+		<imprint>
+			<date type="published" when="2019">2019, 20, 2425</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Depalmitoylation rewires FLT3-ITD signaling and exacerbates leukemia progression</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-G</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Tong</surname></persName>
+		</author>
+		<idno type="DOI">10.1182/blood.2021011582</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Blood</title>
+		<imprint>
+			<biblScope unit="volume">138</biblScope>
+			<biblScope unit="page" from="2244" to="2255" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b13">
+	<analytic>
+		<title level="a" type="main">High-fat diet intensifies MLL-AF9-induced acute myeloid leukemia through activation of the FLT3 signaling in mouse primitive hematopoietic cells</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Hermetet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mshaik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Simonet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Callier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Delva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Quéré</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-020-73020-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2020">2020. 16187</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Polyunsaturated fatty acids induce acute myeloid leukemia cell death associated with mitochondrial glycolytic switch and Nrf2 pathway activation</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Picou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Debeissat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bourgeais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gallay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ferrié</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Foucault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ravalet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maciejewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Vallet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ducrocq</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.phrs.2018.08.015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Pharmacol. Res</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page" from="45" to="55" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Adjunction of a fish oil emulsion to cytarabine and daunorubicin induction chemotherapy in high-risk AML</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pigneux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hunault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Peterlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carré</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-O</forename><surname>Bay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bonmati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-P</forename><surname>Gallego-Hernanz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lioure</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bertrand</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-022-13626-y</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">9748</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Diagnosis and management of AML in adults: 2017 ELN recommendations from an international expert panel</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Döhner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Estey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Grimwade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Amadori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Appelbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Büchner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dombret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Ebert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fenaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Larson</surname></persName>
+		</author>
+		<idno type="DOI">10.1182/blood-2016-08-733196</idno>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="page" from="424" to="447" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The differential activation of metabolic pathways in leukemic cells depending on their genotype and micro-environmental stress</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lo Presti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Fauvelle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mondet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mossuz</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11306-020-1633-z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Metabolomics</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Phosphatidylcholine-Derived Lipid Mediators: The Crosstalk Between Cancer Cells and Immune Cells</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D F</forename><surname>Saito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">N D S</forename><surname>Andrade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">O</forename><surname>Bustos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chammas</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fimmu.2022.768606</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Immunol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Circulating Lysophosphatidylcholines, Phosphatidylcholines, Ceramides, and Sphingomyelins and Ovarian Cancer Risk: A 23-Year Prospective Study</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Zeleznik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Clish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kraft</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Avila-Pacheco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Eliassen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Tworoger</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/jnci/djz195</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Natl. Cancer Inst</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="628" to="636" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Simultaneous quantification of serum monounsaturated and polyunsaturated phosphatidylcholines as potential biomarkers for diagnosing non-small cell lung cancer</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dai</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-018-25552-z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Phospholipase D couples survival and migration signals in stress response of human cancer cells</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rodrik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Toschi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Foster</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.M600660200</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">281</biblScope>
+			<biblScope unit="page" from="15862" to="15868" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Synergistic effects of highly unsaturated fatty acid-containing phosphatidyl-ethanolamine on differentiation of human leukemia HL-60 cells by dibutyryl cyclic adenosine monophosphate</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hosokawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ishigamori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kohno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takahashi</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1349-7006.2001.tb01146.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Jpn. J. Cancer Res</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="666" to="672" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Fatty Acid Metabolism</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Konopleva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Andreeff</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fonc.2020.00155</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Bone Marrow Adipocytes, and AML. Front. Oncol</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Inhibition of glycosphingolipid biosynthesis reverts multidrug resistance by differentially modulating ABC transporters in chronic myeloid leukemias</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Salustiano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Da Costa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Freire-De-Lima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mendonça-Previato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Previato</surname></persName>
+		</author>
+		<idno type="DOI">10.1074/jbc.RA120.013090</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">295</biblScope>
+			<biblScope unit="page" from="6457" to="6471" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b25">
+	<analytic>
+		<title level="a" type="main">The Kennedy pathway-De novo synthesis of phosphatidylethanolamine and phosphatidylcholine</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gibellini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/iub.354</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IUBMB Life</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="414" to="428" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Comparative metabolic and lipidomic profiling of human breast cancer cells with different metastatic potentials</title>
+		<author>
+			<persName><forename type="first">H.-Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-J</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-J</forename><surname>Chun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-K</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="DOI">10.18632/oncotarget.11560</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Oncotarget</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="67111" to="67128" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Characterization of metabolites in infiltrating gliomas using ex vivo 1 H high-resolution magic angle spinning spectroscopy</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Elkhaled</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jalbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Constantin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A I</forename><surname>Yoshihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Phillips</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Molinaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Nelson</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/nbm.3097</idno>
+	</analytic>
+	<monogr>
+		<title level="j">NMR BioMed</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="578" to="593" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Metabolic Profiling of IDH Mutation and Malignant Progression in Infiltrating Glioma</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E</forename><surname>Jalbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Elkhaled</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Phillips</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Neill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Crane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Olson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Molinaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Berger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kurhanewicz</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep44792</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">44792</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Rapid diagnosis and prognosis of de novo acute myeloid leukemia by serum metabonomic analysis</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-Q</forename><surname>Mi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W.-N</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-F</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/pr400403p</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Proteome Res</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="4393" to="4401" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct status="extracted"  xml:id="b30">
+	<monogr>
+		<title level="m" type="main">The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods</title>
+		<imprint>
+			<publisher>Disclaimer/Publisher&apos;s Note</publisher>
+		</imprint>
+	</monogr>
+	<note>instructions or products referred to in the content</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
