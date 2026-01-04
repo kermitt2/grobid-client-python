@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Phase 3 Open-Label Study Evaluating the Efficacy and Safety of Mavacamten in Japanese Adults With Obstructive Hypertrophic Cardiomyopathy ― The HORIZON-HCM Study ―</title>
+				<funder>
+					<orgName type="full">Daiichi-Sankyo</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Bristol Myers Squibb</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">AstraZeneca</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Bayer</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Bayer Yakuhin and Daiichi-Sankyo</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Otsuka</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Eli Lilly, LSI Medience</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Boehringer Ingelheim</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Novartis</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Takeda</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Pfizer</orgName>
+				</funder>
+				<funder ref="#_wefcgR2">
+					<orgName type="full">Terumo</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Cactus Life Sciences</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Abbott Medical Japan</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Sun Medical Technology Research, and Terumo</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Japanese Circulation Society</publisher>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-12-25">2024-12-25</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><roleName>MD</roleName><forename type="first">Hiroaki</forename><surname>Kitaoka</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Masaki</forename><surname>Ieda</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Mio</forename><surname>Ebato</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>MD, PhD</roleName><forename type="first">Ken</forename><surname>Kozuma</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Morimasa</forename><surname>Takayama</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Kaoru</forename><surname>Tanno</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Nobuyuki</forename><surname>Komiyama</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Yasushi</forename><surname>Sakata</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Yuichiro</forename><surname>Maekawa</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Yuichiro</forename><surname>Minami</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Akiyoshi</forename><surname>Ogimoto</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Tomofumi</forename><surname>Takaya</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Satoshi</forename><surname>Yasuda</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Eisuke</forename><surname>Amiya</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Yutaka</forename><surname>Furukawa</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Tetsuya</forename><surname>Watanabe</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Daigo</forename><surname>Hiraya</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Hidetaka</forename><surname>Miyagoshi</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>MS</roleName><forename type="first">Gen</forename><surname>Kinoshita</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>MS</roleName><forename type="first">Alison</forename><surname>Reedy</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Sheila</forename><forename type="middle">M</forename><surname>Hegde</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><roleName>MD, MPH</roleName><forename type="first">Victoria</forename><surname>Florea</surname></persName>
+							<email>victoria.florea@bms.com</email>
+						</author>
+						<author>
+							<persName><roleName>MD</roleName><forename type="first">Chisato</forename><surname>Izumi</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Cardiology and Geriatrics</orgName>
+								<orgName type="department" key="dep2">Kochi Medical School</orgName>
+								<orgName type="institution">Kochi University</orgName>
+								<address>
+									<settlement>Kochi</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Cardiology</orgName>
+								<orgName type="department" key="dep2">Department of Cardiovascular Medicine</orgName>
+								<orgName type="institution" key="instit1">Keio University School of Medicine</orgName>
+								<orgName type="institution" key="instit2">Tokyo (M.I.)</orgName>
+								<orgName type="institution" key="instit3">Showa University Fujigaoka Hospital</orgName>
+								<address>
+									<settlement>Yokohama</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Cardiology</orgName>
+								<orgName type="institution">Teikyo University Hospital</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Cardiology</orgName>
+								<orgName type="institution">Sakakibara Heart Institute</orgName>
+								<address>
+									<settlement>Tokyo (M.T</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Division of Cardiology</orgName>
+								<orgName type="department" key="dep2">Cardiovascular Center</orgName>
+								<orgName type="institution">Showa University Koto Toyosu Hospital</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Cardiovascular Medicine</orgName>
+								<orgName type="institution">St. Luke&apos;s International Hospital</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<region>N.K.);</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Department of Cardiovascular Medicine</orgName>
+								<orgName type="institution">Osaka University Graduate School of Medicine</orgName>
+								<address>
+									<region>Osaka (Y.S</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="department" key="dep1">Division of Cardiology</orgName>
+								<orgName type="department" key="dep2">Internal Medicine III</orgName>
+								<orgName type="department" key="dep3">Department of Cardiology</orgName>
+								<orgName type="institution" key="instit1">Hamamatsu University School of Medicine</orgName>
+								<orgName type="institution" key="instit2">Hamamatsu (Y. Maekawa)</orgName>
+								<orgName type="institution" key="instit3">Tokyo Women&apos;s Medical University</orgName>
+								<address>
+									<settlement>Tokyo (Y. Minami</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff8">
+								<orgName type="department" key="dep1">Division of Cardiology</orgName>
+								<orgName type="department" key="dep2">Division of Cardiovascular Medicine</orgName>
+								<orgName type="institution" key="instit1">Uwajima City Hospital</orgName>
+								<orgName type="institution" key="instit2">Ehime (A.O.)</orgName>
+								<orgName type="institution" key="instit3">Hyogo Prefectural Harima-Himeji General Medical Center</orgName>
+								<address>
+									<settlement>Hyogo (T.T</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff9">
+								<orgName type="department">Department of Cardiovascular Medicine</orgName>
+								<orgName type="institution">Tohoku University Graduate School of Medicine</orgName>
+								<address>
+									<settlement>Sendai</settlement>
+									<region>S.Y.);</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff10">
+								<orgName type="department" key="dep1">Department of Cardiovascular Medicine</orgName>
+								<orgName type="department" key="dep2">Graduate School of Medicine</orgName>
+								<orgName type="department" key="dep3">Tokyo (E.A.)</orgName>
+								<orgName type="department" key="dep4">Department of Cardiovascular Medicine</orgName>
+								<orgName type="institution" key="instit1">The University of Tokyo</orgName>
+								<orgName type="institution" key="instit2">Kobe City Medical Center General Hospital</orgName>
+								<address>
+									<settlement>Kobe</settlement>
+									<region>Y.F</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff11">
+								<orgName type="department">Division of Cardiology</orgName>
+								<orgName type="institution">Osaka General Medical Center</orgName>
+								<address>
+									<settlement>Osaka (T.W</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff12">
+								<orgName type="department" key="dep1">Department of Cardiology</orgName>
+								<orgName type="department" key="dep2">Institute of Medicine</orgName>
+								<orgName type="institution">University of Tsukuba</orgName>
+								<address>
+									<settlement>Ibaraki (D.H</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff13">
+								<orgName type="department">Division of Cardiovascular Medicine</orgName>
+								<orgName type="institution">NJ (A.R</orgName>
+								<address>
+									<region>V.F</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff14">
+								<orgName type="department">Brigham and Women&apos;s Hospital</orgName>
+								<address>
+									<settlement>Boston</settlement>
+									<region>MA (S.M.H</region>
+									<country>USA;</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff15">
+								<orgName type="department">Department of Heart Failure and Transplantation</orgName>
+								<orgName type="institution">National Cerebral and Cardiovascular Center</orgName>
+								<address>
+									<region>Osaka (C.I</region>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff16">
+								<orgName type="institution">Bristol Myers Squibb</orgName>
+								<address>
+									<addrLine>1000 Sierra Point Parkway</addrLine>
+									<postCode>94005</postCode>
+									<settlement>Brisbane</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Phase 3 Open-Label Study Evaluating the Efficacy and Safety of Mavacamten in Japanese Adults With Obstructive Hypertrophic Cardiomyopathy ― The HORIZON-HCM Study ―</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Circulation Journal</title>
+						<title level="j" type="abbrev">Circ J</title>
+						<idno type="ISSN">1346-9843</idno>
+						<idno type="eISSN">1347-4820</idno>
+						<imprint>
+							<publisher>Japanese Circulation Society</publisher>
+							<biblScope unit="volume">89</biblScope>
+							<biblScope unit="issue">1</biblScope>
+							<biblScope unit="page" from="130" to="138"/>
+							<date type="published" when="2024-12-25" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">CF22D7EA9A77016AF3C2AFBD44A203F8</idno>
+					<idno type="DOI">10.1253/circj.cj-24-0501</idno>
+					<note type="submission">Received July 9, 2024; revised manuscript received August 21, 2024; accepted September 14, 2024; J-STAGE Advance Publication released online November 7, 2024 Time for primary review: 7 days</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2025-12-21T15:59+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Efficacy</term>
+					<term>Hypertrophic cardiomyopathy</term>
+					<term>Mavacamten</term>
+					<term>Safety</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Background: Mavacamten, a cardiac myosin inhibitor, significantly improved symptoms and cardiac function vs. placebo in patients with symptomatic obstructive hypertrophic cardiomyopathy (HCM) in EXPLORER-HCM. However, the efficacy and safety profiles of mavacamten in Japanese patients are unclear.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods and Results</head><p>: HORIZON-HCM is a Phase 3 single-arm study in Japanese patients with symptomatic obstructive HCM. The mavacamten starting dose was 2.5 mg; individualized dose titration occurred in Weeks 6-20 based on Valsalva left ventricular outflow tract (LVOT) gradient and resting left ventricular ejection fraction (LVEF). Overall, 38 patients were treated; 36 completed the 30-week primary treatment analysis period. Clinically significant improvements in postexercise LVOT gradient were observed after 30 weeks of treatment (mean change from baseline -60.7 mmHg). Improvements in N-terminal pro B-type natriuretic peptide, New York Heart Association class, and Kansas City Cardiomyopathy Questionnaire-23 Clinical Summary Score were observed over 30 weeks, and mean LVEF was ≥74% at all visits. Treatment-emergent adverse events (TEAEs) and serious TEAEs were reported in 63.2% and 7.9% of patients, respectively; none resulted in treatment discontinuation. One patient experienced a transient asymptomatic reduction in LVEF to &lt;50%. No deaths occurred during the study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions:</head><p>In Japanese patients with obstructive HCM, mavacamten was associated with similar improvements in LVOT gradients, cardiac biomarkers, and symptoms to those observed in EXPLORER-HCM. Treatment was well tolerated with no new safety concerns.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>death. <ref type="bibr" target="#b18">7</ref> Based on large population-based studies in the US and Japan, the prevalence of HCM is estimated to be between 1 in 200 and 1 in 500 people. <ref type="bibr" target="#b19">8,</ref><ref type="bibr" target="#b20">9</ref> Mavacamten is a first-in-class selective, allosteric, reversible cardiac myosin inhibitor approved across 5 continents for the treatment of adults with symptomatic New York Heart Association (NYHA) Class II-III obstructive HCM. <ref type="bibr" target="#b21">10</ref> The 2023 European Society of Cardiology (ESC) and 2024 American Heart Association/American College of Cardiology guidelines recommend the consideration of mavacamten treatment in adult patients with obstructive H ypertrophic cardiomyopathy (HCM) is a myocardial disease defined by left ventricular (LV) hypertrophy in the absence of another condition, and is largely caused by sarcomere dysfunction. <ref type="bibr" target="#b12">[1]</ref><ref type="bibr" target="#b13">[2]</ref><ref type="bibr" target="#b14">[3]</ref><ref type="bibr" target="#b15">[4]</ref> Approximately 70% of patients with HCM have LV outflow tract (LVOT) obstruction, defined as a resting or provoked peak LVOT gradient of 30 mmHg or greater. 2, <ref type="bibr" target="#b16">5</ref> Patients with obstructive HCM commonly experience symptoms of fatigue, dyspnea, and syncope, which can impair exercise capacity and quality of life. <ref type="bibr" target="#b17">6</ref> Potential sequelae of obstructive HCM include arrhythmia, heart failure, and sudden cardiac Mavacamten in HORIZON-HCM: Efficacy and Safety ple, average body weight is lower among people living in Asia than among people living in Europe or North America. <ref type="bibr" target="#b4">15</ref> The cytochrome P450 family 2 subfamily C member 19 (CYP2C19) poor metabolizer (PM) phenotype is also more prevalent in Asian people than in White people (~15% vs. 2-5%). <ref type="bibr" target="#b5">16</ref> People with a CYP2C19 PM phenotype have little to no CYP2C19 activity; this affects their exposure to drugs that are metabolized by CYP2C19 (e.g., mavacamten). 10, <ref type="bibr" target="#b6">17</ref> The effect of CYP2C19 metabolizer phenotype on mavacamten pharmacokinetics is substantial; terminal half-life is prolonged in CYP2C19 PMs compared with CYP2C19 normal metabolizers (NMs; 23 vs. 6-9 days). <ref type="bibr" target="#b21">10</ref> Furthermore, a Phase 1 pharmacokinetic study determined that the area under the concentration-time curve was increased by 241% and the maximum observed concentration was increased by 47% in CYP2C19 PMs compared with NMs following a single 15-mg dose of mavacamten. <ref type="bibr" target="#b21">10</ref> Nevertheless, a different Phase 1 pharmacokinetic study showed no clinically significant differences in mavacamten pharmacokinetics between Japanese participants with an NM phenotype and White participants with an NM phenotype after a single 25-mg dose of mavacamten. <ref type="bibr" target="#b7">18</ref> Therefore, assessment of mavacamten treatment in Japanese patients in a clinical setting would provide important insights into the efficacy and safety of the drug in an obstructive HCM population in Japan. The aim of the HORIZON-HCM study (NCT05414175) was to evaluate the efficacy, tolerability, and safety of a 30-week course of mavacamten treatment in Japanese participants with symptomatic obstructive HCM.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Study Design, Patients, and Dosing</head><p>HORIZON-HCM is a Phase 3 open-label single-arm multicenter study in Japanese patients with symptomatic obstructive HCM. The study consists of 4 periods: a 5-week screening period; a 30-week primary analysis treatment period (Day 1 through Week 30); a 108-week long-term treatment period (Weeks 30-138); and an 8-week post-treatment follow-up period (extended to 20 weeks in CYP2C19 PMs; Supplementary Figure <ref type="figure" target="#fig_1">1</ref>). Data are presented from the primary analysis treatment period; results from the ongoing long-term treatment period will be reported separately.</p><p>Adult patients were eligible for enrollment in HORIZON-HCM if they had a body weight &gt;35 kg, a diagnosis of obstructive HCM (defined as unexplained LV hypertrophy HCM who are still symptomatic after treatment with β-blockers and/or calcium channel blockers. <ref type="bibr" target="#b12">1,</ref><ref type="bibr" target="#b13">2</ref> The ESC guidelines also recommend consideration of mavacamten monotherapy in symptomatic patients with obstructive HCM if they are intolerant to or have contraindications to standard-of-care therapy. <ref type="bibr" target="#b12">1</ref> Mavacamten targets the underlying pathophysiology of HCM by reducing the proportion of myosin heads that can bind to actin, thus reversing hypercontractility and improving myocardial energetics. <ref type="bibr" target="#b12">1,</ref><ref type="bibr" target="#b0">11</ref> In the pivotal Phase 3 EXPLORER-HCM study (ClinicalTrials.gov ID: NCT03470545) in patients with symptomatic obstructive HCM, treatment with mavacamten was superior to placebo in achieving the composite primary endpoint of a ≥1.5 mL/kg/min increase in peak oxygen consumption (pV ˙O2) and an improvement of ≥1 NYHA functional class, or a ≥3.0 mL/kg/min increase in pV ˙O2 without NYHA class worsening. <ref type="bibr" target="#b1">12</ref> Compared with placebo, patients receiving mavacamten showed significant improvements from baseline to Week 30 in all secondary endpoints, including postexercise LVOT gradient, NYHA functional class, and the patient-reported Kansas City Cardiomyopathy Questionnaire-23 Clinical Summary Score (KCCQ-23 CSS). Mavacamten was well tolerated over 30 weeks of treatment, and a similar safety profile was observed for mavacamten and placebo. <ref type="bibr" target="#b1">12</ref> In the Phase 3 VALOR-HCM study (NCT04349072) in patients with obstructive HCM and NYHA Class III-IV symptoms (or NYHA Class II symptoms with exertional/near syncope), a significant reduction in the proportion of patients who decided to proceed with septal reduction therapy (SRT) or remained guideline-eligible for SRT was observed in the mavacamten group compared with the placebo group after 16 weeks of treatment. <ref type="bibr" target="#b2">13</ref> In the Phase 3 EXPLORER-CN study (NCT05174416) conducted in China in 81 patients with obstructive HCM, mavacamten treatment significantly reduced Valsalva LVOT gradient from baseline to Week 30 compared with placebo. <ref type="bibr" target="#b3">14</ref> Patients receiving mavacamten in EXPLORER-CN experienced improvements from baseline to Week 30 in resting LVOT gradient, NYHA class, KCCQ-23 CSS, and N-terminal pro B-type natriuretic peptide (NT-proBNP) and cardiac troponin I (cTnI) levels compared with those receiving placebo. <ref type="bibr" target="#b3">14</ref> A stated limitation of EXPLORER-HCM was the low proportion of participants with non-White ethnicity (22 of 251 patients). <ref type="bibr" target="#b1">12</ref> Certain characteristics of Asian people differ from those of people of predominantly White ethnicity who enrolled in the EXPLORER-HCM study; for exam-before screening were also excluded. Background HCM monotherapy with β-blockers, verapamil, or diltiazem was allowed if treatment was well tolerated for ≥2 weeks before screening and if patients were receiving a stable dose. Current or planned treatment with cibenzoline, disopyramide, or ranolazine, or concomitant treatment with β-blockers and verapamil or diltiazem was not allowed.</p><p>All patients initiated oral mavacamten treatment at a dosage of 2.5 mg once daily. Scheduled, individualized dose adjustment opportunities at Weeks 6, 8, 14, and 20 were based on central laboratory-read measurements of Valsalva LVOT gradient and LVEF by transthoracic echocardiography. The mavacamten dose was down-titrated from 2.5 to 1 mg at Week 6 if a patient's Valsalva LVOT gradient was &lt;30 mmHg and LVEF was ≥50% at Week 4. Stepwise dose up-titrations were possible at Weeks 8, 14, and 20 if a patient's Valsalva LVOT gradient was ≥30 mmHg and LVEF was ≥55% at Weeks 6, 12, and 18. Mavacamten doses available after the final dose-titration step at Week 20 were 1, 2.5, 5, 10, and 15 mg. Dosing was interrupted if a patient had a central laboratory-read LVEF reading &lt;50%, a pre-dose mavacamten plasma concentration ≥1,000 ng/mL, or excessive Fridericia-corrected QT interval (QTcF) prolongation (the smaller of a ≥15% increase in QTcF from baseline, a QTcF ≥520 ms if the baseline QRS interval was narrow [&lt;120 ms], or a QTcF ≥550 ms if the baseline QRS interval was wide [≥120 ms]). Mavacamten was restarted at 1 dose level lower if LVEF was ≥50%, plasma concentration was &lt;1,000 ng/mL, and QTcF duration was below the prespecified interruption threshold at the follow-up visit 4-6 weeks later. Permanent treatment discontinuation criteria included a site-read LVEF measurement ≤30%.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Study Assessments and Endpoints</head><p>The primary study endpoint was the change from baseline to Week 30 in postexercise peak LVOT gradient. Postexercise LVOT gradient measurements were captured within 90 s of patients completing a standard symptom-limited exercise test by treadmill or bicycle ergometer. Secondary study endpoints were changes in KCCQ-23 CSS and cardiac biomarker serum concentrations (NT-proBNP, cTnI, cardiac troponin T [cTnT]) from baseline to Week 30, and the proportion of patients with NYHA functional class improvement ≥1 from baseline to Week 30. Key exploratory endpoints included: change from baseline to Week 30 in resting LVOT gradient, Valsalva LVOT gradient, and LVEF; the proportion of patients who achieved a peak postexercise LVOT gradient of &lt;50 mmHg; the proportion of patients who achieved a peak postexercise LVOT gradient of &lt;30 mmHg at Week 30; the proportion of patients who achieved any decrease in peak postexercise LVOT gradient from baseline to Week 30; and the proportion of patients who achieved a complete response at Week 30 (defined as those with NYHA Class I symptoms and peak resting, Valsalva, and postexercise LVOT gradients &lt;30 mmHg). Further exploratory endpoints included changes from baseline to Week 30 in markers of cardiac structure and function assessed by echocardiography. Safety endpoints included the incidence of treatment-emergent adverse events (TEAEs) and treatment-emergent serious adverse events (TESAEs), the severity of the experienced TEAEs, and the incidence of LVEF &lt;50%.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistical Analyses</head><p>Efficacy analyses were performed using data from the with non-dilated ventricular chambers in the absence of other cardiac or systemic disease, a maximum LV wall thickness ≥15 mm [or ≥13 mm with a family history of HCM], a peak LVOT gradient ≥50 mmHg at rest or with provocation [after the Valsalva maneuver or exercise], and a Valsalva LVOT gradient ≥30 mmHg), a resting LVEF ≥60% read by the echocardiography central laboratory, and NYHA Class II-III symptoms. Key exclusion criteria included a history of syncope or sustained ventricular tachyarrhythmia with exercise in the 6 months before screening, a history of resuscitated sudden cardiac arrest (at any time) or appropriate implantable cardioverter defibrillator discharge for life-threatening ventricular arrhythmia in the 6 months before screening, paroxysmal atrial fibrillation present at the time of screening, and persistent or permanent atrial fibrillation while not receiving anticoagulation therapy for ≥4 weeks before screening and/or not adequately rate controlled in the 6 months before screening. Patients who underwent successful invasive SRT (surgical myectomy or percutaneous alcohol septal ablation) in the 6 months</p><p>Table 1. Baseline Demographics and Disease Characteristics in the HORIZON-HCM Cohort (n=38) Age (years) 64.8±10.9 Female sex 25 (65.8) BMI (kg/m 2 ) 25.9±4.4 Heart rate (beats/min) 65.2±10.6 Systolic blood pressure (mmHg) 129.5±20.6 Diastolic blood pressure (mmHg) 72.7±11.6 Background HCM therapy β-blockers 34 (89.5) Calcium channel blockers 3 (7.9) Family history of HCM 3 (7.9) History of atrial fibrillation 4 (10.5) CYP2C19 metabolizer phenotype Poor metabolizer 8 (21.1) Intermediate metabolizer 16 (42.1) Normal metabolizer 14 (36.8) NYHA functional class Class II 33 (86.8) Class III 5 (13.2) KCCQ-23 CSS (points) 79.1±20.8 NT-proBNP (ng/L) 1,029.0 [525.0-1,657.0] cTnI (ng/L) 16.6 [9.4-23.6] cTnT (ng/L) 12.5 [9.9-17.2] Resting LVOT gradient (mmHg) 73.6±34.2 Valsalva LVOT gradient (mmHg) 91.4±32.1 Postexercise LVOT gradient (mmHg) 85.1±29.2 LVEF (%) 77.8±5.1 Maximum LV wall thickness (mm) 20.9±2.0 LAVI (mL/m 2 ) 42.9±14.6 Data are presented as the mean ± SD, median [interquartile range], or n (%). "Baseline" is defined as the last non-missing assessment before the first dose of mavacamten. BMI, body mass index; cTnI, cardiac troponin I; cTnT, cardiac troponin T; CYP2C19, cytochrome P450 family 2 subfamily C member 19; HCM, hypertrophic cardiomyopathy; KCCQ-23 CSS, Kansas City Cardiomyopathy Questionnaire-23 Clinical Summary Score; LAVI, left atrial volume index; LV, left ventricular; LVEF, left ventricular ejection fraction; LVOT, left ventricular outflow tract; NT-proBNP, N-terminal pro B-type natriuretic peptide; NYHA, New York Heart Association.   (n=1) and QTcF prolongation while receiving mavacamten 1 mg (n=1; Supplementary Figure <ref type="figure" target="#fig_2">2</ref>). The mean age of patients was 64.8±10.9 years and 65.8% of patients were female (Table <ref type="table">1</ref>). All patients were symptomatic at baseline; 86.8% (n=33 of patients) had NYHA Class II symptoms. The mean resting LVOT gradient, Valsalva LVOT gradient, and postexercise LVOT gradient were 73.6±34.2, 91.4±32.1, and 85.1±29.2 mmHg, respectively. Genotyping revealed that of the 38 patients, 8 (21.1%) were CYP2C19 PMs. At baseline, 89.5% of patients were receiving β-blockers and 7.9% of patients were receiving nondihydropyridine calcium channel blockers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Efficacy Results</head><p>After 30 weeks of treatment, mavacamten was associated with an improvement in postexercise LVOT gradient, with a mean change from baseline of -60.7 mmHg (95% CI -71.5, -49.9 mmHg). (The mean postexercise LVOT gradient at Week 30 was 28.4±26.5 mmHg [Figure <ref type="figure" target="#fig_1">1A</ref>].) Reductions from baseline to Week 30 in resting LVOT gradient (mean change -61.1 mmHg; 95% CI -72.9, -49.2 mmHg) and Valsalva LVOT gradient (mean change -70.6 mmHg; 95% CI -83.2, -58.0 mmHg) were also observed. (The mean the mean change from baseline to Week 30 observed in the EXPLORER-HCM placebo arm (i.e., the upper limit of the CI was &lt;-10 mmHg). No formal statistical testing was performed for primary, secondary, and exploratory endpoints, or for safety data. Unless specified otherwise, data are presented as the mean ± SD for continuous variables and as frequencies and percentages for categorical data.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Patient Disposition and Baseline Characteristics</head><p>From August 19, 2022 to March 31, 2023, 43 patients with obstructive HCM were screened for HORIZON-HCM enrollment. Of these, 38 were treated with mavacamten and 36 (94.7%) completed the 30-week primary analysis treatment period. Two patients permanently discontinued treatment during the study owing to patient withdrawal   ), but mean LVEF remained above 74% at every study visit (Supplementary Figure <ref type="figure" target="#fig_3">3</ref>). Mavacamten treatment was associated with improvements from baseline to Week 30 in levels of cardiac biomarkers (Figure <ref type="figure" target="#fig_2">2</ref>): the geometric mean ratios to baseline at Week 30 were 0.180 (coefficient of variation [CV] 156.9) for NT-proBNP, 0.323 (CV 61.3) for cTnI, and 0.546 (CV 35.5) for cTnT. Overall, 24 (63.2%) patients improved by ≥1 NYHA functional class from baseline to Week 30 (Figure <ref type="figure" target="#fig_3">3</ref>). At Week 30, 22 of 36 (61.1%) patients with evaluable data had NYHA Class I symptoms, and none had NYHA Class III symptoms. Rapid improvements in KCCQ-23 CSS from baseline were observed from Week 6, with continued improvement up to Week 12 (Figure <ref type="figure" target="#fig_5">4</ref>). Improvements in KCCQ-23 CSS were sustained through Week 30 (the mean change in KCCQ-23 CSS from baseline to Week 30 was 9.8 points [95% CI 4.1-15.5 points]).</p><p>A summary of key exploratory endpoints is presented in Table <ref type="table">2</ref>. At Week 30, the proportion of patients with postexercise LVOT gradient measurements at both baseline and week 30 (n=35) who achieved postexercise LVOT gradients of &lt;50 and &lt;30 mmHg was 88.6% and 71.4%, respectively. A complete response was achieved by 13 of 35 (37.1%) patients, whereas 34 of 35 (97.1%) patients experienced a decrease in postexercise LVOT gradient (of any size) after 30 weeks of mavacamten treatment. Mavacamten treatment also resulted in improvements between baseline and Week 30 in markers of cardiac structure and function, including LV mass index (LVMI; mean change</p><p>Table 3. Change in Echocardiographic Parameters From Baseline to Week 30 Endpoint No. of patients at baseline Baseline values No. of patients at Week 30 Week 30 values Mean (95% CI) change from baseline Resting LVOT gradient (mmHg) 38 73.6±34.2 36 15.0±16.0 -61.1 (-72.9, -49.2) Valsalva LVOT gradient (mmHg) 38 91.4±32.1 36 23.0±22.3 -70.6 (-83.2, -58.0) Postexercise LVOT gradient (mmHg) 38 85.1±29.2 35 28.4±26.5 -60.7 (-71.5, -49.9) LVEF (%) 38 77.8±5.1 34 74.9±7.0 -2.9 (-5.9, 0.2) LVMI (g/m 2 ) 38 133.4±26.5 34 119.4±28.2 -13.2 (-20.2, -6.2) LAVI (mL/m 2 ) 38 42.9±14.6 34 39.1±10.1 -3.4 (-7.2, 0.3) LV end-diastolic diameter (cm) 38 3.6±0.6 36 3.6±0.5 -0.02 (-0.2, 0.1) LV end-systolic diameter (cm) 36 1.9±0.3 32 2.0±0.4 0.1 (-0.015, 0.3) [n=31 A ] Interventricular septal thickness (mm) 38 18.9±2.5 34 17.85±2.5 -0.8 (-1.7, 0.02) Inferolateral wall thickness (mm) 38 12.5±2.4 36 11.6±1.8 -1.0 (-1.6, -0.3) Lateral E/e′ ratio 37 17.65±7.8 35 12.5±7.2 -4.8 (-6.9, -2.6) [n=34 A ] Septal E/e′ ratio 37 21.2±7.8 32 16.3±6.7 -6.1 (-8.3, -3.85) Average E/e′ ratio 38 21.1±7.7 36 14.2±6.6 -6.9 (-9.15, -4.7) Peak E-wave velocity (cm/s) 38 84.2±25.8 36 72.9±19.1 -12.3 (-21.75, -2.9) Peak A-wave velocity (cm/s) 38 85.1±20.1 34 80.6±18.1 -3.3 (-8.6, 2.0) Patients with SAM 38 35 (92.1) 33 6 (15.8) B NA Patients with mitral regurgitation 38 36 NA None 2 (5.3) 3 (7.9) B Trace/mild 20 (52.6) 26 (68.4) B Moderate or greater 16 (42.1) 7 (18.4) B Unless specified otherwise, data are presented as the mean ± SD or n (%). A Number of patients with available data at baseline and Week 30. B Percentages calculated using a denominator of 38 based on the intention-to-treat population. CI, confidence interval; E/e′, ratio between early mitral inflow velocity and early diastolic mitral annular velocity; LVMI, left ventricular mass index; NA, not applicable; SAM, systolic anterior motion. Other abbreviations as in Table 1. Table 4. Summary of TEAEs and TESAEs (n=38 Patients) Safety parameter No. of patients (%) Any TEAE 24 (63.2) COVID-19 6 (15.8) Atrial fibrillation 3 (7.9) Pyrexia 3 (7.9) Bronchitis 2 (5.3) Dermatitis contact 2 (5.3) Hypertension 2 (5.3) Malaise 2 (5.3) Nasopharyngitis 2 (5.3) Palpitations 2 (5.3) Drug-related TEAE 1 (2.6) TESAE 3 (7.9) Cholangitis 1 (2.6) Macular edema 1 (2.6) Rotator cuff syndrome 1 (2.6) Drug-related TESAE 0 TEAE leading to treatment interruption 2 (5.3) TEAE leading to treatment discontinuation 0 TEAE leading to death 0 Includes events with an onset date up to the date of study drug administration at the Week 30 visit or the last dose date, whichever occurred first. TEAE, treatment-emergent adverse event; TESAE, treatment-emergent serious adverse event.</p><p>in the study (1 mg). The patient, who was a CYP2C19 NM, was receiving concomitant amiodarone hydrochloride at the time of the event. There were no patients who permanently discontinued treatment owing to an LVEF of ≤30%, and there were no deaths in the study.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>In this Phase 3 single-arm study, which aimed to assess the efficacy, tolerability, and safety of the cardiac myosin inhibitor mavacamten in Japanese patients with symptomatic obstructive HCM, treatment with mavacamten resulted in a clinically meaningful improvement in postexercise LVOT gradient over 30 weeks of treatment. In addition, mavacamten treatment was associated with improvements in LVOT obstruction at rest, cardiac function, symptoms, and health status.</p><p>To ensure a robust comparison between the results of HORIZON-HCM and EXPLORER-HCM, the study design and inclusion and exclusion criteria of the 2 studies were purposefully similar. <ref type="bibr" target="#b1">12</ref> Differences between the study protocols included blinding (open-label single arm for HORIZON-HCM; double-blind placebo-controlled for EXPLORER-HCM), primary endpoint (change in postexercise LVOT gradient in HORIZON-HCM; a composite endpoint of NYHA class and pV ˙O2 in EXPLORER-HCM), mavacamten starting dose (2.5 mg in HORIZON-HCM; 5 mg in EXPLORER-HCM), and permissible mavacamten doses (1-15 mg in HORIZON-HCM; 2.5-15 mg in EXPLORER-HCM). Population pharmacokinetic analysis of mavacamten treatment in participants from 12 clinical studies revealed that, of the covariates assessed, CYP2C19 metabolizer phenotype and dose level had the most substantial effect on mavacamten exposure. <ref type="bibr" target="#b8">19</ref> Therefore, in anticipation of a patient cohort with a higher proportion of CYP2C19 PMs than was included in EXPLORER-HCM, the HORIZON-HCM study used a lower starting dose than EXPLORER-HCM and included a potential down-titration step to 1 mg at Week 6. This individualized, echocardiography-based dosing scheme ensured that appropriate mavacamten doses were available for all patients, regardless of CYP2C19 metabolizer phenotype. Permitted background HCM therapies were consistent between HORIZON-HCM and EXPLORER-HCM for standardization purposes except for cibenzoline, which was prohibited in the HORIZON-HCM study owing to its routine prescription in Japan.</p><p>Compared with the mavacamten and placebo arms of EXPLORER-HCM, the patient population of HORIZON-HCM was older, had a higher proportion of females and a lower mean body mass index. <ref type="bibr" target="#b1">12</ref> In addition, the HORIZON-HCM cohort had a higher proportion of patients with NYHA Class II symptoms and higher mean resting and Valsalva LVOT gradients, NT-proBNP levels, and KCCQ-23 CSS than the EXPLORER-HCM patient cohort at baseline. 12,20 Postexercise LVOT gradient, maximum LV wall thickness, and LAVI were similar at baseline across studies. <ref type="bibr" target="#b1">12</ref> After 30 weeks of mavacamten treatment, most patients (89%) in HORIZON-HCM achieved a peak postexercise LVOT gradient of &lt;50 mmHg; as such, these patients no longer met the LVOT gradient eligibility criterion for SRT set by the American Heart Association/ American College of Cardiology guidelines. <ref type="bibr" target="#b13">2</ref> Most patients (71%) also achieved a postexercise LVOT gradient of &lt;30 mmHg, which is the threshold for achieving relief in -13.2 g/m 2 [95% CI -20.2, -6.2 g/m 2 ]; n=34), the average ratio between early mitral inflow velocity and early diastolic mitral annular velocity (E/e′; mean change -6.9 [95% CI -9.15, -4.7]; n=36), and lateral E/e′ ratio (mean change -4.8 [95% CI -6.9, -2.6]; n=34), in addition to a trend towards improvement in left atrial volume index (LAVI; mean change -3.4 mL/m 2 [95% CI -7.2, 0.3 mL/m 2 ]; n=34; Table <ref type="table">3</ref>). Systolic anterior motion (SAM) was observed in 35 (92.1%) patients at baseline, compared with 6 (15.8%) patients at Week 30 (data were missing for 5 patients at Week 30). At baseline, 16 (42.1%) patients had moderate or greater mitral regurgitation (MR), 20 (52.6%) had trace/ mild MR, and 2 (5.3%) had no MR. At Week 30, 7 (18.4%) patients had moderate or greater MR, 26 (68.4%) had trace/mild MR, and 3 (7.9%) had no MR (data were missing for 2 patients at Week 30).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Tolerability Results</head><p>After individualized dose titration of mavacamten, the majority of patients (20/38 [52.6%]) were receiving mavacamten 5 or 10 mg at Week 30 (n=10 each). The proportion of patients receiving mavacamten 1, 2.5, and 15 mg was 13.2%, 15.8%, and 10.5%, respectively (3 [7.9%] patients did not have dosing data at Week 30 owing to having permanently discontinued [n=2] or temporarily interrupted [n=1] treatment). The median mavacamten dose was 5 mg at every visit from Week 8 onwards.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Safety Results</head><p>Overall, 24 (63.2%) patients reported TEAEs during the primary analysis treatment period (Table <ref type="table">4</ref>). All TEAEs were either mild (n=14 patients; 36.8%) or moderate (n=10 patients; 26.3%) in severity. One (2.6%) patient with a medical history of palpitations experienced a TEAE of palpitations that was considered to be related to mavacamten. The TEAE was resolved without further sequelae and the patient completed the 30-week primary analysis treatment period. Three (7.9%) patients experienced 3 TESAEs of macular edema, cholangitis, and rotator cuff syndrome (1 patient for each); all were considered unrelated to treatment. All 3 patients with TESAEs completed the 30-week treatment period. Five cardiovascular TEAEs were reported in 4 (10.5%) patients, including 3 events of atrial fibrillation and 2 events of palpitations. Overall, the proportion of patients who experienced TEAEs and TESAEs (related to or not related to mavacamten) were similar across CYP2C19 metabolizer phenotypes (Supplementary Table <ref type="table">1</ref>).</p><p>Seven (18.4%) patients had a dose interruption owing to meeting protocol-defined criteria (Supplementary Table <ref type="table">2</ref>).</p><p>A transient reduction in central laboratory-read LVEF to &lt;50% was experienced by 1 (2.6%) patient who had a resting LVEF of 46% at Week 24 while receiving mavacamten 5 mg. The patient, who was a CYP2C19 PM, was asymptomatic and did not have an intercurrent TEAE at the time of the event, resumed treatment at a dose of 2.5 mg after LVEF recovery to ≥50%, and completed the 30-week treatment period. Of the 5 (13.2%) patients who interrupted treatment owing to a mavacamten concentration of ≥1,000 ng/mL (3 intermediate metabolizers and 2 PMs), none had an LVEF of &lt;50%. All patients resumed treatment at a lower dose and completed the 30-week primary treatment analysis period. One patient (2.6%) had their dose interrupted at Week 12 due to excessive QTcF prolongation (521 ms) and permanently discontinued treatment because this patient was already receiving the lowest dose of mavacamten used</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mavacamten in HORIZON-HCM: Efficacy and Safety</head><p>The results of this study should be interpreted in the context of some limitations. HORIZON-HCM was a single-arm study; therefore, no comparison of treatment to a placebo group was performed. This limitation could have resulted in a biased assessment of efficacy and safety. The study population was relatively small and had a short follow-up period; assessment of whether mavacamten efficacy and safety profiles are sustained over the long-term treatment period of HORIZON-HCM will help contextualize the findings reported here. The study excluded patients receiving disopyramide or cibenzoline, and patients with severe symptoms (NYHA Class IV).</p><p>In conclusion, mavacamten treatment demonstrated a clinically meaningful improvement in the primary endpoint of change in postexercise LVOT gradient over 30 weeks of treatment. Mavacamten was also associated with improvements in resting and Valsalva LVOT gradients, NYHA functional class, NT-proBNP and cTnI concentrations, KCCQ-23 CSS, and markers of cardiac structure and function. Mavacamten treatment was well tolerated regardless of patient CYP2C19 metabolizer phenotype, with no new safety concerns identified. Overall, the results of this study are similar to those observed in EXPLORER-HCM and EXPLORER-CN.</p><p>Plain language summaries of this publication in English and Japanese are available in Supplementary Files.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IRB Information</head><p>The study was designed in consultation with the Japanese LVOT obstruction. <ref type="bibr" target="#b13">2</ref> The change in postexercise LVOT gradient from baseline to Week 30 was a key secondary endpoint in EXPLORER-HCM. In that study, the mean change in the mavacamten group was -47±40 mmHg, compared with -10±30 mmHg in the placebo group. <ref type="bibr" target="#b1">12</ref> Based on prespecified statistical analyses, the improvement in postexercise LVOT gradient from baseline observed in HORIZON-HCM (mean change -60.7 mmHg) can be considered similar to that observed in the mavacamten group of EXPLORER-HCM. When comparing the 2 studies, numerically similar improvements in the secondary endpoints of the proportion of patients who improved by ≥1 NYHA functional class (63% in HORIZON-HCM vs. 65% in EXPLORER-HCM) and the change from baseline to Week 30 in KCCQ-23 CSS (9.8 points in HORIZON-HCM vs. 13.6 points in EXPLORER-HCM) were observed. In addition, similar trends of improvement in resting and Valsalva LVOT gradients, as well as in NT-proBNP and cTnI levels from baseline to Week 30 were reported in both studies. <ref type="bibr" target="#b1">12</ref> Despite the starting dose of mavacamten being lower in HORIZON-HCM than in EXPLORER-HCM, improvements in efficacy parameters from baseline were still observed in the first 6 weeks and were sustained through Week 30. Improvements from baseline to Week 30 in echocardiographic parameters, such as LVMI, LAVI, and E/e′ ratio, were consistent with results from EXPLORER-HCM and were indicative of favorable changes in cardiac structure and function after mavacamten treatment. <ref type="bibr" target="#b10">21</ref> In addition, the proportion of patients with SAM and moderate or greater MR decreased from baseline to Week 30. Overall, the results of HORIZON-HCM suggest that mavacamten therapy had a similar efficacy profile in Japanese patients to those assessed in the multinational EXPLORER-HCM study. The efficacy profile of mavacamten in HORIZON-HCM was also broadly consistent with that of the mavacamten group in EXPLORER-CN. <ref type="bibr" target="#b3">14</ref> Mavacamten treatment was associated with a reduction in mean resting LVEF. This observation was consistent with the mechanism of action of mavacamten and the effect of mavacamten on LVEF seen in other clinical trials. 12, <ref type="bibr" target="#b2">13</ref> Mean LVEF also remained within the normal range of 52-74% established in the American Society of Echocardiography/European Association of Cardiovascular Imaging guidelines. <ref type="bibr" target="#b11">22</ref> Overall, mavacamten was well tolerated, with no new safety concerns identified. Assessment of mavacamten dose distribution suggested that a minority of patients require the lowest possible mavacamten dose (1 mg), whereas the median mavacamten dose following the first dose up-titration opportunity at Week 8 was 5 mg at every subsequent visit. Of the 5 patients who underwent protocol-defined treatment interruption owing to a plasma mavacamten concentration ≥1,000 ng/mL, all resumed treatment and completed the 30-week treatment period after mavacamten down-titration, and none had a corresponding reduction in LVEF to &lt;50%. The patient who had a dose interruption owing to an LVEF of &lt;50% subsequently resumed treatment at 1 dose level lower and completed the 30-week treatment. The frequency of TEAEs and TESAEs was similar across CYP2C19 metabolizer phenotypes, thus providing evidence that mavacamten administered using the dosing scheme applied in this study has an acceptable safety profile in Japanese patients, regardless of CYP2C19 metabolizer status. No deaths occurred during the study.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>(</head><figDesc>±SD) primary endpoint of -40±45 mmHg. The primary endpoint of HORIZON-HCM was considered to be similar to the corresponding result observed in EXPLORER-HCM if the observed mean change from baseline to Week 30 in postexercise LVOT gradient was ≤-27 mmHg (i.e., ≥57% of the change shown in the EXPLORER-HCM mavacamten arm) and if the 95% CI of the mean change in postexercise LVOT gradient in HORIZON-HCM excluded intention-to-treat population, defined as patients who were assigned to mavacamten. Safety analyses were performed using data from the safety analysis population, defined as patients who received ≥1 dose of mavacamten. A sample size of 30 patients was predicted to provide a &gt;90% probability to observe a mean change in postexercise LVOT gradient from baseline to Week 30 of ≤-27 mmHg (95% confidence interval [CI] -43, -11 mmHg) assuming a mean</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Mean (±SD) (A) postexercise left ventricular outflow tract (LVOT) gradient, (B) resting LVOT gradient, and (C) Valsalva LVOT gradient over time. CI, confidence interval.</figDesc><graphic coords="4,57.12,56.50,218.26,503.59" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Median (A) N-terminal pro B-type natriuretic peptide (NT-proBNP), (B) cardiac troponin I (cTnI), and (C) cardiac troponin T (cTnT) concentrations over time. CI, confidence interval; IQR, interquartile range.</figDesc><graphic coords="4,311.12,56.50,218.26,504.62" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. New York Heart Association (NYHA) functional class at baseline and at Week 30. Missing NYHA class data at Week 30 were imputed using available NYHA class data from Week 26.</figDesc><graphic coords="5,61.71,60.50,255.09,176.50" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Table 2 .</head><label>2</label><figDesc>Key Exploratory EndpointsEndpoint n/N (%) Proportion of patients achieving peak postexercise LVOT gradient &lt;50 mmHg at Week 30 31/35 (88.6) Proportion of patients achieving peak postexercise LVOT gradient &lt;30 mmHg at Week 30 25/35 (71.4) Proportion of patients achieving any decrease in peak postexercise LVOT gradient from baseline at Week 30 34/35 (97.1) Proportion of patients achieving a complete response A at Week 30 13/35 (37.1) Three of the 38 patients who were treated with mavacamten did not have postexercise left ventricular outflow tract (LVOT) measurements at both baseline and Week 30. A Defined as New York Heart Association Class I symptoms and resting, Valsalva, and postexercise LVOT gradients of &lt;30 mmHg.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Mean (±SD) change in Kansas City Cardiomyopathy Questionnaire-23 Clinical Summary Score (KCCQ-23 CSS) from baseline through Week 30. CI, confidence interval.</figDesc><graphic coords="5,55.68,288.63,221.14,184.11" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Circulation Journal Vol.89, January 2025</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>The authors thank the patients and families who made this study possible and the clinical study teams who participated. The authors also thank <rs type="person">Koichi Hashizume</rs> and <rs type="person">Hyunmoon Back</rs> for their contributions to the study. All authors contributed to the development of the manuscript and approved the final draft; writing and editorial support was provided by <rs type="person">Thomas Crighton, PhD</rs>, of <rs type="affiliation">Oxford PharmaGenesis (Oxford, UK</rs>) and funded by <rs type="funder">Bristol Myers Squibb</rs>. Translation services for the publication plain language summary were provided by <rs type="funder">Cactus Life Sciences</rs> (part of Cactus Communications).</p></div>
+<div><head>Sources of Funding</head><p>This work was supported by <rs type="funder">Bristol Myers Squibb</rs>. Disclosures H.K. has received fees from <rs type="funder">AstraZeneca</rs>, <rs type="funder">Daiichi-Sankyo</rs>, <rs type="funder">Novartis</rs>, <rs type="funder">Otsuka</rs>, <rs type="funder">Pfizer</rs>, and <rs type="funder">Takeda</rs>. M.E. has received funds for medical education from <rs type="funder">Pfizer</rs> and fees from <rs type="funder">Boehringer Ingelheim</rs>, <rs type="funder">Daiichi-Sankyo</rs>, and <rs type="funder">Otsuka</rs>. Y.S. has received fees from <rs type="funder">AstraZeneca</rs>, <rs type="funder">Bayer</rs>, <rs type="funder">Boehringer Ingelheim</rs>, <rs type="funder">Daiichi-Sankyo</rs>, <rs type="funder">Novartis</rs>, and <rs type="funder">Otsuka</rs>. <rs type="person">Y. Maekawa</rs> has received donations for scholarship funds from <rs type="affiliation">Abbott Medical Japan and Biotronik Japan</rs>. S.Y. has received fees from <rs type="funder">Bayer Yakuhin and Daiichi-Sankyo</rs>. E.A. has received financial support from <rs type="affiliation">Abiomed, AQuA-Inc, Boehringer Ingelheim, Century Medical, Fukuda Denshi, Medtronic Japan, Mochida Pharmaceutical, Nippon Shinyaku, NIPRO, ONO Pharmaceutical, Senko Medical Instrument Mfg</rs>., <rs type="funder">Sun Medical Technology Research, and Terumo</rs>. Y.F. has received fees from <rs type="funder">Bayer</rs> and <rs type="funder">Daiichi-Sankyo</rs>. H.M. and G.K. are employees of <rs type="affiliation">Bristol Myers Squibb</rs> K.K. and own stock in Bristol Myers Squibb K.K. A.R. and V.F. are employees of Bristol Myers Squibb and own stock in Bristol Myers Squibb. S.M.H. serves on the faculty of the <rs type="institution">Cardiovascular Imaging Core Laboratory at Brigham and Women's Hospital</rs>, and her institution has received payments for her core laboratory services from <rs type="institution">Bristol Myers Squibb and Cytokinetics. C.I.</rs> has received fees from <rs type="funder">Abbott Medical Japan</rs>, <rs type="funder">Boehringer Ingelheim</rs>, <rs type="funder">Daiichi-Sankyo</rs>, <rs type="funder">Eli Lilly, LSI Medience</rs>, <rs type="funder">Novartis</rs>, <rs type="funder">Pfizer</rs>, and <rs type="funder">Terumo</rs>. M.I., K.K., M.T., K.T., N.K., <rs type="person">Y. Minami</rs>, A.O., T.T., T.W., and D.H. have no relevant conflicts of interest to disclose. H.K., M.I., K.K., Y.S., S.Y., and C.I. are members of Circulation Journal's <rs type="programName">Editorial Team</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_wefcgR2">
+					<orgName type="program" subtype="full">Editorial Team</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Availability</head><p>Bristol Myers Squibb shares data from studies meeting data-sharing criteria with qualified researchers submitting a data-sharing proposal. Shareable data includes deidentified patient-and study-level clinical data, annotated case report forms, and the clinical study report, statistical analysis plan, and protocol. Data will become available from March 6, 2028 onwards. Upon completing a Data Use Agreement, deidentified datasets will be released. Bristol Myers Squibb's policy on data sharing is available online (<ref type="url" target="https://www.bms.com/researchers-and-partners/clinical-trials-and-research/disclosure-commitment.html">https://www.bms.com/researchers- and-partners/clinical-trials-and-research/disclosure-commitment.  html</ref>).</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary Files</head><p>Please find supplementary file(s); <ref type="url" target="https://doi.org/10.1253/circj.CJ-24-0501">https://doi.org/10.1253/circj.CJ-24-0501</ref> Pharmaceuticals and Medical Devices Agency and conducted in accordance with Good Clinical Practice guidelines defined by the International Council for Harmonisation and with the ethical principles outlined in the Declaration of Helsinki. The study was approved by the Kochi Medical School Hospital Institutional Review Board (Reference no. 2254801) and the local ethics committee of each participating hospital. All patients provided informed consent before any treatment related to the clinical trial was initiated.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Deciphering the super relaxed state of human β-cardiac myosin and the mode of action of mavacamten from myosin molecules to muscle fibers</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Trivedi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Sarkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Henze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Gong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="8143" to="E8152" />
+			<date type="published" when="2018">2018</date>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM): A randomised, double-blind, placebo-controlled, phase 3 trial</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Olivotto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Oreziak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Barriales-Villa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Abraham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Masri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Garcia-Pavia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Lancet</title>
+		<imprint>
+			<biblScope unit="volume">396</biblScope>
+			<biblScope unit="page" from="759" to="769" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Myosin inhibition in patients with obstructive hypertrophic cardiomyopathy referred for septal reduction therapy: Results of the VALOR-HCM trial</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Desai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Owens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Geske</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wolski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Naidu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Smedira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Am Coll Cardiol</title>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="95" to="108" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Effect of mavacamten on Chinese patients with symptomatic obstructive hypertrophic cardiomyopathy: The EXPLORER-CN randomized clinical trial</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">JAMA Cardiol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="957" to="965" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The weight of nations: An estimation of adult human biomass</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Walpole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Prieto-Merino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Edwards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cleland</forename><forename type="middle">J</forename><surname>Stevens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Public Health</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">439</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Clinical Pharmacogenetics Implementation Consortium guidelines for cytochrome P450-2C19 (CYP2C19) genotype and clopidogrel therapy</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Scott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sangkuhl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Gardner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Stein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Hulot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Johnson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Clin Pharmacol Ther</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="328" to="332" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Carisoprodol therapy and CYP2C19 genotype</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dean</surname></persName>
+		</author>
+		<ptr target="https://www.ncbi.nlm.nih.gov/books/NBK425390/" />
+		<imprint>
+			<date type="published" when="2017-09-20">2017. September 20, 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Ethno-bridging of mavacamten pharmacokinetics in healthy Japanese participants, and the impact of CYP2C19 phenotype</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Okutsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Back</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Seroogy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Florea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Merali</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">88th Annual Scientific Meeting of the</title>
+		<meeting><address><addrLine>Kobe, Japan</addrLine></address></meeting>
+		<imprint>
+			<publisher>Japanese Circulation Society</publisher>
+			<date type="published" when="2024">March 8 -10, 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Characterization of mavacamten pharmacokinetics in patients with hypertrophic cardiomyopathy to inform dose titration</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Perera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Salinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Merali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Thanneer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Back</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">CPT Pharmacometrics Syst Pharmacol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1462" to="1475" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM): Health status analysis of a randomised, double-blind, placebo-controlled, phase 3 trial</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Spertus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Fine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Olivotto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Saberi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Lancet</title>
+		<imprint>
+			<biblScope unit="volume">397</biblScope>
+			<biblScope unit="page" from="2467" to="2475" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Effect of mavacamten on echocardiographic features in symptomatic patients with obstructive hypertrophic cardiomyopathy</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Hegde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Lester</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Solomon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Michels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">F</forename><surname>Nagueh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Am Coll Cardiol</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="2518" to="2532" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Recommendations for cardiac chamber quantification by echocardiography in adults: An update from the American Society of Echocardiography and the European Association of Cardiovascular Imaging</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Lang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Badano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Mor-Avi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Afilalo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Armstrong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ernande</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Am Soc Echocardiogr</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1" to="39" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>e14</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">2023 ESC guidelines for the management of cardiomyopathies: Developed by the task force on the management of cardiomyopathies of the European Society of Cardiology (ESC)</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Arbelo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Protonotarios</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Gimeno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Arbustini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Barriales-Villa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Basso</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Eur Heart J</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="3503" to="3626" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">AHA/ACC/AMSSM/HRS/PACES/SCMR guideline for the management of hypertrophic cardiomyopathy: A report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Ommen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Asif</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Balaji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Day</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Circulation</title>
+		<imprint>
+			<biblScope unit="volume">149</biblScope>
+			<biblScope unit="page" from="1239" to="e1311" />
+			<date type="published" when="2024">2024. 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Diagnosis and evaluation of hypertrophic cardiomyopathy: JACC state-of-the-art review</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Maron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Desai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Nishimura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Spirito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Rakowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Towbin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Am Coll Cardiol</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="372" to="389" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">JCS/JHFS 2018 guideline on the diagnosis and treatment of cardiomyopathies</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kitaoka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tsutsui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kubo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ide</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chikamori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Fukuda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Circ J</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="1590" to="1689" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Hypertrophic cardiomyopathy: Clinical update</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Geske</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Ommen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Gersh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">JACC Heart Fail</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="364" to="375" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Patient experiences with hypertrophic cardiomyopathy: A conceptual model of symptoms and impacts on quality of life</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Zaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Sehnert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Duenas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Saberi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Brookes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Reaney</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Patient Rep Outcomes</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">102</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Marian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Braunwald</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hypertrophic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Circ Res</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="749" to="770" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Prevalence of hypertrophic cardiomyopathy in a population of adult Japanese workers as detected by echocardiographic screening</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sakamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Amano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yamaguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takenaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Takahashi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Cardiol</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="183" to="184" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">New perspectives on the prevalence of hypertrophic cardiomyopathy</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Semsarian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ingles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Maron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Maron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Am Coll Cardiol</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="1249" to="1254" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><surname>Camzyos</surname></persName>
+		</author>
+		<ptr target="https://packageinserts.bms.com/pi/pi_camzyos.pdf" />
+	</analytic>
+	<monogr>
+		<title level="s">mavacamten). US prescribing information. Bristol-Myers Squibb Company</title>
+		<imprint>
+			<date type="published" when="2024-07-05">2024. July 5, 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

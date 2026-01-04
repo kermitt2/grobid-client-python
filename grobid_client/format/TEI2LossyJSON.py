@@ -669,9 +669,27 @@ class TEI2LossyJSONConverter:
 
                 div_type = div.get("type")
 
+                # Check if this is a header-only div (no content, no nested divs)
+                # If so, capture its header as context for subsequent divs
+                head = div.find("head")
+                direct_p_nodes = [c for c in div.children if hasattr(c, 'name') and c.name == "p"]
+                direct_formula_nodes = [c for c in div.children if hasattr(c, 'name') and c.name == "formula"]
+                nested_divs = [c for c in div.children if hasattr(c, 'name') and (c.name == "div" or (c.name and c.name.endswith(":div")))]
+                has_direct_content = len(direct_p_nodes) > 0 or len(direct_formula_nodes) > 0
+                
+                if head and not has_direct_content and len(nested_divs) == 0:
+                    # This is a header-only div with no nested content
+                    # Capture the header for the next div
+                    head_paragraph = self._clean_text(head.get_text())
+                    continue  # Skip to next div, the header will be used by subsequent sibling
+
                 # Process this div and potentially nested divs
                 for passage in self._process_div_with_nested_content(div, passage_level, head_paragraph):
                     yield passage
+                
+                # Reset head_paragraph after it's been used by a content-bearing div
+                head_paragraph = None
+
 
     def _process_div_with_nested_content(self, div: Tag, passage_level: str, head_paragraph: str = None) -> Iterator[Dict[str, Union[str, Dict[str, str]]]]:
         """
