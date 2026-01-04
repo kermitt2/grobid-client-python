@@ -9,6 +9,8 @@ import os
 import uuid
 from collections import OrderedDict
 from concurrent.futures import ProcessPoolExecutor, as_completed
+import html
+import re
 from pathlib import Path
 from typing import Dict, Union, BinaryIO, Iterator
 
@@ -41,8 +43,15 @@ class TEI2LossyJSONConverter:
         If stream=False returns the full document dict (same shape as original function).
         """
         # Load with BeautifulSoup but avoid building huge structures when streaming
-        with open(tei_file, 'r') as f:
-            content = f.read()
+        if hasattr(tei_file, 'read'):
+            # File-like object (BinaryIO/StringIO)
+            content = tei_file.read()
+            if isinstance(content, bytes):
+                content = content.decode('utf-8')
+        else:
+            # Path-like object
+            with open(tei_file, 'r', encoding='utf-8') as f:
+                content = f.read()
         soup = BeautifulSoup(content, 'xml')
 
         if soup.TEI is None:
@@ -222,7 +231,6 @@ class TEI2LossyJSONConverter:
         Extract detailed bibliographic information from TEI biblStruct elements.
         Implements comprehensive parsing for all standard TEI bibliographic components.
         """
-        import re
 
         citation_data = OrderedDict()
         citation_data['id'] = f"b{index}"
@@ -430,7 +438,6 @@ class TEI2LossyJSONConverter:
 
     def _process_imprint_details(self, imprint_element: Tag, publication_metadata: Dict):
         """Extract and process imprint information including publisher, dates, and page ranges."""
-        import re
 
         # Extract publisher information
         publisher_elements = imprint_element.find_all("publisher")
@@ -557,7 +564,6 @@ class TEI2LossyJSONConverter:
         Extract person data (author/editor) from TEI persName or author elements.
         Handles various name formats and affiliations.
         """
-        import re
 
         person_data = {}
 
@@ -628,11 +634,9 @@ class TEI2LossyJSONConverter:
                     text = text.decode('utf-8', errors='ignore')
 
         # Normalize whitespace and strip
-        import re
         text = re.sub(r'\s+', ' ', text.strip())
 
         # Remove any potential XML/HTML entities
-        import html
         text = html.unescape(text)
 
         return text
@@ -665,14 +669,33 @@ class TEI2LossyJSONConverter:
 
                 div_type = div.get("type")
 
+                # Check if this is a header-only div (no content, no nested divs)
+                # If so, capture its header as context for subsequent divs
+                head = div.find("head")
+                direct_p_nodes = [c for c in div.children if hasattr(c, 'name') and c.name == "p"]
+                direct_formula_nodes = [c for c in div.children if hasattr(c, 'name') and c.name == "formula"]
+                nested_divs = [c for c in div.children if hasattr(c, 'name') and (c.name == "div" or (c.name and c.name.endswith(":div")))]
+                has_direct_content = len(direct_p_nodes) > 0 or len(direct_formula_nodes) > 0
+                
+                if head and not has_direct_content and len(nested_divs) == 0:
+                    # This is a header-only div with no nested content
+                    # Capture the header for the next div
+                    head_paragraph = self._clean_text(head.get_text())
+                    continue  # Skip to next div, the header will be used by subsequent sibling
+
                 # Process this div and potentially nested divs
                 for passage in self._process_div_with_nested_content(div, passage_level, head_paragraph):
                     yield passage
+                
+                # Reset head_paragraph after it's been used by a content-bearing div
+                head_paragraph = None
+
 
     def _process_div_with_nested_content(self, div: Tag, passage_level: str, head_paragraph: str = None) -> Iterator[Dict[str, Union[str, Dict[str, str]]]]:
         """
         Process a div and its nested content, handling various back section types.
         Supports nested divs for complex back sections like annex with multiple subsections.
+        Also handles formula elements that are direct children of divs.
         """
         head = div.find("head")
         p_nodes = div.find_all("p")
@@ -687,10 +710,12 @@ class TEI2LossyJSONConverter:
                 if child.name == "div" or child.name.endswith(":div"):
                     nested_divs.append(child)
 
-        # Count only direct child paragraphs, not those in nested divs
+        # Count only direct child paragraphs and formulas, not those in nested divs
         direct_p_nodes = [child for child in div.children if hasattr(child, 'name') and child.name == "p"]
+        direct_formula_nodes = [child for child in div.children if hasattr(child, 'name') and child.name == "formula"]
+        has_direct_content = len(direct_p_nodes) > 0 or len(direct_formula_nodes) > 0
 
-        if len(nested_divs) > 0 and len(direct_p_nodes) == 0:
+        if len(nested_divs) > 0 and not has_direct_content:
             # This is a container div - process each nested div independently
             for nested_div in nested_divs:
                 # Skip references divs
@@ -703,11 +728,11 @@ class TEI2LossyJSONConverter:
 
         # Determine the section header and content type for divs with content
         if head:
-            if len(direct_p_nodes) == 0:
-                # This div has only a head, no paragraphs (standalone head)
+            if not has_direct_content:
+                # This div has only a head, no paragraphs or formulas (standalone head)
                 current_head_paragraph = self._clean_text(head.get_text())
             else:
-                # This div has both head and paragraphs - head is the section header
+                # This div has both head and content - head is the section header
                 head_section = self._clean_text(head.get_text())
         else:
             # If no head element, try to use the type attribute as head_section
@@ -722,7 +747,7 @@ class TEI2LossyJSONConverter:
                     head_section = "Author Contributions"
                 elif div_type == "availability":
                     # Only set as default if this div has its own content
-                    if len(direct_p_nodes) > 0:
+                    if has_direct_content:
                         head_section = "Data Availability"
                 elif div_type == "annex":
                     head_section = "Annex"
@@ -730,26 +755,59 @@ class TEI2LossyJSONConverter:
                     # Generic handling - capitalize and format
                     head_section = div_type.replace("_", " ").title()
 
-        # Process paragraphs in this div
-        if len(direct_p_nodes) > 0:
-            for id_p, p in enumerate(direct_p_nodes):
+        # Process direct children (paragraphs and formulas) in document order
+        for child in div.children:
+            if not hasattr(child, 'name') or not child.name:
+                continue
+
+            if child.name == "p":
                 paragraph_id = get_random_id(prefix="p_")
 
                 if passage_level == "sentence":
-                    for id_s, sentence in enumerate(p.find_all("s")):
+                    for id_s, sentence in enumerate(child.find_all("s")):
                         struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, sentence)
                         if self.validate_refs:
                             for ref in struct['refs']:
-                                assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
-                                assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                                assert ref['offset_start'] < ref['offset_end'], "Wrong offsets"
+                                assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text'], "Cannot apply offsets"
                         yield struct
                 else:
-                    struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, p)
+                    struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, child)
                     if self.validate_refs:
                         for ref in struct['refs']:
-                            assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
-                            assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                            assert ref['offset_start'] < ref['offset_end'], "Wrong offsets"
+                            assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text'], "Cannot apply offsets"
                     yield struct
+
+            elif child.name == "formula":
+                # Process formula elements as passages
+                formula_id = get_random_id(prefix="f_")
+                formula_text = self._clean_text(child.get_text())
+                
+                if formula_text:
+                    # Create a passage structure for the formula
+                    formula_passage = {
+                        "id": formula_id,
+                        "text": formula_text,
+                        "coords": [
+                            box_to_dict(coord.split(","))
+                            for coord in child.get("coords", "").split(";")
+                        ] if child.has_attr("coords") else [],
+                        "refs": [],
+                        "type": "formula"
+                    }
+                    
+                    if current_head_paragraph or head_paragraph:
+                        formula_passage["head_paragraph"] = current_head_paragraph or head_paragraph
+                    if head_section:
+                        formula_passage["head_section"] = head_section
+                    
+                    # Extract formula label if present
+                    label = child.find("label")
+                    if label:
+                        formula_passage["label"] = self._clean_text(label.get_text())
+                    
+                    yield formula_passage
 
         # Update head_paragraph for potential next div
         if current_head_paragraph is not None:

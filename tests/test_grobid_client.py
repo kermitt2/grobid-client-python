@@ -1,14 +1,13 @@
 """
 Unit tests for the GROBID client main functionality.
 """
-import pytest
-from unittest.mock import Mock, patch, MagicMock, mock_open, call
 import json
 import os
 import tempfile
-import logging
+from unittest.mock import Mock, patch, mock_open
+
+import pytest
 import requests
-from io import StringIO
 
 from grobid_client.grobid_client import GrobidClient, ServerUnavailableException
 

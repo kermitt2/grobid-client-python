@@ -622,6 +622,92 @@ class TestTEIConversions:
                 else:
                     print("No offset differences detected between conversion and expected output")
 
+    def test_formula_extraction_in_json(self):
+        """Test that formula elements are extracted as passages in JSON conversion."""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Use the actual TEI file from test resources which contains formulas
+        tei_file = os.path.join(TEST_DATA_PATH, '0046d83a-edd6-4631-b57c-755cdcce8b7f.tei.xml')
+
+        converter = TEI2LossyJSONConverter()
+        json_data = converter.convert_tei_file(tei_file, stream=False)
+
+        # Find formula passages
+        body_text = json_data.get('body_text', [])
+        formula_passages = [p for p in body_text if p.get('type') == 'formula']
+
+        # The test file contains 2 formulas
+        assert len(formula_passages) >= 2, "Should extract at least 2 formulas from test file"
+
+        # Check formula structure
+        for formula in formula_passages:
+            assert 'text' in formula, "Formula should have text"
+            assert 'id' in formula, "Formula should have id"
+            assert formula['text'].strip(), "Formula text should not be empty"
+            
+            # The test formulas have labels
+            if 'label' in formula:
+                assert formula['label'].strip(), "Formula label should not be empty"
+
+        # Check for specific formula content from test file
+        formula_texts = [f.get('text', '') for f in formula_passages]
+        assert any('Fext' in t for t in formula_texts), "Should extract formula containing 'Fext'"
+
+    def test_formula_extraction_in_markdown(self):
+        """Test that formula elements are included in Markdown conversion."""
+        from grobid_client.format.TEI2Markdown import TEI2MarkdownConverter
+
+        # Use the actual TEI file from test resources which contains formulas
+        tei_file = os.path.join(TEST_DATA_PATH, '0046d83a-edd6-4631-b57c-755cdcce8b7f.tei.xml')
+
+        converter = TEI2MarkdownConverter()
+        markdown = converter.convert_tei_file(tei_file)
+
+        # Check that formula content is present
+        assert 'Fext' in markdown, "Markdown should contain formula text 'Fext'"
+        
+        # Check that formula is italicized (surrounded by asterisks)
+        assert '*Fext' in markdown, "Formula should be italicized in Markdown"
+
+    def test_header_only_div_in_json(self):
+        """Test that headers without paragraphs are included in JSON conversion."""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Use the actual TEI file from test resources
+        tei_file = os.path.join(TEST_DATA_PATH, '0046d83a-edd6-4631-b57c-755cdcce8b7f.tei.xml')
+
+        converter = TEI2LossyJSONConverter()
+        json_data = converter.convert_tei_file(tei_file, stream=False)
+
+        # Collect all section headers from the body_text
+        body_text = json_data.get('body_text', [])
+        section_headers = set()
+        for passage in body_text:
+            if 'head_section' in passage and passage['head_section']:
+                section_headers.add(passage['head_section'])
+
+        # Check that common sections are present
+        # The test file has Acknowledgements and Competing interests headers
+        assert 'Competing interests' in section_headers, "Should include 'Competing interests' header"
+        
+        # Verify we have a good number of sections
+        assert len(section_headers) >= 10, f"Should extract many section headers, got {len(section_headers)}"
+
+    def test_header_only_div_in_markdown(self):
+        """Test that headers without paragraphs are included in Markdown conversion."""
+        from grobid_client.format.TEI2Markdown import TEI2MarkdownConverter
+
+        # Use the actual TEI file from test resources
+        tei_file = os.path.join(TEST_DATA_PATH, '0046d83a-edd6-4631-b57c-755cdcce8b7f.tei.xml')
+
+        converter = TEI2MarkdownConverter()
+        markdown = converter.convert_tei_file(tei_file)
+
+        # Check that the Acknowledgements header is present
+        assert 'Acknowledgements' in markdown, "Markdown should contain 'Acknowledgements' header"
+        
+        # Check it's formatted as a header (preceded by ###)
+        assert '### Acknowledgements' in markdown, "Acknowledgements should be formatted as Markdown header"
 
     def test_conversion_JSON(self):
         from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
@@ -647,4 +733,43 @@ class TestTEIConversions:
                     if 0 <= offset_start < offset_end <= len(paragraph_text):
                         actual_text = paragraph_text[offset_start:offset_end]
                         assert actual_text == ref_text, f"Reference text at offsets ({offset_start}-{offset_end}) should match '{ref_text}' but got '{actual_text}'"
+
+    def test_header_extraction_from_mjb_file(self):
+        """Test specific header extraction for mjb3wlzxcb2mc-migowebupload-1766042162782.grobid.tei.xml"""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+        
+        # Calculate path to the specific test file in resources/test_pdf
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        tei_file = os.path.join(project_root, 'resources', 'test_pdf', 'mjb3wlzxcb2mc-migowebupload-1766042162782.grobid.tei.xml')
+        
+        converter = TEI2LossyJSONConverter()
+        json_data = converter.convert_tei_file(tei_file, stream=False)
+        
+        body_text = json_data.get('body_text', [])
+        
+        # Verify 'Methods' is identified
+        methods_found = False
+        for passage in body_text:
+            # Based on debug output, it appears as head_paragraph
+            if passage.get('head_paragraph') == 'Methods' or passage.get('head_section') == 'Methods':
+                methods_found = True
+                break
+        
+        assert methods_found, "'Methods' header should be extracted as head_paragraph or head_section"
+
+        # Verify other sections are present as head_section
+        sections_found = set()
+        for passage in body_text:
+            if 'head_section' in passage:
+                sections_found.add(passage['head_section'])
+                
+        expected_sections = [
+            "Study Design, Patients, and Dosing",
+            "Study Assessments and Endpoints",
+            "Statistical Analyses"
+        ]
+        
+        for section in expected_sections:
+            assert section in sections_found, f"'{section}' should be in extracted sections"
+
 
