@@ -342,6 +342,7 @@ class GrobidClient(ApiClient):
             json_output=False,
             markdown_output=False
     ):
+        start_time = time.time()
         batch_size_pdf = self.config["batch_size"]
 
         # First pass: count all eligible files
@@ -433,11 +434,19 @@ class GrobidClient(ApiClient):
             errors_files_count += batch_errors
             skipped_files_count += batch_skipped
 
+        runtime = time.time() - start_time
+        docs_per_second = processed_files_count / runtime if runtime > 0 else 0
+        seconds_per_doc = runtime / processed_files_count if processed_files_count > 0 else 0
+
         # Log final statistics - always visible
         print(f"Processing completed: {processed_files_count} out of {total_files} files processed")
         print(f"Errors: {errors_files_count} out of {total_files} files processed")
         if skipped_files_count > 0:
             print(f"Skipped: {skipped_files_count} out of {total_files} files (already existed, use --force to reprocess)")
+        
+        print(f"⏱️  Total runtime: {runtime:.2f} seconds")
+        print(f"🚀 Speed: {docs_per_second:.2f} documents/second")
+        print(f" Throughput: {seconds_per_doc:.2f} seconds/document")
 
     def process_batch(
             self,
@@ -459,6 +468,7 @@ class GrobidClient(ApiClient):
             json_output=False,
             markdown_output=False
     ):
+        batch_start_time = time.time()
         if verbose:
             self.logger.info(f"{len(input_files)} files to process in current batch")
 
@@ -612,6 +622,16 @@ class GrobidClient(ApiClient):
                             
                 except OSError as e:
                     self.logger.error(f"Failed to write TEI XML file {filename}: {str(e)}")
+
+        # Calculate batch statistics
+        batch_runtime = time.time() - batch_start_time
+        batch_docs_per_second = processed_count / batch_runtime if batch_runtime > 0 else 0
+        batch_seconds_per_docs = batch_runtime / processed_count if processed_count > 0 else 0
+        
+        if verbose:
+            self.logger.info(f"⏱️  Runtime: {batch_runtime:.2f} seconds")
+            self.logger.info(f"🚀 Speed: {batch_docs_per_second:.2f} documents/second")
+            self.logger.info(f" Throughput: {batch_seconds_per_docs:.2f} seconds/document")
 
         return processed_count, error_count, skipped_count
 
