@@ -734,4 +734,42 @@ class TestTEIConversions:
                         actual_text = paragraph_text[offset_start:offset_end]
                         assert actual_text == ref_text, f"Reference text at offsets ({offset_start}-{offset_end}) should match '{ref_text}' but got '{actual_text}'"
 
+    def test_header_extraction_from_mjb_file(self):
+        """Test specific header extraction for mjb3wlzxcb2mc-migowebupload-1766042162782.grobid.tei.xml"""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+        
+        # Calculate path to the specific test file in resources/test_pdf
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        tei_file = os.path.join(project_root, 'resources', 'test_pdf', 'mjb3wlzxcb2mc-migowebupload-1766042162782.grobid.tei.xml')
+        
+        converter = TEI2LossyJSONConverter()
+        json_data = converter.convert_tei_file(tei_file, stream=False)
+        
+        body_text = json_data.get('body_text', [])
+        
+        # Verify 'Methods' is identified
+        methods_found = False
+        for passage in body_text:
+            # Based on debug output, it appears as head_paragraph
+            if passage.get('head_paragraph') == 'Methods' or passage.get('head_section') == 'Methods':
+                methods_found = True
+                break
+        
+        assert methods_found, "'Methods' header should be extracted as head_paragraph or head_section"
+
+        # Verify other sections are present as head_section
+        sections_found = set()
+        for passage in body_text:
+            if 'head_section' in passage:
+                sections_found.add(passage['head_section'])
+                
+        expected_sections = [
+            "Study Design, Patients, and Dosing",
+            "Study Assessments and Endpoints",
+            "Statistical Analyses"
+        ]
+        
+        for section in expected_sections:
+            assert section in sections_found, f"'{section}' should be in extracted sections"
+
 
