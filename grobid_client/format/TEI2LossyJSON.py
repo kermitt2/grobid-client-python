@@ -9,6 +9,8 @@ import os
 import uuid
 from collections import OrderedDict
 from concurrent.futures import ProcessPoolExecutor, as_completed
+import html
+import re
 from pathlib import Path
 from typing import Dict, Union, BinaryIO, Iterator
 
@@ -41,8 +43,15 @@ class TEI2LossyJSONConverter:
         If stream=False returns the full document dict (same shape as original function).
         """
         # Load with BeautifulSoup but avoid building huge structures when streaming
-        with open(tei_file, 'r') as f:
-            content = f.read()
+        if hasattr(tei_file, 'read'):
+            # File-like object (BinaryIO/StringIO)
+            content = tei_file.read()
+            if isinstance(content, bytes):
+                content = content.decode('utf-8')
+        else:
+            # Path-like object
+            with open(tei_file, 'r', encoding='utf-8') as f:
+                content = f.read()
         soup = BeautifulSoup(content, 'xml')
 
         if soup.TEI is None:
@@ -222,7 +231,6 @@ class TEI2LossyJSONConverter:
         Extract detailed bibliographic information from TEI biblStruct elements.
         Implements comprehensive parsing for all standard TEI bibliographic components.
         """
-        import re
 
         citation_data = OrderedDict()
         citation_data['id'] = f"b{index}"
@@ -430,7 +438,6 @@ class TEI2LossyJSONConverter:
 
     def _process_imprint_details(self, imprint_element: Tag, publication_metadata: Dict):
         """Extract and process imprint information including publisher, dates, and page ranges."""
-        import re
 
         # Extract publisher information
         publisher_elements = imprint_element.find_all("publisher")
@@ -557,7 +564,6 @@ class TEI2LossyJSONConverter:
         Extract person data (author/editor) from TEI persName or author elements.
         Handles various name formats and affiliations.
         """
-        import re
 
         person_data = {}
 
@@ -628,11 +634,9 @@ class TEI2LossyJSONConverter:
                     text = text.decode('utf-8', errors='ignore')
 
         # Normalize whitespace and strip
-        import re
         text = re.sub(r'\s+', ' ', text.strip())
 
         # Remove any potential XML/HTML entities
-        import html
         text = html.unescape(text)
 
         return text
@@ -740,15 +744,15 @@ class TEI2LossyJSONConverter:
                         struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, sentence)
                         if self.validate_refs:
                             for ref in struct['refs']:
-                                assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
-                                assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                                assert ref['offset_start'] < ref['offset_end'], "Wrong offsets"
+                                assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text'], "Cannot apply offsets"
                         yield struct
                 else:
                     struct = get_formatted_passage(current_head_paragraph or head_paragraph, head_section, paragraph_id, p)
                     if self.validate_refs:
                         for ref in struct['refs']:
-                            assert "Wrong offsets", ref['offset_start'] < ref['offset_end']
-                            assert "Cannot apply offsets", struct['text'][ref['offset_start']:ref['offset_end']] == ref['text']
+                            assert ref['offset_start'] < ref['offset_end'], "Wrong offsets"
+                            assert struct['text'][ref['offset_start']:ref['offset_end']] == ref['text'], "Cannot apply offsets"
                     yield struct
 
         # Update head_paragraph for potential next div
