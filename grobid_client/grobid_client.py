@@ -608,7 +608,7 @@ class GrobidClient(ApiClient):
                             converter = TEI2MarkdownConverter()
                             markdown_data = converter.convert_tei_file(filename)
 
-                            if markdown_data:
+                            if markdown_data is not None:
                                 markdown_filename = filename.replace('.grobid.tei.xml', '.md')
                                 # Always write Markdown file when TEI is written (respects --force behavior)
                                 markdown_filename_expanded = os.path.expanduser(markdown_filename)

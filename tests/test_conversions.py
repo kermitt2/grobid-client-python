@@ -772,4 +772,180 @@ class TestTEIConversions:
         for section in expected_sections:
             assert section in sections_found, f"'{section}' should be in extracted sections"
 
+    def test_withdrawn_article_json_conversion(self):
+        """Test JSON conversion for a withdrawn/empty article TEI file."""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Use the withdrawn article TEI file from test resources
+        tei_file = os.path.join(TEST_DATA_PATH, 'article_withdrawn.grobid.tei.xml')
+
+        # Verify the test TEI file exists
+        assert os.path.exists(tei_file), f"Test TEI file should exist at {tei_file}"
+
+        converter = TEI2LossyJSONConverter()
+        json_data = converter.convert_tei_file(tei_file, stream=False)
+
+        # The converter should return a non-None result (not fail) for valid but empty TEI
+        assert json_data is not None, "Withdrawn/empty TEI should return non-None JSON result"
+        assert isinstance(json_data, dict), "Result should be a dictionary"
+
+        # Check basic structure is present
+        assert 'biblio' in json_data, "Should have biblio section"
+        assert 'body_text' in json_data, "Should have body_text section"
+
+    def test_withdrawn_article_markdown_conversion(self):
+        """Test Markdown conversion for a withdrawn/empty article TEI file."""
+        from grobid_client.format.TEI2Markdown import TEI2MarkdownConverter
+
+        # Use the withdrawn article TEI file from test resources
+        tei_file = os.path.join(TEST_DATA_PATH, 'article_withdrawn.grobid.tei.xml')
+
+        # Verify the test TEI file exists
+        assert os.path.exists(tei_file), f"Test TEI file should exist at {tei_file}"
+
+        converter = TEI2MarkdownConverter()
+        markdown_data = converter.convert_tei_file(tei_file)
+
+        # The converter should return a non-None result (not fail) for valid but empty TEI
+        # It may return an empty string, but should not return None
+        assert markdown_data is not None, "Withdrawn/empty TEI should return non-None Markdown result"
+        assert isinstance(markdown_data, str), "Result should be a string"
+
+    def test_json_conversion_stream_mode_with_real_file(self):
+        """Test JSON conversion in streaming mode with a real TEI file."""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Use the actual TEI file from test resources
+        tei_file = os.path.join(TEST_DATA_PATH, '0046d83a-edd6-4631-b57c-755cdcce8b7f.tei.xml')
+
+        # Verify the test TEI file exists
+        assert os.path.exists(tei_file), f"Test TEI file should exist at {tei_file}"
+
+        converter = TEI2LossyJSONConverter()
+        passages_generator = converter.convert_tei_file(tei_file, stream=True)
+
+        # Should return a generator/iterator, not None
+        assert passages_generator is not None, "Streaming mode should return a generator"
+
+        # Collect all passages from the generator
+        passages = list(passages_generator)
+
+        # Should have extracted some passages
+        assert len(passages) > 0, "Should extract at least one passage in streaming mode"
+
+        # Each passage should be a dict with expected structure
+        for passage in passages:
+            assert isinstance(passage, dict), "Each passage should be a dictionary"
+            assert 'id' in passage, "Passage should have an id"
+            assert 'text' in passage, "Passage should have text"
+
+    def test_json_conversion_stream_mode_with_empty_tei(self):
+        """Test JSON conversion in streaming mode with empty TEI content."""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Test with empty TEI content
+        empty_tei = """<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+</TEI>"""
+
+        # Create a temporary TEI file with empty content
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.tei.xml', delete=False) as tei_file:
+            tei_file.write(empty_tei)
+            tei_path = tei_file.name
+
+        try:
+            converter = TEI2LossyJSONConverter()
+            passages_generator = converter.convert_tei_file(tei_path, stream=True)
+
+            # Should return an empty iterator for empty TEI, not None
+            assert passages_generator is not None, "Streaming mode should return an iterator even for empty TEI"
+
+            # Collect all passages - should be empty for empty TEI
+            passages = list(passages_generator)
+
+            # Empty TEI should produce no passages
+            assert isinstance(passages, list), "Result should be convertible to list"
+
+        finally:
+            # Clean up temporary file
+            os.unlink(tei_path)
+
+    def test_json_conversion_stream_mode_with_withdrawn_article(self):
+        """Test JSON conversion in streaming mode with withdrawn/empty article."""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Use the withdrawn article TEI file from test resources
+        tei_file = os.path.join(TEST_DATA_PATH, 'article_withdrawn.grobid.tei.xml')
+
+        # Verify the test TEI file exists
+        assert os.path.exists(tei_file), f"Test TEI file should exist at {tei_file}"
+
+        converter = TEI2LossyJSONConverter()
+        passages_generator = converter.convert_tei_file(tei_file, stream=True)
+
+        # Should return a generator/iterator, not None
+        assert passages_generator is not None, "Streaming mode should return an iterator for withdrawn article"
+
+        # Collect all passages - may be empty for withdrawn article
+        passages = list(passages_generator)
+
+        # Should be a list (possibly empty)
+        assert isinstance(passages, list), "Result should be convertible to list"
+
+    def test_json_conversion_stream_mode_validates_refs(self):
+        """Test that streaming mode validates reference offsets correctly."""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Use file with references
+        tei_file = os.path.join(TEST_DATA_PATH, '0046d83a-edd6-4631-b57c-755cdcce8b7f.tei.xml')
+
+        converter = TEI2LossyJSONConverter(validate_refs=True)
+        passages_generator = converter.convert_tei_file(tei_file, stream=True)
+
+        # Collect all passages - this should not raise assertion errors if refs are valid
+        passages = list(passages_generator)
+
+        # Check passages with refs have valid offsets
+        for passage in passages:
+            if 'refs' in passage and passage['refs']:
+                for ref in passage['refs']:
+                    offset_start = ref.get('offset_start', -1)
+                    offset_end = ref.get('offset_end', -1)
+                    ref_text = ref.get('text', '')
+                    passage_text = passage.get('text', '')
+
+                    # Validate offset bounds
+                    assert 0 <= offset_start < offset_end <= len(passage_text), \
+                        f"Invalid ref offsets: {offset_start}-{offset_end} for text length {len(passage_text)}"
+
+                    # Validate text matches
+                    actual_text = passage_text[offset_start:offset_end]
+                    assert actual_text == ref_text, \
+                        f"Ref text mismatch: expected '{ref_text}', got '{actual_text}'"
+
+    def test_json_conversion_stream_vs_non_stream_consistency(self):
+        """Test that streaming and non-streaming modes produce consistent results."""
+        from grobid_client.format.TEI2LossyJSON import TEI2LossyJSONConverter
+
+        # Use the actual TEI file from test resources
+        tei_file = os.path.join(TEST_DATA_PATH, '0046d83a-edd6-4631-b57c-755cdcce8b7f.tei.xml')
+
+        converter = TEI2LossyJSONConverter()
+
+        # Get non-streaming result
+        non_stream_result = converter.convert_tei_file(tei_file, stream=False)
+        body_text_non_stream = non_stream_result.get('body_text', [])
+
+        # Get streaming result
+        stream_result = converter.convert_tei_file(tei_file, stream=True)
+        body_text_stream = list(stream_result)
+
+        # Both should have the same number of passages
+        assert len(body_text_non_stream) == len(body_text_stream), \
+            f"Stream and non-stream should have same number of passages: {len(body_text_stream)} vs {len(body_text_non_stream)}"
+
+        # Compare passage texts
+        for i, (stream_p, non_stream_p) in enumerate(zip(body_text_stream, body_text_non_stream)):
+            assert stream_p.get('text') == non_stream_p.get('text'), \
+                f"Passage {i} text mismatch between stream and non-stream modes"
 
