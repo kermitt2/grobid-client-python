@@ -875,8 +875,6 @@ def get_refs_with_offsets(element):
     def _clean_text(text: str) -> str:
         if not text:
             return ""
-        import re
-        import html
         text = re.sub(r'\s+', ' ', text.strip())
         text = html.unescape(text)
         return text
@@ -961,8 +959,6 @@ def get_formatted_passage(head_paragraph, head_section, paragraph_id, element):
     def _clean_text_local(text: str) -> str:
         if not text:
             return ""
-        import re
-        import html
         text = re.sub(r'\s+', ' ', text.strip())
         text = html.unescape(text)
         return text

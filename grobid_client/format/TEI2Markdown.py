@@ -648,8 +648,6 @@ class TEI2MarkdownConverter:
 
     def _extract_year(self, date_text: str) -> str:
         """Extract year from date text, handling various formats."""
-        import re
-
         # Look for 4-digit year patterns
         year_match = re.search(r'\b(19|20)\d{2}\b', date_text)
         if year_match:
